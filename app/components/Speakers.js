@@ -1,16 +1,22 @@
 import SectionLayout from "../layouts/SectionLayout";
-import SpeakerCard from "../components/SpeakerCard";
+import SpeakerCard from "./SpeakerCard";
 
 const Speakers = async () => {
   const speakers = await getSpeakersData();
+
   return (
-    <SectionLayout title="Speakers" description="LISTEN TO THE EVENT SPEAKERS">
-      <div className="flex flex-wrap flex-center mt-2 gap-x-8 gap-y-4">
-        {speakers.map((speaker) => (
-          <SpeakerCard key={speaker.id} speaker={speaker} />
-        ))}
-      </div>
-    </SectionLayout>
+    <>
+      <SectionLayout
+        title="Speakers"
+        description="LISTEN TO THE EVENT SPEAKERS"
+      >
+        <div className="flex flex-wrap justify-start mt-2 gap-x-2 gap-y-4">
+          {speakers.map((speaker) => (
+            <SpeakerCard key={speaker.id} speaker={speaker} />
+          ))}
+        </div>
+      </SectionLayout>
+    </>
   );
 };
 
@@ -42,7 +48,7 @@ const getSpeakersData = async () => {
     },
     {
       id: 2,
-      name: "Dr. Michael Stewart",
+      name: "Dr. Michael Stewart sfjasdkfjask",
       company: "M12",
       title: "Managing Partner",
       linkedin: "https://www.linkedin.com/in/mpstewart/",
@@ -55,8 +61,8 @@ const getSpeakersData = async () => {
     {
       id: 3,
       name: "Dr. Michael Stewart",
-      company: "M12",
-      title: "Managing Partner",
+      company: "M12M12M12",
+      title: "Managing Partner partner",
       linkedin: "https://www.linkedin.com/in/mpstewart/",
       twitter: "https://twitter.com/mps_vc",
       website: "",
@@ -90,9 +96,9 @@ const getSpeakersData = async () => {
     },
     {
       id: 6,
-      name: "Dr. Michael Stewart",
-      company: "M12",
-      title: "Managing Partner",
+      name: "Dr. Michael Stewarsdfjkasdfjk",
+      company: "M12 dfjkasfj",
+      title: "Managing Partnerfjkdak df",
       linkedin: "https://www.linkedin.com/in/mpstewart/",
       twitter: "https://twitter.com/mps_vc",
       website: "",
@@ -103,7 +109,7 @@ const getSpeakersData = async () => {
     {
       id: 7,
       name: "Dr. Michael Stewart",
-      company: "M12",
+      company: "M12jfkdasjfkadsfasfa",
       title: "Managing Partner",
       linkedin: "https://www.linkedin.com/in/mpstewart/",
       twitter: "https://twitter.com/mps_vc",

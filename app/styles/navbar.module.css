@@ -9,6 +9,7 @@
   background: rgba(255, 255, 255, 0.6);
   /* background-color: #0003; */
   backdrop-filter: blur(10px);
+  z-index: 40;
 }
 
 .item {

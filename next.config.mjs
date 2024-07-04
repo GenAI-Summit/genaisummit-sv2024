@@ -10,6 +10,11 @@ const nextConfig = {
       },
     ],
   },
+  variants: {
+    extend: {
+      display: ["group-hover"],
+    },
+  },
 };
 
 export default nextConfig;

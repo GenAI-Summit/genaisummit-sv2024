@@ -13,7 +13,7 @@ const Footer = () => {
           <div className={styles.content}>Oct 30 - Nov 3, 2024</div>
           <div className={styles.content}>Santa Clara, CA</div>
           <div className={styles.content}>genaix@gptdao.ai</div>
-          <div className={styles.content}>
+          <div className={`${styles.content} hover:text-sky-500`}>
             <Link href="https://linktr.ee/gptdao" target="_blank">
               Contact us
             </Link>
