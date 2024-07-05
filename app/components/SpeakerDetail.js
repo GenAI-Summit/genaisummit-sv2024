@@ -4,19 +4,21 @@ import Icon from "./Icon";
 
 const SpeakerDetail = ({ speaker }) => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col items-center">
       <div className="flex items-center justify-start w-full">
         <Image
           src={speaker.image}
           alt={speaker.name}
-          width={200}
-          height={200}
+          width={150}
+          height={150}
           loading="lazy"
         />
-        <div className="h-full flex flex-col ml-4 font-bold justify-center text-wrap">
-          <div className="text-xl">{speaker.name}</div>
-          <div className="text-lg">{speaker.title}</div>
-          <div className="text-lg">{speaker.company}</div>
+        <div className="h-full flex flex-col ml-4 justify-center text-wrap">
+          <div className="text-lg font-bold">{speaker.name}</div>
+          {speaker.title && <div className="font-medium">{speaker.title}</div>}
+          {speaker.company && (
+            <div className="font-medium">@{speaker.company}</div>
+          )}
           <div className="flex gap-1 mt-1">
             {speaker.website && (
               <Link href={speaker.website} target="_blank">
