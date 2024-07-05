@@ -96,6 +96,86 @@ const getExhibitiorsData = async () => {
       description:
         "Mountain Lion is a technology company specializing in AI-powered solutions for wealth and asset management. By leveraging advanced machine learning algorithms, Mountain Lion offers comprehensive tools for predictive analytics, risk management, and portfolio optimization. Their innovative platform aims to enhance decision-making processes and improve financial outcomes for clients, helping asset managers and financial advisors navigate complex market environments with greater efficiency and insight.",
     },
+    {
+      id: 10,
+      name: "Espeed Capital",
+      image: "/exhibitors/espeed.webp",
+      url: "https://www.espeedcap.com",
+      description:
+        "Espeed Capital is a venture capital firm focused on investing in early-stage technology companies. With a portfolio spanning various industries, including AI, fintech, and e-commerce, Espeed Capital provides strategic support and funding to innovative startups. The firm aims to drive growth and success for its portfolio companies by leveraging its expertise, network, and resources to help them achieve their full potential.",
+    },
+    {
+      id: 11,
+      name: "Puffer",
+      image: "/exhibitors/puffer.webp",
+      url: "https://www.puffer.fi/",
+      description:
+        "Puffer is a decentralized finance (DeFi) platform specializing in liquid restaking for Ethereum. It enables users to stake their ETH and earn rewards while maintaining liquidity through its native token, pufETH. Puffer's protocol features advanced security measures, permissionless validator participation, and the ability to enhance rewards by leveraging pufETH across various DeFi ecosystems. This approach aims to decentralize Ethereum and maximize user returns.",
+    },
+    {
+      id: 12,
+      name: "Exabits",
+      image: "/exhibitors/exabits.webp",
+      url: "https://exabits.ai",
+      description:
+        "Exabits is a pioneering technology company focused on tokenizing GPU power to create an AI compute economy. By offering a decentralized network of over 65,000 GPUs across global datacenters, Exabits enables users to participate in and benefit from the AI revolution. The platform provides simplified access to high-performance computing resources, facilitating advancements in AI and blockchain technology while driving innovation and efficiency in various industries.",
+    },
+    {
+      id: 13,
+      name: "Tele AI",
+      image: "/exhibitors/teleai.webp",
+      url: "https://cn.94ai.com/",
+      description:
+        "Tele AI, also known as 94AI, is an intelligent user operation service provider that leverages advanced artificial intelligence to enhance user engagement and operational efficiency. The company offers AI-driven solutions for customer interaction, data analysis, and personalized marketing, enabling businesses to optimize their user experience and drive growth. Tele AI focuses on delivering innovative, scalable technology to support the evolving needs of modern enterprises.",
+    },
+    {
+      id: 14,
+      name: "Akool",
+      image: "/exhibitors/akool.webp",
+      url: "https://akool.com",
+      description:
+        "Akool is an advanced AI-powered platform designed for dynamic content creation and digital storytelling. It offers a suite of tools including face swaps, realistic avatars, video translation, talking photos, and image generation. Akool aims to enhance marketing and advertising by providing innovative and customizable AI solutions that help brands create engaging, high-quality content efficiently. Its technology is trusted by numerous businesses to elevate their digital presence and connect with audiences in impactful ways.",
+    },
+    {
+      id: 15,
+      name: "ArtX Gallery",
+      image: "/exhibitors/artxgallery.webp",
+      url: "https://www.artxgallery.com",
+      description:
+        "ArtX Gallery is a digital art platform that showcases and promotes contemporary artists and their works. By leveraging blockchain technology, ArtX Gallery provides a secure and transparent marketplace for art collectors and enthusiasts. The platform features a diverse collection of digital art pieces, including NFTs (non-fungible tokens), enabling artists to monetize their creations and art lovers to discover and collect unique digital artworks.",
+    },
+    {
+      id: 16,
+      name: "TaskUs",
+      image: "/exhibitors/taskus.webp",
+      url: "https://www.taskus.com",
+      description:
+        "TaskUs is a leading provider of outsourced digital services and next-generation customer experience for innovative companies. Specializing in customer support, content moderation, and AI operations, TaskUs helps clients scale operations and enhance efficiency. With a global presence and a commitment to employee well-being, TaskUs partners with high-growth companies to deliver customized, tech-enabled solutions that drive business success.",
+    },
+    {
+      id: 17,
+      name: "OneGen",
+      image: "/exhibitors/1gen.webp",
+      url: "https://www.1gen.ai/",
+      description:
+        "1Gen is an innovative AI company focused on community engagement through advanced AI moderation tools. Their platform features an AI moderator that uses a comprehensive knowledge base to provide insightful, engaging, and customizable interactions. 1Gen aims to empower communities by leveraging AI to enhance communication and interaction, ensuring accurate and proactive engagement tailored to the unique needs and personalities of each community.",
+    },
+    {
+      id: 18,
+      name: "Covalent",
+      image: "/exhibitors/covalent.webp",
+      url: "https://www.covalenthq.xyz",
+      description:
+        "Covalent is a powerful AI compute orchestration platform designed to simplify AI development, deployment, and scaling. It offers developers seamless access to GPU resources across clouds and on-premises environments, enabling efficient training of AI models and execution of complex simulations. By maximizing infrastructure utilization and providing dynamic resource allocation, Covalent helps organizations optimize their AI workflows and accelerate innovation in various fields.",
+    },
+    {
+      id: 19,
+      name: "UpMarket",
+      image: "/exhibitors/upmarket.webp",
+      url: "https://www.upmarket.com",
+      description:
+        "UpMarket is a platform designed for accredited investors to access alternative investments, including shares in private companies, hedge funds, private equity, and real estate. It offers opportunities in pre-IPO companies, crypto, and various market funds, allowing investors to diversify their portfolios. UpMarket emphasizes transparency, robust due diligence, and a seamless investment process, catering to sophisticated asset classes while providing comprehensive post-investment monitoring and support.",
+    },
   ];
 };
 

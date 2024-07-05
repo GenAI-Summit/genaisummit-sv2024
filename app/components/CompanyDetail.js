@@ -7,7 +7,13 @@ const CompanyDetail = ({ company }) => {
       <Link className="w-64 h-36 bg-white" href={company.url} target="_blank">
         <Logo info={company} />
       </Link>
-      <div className="mt-4 text-2xl font-bold">{company.name}</div>
+      <Link
+        href={company.url}
+        target="_blank"
+        className="mt-4 text-2xl font-bold hover:text-sky-500"
+      >
+        {company.name}
+      </Link>
       <div className="mt-4">{company.description}</div>
     </div>
   );
