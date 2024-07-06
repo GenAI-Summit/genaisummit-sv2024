@@ -3,6 +3,8 @@ import Link from "next/link";
 import SectionLayout from "../layouts/SectionLayout";
 import Logo from "../components/Logo";
 
+import { getMedia } from "/lib/api";
+
 const Media = async () => {
   const media = await getMediaData();
   return (
@@ -24,32 +26,7 @@ const Media = async () => {
 };
 
 const getMediaData = async () => {
-  const media = [
-    {
-      id: 0,
-      name: "Washington Post",
-      image: "/media/washingtonpost.webp",
-      url: "https://www.washingtonpost.com/",
-    },
-    {
-      id: 1,
-      name: "NBC",
-      image: "/media/nbcnews.webp",
-      url: "https://www.nbcnews.com/",
-    },
-    {
-      id: 2,
-      name: "Bloomberg",
-      image: "/media/bloomberg.webp",
-      url: "https://www.bloomberg.com/",
-    },
-    {
-      id: 3,
-      name: "Business Insider",
-      image: "/media/businessinsider.webp",
-      url: "https://www.businessinsider.com/",
-    },
-  ];
+  const media = await getMedia();
   return media;
 };
 

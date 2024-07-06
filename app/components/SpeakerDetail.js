@@ -25,7 +25,7 @@ const SpeakerDetail = ({ speaker }) => {
                 <Icon
                   width={30}
                   height={30}
-                  src="/icons/website.png"
+                  src="/images/icons/website.png"
                   alt={speaker.name + "'s website"}
                 />
               </Link>
@@ -35,7 +35,7 @@ const SpeakerDetail = ({ speaker }) => {
                 <Icon
                   width={30}
                   height={30}
-                  src="/icons/linkedin.png"
+                  src="/images/icons/linkedin.png"
                   alt={speaker.name + "'s linkedin account"}
                 />
               </Link>
@@ -45,8 +45,8 @@ const SpeakerDetail = ({ speaker }) => {
                 <Icon
                   width={30}
                   height={30}
-                  src="/icons/x.png"
-                  alt={speaker.name + "'s twitter"}
+                  src="/images/icons/x.png"
+                  alt={speaker.name + "'s x account"}
                 />
               </Link>
             )}

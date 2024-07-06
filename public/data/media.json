@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Washington Post",
+    "image": "/images/media/washingtonpost.webp",
+    "url": "https://www.washingtonpost.com/"
+  },
+  {
+    "id": 1,
+    "name": "NBC",
+    "image": "/images/media/nbcnews.webp",
+    "url": "https://www.nbcnews.com/"
+  },
+  {
+    "id": 2,
+    "name": "Bloomberg",
+    "image": "/images/media/bloomberg.webp",
+    "url": "https://www.bloomberg.com/"
+  },
+  {
+    "id": 3,
+    "name": "Business Insider",
+    "image": "/images/media/businessinsider.webp",
+    "url": "https://www.businessinsider.com/"
+  }
+]
