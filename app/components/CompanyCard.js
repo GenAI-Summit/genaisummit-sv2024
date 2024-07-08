@@ -18,7 +18,7 @@ const CompanyCard = ({ company }) => {
   return (
     <>
       <div
-        className="w-full h-36 bg-white md:w-48 md:h-27"
+        className="w-full h-36 bg-white cursor-pointer md:w-48 md:h-27"
         onClick={openDrawer}
       >
         <Logo info={company} />

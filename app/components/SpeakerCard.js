@@ -18,7 +18,7 @@ const SpeakerCard = ({ speaker }) => {
   return (
     <>
       <div
-        className="group relative h-auto w-44 md:w-44 md:h-auto bg-white border-2 border-white hover:border-sky-500 ease-in-out duration-300 overflow-hidden"
+        className="group relative h-auto w-44 md:w-44 md:h-auto bg-white border-2 border-white cursor-pointer hover:border-sky-500 ease-in-out duration-300 overflow-hidden"
         onClick={openDrawer}
       >
         <Image

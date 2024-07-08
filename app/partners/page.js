@@ -1,4 +1,3 @@
-import React from "react";
 import Sponsors from "../components/Sponsors";
 import Media from "../components/Media";
 import SearchBar from "../components/SearchBar";

@@ -5,12 +5,7 @@ import { getSponsors } from "/lib/api";
 
 const Sponsors = async () => {
   const sponsors = await getSponsorsData();
-  const types = [
-    "Platinum Sponsor",
-    "Gold Sponsor",
-    "Silver Sponsor",
-    "Special Sponsor",
-  ];
+  const types = ["Platinum", "Gold", "Silver", "Special"];
   return (
     <>
       <SectionLayout
