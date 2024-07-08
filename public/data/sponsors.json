@@ -13,7 +13,7 @@
     "type": "Gold",
     "url": "https://www.ibm.com",
     "image": "/images/sponsors/ibm.webp",
-    "desciption": "IBM, established in 1911, is a global technology and consulting company renowned for its contributions to hardware, software, and artificial intelligence. Known for innovations like the mainframe computer and Watson AI, IBM has been a pioneer in cloud computing, quantum computing, and enterprise solutions. Despite shifting market dynamics, IBM continues to influence numerous industries with its cutting-edge technology and comprehensive IT services."
+    "description": "IBM, established in 1911, is a global technology and consulting company renowned for its contributions to hardware, software, and artificial intelligence. Known for innovations like the mainframe computer and Watson AI, IBM has been a pioneer in cloud computing, quantum computing, and enterprise solutions. Despite shifting market dynamics, IBM continues to influence numerous industries with its cutting-edge technology and comprehensive IT services."
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "type": "Gold",
     "url": "https://www.iobc.capital/#/",
     "image": "/images/sponsors/iobc.webp",
-    "desciption": "IOBC is a venture capital firm specializing in investments across the technology and biotechnology sectors. With a focus on early to growth-stage companies, IOBC provides strategic support and funding to innovative startups. The firm is dedicated to fostering breakthroughs in cutting-edge fields, leveraging its expertise and network to drive success and growth for its portfolio companies."
+    "description": "IOBC is a venture capital firm specializing in investments across the technology and biotechnology sectors. With a focus on early to growth-stage companies, IOBC provides strategic support and funding to innovative startups. The firm is dedicated to fostering breakthroughs in cutting-edge fields, leveraging its expertise and network to drive success and growth for its portfolio companies."
   },
   {
     "id": 3,
@@ -29,7 +29,7 @@
     "type": "Silver",
     "url": "https://www.sambanova.ai",
     "image": "/images/sponsors/sambanova.webp",
-    "description": ""
+    "description": "SambaNova Systems, founded in 2017, is a leading company in AI and machine learning infrastructure. Specializing in advanced software and hardware solutions, SambaNova offers innovative platforms to accelerate AI workloads. Its flagship product, the DataScale system, provides unparalleled performance for enterprise AI applications, enabling organizations to harness the full potential of artificial intelligence and transform their data-driven strategies."
   },
   {
     "id": 4,

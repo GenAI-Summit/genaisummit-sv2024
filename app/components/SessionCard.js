@@ -5,15 +5,18 @@ import Drawer from "./Drawer";
 import SpeakerDetail from "./SpeakerDetail";
 
 const SessionCard = ({ item }) => {
-  const [selectedSpeaker, setSelectedSpeaker] = useState(null);
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [currentSpeaker, setCurrentSpeaker] = useState(null);
 
   const typeColorClass = getTypeColorClass(item.type);
 
   const openDrawer = (speaker) => {
-    setSelectedSpeaker(speaker);
+    setIsDrawerOpen(true);
+    setCurrentSpeaker(speaker);
   };
   const closeDrawer = () => {
-    setSelectedSpeaker(null);
+    setIsDrawerOpen(false);
+    setCurrentSpeaker(null);
   };
 
   return (
@@ -74,8 +77,8 @@ const SessionCard = ({ item }) => {
           ))}
         </div>
       )}
-      <Drawer isDrawerOpen={Boolean(selectedSpeaker)} closeDrawer={closeDrawer}>
-        {selectedSpeaker && <SpeakerDetail speaker={selectedSpeaker} />}
+      <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
+        {currentSpeaker && <SpeakerDetail speaker={currentSpeaker} />}
       </Drawer>
     </div>
   );
