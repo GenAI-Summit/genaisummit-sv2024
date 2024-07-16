@@ -1,14 +1,20 @@
 "use client";
 
 import React, { useState } from "react";
+import CardLayout from "../layouts/CardLayout";
 import Drawer from "./Drawer";
 import SpeakerDetail from "./SpeakerDetail";
+import { useRouter } from "next/navigation";
 
-const SessionCard = ({ item }) => {
+const SessionCard = ({ session }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [currentSpeaker, setCurrentSpeaker] = useState(null);
+  const router = useRouter();
 
-  const typeColorClass = getTypeColorClass(item.type);
+  const sessionStart = new Date(session.start);
+  const sessionEnd = new Date(session.end);
+
+  const typeColorClass = getTypeColorClass(session.type);
 
   const openDrawer = (speaker) => {
     setIsDrawerOpen(true);
@@ -18,68 +24,87 @@ const SessionCard = ({ item }) => {
     setIsDrawerOpen(false);
     setCurrentSpeaker(null);
   };
+  const onSpeakerDetail = (speaker) => {
+    router.push(`/speakers/${speaker.id}`);
+  };
 
   return (
-    <div className="bg-white shadow-md rounded-lg p-4 mt-2 border-2 border-white hover:border-sky-500 ease-in-out duration-300">
-      <div className="text-xl font-bold">
-        <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
-          <span>{item.type}</span>
-        </span>
-        {item.topic}
-      </div>
-      <p className="text-gray-600 mb-1">
-        {item.time} | {item.date}
-      </p>
-      <p className="text-gray-600 mb-2">{item.room}</p>
-      {item.moderators.length > 0 && (
-        <div className="mb-2">
-          {item.moderators.length > 1 ? (
-            <div className="font-semibold">moderators:</div>
-          ) : (
-            <div className="font-semibold">moderator:</div>
+    <div className="w-full mt-4">
+      <CardLayout>
+        <div className="flex flex-col items-start text-left">
+          <div className="text-xl font-bold">
+            <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
+              <span>{session.type}</span>
+            </span>
+            {session.topic}
+          </div>
+          <p className="text-gray-600 mb-1">
+            {sessionStart.toLocaleTimeString()} -{" "}
+            {sessionEnd.toLocaleTimeString()} |{" "}
+            {sessionStart.toLocaleDateString()}
+          </p>
+          <p className="text-gray-600 mb-2">{session.room}</p>
+          {session.moderators.length > 0 && (
+            <div className="mb-2 flex flex-col items-start">
+              {session.moderators.length > 1 ? (
+                <div className="font-semibold">Moderators:</div>
+              ) : (
+                <div className="font-semibold">Moderator:</div>
+              )}
+              {session.moderators.map((moderator) => (
+                <>
+                  <div>
+                    <span
+                      className="cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
+                      onClick={() => openDrawer(moderator)}
+                    >
+                      {moderator.name}
+                    </span>
+                    {moderator.title && <span>, {moderator.title}</span>}
+                    {moderator.company && <span> @{moderator.company}</span>}
+                  </div>
+                </>
+              ))}
+            </div>
           )}
-          {item.moderators.map((moderator) => (
-            <>
+          {session.speakers.length > 0 && (
+            <div className="mb-2 flex flex-col items-start">
+              {session.speakers.length > 1 ? (
+                <div className="font-semibold">Speakers:</div>
+              ) : (
+                <div className="font-semibold">Speaker:</div>
+              )}
+              {session.speakers.map((speaker) => (
+                <>
+                  <div>
+                    <span
+                      className="cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
+                      onClick={() => openDrawer(speaker)}
+                    >
+                      {speaker.name}
+                    </span>
+                    {speaker.title && <span>, {speaker.title}</span>}
+                    {speaker.company && <span> @{speaker.company}</span>}
+                  </div>
+                </>
+              ))}
+            </div>
+          )}
+          <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
+            {currentSpeaker && <SpeakerDetail speaker={currentSpeaker} />}
+            {currentSpeaker && (
               <div>
                 <span
-                  className="cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
-                  onClick={() => openDrawer(moderator)}
+                  className="mt-2 cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
+                  onClick={() => onSpeakerDetail(currentSpeaker)}
                 >
-                  {moderator.name}
+                  All Sessions by {currentSpeaker.name}
                 </span>
-                {moderator.title && <span>, {moderator.title}</span>}
-                {moderator.company && <span> @{moderator.company}</span>}
               </div>
-            </>
-          ))}
+            )}
+          </Drawer>
         </div>
-      )}
-      {item.speakers.length > 0 && (
-        <div className="mb-2">
-          {item.speakers.length > 1 ? (
-            <div className="font-semibold">Speakers:</div>
-          ) : (
-            <div className="font-semibold">Speaker:</div>
-          )}
-          {item.speakers.map((speaker) => (
-            <>
-              <div>
-                <span
-                  className="cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
-                  onClick={() => openDrawer(speaker)}
-                >
-                  {speaker.name}
-                </span>
-                {speaker.title && <span>, {speaker.title}</span>}
-                {speaker.company && <span> @{speaker.company}</span>}
-              </div>
-            </>
-          ))}
-        </div>
-      )}
-      <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
-        {currentSpeaker && <SpeakerDetail speaker={currentSpeaker} />}
-      </Drawer>
+      </CardLayout>
     </div>
   );
 };

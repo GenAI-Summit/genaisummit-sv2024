@@ -1,8 +1,8 @@
 [
   {
     "id": 0,
-		"date": "05-29-2024",
-    "time": "09:30-10:15",
+    "start": "2024-05-29T09:30:00",
+    "end": "2024-05-29T10:15:00",
     "room": "GPT Stage",
     "type": "Keynote",
     "topic": "Demystifying LLMs with Mistral AI",
@@ -26,8 +26,8 @@
   },
 	{
 		"id": 1,
-		"date": "05-30-2024",
-    "time": "09:00-09:45",
+    "start": "2024-05-30T09:00:00",
+    "end": "2024-05-30T09:45:00",
     "room": "GPT Stage",
     "type": "Keynote",
     "topic": "The Age of Generative AI: Data at the Intelligent Edge",
@@ -51,8 +51,8 @@
   },
 	{
 		"id": 2,
-		"date": "05-31-2024",
-    "time": "09:45-10:30",
+    "start": "2024-05-31T09:45:00",
+    "end": "2024-05-31T10:30:00",
     "room": "GPT Stage",
     "type": "Keynote",
     "topic": "What Does AI Mean for Cloud Infrastructure",
@@ -76,8 +76,8 @@
   },
 	{
 		"id": 3,
-		"date": "05-29-2024",
-    "time": "10:15-10:45",
+    "start": "2024-05-29T10:15:00",
+    "end": "2024-05-29T10:45:00",
     "room": "GPT Stage",
     "type": "Keynote",
     "topic": "AGl Belongs to The Community in Open Source: Democratizing LLMs in The Service of Life and The Planet",
@@ -101,8 +101,8 @@
   },
 	{
 		"id": 4,
-		"date": "05-29-2024",
-    "time": "10:45-11:25",
+    "start": "2024-05-29T10:45:00",
+    "end": "2024-05-29T11:25:00",
     "room": "GPT Stage",
     "type": "Keynote",
     "topic": "Not So Fast: The Slow Death of the All-Powerful GPU",
@@ -127,8 +127,8 @@
 	{
 		"id": 5,
     "room": "GPT Stage",
-		"date": "05-29-2024",
-    "time": "11:45-12:15",
+    "start": "2024-05-29T11:45:00",
+    "end": "2024-05-29T12:15:00",
     "type": "Keynote",
     "topic": "Improving RAG with Retrieval Augmented Fine-Tuning (RAFT) with AI Studio: Practical Insights",
     "moderators": [
@@ -152,8 +152,8 @@
 	{
 		"id": 6,
     "room": "GPT Stage",
-		"date": "05-29-2024",
-    "time": "13:00-13:45",
+    "start": "2024-05-29T13:00:00",
+    "end": "2024-05-29T13:45:00",
     "type": "Panel Discussion",
     "topic": "Key Challenges for Providing GenAI Services On Scalable Cloud Infrastructure",
     "moderators": [
@@ -232,8 +232,8 @@
 	{
 	  "id": 7,
     "room": "AGI Stage",
-	  "date": "05-29-2024",
-    "time": "09:15-10:00",
+    "start": "2024-05-29T09:15:00",
+    "end": "2024-05-29T10:00:00",
     "type": "Keynote",
     "topic": "Advancements in Embodied AI: Key Technologies, Applications, and Future Trends",
     "moderators": [
@@ -257,8 +257,8 @@
 	{
 		"id": 8,
     "room": "GPT Stage",
-		"date": "05-30-2024",
-    "time": "09:45-10:30",
+    "start": "2024-05-30T09:45:00",
+    "end": "2024-05-30T10:30:00",
     "type": "Fireside Chat",
     "topic": "Unlocks the Power of Knowledge with Information Discovery and Sharing",
     "moderators": [
@@ -293,8 +293,8 @@
 	{
 		"id": 9,
     "room": "AGI Stage",
-		"date": "05-30-2024",
-    "time": "09:00-09:45",
+    "start": "2024-05-30T09:00:00",
+    "end": "2024-05-30T09:45:00",
     "type": "Keynote",
     "topic": "Some Intuitions about Large Language Models",
     "moderators": [
@@ -318,8 +318,8 @@
 	{
 		"id": 10,
     "room": "AGI Stage",
-		"date": "05-30-2024",
-    "time": "09:45-10:15",
+    "start": "2024-05-30T09:45:00",
+    "end": "2024-05-30T10:15:00",
     "type": "Keynote",
     "topic": "Either AI Is Happening to You, or You Are Making AI Happen",
     "moderators": [

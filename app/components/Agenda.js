@@ -4,17 +4,17 @@ import SessionCard from "../components/SessionCard";
 import { getAgenda } from "/lib/api";
 
 const Agenda = async () => {
-  const events = await getAgendaData();
+  const sessions = await getAgendaData();
   return (
     <>
       <SectionLayout
         title="Agenda"
         description="MAXIMIZE YOUR JOURNEY AT THE AI SUMMIT"
       >
-        {events.map((arr) => (
+        {sessions.map((arr) => (
           <SubsectionLayout key={arr[0].date} title={arr[0].date}>
-            {arr.map((item) => (
-              <SessionCard key={item.id} item={item} />
+            {arr.map((session) => (
+              <SessionCard key={session.id} session={session} />
             ))}
           </SubsectionLayout>
         ))}
@@ -24,26 +24,15 @@ const Agenda = async () => {
 };
 
 const getAgendaData = async () => {
-  const agenda = await getAgenda();
+  const sessions = await getAgenda();
 
-  const parseTime = (timeString) => {
-    const [start] = timeString.split("-");
-    return new Date(`1970-01-01T${start}`);
-  };
-
-  agenda.sort((a, b) => {
-    const dateComparison = new Date(a.date) - new Date(b.date);
-    if (dateComparison === 0) {
-      return parseTime(a.time) - parseTime(b.time);
+  const groupedEvents = sessions.reduce((acc, session) => {
+    const date = new Date(session.start).toLocaleDateString();
+    session.date = date;
+    if (!acc[session.date]) {
+      acc[session.date] = [];
     }
-    return dateComparison;
-  });
-
-  const groupedEvents = agenda.reduce((acc, event) => {
-    if (!acc[event.date]) {
-      acc[event.date] = [];
-    }
-    acc[event.date].push(event);
+    acc[session.date].push(session);
     return acc;
   }, {});
 

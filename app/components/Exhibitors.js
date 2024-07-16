@@ -8,7 +8,11 @@ const Exhibitors = async () => {
     <SectionLayout title="Exhibitiors" description="MEET OUR EXHIBITIORS">
       <div className="flex flex-wrap mt-2 items-center gap-x-8 gap-y-4">
         {exhibitors.map((exhibitor) => (
-          <CompanyCard key={exhibitor.id} company={exhibitor} />
+          <CompanyCard
+            key={exhibitor.id}
+            type={"exhibitors"}
+            company={exhibitor}
+          />
         ))}
       </div>
     </SectionLayout>

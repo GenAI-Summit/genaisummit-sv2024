@@ -32,13 +32,6 @@ const NavBar = ({ closeDrawer }) => {
         SPEAKERS
       </Link>
       <Link
-        className={`${styles.item} ${pathname === "/experience" ? styles.active : ""}`}
-        href="/experience"
-        onClick={closeDrawer}
-      >
-        EXPERIENCE
-      </Link>
-      <Link
         className={`${styles.item} ${pathname === "/exhibitors" ? styles.active : ""}`}
         href="/exhibitors"
         onClick={closeDrawer}

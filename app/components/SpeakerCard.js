@@ -4,15 +4,20 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Drawer from "./Drawer";
 import SpeakerDetail from "./SpeakerDetail";
+import { useRouter } from "next/navigation";
 
 const SpeakerCard = ({ speaker }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const router = useRouter();
 
   const openDrawer = () => {
     setIsDrawerOpen(true);
   };
   const closeDrawer = () => {
     setIsDrawerOpen(false);
+  };
+  const onSpeakerDetail = () => {
+    router.push(`/speakers/${speaker.id}`);
   };
 
   return (
@@ -40,6 +45,14 @@ const SpeakerCard = ({ speaker }) => {
       </div>
       <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
         <SpeakerDetail speaker={speaker} />
+        <div>
+          <span
+            className="mt-2 cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
+            onClick={onSpeakerDetail}
+          >
+            All Sessions by {speaker.name}
+          </span>
+        </div>
       </Drawer>
     </>
   );

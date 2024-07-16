@@ -20,7 +20,11 @@ const Sponsors = async () => {
             <SubsectionLayout key={type} title={type}>
               <div className="flex flex-wrap items-center mt-2 gap-x-8 gap-y-4">
                 {filteredSponsors.map((sponsor) => (
-                  <CompanyCard key={sponsor.id} company={sponsor} />
+                  <CompanyCard
+                    key={sponsor.id}
+                    type={"sponsors"}
+                    company={sponsor}
+                  />
                 ))}
               </div>
             </SubsectionLayout>
