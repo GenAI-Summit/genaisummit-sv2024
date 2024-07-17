@@ -27,8 +27,6 @@ const getAgendaData = async () => {
   const sessions = await getAgenda();
 
   const groupedEvents = sessions.reduce((acc, session) => {
-    const date = new Date(session.start).toLocaleDateString();
-    session.date = date;
     if (!acc[session.date]) {
       acc[session.date] = [];
     }

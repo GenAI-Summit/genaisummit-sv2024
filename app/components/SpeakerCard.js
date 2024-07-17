@@ -6,7 +6,7 @@ import Drawer from "./Drawer";
 import SpeakerDetail from "./SpeakerDetail";
 import { useRouter } from "next/navigation";
 
-const SpeakerCard = ({ speaker }) => {
+const SpeakerCard = ({ speaker, width = "w-44", textSize = "text-base" }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
@@ -23,7 +23,7 @@ const SpeakerCard = ({ speaker }) => {
   return (
     <>
       <div
-        className="group relative h-auto w-44 md:w-44 md:h-auto bg-white border-2 border-white cursor-pointer hover:border-sky-500 ease-in-out duration-300 overflow-hidden"
+        className={`${width} ${textSize} group relative h-auto md:h-auto bg-white border-2 border-white cursor-pointer hover:border-sky-500 ease-in-out duration-300 overflow-hidden`}
         onClick={openDrawer}
       >
         <Image
