@@ -1,5 +1,5 @@
-import SectionLayout from "../layouts/SectionLayout";
-import SubsectionLayout from "../layouts/SubsectionLayout";
+import SectionLayout from "../Layouts/SectionLayout";
+import SubsectionLayout from "../Layouts/SubsectionLayout";
 import CompanyCard from "./CompanyCard";
 import { getSponsors } from "/lib/api";
 

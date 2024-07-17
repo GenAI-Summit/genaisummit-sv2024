@@ -1,6 +1,6 @@
 import SectionLayout from "../layouts/SectionLayout";
 import SubsectionLayout from "../layouts/SubsectionLayout";
-import SessionCard from "../components/SessionCard";
+import SessionCard from "../Components/SessionCard";
 import { getAgenda } from "/lib/api";
 
 const Agenda = async () => {

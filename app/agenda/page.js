@@ -1,5 +1,5 @@
-import SearchBar from "../components/SearchBar";
-import Agenda from "../components/Agenda";
+import SearchBar from "../Components/SearchBar";
+import Agenda from "../Components/Agenda";
 
 const AgendaPage = () => {
   return (

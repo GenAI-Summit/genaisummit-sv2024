@@ -1,6 +1,6 @@
 import Link from "next/link";
-import SectionLayout from "../layouts/SectionLayout";
-import Logo from "../components/Logo";
+import SectionLayout from "../Layouts/SectionLayout";
+import Logo from "../Components/Logo";
 import { getWorkshops } from "/lib/api";
 
 const Workshops = async () => {

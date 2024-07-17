@@ -1,5 +1,5 @@
-import SearchBar from "../components/SearchBar";
-import Exhibitors from "../components/Exhibitors";
+import SearchBar from "../Components/SearchBar";
+import Exhibitors from "../Components/Exhibitors";
 
 const ExhibitorsPage = () => {
   return (

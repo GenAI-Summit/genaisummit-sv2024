@@ -1,5 +1,5 @@
-import SearchBar from "../components/SearchBar";
-import Speakers from "../components/Speakers";
+import SearchBar from "../Components/SearchBar";
+import Speakers from "../Components/Speakers";
 
 const SpeakersPage = () => {
   return (

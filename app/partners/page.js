@@ -1,6 +1,6 @@
-import Sponsors from "../components/Sponsors";
-import Media from "../components/Media";
-import SearchBar from "../components/SearchBar";
+import Sponsors from "../Components/Sponsors";
+import Media from "../Components/Media";
+import SearchBar from "../Components/SearchBar";
 
 const PartnersPage = () => {
   return (

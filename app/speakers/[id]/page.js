@@ -1,7 +1,7 @@
-import SpeakerDetail from "../../components/SpeakerDetail";
-import SessionCard from "../../components/SessionCard";
-import SectionLayout from "../../layouts/SectionLayout";
-import CardLayout from "../../layouts/CardLayout";
+import SpeakerDetail from "../../Components/SpeakerDetail";
+import SessionCard from "../../Components/SessionCard";
+import SectionLayout from "../../Layouts/SectionLayout";
+import CardLayout from "../../Layouts/CardLayout";
 import { getSpeakerById, getSessionsBySpeakerId } from "/lib/api";
 
 const SpeakerPage = async ({ params }) => {

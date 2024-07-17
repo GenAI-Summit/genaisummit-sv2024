@@ -1,7 +1,7 @@
-import CompanyDetail from "../../components/CompanyDetail";
+import CompanyDetail from "../../Components/CompanyDetail";
 import { getExhibitorById } from "/lib/api";
-import SectionLayout from "../../layouts/SectionLayout";
-import CardLayout from "../../layouts/CardLayout";
+import SectionLayout from "../../Layouts/SectionLayout";
+import CardLayout from "../../Layouts/CardLayout";
 
 const ExhibitorPage = async ({ params }) => {
   const exhibitor = await getExhibitorData(params.id);

@@ -1,4 +1,4 @@
-import SectionLayout from "../layouts/SectionLayout";
+import SectionLayout from "../Layouts/SectionLayout";
 import SpeakerCard from "./SpeakerCard";
 import { getSpeakers } from "/lib/api";
 

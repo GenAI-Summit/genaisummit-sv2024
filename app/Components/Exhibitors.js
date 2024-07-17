@@ -1,5 +1,5 @@
-import SectionLayout from "../layouts/SectionLayout";
-import CompanyCard from "../components/CompanyCard";
+import SectionLayout from "../Layouts/SectionLayout";
+import CompanyCard from "../Components/CompanyCard";
 import { getExhibitors } from "/lib/api";
 
 const Exhibitors = async () => {

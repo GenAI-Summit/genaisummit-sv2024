@@ -1,6 +1,6 @@
-import Workshops from "../components/Workshops";
-import Seminars from "../components/Seminars";
-import SearchBar from "../components/SearchBar";
+import Workshops from "../Components/Workshops";
+import Seminars from "../Components/Seminars";
+import SearchBar from "../Components/SearchBar";
 
 const ExperiencePage = () => {
   return (

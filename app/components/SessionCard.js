@@ -1,5 +1,5 @@
 import React from "react";
-import CardLayout from "../layouts/CardLayout";
+import CardLayout from "../Layouts/CardLayout";
 /*
 import { useRouter } from "next/navigation";
 import Drawer from "./Drawer";
