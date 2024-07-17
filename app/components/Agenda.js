@@ -1,5 +1,5 @@
 import SectionLayout from "../Layouts/SectionLayout";
-import SubsectionLayout from "../Layouts/SubsectionLayout";
+import SubsectionLayout from "../Layouts/SubSectionLayout";
 import SessionCard from "../Components/SessionCard";
 import { getAgenda } from "/lib/api";
 
