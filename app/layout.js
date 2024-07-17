@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -10,7 +10,6 @@ export const metadata = {
   description: "Generative AI Summit 2024, Santa Clara, CA",
 };
 
-// TODO: temporary padding
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
