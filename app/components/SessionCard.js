@@ -47,37 +47,41 @@ const SessionCard = ({ session }) => {
           </p>
           <p className="text-gray-600 mb-2">{session.room}</p>
           {session.moderators.length > 0 && (
-            <div className="mb-2 flex flex-wrap items-center gap-2">
+            <div className="mb-2">
               {session.moderators.length > 1 ? (
                 <div className="font-semibold">Moderators:</div>
               ) : (
                 <div className="font-semibold">Moderator:</div>
               )}
-              {session.moderators.map((moderator) => (
-                <SpeakerCard
-                  key={moderator.id}
-                  speaker={moderator}
-                  width="w-24"
-                  textSize="text-[8px]"
-                />
-              ))}
+              <div className="flex flex-wrap items-center gap-2">
+                {session.moderators.map((moderator) => (
+                  <SpeakerCard
+                    key={moderator.id}
+                    speaker={moderator}
+                    width="w-24"
+                    textSize="text-[8px]"
+                  />
+                ))}
+              </div>
             </div>
           )}
           {session.speakers.length > 0 && (
-            <div className="mb-2 flex flex-wrap items-center gap-2">
+            <div className="mb-2">
               {session.speakers.length > 1 ? (
                 <div className="font-semibold">Speakers:</div>
               ) : (
                 <div className="font-semibold">Speaker:</div>
               )}
-              {session.speakers.map((speaker) => (
-                <SpeakerCard
-                  key={speaker.id}
-                  speaker={speaker}
-                  width="w-24"
-                  textSize="text-[8px]"
-                />
-              ))}
+              <div className="flex flex-wrap items-center gap-2">
+                {session.speakers.map((speaker) => (
+                  <SpeakerCard
+                    key={speaker.id}
+                    speaker={speaker}
+                    width="w-24"
+                    textSize="text-[8px]"
+                  />
+                ))}
+              </div>
             </div>
           )}
         </div>
