@@ -8,6 +8,18 @@ const nextConfig = {
         port: "",
         pathname: "/dms/image/**",
       },
+      {
+        protocol: "https",
+        hostname: "d1keuthy5s86c8.cloudfront.net",
+        port: "",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "whova.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   variants: {
