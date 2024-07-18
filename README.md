@@ -1,10 +1,11 @@
 # TODO
 
+ - [ ] fix description in session page
  - [ ] backend
  - [ ] add session to google calendar
- - [ ] use speaker name in session
+ - [x] use speaker name in session
  - [x] pics in agenda
  - [ ] ticket page
  - [ ] homepage
  - [ ] search bar
- - [ ] deploy test
+ - [x] deploy test

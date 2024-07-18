@@ -10,7 +10,7 @@ const Exhibitors = async () => {
         {exhibitors.map((exhibitor) => (
           <CompanyCard
             key={exhibitor.id}
-            type={"exhibitors"}
+            type={"exhibitor"}
             company={exhibitor}
           />
         ))}
