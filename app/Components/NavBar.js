@@ -31,7 +31,7 @@ const NavBar = () => {
       >
         <Icon
           className={styles.item}
-          src="/icons/gptdao.png"
+          src="/images/icons/gptdao.png"
           alt="logo"
           width="40"
           height="40"

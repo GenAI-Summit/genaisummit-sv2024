@@ -28,16 +28,24 @@ const Footer = () => {
           </div>
           <div className={`${styles.content} ${styles.icons}`}>
             <Link href="https://x.com/genaisummitsf" target="_blank">
-              <Icon className="icon" src="/icons/x.png" alt="x" />
+              <Icon className="icon" src="/images/icons/x.png" alt="x" />
             </Link>
             <Link
               href="https://www.linkedin.com/company/gptdao/"
               target="_blank"
             >
-              <Icon className="icon" src="/icons/linkedin.png" alt="linkedin" />
+              <Icon
+                className="icon"
+                src="/images/icons/linkedin.png"
+                alt="linkedin"
+              />
             </Link>
             <Link href="https://www.facebook.com/gptdaoai/" target="_blank">
-              <Icon className="icon" src="/icons/facebook.png" alt="facebook" />
+              <Icon
+                className="icon"
+                src="/images/icons/facebook.png"
+                alt="facebook"
+              />
             </Link>
             <Link
               href="https://www.instagram.com/genaisummit.xyz"
@@ -45,7 +53,7 @@ const Footer = () => {
             >
               <Icon
                 className="icon"
-                src="/icons/instagram.png"
+                src="/images/icons/instagram.png"
                 alt="instagram"
               />
             </Link>
