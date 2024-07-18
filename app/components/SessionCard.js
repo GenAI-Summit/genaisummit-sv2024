@@ -94,7 +94,7 @@ const getTypeColorClass = (type) => {
   switch (type) {
     case "Keynote":
       return "bg-sky-500 text-white";
-    case "Panel Discussion":
+    case "Panel":
       return "bg-green-500 text-white";
     case "Seminar":
       return "bg-yellow-500 text-white";
