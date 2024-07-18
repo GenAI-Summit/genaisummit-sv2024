@@ -10,11 +10,23 @@ const Footer = () => {
       <div className={styles.container}>
         <div className={styles.info}>
           <div className={styles.title}>Summit Information</div>
-          <div className={styles.content}>Oct 30 - Nov 3, 2024</div>
-          <div className={styles.content}>Santa Clara, CA</div>
+          <div className={styles.content}>Nov 1 - Nov 3, 2024</div>
+          <div className={`${styles.content}`}>
+            <Link
+              className="hover:text-sky-500"
+              href="https://santaclaraconventioncenter.com/"
+              target="_blank"
+            >
+              Santa Clara Convention Center
+            </Link>
+          </div>
           <div className={styles.content}>genaix@gptdao.ai</div>
-          <div className={`${styles.content} hover:text-sky-500`}>
-            <Link href="https://linktr.ee/gptdao" target="_blank">
+          <div className={`${styles.content}`}>
+            <Link
+              className="hover:text-sky-500"
+              href="https://linktr.ee/gptdao"
+              target="_blank"
+            >
               Contact us
             </Link>
           </div>

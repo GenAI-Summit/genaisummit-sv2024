@@ -43,7 +43,7 @@ const NavBar = () => {
         <div className="w-full flex flex-row justify-between">
           <Icon
             className={styles.item}
-            src="/icons/gptdao.png"
+            src="/images/icons/gptdao.png"
             alt="GPTDAO Logo"
             width="40"
             height="40"
@@ -52,7 +52,12 @@ const NavBar = () => {
             className={`${styles.item} ${styles.drawer}`}
             onClick={handleClickDrawer}
           >
-            <Icon src="/icons/drawer.png" alt="drawer" width="40" height="40" />
+            <Icon
+              src="/images/icons/drawer.png"
+              alt="drawer"
+              width="40"
+              height="40"
+            />
           </button>
         </div>
         <div

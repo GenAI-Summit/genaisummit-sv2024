@@ -8,7 +8,7 @@
     "topic": "Demystifying LLMs with Mistral AI",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       0
     ],
@@ -23,7 +23,7 @@
     "topic": "The Age of Generative AI: Data at the Intelligent Edge",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       14
     ],
@@ -38,7 +38,7 @@
     "topic": "What Does AI Mean for Cloud Infrastructure",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       5
     ],
@@ -53,7 +53,7 @@
     "topic": "AGl Belongs to The Community in Open Source: Democratizing LLMs in The Service of Life and The Planet",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       1
     ],
@@ -68,7 +68,7 @@
     "topic": "Not So Fast: The Slow Death of the All-Powerful GPU",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       2
     ],
@@ -83,7 +83,7 @@
     "topic": "Improving RAG with Retrieval Augmented Fine-Tuning (RAFT) with AI Studio: Practical Insights",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       3
     ],
@@ -99,7 +99,7 @@
     "moderators": [
       4
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       5,6,8,9,10
     ],
@@ -114,7 +114,7 @@
     "topic": "Advancements in Embodied AI: Key Technologies, Applications, and Future Trends",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       11
     ],
@@ -130,7 +130,7 @@
     "moderators": [
       12
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       14
     ],
@@ -145,7 +145,7 @@
     "topic": "Some Intuitions about Large Language Models",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       15
     ],
@@ -160,7 +160,7 @@
     "topic": "Either AI Is Happening to You, or You Are Making AI Happen",
     "moderators": [
     ],
-    "abstract": "",
+    "description": "",
     "speakers": [
       16
     ],

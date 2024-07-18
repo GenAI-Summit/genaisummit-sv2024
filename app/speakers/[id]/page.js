@@ -2,12 +2,12 @@ import SpeakerDetail from "../../Components/SpeakerDetail";
 import SessionCard from "../../Components/SessionCard";
 import SectionLayout from "../../Layouts/SectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
-import { getSpeakerById, getSessionsBySpeakerId } from "/lib/api";
+import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
 
 const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);
-  const sessions = await getSsionsData(params.id);
-  console.log(sessions);
+  const sessions = await getSessionsData(speaker.name);
+  console.log("===== DEBUG =====", speaker, sessions);
   return (
     <div className="w-full">
       <SectionLayout title="Speaker">
@@ -33,8 +33,8 @@ const getSpeakerData = async (id) => {
   return speaker;
 };
 
-const getSsionsData = async (id) => {
-  const sessions = await getSessionsBySpeakerId(id);
+const getSessionsData = async (name) => {
+  const sessions = await getSessionsBySpeaker(name);
   return sessions;
 };
 
