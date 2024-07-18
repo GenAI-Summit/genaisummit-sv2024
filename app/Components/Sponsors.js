@@ -22,7 +22,7 @@ const Sponsors = async () => {
                 {filteredSponsors.map((sponsor) => (
                   <CompanyCard
                     key={sponsor.id}
-                    type={"sponsors"}
+                    type="sponsor"
                     company={sponsor}
                   />
                 ))}
