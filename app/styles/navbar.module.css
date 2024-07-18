@@ -6,9 +6,7 @@
   padding: 0.6rem 1.2rem;
   color: #78808f;
   font-weight: bold;
-  background: rgba(255, 255, 255, 0.6);
-  /* background-color: #0003; */
-  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255);
   z-index: 40;
 }
 
@@ -28,7 +26,7 @@
 .drawer:hover {
   border-radius: 5px;
   cursor: pointer;
-  tangition: 0.3s;
+  transition: 0.3s;
   background-color: #f0f0f0;
 }
 

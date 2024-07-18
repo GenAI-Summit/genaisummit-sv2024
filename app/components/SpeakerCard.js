@@ -6,7 +6,7 @@ import Drawer from "./Drawer";
 import SpeakerDetail from "./SpeakerDetail";
 import { useRouter } from "next/navigation";
 
-const SpeakerCard = ({ speaker, width = "w-44", textSize = "text-base" }) => {
+const SpeakerCard = ({ speaker, width = "w-36", textSize = "text-[12px]" }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
