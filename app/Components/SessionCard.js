@@ -1,35 +1,17 @@
+"use client";
+
 import React from "react";
 import CardLayout from "../Layouts/CardLayout";
-/*
-import { useRouter } from "next/navigation";
-import Drawer from "./Drawer";
-import SpeakerDetail from "./SpeakerDetail";
-*/
 import SpeakerCard from "./SpeakerCard";
+import { useRouter } from "next/navigation";
 
-const SessionCard = ({ session }) => {
-  /*
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const [currentSpeaker, setCurrentSpeaker] = useState(null);
-  const router = useRouter();
-  */
-
+const SessionCard = ({ session, showDesc = false }) => {
   const typeColorClass = getTypeColorClass(session.type);
+  const router = useRouter();
 
-  /*
-  const openDrawer = (speaker) => {
-    setIsDrawerOpen(true);
-    setCurrentSpeaker(speaker);
+  const onSessionClick = () => {
+    router.push(`/session/${session.id}`);
   };
-  const closeDrawer = () => {
-    setIsDrawerOpen(false);
-    setCurrentSpeaker(null);
-  };
-
-  const onSpeakerDetail = (speaker) => {
-    router.push(`/speakers/${speaker.id}`);
-  };
-  */
 
   return (
     <div className="w-full mt-4">
@@ -39,7 +21,12 @@ const SessionCard = ({ session }) => {
             <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
               <span>{session.type}</span>
             </span>
-            {session.topic}
+            <span
+              className="cursor-pointer hover:text-sky-500 ease-in-out duration-300"
+              onClick={onSessionClick}
+            >
+              {session.topic}
+            </span>
           </div>
           <p className="text-gray-600 mb-1">
             {session.start.toLocaleTimeString()} -{" "}
@@ -84,6 +71,7 @@ const SessionCard = ({ session }) => {
               </div>
             </div>
           )}
+          {showDesc && <span>{session.description}</span>}
         </div>
       </CardLayout>
     </div>
@@ -110,34 +98,3 @@ const getTypeColorClass = (type) => {
 };
 
 export default SessionCard;
-/*
-          <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
-            {currentSpeaker && <SpeakerDetail speaker={currentSpeaker} />}
-            {currentSpeaker && (
-              <div>
-                <span
-                  className="mt-2 cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
-                  onClick={() => onSpeakerDetail(currentSpeaker)}
-                >
-                  All Sessions by {currentSpeaker.name}
-                </span>
-              </div>
-            )}
-          </Drawer>
-          */
-/*
-              {session.moderators.map((moderator) => (
-                <>
-                  <div>
-                    <span
-                      className="cursor-pointer font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
-                      onClick={() => openDrawer(moderator)}
-                    >
-                      {moderator.name}
-                    </span>
-                    {moderator.title && <span>, {moderator.title}</span>}
-                    {moderator.company && <span> @{moderator.company}</span>}
-                  </div>
-                </>
-              ))}
-              */

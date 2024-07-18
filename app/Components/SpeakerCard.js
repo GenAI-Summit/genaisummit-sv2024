@@ -17,7 +17,7 @@ const SpeakerCard = ({ speaker, width = "w-36", textSize = "text-[12px]" }) => {
     setIsDrawerOpen(false);
   };
   const onSpeakerDetail = () => {
-    router.push(`/speakers/${speaker.id}`);
+    router.push(`/speaker/${speaker.id}`);
   };
 
   return (
