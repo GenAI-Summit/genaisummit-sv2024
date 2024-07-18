@@ -15,6 +15,7 @@ const nextConfig = {
       display: ["group-hover"],
     },
   },
+  distDir: "dist",
 };
 
 export default nextConfig;
