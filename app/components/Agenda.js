@@ -1,10 +1,10 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
 import SessionCard from "../Components/SessionCard";
-import { getAgenda } from "/lib/api";
+import { getSessions } from "/lib/api";
 
 const Agenda = async () => {
-  const sessions = await getAgendaData();
+  const sessions = await getSessionsData();
   return (
     <>
       <SectionLayout
@@ -23,8 +23,8 @@ const Agenda = async () => {
   );
 };
 
-const getAgendaData = async () => {
-  const sessions = await getAgenda();
+const getSessionsData = async () => {
+  const sessions = await getSessions();
 
   const groupedEvents = sessions.reduce((acc, session) => {
     if (!acc[session.date]) {

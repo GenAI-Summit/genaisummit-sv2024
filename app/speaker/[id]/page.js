@@ -7,7 +7,6 @@ import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
 const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);
   const sessions = await getSessionsData(speaker.name);
-  console.log("===== DEBUG =====", speaker, sessions);
   return (
     <div className="w-full">
       <SectionLayout title="Speaker">
