@@ -22,11 +22,13 @@ const nextConfig = {
       },
     ],
   },
+  /*
   variants: {
     extend: {
       display: ["group-hover"],
     },
   },
+  */
   distDir: "dist",
 };
 
