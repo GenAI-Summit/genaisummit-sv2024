@@ -10,10 +10,10 @@ const IndexTicketCard = ({ ticket }) => {
         <div className="mt-auto">
           {" "}
           <p className="text-xl font-bold">${ticket.price}</p>
-          <p className="text-sm text-gray-500 line-through">
-            ${ticket.originalPrice}
+          <p className="text-sm text-gray-500">
+            <span className="line-through">${ticket.originalPrice}</span>{" "}
+            <span className="text-sm text-gray-500">{ticket.saveText}</span>
           </p>
-          <span className="text-sm text-gray-500">{ticket.saveText}</span>
         </div>
         <TicketBtn />
       </div>

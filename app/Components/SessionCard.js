@@ -59,10 +59,23 @@ const SessionCard = ({ session, showDesc = false }) => {
               ) : (
                 <div className="font-semibold">Speaker:</div>
               )}
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap items-center gap-4">
                 {session.speakers.map((speaker) => (
-                  <div key={speaker.id} className="w-24 text-[8px]">
-                    <SpeakerCard key={speaker.id} speaker={speaker} />
+                  <div key={speaker.id} className="flex gap-2 items-center">
+                    <div className="w-24 text-[8px]">
+                      <SpeakerCard key={speaker.id} speaker={speaker} />
+                    </div>
+                    <div className="flex flex-col items-start justify-center">
+                      <p className="text-sm font-bold">{speaker.name}</p>
+                      {speaker.title && (
+                        <p className="text-xs text-gray-500">{speaker.title}</p>
+                      )}
+                      {speaker.company && (
+                        <p className="text-xs text-gray-500">
+                          @{speaker.company}
+                        </p>
+                      )}
+                    </div>
                   </div>
                 ))}
               </div>
