@@ -8,7 +8,7 @@ const ExhibitorPage = async ({ params }) => {
   return (
     <div className="w-full">
       <SectionLayout title="Exhibitor">
-        <div className="mt-4">
+        <div className="w-full mt-4">
           <CardLayout>
             <CompanyDetail company={exhibitor} />
           </CardLayout>

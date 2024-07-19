@@ -1,8 +1,9 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SpeakerCard from "./SpeakerCard";
+import ShowMore from "./ShowMore";
 import { getSpeakers } from "/lib/api";
 
-const Speakers = async () => {
+const IndexSpeakers = async () => {
   const speakers = await getSpeakersData();
 
   return (
@@ -11,16 +12,17 @@ const Speakers = async () => {
         title="Speakers"
         description="LISTEN TO THE EVENT SPEAKERS"
       >
-        <div className="flex flex-wrap justify-around mt-2 gap-x-2 gap-y-4 md:justify-start">
+        <div className="flex flex-wrap justify-between gap-x-2 gap-y-4">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className="w-1/4 md:w-36 text-[8px] md:text-[12px]"
+              className="w-1/4 text-[8px] md:w-1/5 md:text-lg"
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
             </div>
           ))}
         </div>
+        <ShowMore target="/speakers" text="View All Speakers" />
       </SectionLayout>
     </>
   );
@@ -28,7 +30,7 @@ const Speakers = async () => {
 
 const getSpeakersData = async () => {
   const speakers = await getSpeakers();
-  return speakers;
+  return speakers.slice(0, 12);
 };
 
-export default Speakers;
+export default IndexSpeakers;

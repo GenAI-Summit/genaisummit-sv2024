@@ -8,7 +8,7 @@ const SponsorPage = async ({ params }) => {
   return (
     <div className="w-full">
       <SectionLayout title="Sponsor">
-        <div className="mt-4">
+        <div className="w-full mt-4">
           <CardLayout>
             <CompanyDetail company={sponsor} />
           </CardLayout>

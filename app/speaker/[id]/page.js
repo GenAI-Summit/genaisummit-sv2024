@@ -10,7 +10,7 @@ const SpeakerPage = async ({ params }) => {
   return (
     <div className="w-full">
       <SectionLayout title="Speaker">
-        <div className="mt-4">
+        <div className="w-full mt-4">
           <CardLayout>
             <SpeakerDetail speaker={speaker} />
           </CardLayout>

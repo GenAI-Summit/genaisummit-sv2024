@@ -10,7 +10,9 @@ const SectionLayout = ({ title, description, children }) => {
           {description}
         </div>
       )}
-      {children}
+      <div className="flex flex-col mt-4 items-center justify-center gap-y-4 w-full h-full">
+        {children}
+      </div>
     </div>
   );
 };
