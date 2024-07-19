@@ -1,10 +1,12 @@
 import IndexSpeakers from "./Components/IndexSpeakers";
 import IndexSponsors from "./Components/IndexSponsors";
 import IndexExhibitors from "./Components/IndexExhibitors";
+import Ticketbtn from "./Components/Ticketbtn";
 
 const Index = () => {
   return (
-    <div className="w-3/4">
+    <div className="w-full md:w-3/4">
+      <Ticketbtn />
       <IndexSponsors />
       <IndexSpeakers />
       <IndexExhibitors />
