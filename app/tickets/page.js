@@ -1,36 +1,31 @@
+"use client";
+
 const TicketPage = () => {
+  const onSubmit = (e) => {
+    e.preventDefault();
+    alert("Form submitted");
+    e.target.reset();
+  };
   return (
-    <div>
-      <form name="contact" method="POST" netlify>
-        <p>
-          <label>
-            Your Name: <input type="text" name="name" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Email: <input type="email" name="email" />
-          </label>
-        </p>
-        <p>
-          <label>
-            Your Role:{" "}
-            <select name="role[]" multiple>
-              <option value="leader">Leader</option>
-              <option value="follower">Follower</option>
-            </select>
-          </label>
-        </p>
-        <p>
-          <label>
-            Message: <textarea name="message"></textarea>
-          </label>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
-    </div>
+    <form name="contact" method="POST" data-netlify="true" onSubmit={onSubmit}>
+      <input type="hidden" name="form-name" value="contact" />
+      <p>
+        <input type="text" name="firstname" id="firstname" />
+        <label htmlFor="yourname">Your Name:</label> <br />
+        <input type="text" name="name" id="yourname" />
+      </p>
+      <p>
+        <label htmlFor="youremail">Your Email:</label> <br />
+        <input type="email" name="email" id="youremail" />
+      </p>
+      <p>
+        <label htmlFor="yourmessage">Message:</label> <br />
+        <textarea name="message" id="yourmessage"></textarea>
+      </p>
+      <p>
+        <button type="submit">Send</button>
+      </p>
+    </form>
   );
 };
 
