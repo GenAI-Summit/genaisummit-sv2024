@@ -43,9 +43,9 @@ const Footer = () => {
   ];
   return (
     <div className="flex flex-col bg-black text-gray-500">
-      <div className="flex p-7 justify-between flex-wrap items-start">
-        <div className="w-full md:w-1/5 flex flex-col justify-center items-center">
-          <Link href="/" className="w-fit bg-white">
+      <div className="flex p-7 flex-col md:flex-row justify-between flex-wrap">
+        <div className="flex flex-col justify-center">
+          <Link href="/" className="bg-white">
             <Icon
               className="icon"
               src="/images/icons/gptdao2.png"
@@ -55,10 +55,8 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <div className="w-2/5 md:w-1/5 flex flex-col justify-center">
-          <div className="text-white text-lg md:text-xl font-bold">
-            Summit Information
-          </div>
+        <div className="flex flex-col justify-center">
+          <div className={styles.title}>Summit Information</div>
           <div className={styles.content}>Nov 1 - Nov 3, 2024</div>
           <div className={`${styles.content}`}>
             <Link
@@ -80,10 +78,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/5 md:w-1/5 flex flex-col justify-center">
-          <div className="text-white text-lg md:text-xl font-bold">
-            Quick Links
-          </div>
+        <div className="flex flex-col justify-center">
+          <div className={styles.title}>Quick Links</div>
           <div className="flex flex-col text-lg">
             {quickLinks.map((item) => (
               <Link href={item.link} key={item.name}>
@@ -94,15 +90,13 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="w-full md:w-2/5 flex flex-col justify-center">
-          <div className="text-white text-lg md:text-xl font-bold">
-            Contact Us
-          </div>
-          <span className="text-sm">
+        <div className="flex flex-col justify-center">
+          <div className={styles.title}>Contact Us</div>
+          <div className={styles.content}>
             We sincerely invite you to join us, bring your creativity and ideas,
             and explore the future of generative AI together. Please contact us
             for more information.
-          </span>
+          </div>
           <div className={`${styles.content} ${styles.icons}`}>
             {socialMedia.map((item) => (
               <Link href={item.link} target="_blank" key={item.name}>

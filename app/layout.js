@@ -14,6 +14,7 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <link rel="icon" href="/images/icons/favicon.ico" sizes="any" />
       <body className={inter.className}>
         <Navbar />
         <div className="pt-20 pb-5 px-5 flex flex-col items-center text-center bg-sky-50">
