@@ -69,7 +69,7 @@ const Footer = () => {
           </Link>
         </div>
         <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5">
-          <div className="text-white text-lg md:text-xl font-bold">
+          <div className="text-white text-lg md:text-xl font-bold mb-1">
             Summit Info
           </div>
           <div className={styles.content}>Nov 1 - Nov 3, 2024</div>
@@ -94,7 +94,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5">
-          <div className="text-white text-lg md:text-xl font-bold">
+          <div className="text-white text-lg md:text-xl font-bold mb-1">
             Quick Links
           </div>
           <div className="flex flex-col text-lg">
@@ -108,10 +108,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full md:w-[35%] flex flex-col justify-center mt-5">
-          <div className="text-white text-lg md:text-xl font-bold">
+          <div className="text-white text-lg md:text-xl font-bold mb-2">
             Stay Connected
           </div>
-          <span className="text-sm">
+          <span className="text-sm mb-2">
             We sincerely invite you to join us, bring your creativity and ideas,
             and explore the future of generative AI together. Please contact us
             for more information.
