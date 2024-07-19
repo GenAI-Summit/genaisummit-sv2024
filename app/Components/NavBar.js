@@ -4,9 +4,11 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 import NavBarItems from "./NavBarItems";
 import styles from "../styles/navbar.module.css";
+import { useRouter } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const openDrawer = () => {
     setIsMenuOpen(true);
@@ -24,30 +26,39 @@ const NavBar = () => {
     }
   };
 
+  const onClickLogo = () => {
+    console.log("Clicked on logo");
+    router.push("/");
+  };
+
   return (
     <>
       <div
         className={`${styles.navbar} flex flex-row justify-between hidden md:flex`}
       >
-        <Icon
-          className={styles.item}
-          src="/images/icons/gptdao.png"
-          alt="logo"
-          width="40"
-          height="40"
-        />
+        <div className="cursor-pointer" onClick={onClickLogo}>
+          <Icon
+            className={styles.item}
+            src="/images/icons/gptdao.png"
+            alt="logo"
+            width="40"
+            height="40"
+          />
+        </div>
         <NavBarItems />
       </div>
 
       <div className={`${styles.navbar} flex flex-col text-center md:hidden`}>
         <div className="w-full flex flex-row justify-between">
-          <Icon
-            className={styles.item}
-            src="/images/icons/gptdao.png"
-            alt="GPTDAO Logo"
-            width="40"
-            height="40"
-          />
+          <div className="cursor-pointer" onClick={onClickLogo}>
+            <Icon
+              className={styles.item}
+              src="/images/icons/gptdao.png"
+              alt="GPTDAO Logo"
+              width="40"
+              height="40"
+            />
+          </div>
           <button
             className={`${styles.item} ${styles.drawer}`}
             onClick={handleClickDrawer}
