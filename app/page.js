@@ -1,7 +1,7 @@
 import IndexSpeakers from "./Components/IndexSpeakers";
 import IndexSponsors from "./Components/IndexSponsors";
 import IndexExhibitors from "./Components/IndexExhibitors";
-import Ticketbtn from "./Components/Ticketbtn";
+import Ticketbtn from "./Components/TicketBtn";
 
 const Index = () => {
   return (
