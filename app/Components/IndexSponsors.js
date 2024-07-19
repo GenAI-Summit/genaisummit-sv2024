@@ -23,7 +23,7 @@ const Sponsors = async () => {
                 {filteredSponsors.map((sponsor) => (
                   <div
                     key={sponsor.id}
-                    className="w-full h-36 md:w-1/4 md:h-27"
+                    className="w-full h-36 md:w-[31%] md:h-27"
                   >
                     <CompanyCard type="sponsor" company={sponsor} />
                   </div>
