@@ -54,7 +54,11 @@ const Footer = () => {
               height="200"
             />
           </Link>
-          <Link href="/" className="w-fit bg-white">
+          <Link
+            href="https://santaclaraconventioncenter.com/"
+            className="w-fit bg-white"
+            target="_blank"
+          >
             <Icon
               className="icon"
               src="/images/icons/santaclara.png"
