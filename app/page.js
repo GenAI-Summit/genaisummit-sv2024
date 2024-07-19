@@ -4,7 +4,7 @@ import IndexExhibitors from "./Components/IndexExhibitors";
 
 const Index = () => {
   return (
-    <div className="w-4/5">
+    <div className="w-3/4">
       <IndexSponsors />
       <IndexSpeakers />
       <IndexExhibitors />
