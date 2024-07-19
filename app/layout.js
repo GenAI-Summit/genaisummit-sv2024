@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
+import FloatFotter from "./Components/FloatFooter";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -18,6 +19,7 @@ const RootLayout = ({ children }) => {
         <div className="pt-20 pb-5 px-5 flex flex-col items-center text-center bg-sky-50">
           {children}
         </div>
+        <FloatFotter />
         <Footer />
       </body>
     </html>
