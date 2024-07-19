@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Icon from "./Icon";
 import NavBarItems from "./NavBarItems";
+import TicketBtn from "./TicketBtn";
 import styles from "../styles/navbar.module.css";
 import { useRouter } from "next/navigation";
 
@@ -46,6 +47,7 @@ const NavBar = () => {
           />
         </div>
         <NavBarItems />
+        <TicketBtn />
       </div>
 
       <div className={`${styles.navbar} flex flex-col text-center md:hidden`}>
