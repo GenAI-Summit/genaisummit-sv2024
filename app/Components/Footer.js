@@ -44,12 +44,21 @@ const Footer = () => {
   return (
     <div className="flex flex-col bg-black text-gray-500">
       <div className="flex p-7 justify-between flex-wrap items-start">
-        <div className="w-full md:w-1/5 flex flex-col justify-center items-center">
+        <div className="w-full md:w-1/5 flex flex-row md:flex-col justify-around items-center">
           <Link href="/" className="w-fit bg-white">
             <Icon
               className="icon"
               src="/images/icons/gptdao2.png"
               alt="GPTDAO Logo"
+              width="200"
+              height="200"
+            />
+          </Link>
+          <Link href="/" className="w-fit bg-white">
+            <Icon
+              className="icon"
+              src="/images/icons/santaclara.png"
+              alt="Santa Clara Convention Center Logo"
               width="150"
               height="150"
             />
@@ -57,7 +66,7 @@ const Footer = () => {
         </div>
         <div className="w-2/5 md:w-1/5 flex flex-col justify-center">
           <div className="text-white text-lg md:text-xl font-bold">
-            Summit Information
+            Summit Info
           </div>
           <div className={styles.content}>Nov 1 - Nov 3, 2024</div>
           <div className={`${styles.content}`}>
@@ -96,7 +105,7 @@ const Footer = () => {
         </div>
         <div className="w-full md:w-2/5 flex flex-col justify-center">
           <div className="text-white text-lg md:text-xl font-bold">
-            Contact Us
+            Stay Connected
           </div>
           <span className="text-sm">
             We sincerely invite you to join us, bring your creativity and ideas,
