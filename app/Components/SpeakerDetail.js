@@ -17,10 +17,10 @@ const SpeakerDetail = ({ speaker }) => {
           <div className="h-full flex flex-col ml-4 justify-center text-wrap items-start">
             <div className="text-lg font-bold">{speaker.name}</div>
             {speaker.title && (
-              <div className="font-medium">{speaker.title}</div>
+              <div className="text-base font-medium">{speaker.title}</div>
             )}
             {speaker.company && (
-              <div className="font-medium">@{speaker.company}</div>
+              <div className="text-base font-medium">@{speaker.company}</div>
             )}
             <div className="flex gap-1 mt-1">
               {speaker.website && (

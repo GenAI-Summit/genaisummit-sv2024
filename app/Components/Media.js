@@ -9,7 +9,7 @@ const Media = async () => {
   const media = await getMediaData();
   return (
     <SectionLayout title="Media" description="MEDIA COVERAGE OF GENAI SUMMIT">
-      <div className="flex flex-wrap mt-2 items-center gap-x-8 gap-y-4">
+      <div className="w-full flex flex-wrap mt-2 items-center gap-x-8 gap-y-4 justify-start">
         {media.map((item) => (
           <Link
             key={item.id}

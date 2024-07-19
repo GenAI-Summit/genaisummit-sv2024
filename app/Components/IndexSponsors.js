@@ -1,6 +1,7 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
 import CompanyCard from "./CompanyCard";
+import ShowMore from "./ShowMore";
 import { getSponsors } from "/lib/api";
 
 const Sponsors = async () => {
@@ -17,10 +18,13 @@ const Sponsors = async () => {
             (sponsor) => sponsor.type === type,
           );
           return (
-            <SubsectionLayout key={type} title={type} textAlign="text-left">
-              <div className="w-full flex flex-wrap items-center justify-start mt-2 gap-x-8 gap-y-4">
+            <SubsectionLayout key={type} title={type} textAlign="text-center">
+              <div className="w-full flex flex-wrap items-center justify-center mt-2 gap-x-8 gap-y-4">
                 {filteredSponsors.map((sponsor) => (
-                  <div key={sponsor.id} className="w-full h-36 md:w-48 md:h-27">
+                  <div
+                    key={sponsor.id}
+                    className="w-full h-36 md:w-1/4 md:h-27"
+                  >
                     <CompanyCard type="sponsor" company={sponsor} />
                   </div>
                 ))}
@@ -28,6 +32,7 @@ const Sponsors = async () => {
             </SubsectionLayout>
           );
         })}
+        <ShowMore target="/partners" text="View All Sponsors" />
       </SectionLayout>
     </>
   );

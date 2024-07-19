@@ -1,8 +1,10 @@
-const SubSectionLayout = ({ title, children }) => {
+const SubSectionLayout = ({ title, children, textAlign }) => {
   return (
     <>
-      <div className="text-2xl font-semibold mt-5">{title}</div>
-      {children}
+      <div className={`w-full text-2xl font-semibold mt-5 ${textAlign}`}>
+        {title}
+      </div>
+      <div className="w-full h-full flex flex-col">{children}</div>
     </>
   );
 };
