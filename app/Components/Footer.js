@@ -44,8 +44,8 @@ const Footer = () => {
   return (
     <div className="flex flex-col bg-black text-gray-500">
       <div className="flex p-7 justify-between flex-wrap items-start">
-        <div className="w-full md:w-1/5 flex flex-row md:flex-col justify-around items-center">
-          <Link href="/" className="w-fit bg-white">
+        <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between items-center mt-5">
+          <Link href="/" className="w-fit">
             <Icon
               className="icon"
               src="/images/icons/gptdao2.png"
@@ -56,7 +56,7 @@ const Footer = () => {
           </Link>
           <Link
             href="https://santaclaraconventioncenter.com/"
-            className="w-fit bg-white"
+            className="w-fit"
             target="_blank"
           >
             <Icon
@@ -68,7 +68,7 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <div className="w-2/5 md:w-1/5 flex flex-col justify-center">
+        <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5">
           <div className="text-white text-lg md:text-xl font-bold">
             Summit Info
           </div>
@@ -93,7 +93,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="w-2/5 md:w-1/5 flex flex-col justify-center">
+        <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5">
           <div className="text-white text-lg md:text-xl font-bold">
             Quick Links
           </div>
@@ -107,7 +107,7 @@ const Footer = () => {
             ))}
           </div>
         </div>
-        <div className="w-full md:w-2/5 flex flex-col justify-center">
+        <div className="w-full md:w-[35%] flex flex-col justify-center mt-5">
           <div className="text-white text-lg md:text-xl font-bold">
             Stay Connected
           </div>
