@@ -16,7 +16,7 @@ const IndexSpeakers = async () => {
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className="w-1/4 text-[8px] md:w-1/5 md:text-lg"
+              className="w-1/4 text-[8px] md:w-[21%] md:text-lg"
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
             </div>
