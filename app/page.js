@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center">
       <Banner />
-      <div className="w-full md:w-3/4">
+      <div className="w-full px-5 md:w-3/4">
         <IndexSponsors />
         <IndexSpeakers />
         <IndexExhibitors />
