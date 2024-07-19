@@ -1,13 +1,8 @@
 "use client";
 
 const TicketPage = () => {
-  const onSubmit = (e) => {
-    e.preventDefault();
-    alert("Form submitted");
-    e.target.reset();
-  };
   return (
-    <form name="contact" method="POST" data-netlify="true" onSubmit={onSubmit}>
+    <form name="contact" method="POST" data-netlify="true" action="/">
       <input type="hidden" name="form-name" value="contact" />
       <p>
         <input type="text" name="firstname" id="firstname" />
