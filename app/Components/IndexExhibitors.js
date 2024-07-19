@@ -10,7 +10,7 @@ const Exhibitors = async () => {
     <SectionLayout title="Exhibitiors" description="MEET OUR EXHIBITIORS">
       <div className="flex flex-wrap justify-around items-center gap-y-4 gap-x-4 md:justify-between">
         {exhibitors.map((exhibitor) => (
-          <div key={exhibitor.id} className="w-full h-36 md:w-1/5 md:h-27">
+          <div key={exhibitor.id} className="w-full h-36 md:w-[23%] md:h-27">
             <CompanyCard type="exhibitor" company={exhibitor} />
           </div>
         ))}
