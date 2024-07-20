@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Logo = ({ info }) => {
   return (
-    <div className="w-full h-full flex flex-col justify-center items-center p-4 border-2 border-white hover:border-sky-500 ease-in-out duration-300">
+    <div className="w-full h-full flex flex-col justify-center items-center p-4">
       <Image
         src={info.image}
         alt={info.name}
