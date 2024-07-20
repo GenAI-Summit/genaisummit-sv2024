@@ -74,7 +74,7 @@ const NavBar = () => {
           </button>
         </div>
         <div
-          className={`${styles.drawerMenu} ${!isMenuOpen ? "hidden" : ""} md:hidden flex flex-col text-center justify-center`}
+          className={`${styles.drawerMenu} ${!isMenuOpen ? "hidden" : ""} md:hidden flex flex-col text-center justify-center gap-4 pb-4`}
         >
           <NavBarItems closeDrawer={closeDrawer} />
         </div>
