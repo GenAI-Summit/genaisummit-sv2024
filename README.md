@@ -1,11 +1,14 @@
 # TODO
 
  - [ ] fix description in session page
- - [ ] backend
+ - [x] backend
  - [ ] add session to google calendar
  - [x] use speaker name in session
  - [x] pics in agenda
  - [ ] ticket page
- - [ ] homepage
+ - [x] homepage
  - [ ] search bar
+ - [ ] company card styles
+ - [ ] use backend for exhibitors
+ - [ ] merge exhibitors and sponsors
  - [x] deploy test
