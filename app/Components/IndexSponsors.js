@@ -19,7 +19,7 @@ const Sponsors = async () => {
           );
           return (
             <SubsectionLayout key={type} title={type} textAlign="text-center">
-              <div className="w-full flex flex-wrap items-center justify-center mt-2 gap-x-8 gap-y-4">
+              <div className="w-full flex flex-wrap items-center justify-center mt-2 gap-x-[3%] gap-y-4">
                 {filteredSponsors.map((sponsor) => (
                   <div
                     key={sponsor.id}
