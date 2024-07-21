@@ -2,7 +2,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
   return (
     <div
       className={
-        " fixed overflow-hidden z-10 bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out z-50 " +
+        " fixed overflow-hidden bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out z-50 " +
         (isDrawerOpen
           ? " transition-opacity opacity-100 duration-500 translate-x-0 "
           : " transition-all delay-500 opacity-0 translate-x-full ")
@@ -16,7 +16,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
       >
         <div className="relative w-screen max-w-lg p-7 flex flex-col space-y-6 overflow-y-scroll h-full">
           <button
-            className="fixed top-1 left-2 text-2xl z-50"
+            className="fixed top-1 left-2 text-xl z-50 border-2 border-black rounded-full p-1"
             onClick={closeDrawer}
           >
             X
