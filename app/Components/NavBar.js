@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 import NavBarItems from "./NavBarItems";
 import TicketBtn from "./TicketBtn";
-import styles from "../styles/navbar.module.css";
 import { useRouter } from "next/navigation";
 
 const NavBar = () => {
@@ -34,12 +33,9 @@ const NavBar = () => {
 
   return (
     <>
-      <div
-        className={`${styles.navbar} flex flex-row justify-between hidden md:flex`}
-      >
+      <div className="fixed top-0 px-4 py-2 w-full bg-white text-slate-500 font-semibold flex flex-row justify-between items-center hidden md:flex z-50">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
-            className={styles.item}
             src="/images/icons/gptdao.png"
             alt="logo"
             width="40"
@@ -50,11 +46,10 @@ const NavBar = () => {
         <TicketBtn />
       </div>
 
-      <div className={`${styles.navbar} flex flex-col text-center md:hidden`}>
+      <div className="fixed top-0 px-4 py-2 w-full bg-white text-slate-500 font-semibold flex flex-col items-center text-center md:hidden z-50">
         <div className="w-full flex flex-row justify-between">
           <div className="cursor-pointer" onClick={onClickLogo}>
             <Icon
-              className={styles.item}
               src="/images/icons/gptdao.png"
               alt="GPTDAO Logo"
               width="40"
@@ -62,7 +57,7 @@ const NavBar = () => {
             />
           </div>
           <button
-            className={`${styles.item} ${styles.drawer}`}
+            className="cursor-pointer hover:bg-slate-200 hover:rounded-lg duration-300"
             onClick={handleClickDrawer}
           >
             <Icon
@@ -74,7 +69,7 @@ const NavBar = () => {
           </button>
         </div>
         <div
-          className={`${styles.drawerMenu} ${!isMenuOpen ? "hidden" : ""} md:hidden flex flex-col text-center justify-center gap-4 pb-4`}
+          className={`${!isMenuOpen ? "hidden" : ""} md:hidden flex flex-col text-center justify-center gap-4 pb-4`}
         >
           <NavBarItems closeDrawer={closeDrawer} />
         </div>

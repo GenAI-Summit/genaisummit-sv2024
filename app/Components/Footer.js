@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import Icon from "./Icon";
-import styles from "../styles/footer.module.css";
 
 const Footer = () => {
   const socialMedia = [
@@ -72,26 +71,22 @@ const Footer = () => {
           <div className="text-white text-lg md:text-xl font-bold mb-1">
             Summit Info
           </div>
-          <div className={styles.content}>Nov 1 - Nov 3, 2024</div>
-          <div className={`${styles.content}`}>
-            <Link
-              className="hover:text-sky-500"
-              href="https://santaclaraconventioncenter.com/"
-              target="_blank"
-            >
-              Santa Clara Convention Center
-            </Link>
-          </div>
-          <div className={styles.content}>genaix@gptdao.ai</div>
-          <div className={`${styles.content}`}>
-            <Link
-              className="hover:text-sky-500 ease-in-out duration-300"
-              href="https://linktr.ee/gptdao"
-              target="_blank"
-            >
-              Contact us
-            </Link>
-          </div>
+          <div>Nov 1 - Nov 3, 2024</div>
+          <Link
+            className="hover:text-sky-500"
+            href="https://santaclaraconventioncenter.com/"
+            target="_blank"
+          >
+            Santa Clara Convention Center
+          </Link>
+          <div>genaix@gptdao.ai</div>
+          <Link
+            className="hover:text-sky-500 ease-in-out duration-300"
+            href="https://linktr.ee/gptdao"
+            target="_blank"
+          >
+            Contact us
+          </Link>
         </div>
         <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5">
           <div className="text-white text-lg md:text-xl font-bold mb-1">
@@ -116,7 +111,7 @@ const Footer = () => {
             and explore the future of generative AI together. Please contact us
             for more information.
           </span>
-          <div className={`${styles.content} ${styles.icons}`}>
+          <div className="flex gap-x-4">
             {socialMedia.map((item) => (
               <Link href={item.link} target="_blank" key={item.name}>
                 <Icon

@@ -16,3 +16,6 @@
  - [ ] color
  - [ ] improve speaker card styles
  - [ ] font
+ - [ ] counter
+ - [ ] social media
+ - [ ] drawer hook
