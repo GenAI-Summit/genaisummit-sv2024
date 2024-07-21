@@ -12,3 +12,7 @@
  - [ ] use backend for exhibitors
  - [ ] merge exhibitors and sponsors
  - [x] deploy test
+ - [ ] card abstraction
+ - [ ] color
+ - [ ] improve speaker card styles
+ - [ ] font
