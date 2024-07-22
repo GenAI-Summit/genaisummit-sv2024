@@ -11,7 +11,7 @@ const TicketBtn = () => {
 
   return (
     <button
-      className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded ease-in-out duration-300"
+      className="bg-btnPrimary hover:bg-btnHoverPrimary text-btnTextPrimary font-bold py-2 px-4 rounded ease-in-out duration-300"
       onClick={onBuyTickets}
     >
       Buy Tickets

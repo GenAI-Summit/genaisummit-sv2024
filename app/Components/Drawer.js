@@ -10,7 +10,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
     >
       <div
         className={
-          " w-screen max-w-lg right-0 absolute bg-white h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
+          " w-screen max-w-lg right-0 absolute bg-cardBgPrimary h-full shadow-xl delay-400 duration-500 ease-in-out transition-all transform  " +
           (isDrawerOpen ? " translate-x-0 " : " translate-x-full ")
         }
       >

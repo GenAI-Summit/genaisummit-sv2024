@@ -6,40 +6,41 @@ import { usePathname } from "next/navigation";
 
 const NavBar = ({ closeDrawer }) => {
   const pathname = usePathname();
-  const hoverEffect = "hover:text-black transition duration-300 ease-in-out";
+  const hoverEffect =
+    "hover:text-navbarActive transition duration-300 ease-in-out";
 
   return (
     <>
       <Link
-        className={`${pathname === "/" || pathname === "/home" ? "text-black" : ""} ${hoverEffect}`}
+        className={`${pathname === "/" || pathname === "/home" ? "text-barActive" : ""} ${hoverEffect}`}
         href="/"
         onClick={closeDrawer}
       >
         HOME
       </Link>
       <Link
-        className={`${pathname === "/partners" ? "text-black" : ""} ${hoverEffect}`}
+        className={`${pathname === "/partners" ? "text-barActive" : ""} ${hoverEffect}`}
         href="/partners"
         onClick={closeDrawer}
       >
         PARTNERS
       </Link>
       <Link
-        className={`${pathname === "/speakers" ? "text-black" : ""} ${hoverEffect}`}
+        className={`${pathname === "/speakers" ? "text-barActive" : ""} ${hoverEffect}`}
         href="/speakers"
         onClick={closeDrawer}
       >
         SPEAKERS
       </Link>
       <Link
-        className={`${pathname === "/exhibitors" ? "text-black" : ""} ${hoverEffect}`}
+        className={`${pathname === "/exhibitors" ? "text-barActive" : ""} ${hoverEffect}`}
         href="/exhibitors"
         onClick={closeDrawer}
       >
         EXHIBITORS
       </Link>
       <Link
-        className={`${pathname === "/agenda" ? "text-black" : ""} ${hoverEffect}`}
+        className={`${pathname === "/agenda" ? "text-barActive" : ""} ${hoverEffect}`}
         href="/agenda"
         onClick={closeDrawer}
       >

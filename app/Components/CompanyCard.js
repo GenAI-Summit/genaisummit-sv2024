@@ -23,7 +23,7 @@ const CompanyCard = ({ type, company }) => {
   return (
     <>
       <div
-        className="w-full h-full bg-white cursor-pointer border-2 border-white ease-in-out duration-300 hover:border-sky-500 rounded-lg shadow-md"
+        className="w-full h-full bg-cardBgPrimary cursor-pointer border-2 border-cardBorder ease-in-out duration-300 hover:border-cardBorderHover rounded-lg shadow-md"
         onClick={openDrawer}
       >
         <Logo info={company} />
@@ -32,7 +32,7 @@ const CompanyCard = ({ type, company }) => {
         <CompanyDetail company={company} />
         <div>
           <span
-            className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
+            className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-cardBorderHover"
             onClick={onCompanyDetail}
           >
             About {company.name}

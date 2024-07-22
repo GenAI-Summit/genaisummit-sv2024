@@ -23,9 +23,7 @@ const SpeakerCard = ({ speaker }) => {
   return (
     <>
       <div
-        className={
-          "w-full h-auto group relative bg-white border-2 border-white cursor-pointer hover:border-sky-500 ease-in-out duration-300 overflow-hidden"
-        }
+        className="w-full h-auto group relative bg-cardBgPrimary text-cardTextPrimary border-2 border-cardBorder cursor-pointer hover:border-cardBorderHover ease-in-out duration-300 overflow-hidden"
         onClick={openDrawer}
       >
         <Image
@@ -35,10 +33,10 @@ const SpeakerCard = ({ speaker }) => {
           height={400}
           loading="lazy"
         />
-        <div className="absolute bottom-0 w-full bg-white bg-opacity-80 p-0.5 text-center transform group-hover:translate-y-full transition-transform duration-300 ease-in-out">
+        <div className="absolute bottom-0 w-full bg-white text-black bg-opacity-80 p-0.5 text-center transform group-hover:translate-y-full transition-transform duration-300 ease-in-out">
           <div className="font-bold">{speaker.name}</div>
         </div>
-        <div className="absolute bottom-0 w-full bg-white bg-opacity-80 p-0.5 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+        <div className="absolute bottom-0 w-full bg-white text-black bg-opacity-80 p-0.5 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
           {speaker.title && <div className="font-medium">{speaker.title}</div>}
           {speaker.company && (
             <div className="font-medium">@{speaker.company}</div>
@@ -49,7 +47,7 @@ const SpeakerCard = ({ speaker }) => {
         <SpeakerDetail speaker={speaker} />
         <div>
           <span
-            className="mt-2 cursor-pointer text-base font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-sky-500"
+            className="mt-2 cursor-pointer text-base font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-primary"
             onClick={onSpeakerDetail}
           >
             All Sessions by {speaker.name}
