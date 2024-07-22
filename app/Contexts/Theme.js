@@ -5,10 +5,15 @@ import React, { createContext, useState, useEffect } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState(() => {
+  const [theme, setTheme] = useState("theme1");
+
+  useEffect(() => {
     const savedTheme = localStorage.getItem("theme");
-    return savedTheme || "theme1";
-  });
+    if (savedTheme) {
+      setTheme(savedTheme);
+      applyTheme(savedTheme);
+    }
+  }, []);
 
   useEffect(() => {
     applyTheme(theme);
