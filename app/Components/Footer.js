@@ -41,7 +41,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-black text-gray-500">
+    <div className="flex flex-col bg-footerBg text-footerText">
       <div className="flex p-7 justify-between flex-wrap items-start">
         <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between items-center mt-5">
           <Link href="/" className="w-fit">
@@ -68,42 +68,49 @@ const Footer = () => {
           </Link>
         </div>
         <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5">
-          <div className="text-white text-lg md:text-xl font-bold mb-1">
+          <div className="text-footerTitle text-lg md:text-xl font-bold mb-1">
             Summit Info
           </div>
           <div>Nov 1 - Nov 3, 2024</div>
-          <Link
-            className="hover:text-sky-500"
-            href="https://santaclaraconventioncenter.com/"
-            target="_blank"
-          >
-            Santa Clara Convention Center
-          </Link>
+          <span>
+            <Link
+              className="hover:text-primary ease-in-out duration-300"
+              href="https://santaclaraconventioncenter.com/"
+              target="_blank"
+            >
+              Santa Clara Convention Center
+            </Link>
+          </span>
           <div>genaix@gptdao.ai</div>
-          <Link
-            className="hover:text-sky-500 ease-in-out duration-300"
-            href="https://linktr.ee/gptdao"
-            target="_blank"
-          >
-            Contact us
-          </Link>
+          <span>
+            <Link
+              className="hover:text-primary ease-in-out duration-300"
+              href="https://linktr.ee/gptdao"
+              target="_blank"
+            >
+              Contact us
+            </Link>
+          </span>
         </div>
         <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5">
-          <div className="text-white text-lg md:text-xl font-bold mb-1">
+          <div className="text-footerTitle text-lg md:text-xl font-bold mb-1">
             Quick Links
           </div>
           <div className="flex flex-col text-lg">
             {quickLinks.map((item) => (
-              <Link href={item.link} key={item.name}>
-                <span className="hover:text-sky-500 ease-in-out duration-300">
+              <span key={item.name}>
+                <Link
+                  href={item.link}
+                  className="hover:text-primary ease-in-out duration-300"
+                >
                   {item.name}
-                </span>
-              </Link>
+                </Link>
+              </span>
             ))}
           </div>
         </div>
         <div className="w-full md:w-[35%] flex flex-col justify-center mt-5">
-          <div className="text-white text-lg md:text-xl font-bold mb-2">
+          <div className="text-footerTitle text-lg md:text-xl font-bold mb-2">
             Stay Connected
           </div>
           <span className="text-sm mb-2">
@@ -124,16 +131,16 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-gray-700">
+      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-footerBorder">
         <div className="text-sm">
           <span className="text-sm">
-            <Link href="/privacy" className="hover:text-sky-500">
+            <Link href="/privacy" className="hover:text-primary">
               Privacy Policy
             </Link>
           </span>
           <span className="text-sm"> | </span>
           <span className="text-sm">
-            <Link href="/terms" className="hover:text-sky-500">
+            <Link href="/terms" className="hover:text-primary">
               Terms of Service
             </Link>
           </span>

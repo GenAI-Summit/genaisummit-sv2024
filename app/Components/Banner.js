@@ -12,14 +12,15 @@ const Banner = () => {
         className="z-10"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-900 via-gray-600 to-transparent opacity-70 z-20"></div>
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-white text-center p-6">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full text-bannerTextPrimary text-center p-6">
         <div className="mb-20">
-          <p className="text-2xl md:text-5xl font-bold mb-4 text-sky-400">
+          <p className="text-2xl md:text-5xl font-bold mb-4 text-bannerTextSecondary">
             #ALLAREAI
           </p>
           <p className="text-4xl md:text-7xl font-bold mb-4">GENAI SUMMIT</p>
           <p className="text-4xl md:text-7xl font-bold mb-4">
-            <span>Santa Clara</span> <span className="text-sky-400">2024</span>
+            <span>Santa Clara</span>{" "}
+            <span className="text-bannerTextSecondary">2024</span>
           </p>
         </div>
         <div>

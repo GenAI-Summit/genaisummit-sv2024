@@ -4,17 +4,19 @@ import Logo from "./Logo";
 const CompanyDetail = ({ company }) => {
   return (
     <div className="flex flex-col items-center">
-      <Link className="w-64 h-36 bg-white" href={company.url} target="_blank">
+      <Link className="w-64 h-36 bg-cardBg" href={company.url} target="_blank">
         <Logo info={company} />
       </Link>
       <Link
         href={company.url}
         target="_blank"
-        className="mt-4 text-2xl font-bold hover:text-sky-500 duration-300 ease-in-out"
+        className="mt-4 text-2xl font-bold hover:text-textPrimary duration-300 ease-in-out"
       >
         {company.name}
       </Link>
-      <div className="mt-4 text-left text-lg">{company.description}</div>
+      <div className="mt-4 text-left text-lg text-textSecondary">
+        {company.description}
+      </div>
     </div>
   );
 };

@@ -16,7 +16,7 @@ const Seminars = async () => {
             key={seminar.id}
             href={seminar.url}
             target="_blank"
-            className="w-full h-36 md:w-48 md:h-27 bg-white"
+            className="w-full h-36 md:w-48 md:h-27 bg-cardBg"
           >
             <Logo info={seminar} />
           </Link>
