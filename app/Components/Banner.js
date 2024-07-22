@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TicketBtn from "./TicketBtn";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 const Banner = () => {
   return (
@@ -34,6 +35,7 @@ const Banner = () => {
             <span className="font-bold">Nov 1 - Nov 3</span>
           </p>
           <TicketBtn />
+          <ThemeSwitcher />
         </div>
       </div>
     </div>

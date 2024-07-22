@@ -5,7 +5,7 @@ import { ThemeContext } from "../Contexts/Theme";
 
 const ThemeSwitcher = () => {
   const { theme, changeTheme } = useContext(ThemeContext);
-  const themeCnt = new Array(11).fill(0);
+  const themeCnt = new Array(20).fill(0);
 
   return (
     <select

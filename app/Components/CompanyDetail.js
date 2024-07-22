@@ -10,13 +10,11 @@ const CompanyDetail = ({ company }) => {
       <Link
         href={company.url}
         target="_blank"
-        className="mt-4 text-2xl font-bold hover:text-textPrimary duration-300 ease-in-out"
+        className="mt-4 text-2xl font-bold hover:text-primary duration-300 ease-in-out"
       >
         {company.name}
       </Link>
-      <div className="mt-4 text-left text-lg text-textSecondary">
-        {company.description}
-      </div>
+      <div className="mt-4 text-left text-lg">{company.description}</div>
     </div>
   );
 };
