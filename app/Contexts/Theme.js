@@ -11,8 +11,8 @@ export const ThemeProvider = ({ children }) => {
     const savedTheme = localStorage.getItem("theme");
     if (savedTheme) {
       setTheme(savedTheme);
-      applyTheme(savedTheme);
     }
+    applyTheme(savedTheme);
   }, []);
 
   const changeTheme = (newTheme) => {
