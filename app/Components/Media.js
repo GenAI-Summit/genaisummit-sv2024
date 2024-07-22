@@ -15,7 +15,7 @@ const Media = async () => {
             key={item.id}
             href={item.url}
             target="_blank"
-            className="w-full h-36 md:w-48 md:h-27 bg-cardBg cursor-pointer border-2 border-white ease-in-out duration-300 hover:border-sky-500 rounded-lg shadow-md"
+            className="w-full h-36 md:w-48 md:h-27 bg-cardBgPrimary cursor-pointer border-2 border-white ease-in-out duration-300 hover:border-sky-500 rounded-lg shadow-md"
           >
             <Logo info={item} />
           </Link>
