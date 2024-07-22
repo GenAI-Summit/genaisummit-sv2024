@@ -31,7 +31,7 @@ export const ThemeProvider = ({ children }) => {
         root.style.setProperty("--color-mainBg", "#f0f9ff");
         root.style.setProperty("--color-btnPrimary", "#0ea5e9");
         root.style.setProperty("--color-btnTextPrimary", "#ffffff");
-        root.style.setProperty("--color-btnHoverPrimary", "#ffffff");
+        root.style.setProperty("--color-btnHoverPrimary", "#0284c7");
         root.style.setProperty("--color-btnSecondary", "#38bdf8");
         root.style.setProperty("--color-btnTextSecondary", "#ffffff");
         root.style.setProperty("--color-btnHoverSecondary", "#ffffff");
