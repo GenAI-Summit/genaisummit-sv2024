@@ -387,6 +387,303 @@ export const ThemeProvider = ({ children }) => {
         root.style.setProperty("--color-footerText", "#ecf0f1");
         root.style.setProperty("--color-footerBorder", "#3498db");
         break;
+      case "theme12":
+        root.style.setProperty("--color-primary", "#4c6ef5"); // Soft Blue
+        root.style.setProperty("--color-secondary", "#74c0fc"); // Light Blue
+        root.style.setProperty("--color-accent", "#d0ebff"); // Very Light Blue
+        root.style.setProperty("--color-mainBg", "#e7f5ff"); // Pale Blue Background
+        root.style.setProperty("--color-btnPrimary", "#4c6ef5"); // Soft Blue Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#74c0fc"); // Light Blue Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#d0ebff"); // Very Light Blue Button
+        root.style.setProperty("--color-btnHoverSecondary", "#4c6ef5"); // Soft Blue Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#4c6ef5"); // Soft Blue Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#74c0fc"); // Light Blue Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#e7f5ff"); // Pale Blue Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#4c6ef5"); // Soft Blue Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#74c0fc"); // Light Blue Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#4c6ef5"); // Soft Blue Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#74c0fc"); // Light Blue Card Text
+        root.style.setProperty("--color-cardBorder", "#4c6ef5"); // Soft Blue Card Border
+        root.style.setProperty("--color-cardBorderHover", "#74c0fc"); // Light Blue Card Border Hover
+        root.style.setProperty("--color-footerBg", "#e7f5ff"); // Pale Blue Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#4c6ef5"); // Soft Blue Footer Text
+        root.style.setProperty("--color-footerBorder", "#74c0fc"); // Light Blue Footer Border
+        break;
+      case "theme13":
+        root.style.setProperty("--color-primary", "#20c997"); // Mint Green
+        root.style.setProperty("--color-secondary", "#38d9a9"); // Lighter Mint Green
+        root.style.setProperty("--color-accent", "#e6fcf5"); // Very Light Mint
+        root.style.setProperty("--color-mainBg", "#f4fdf8"); // Pale Mint Background
+        root.style.setProperty("--color-btnPrimary", "#20c997"); // Mint Green Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#38d9a9"); // Lighter Mint Green Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#e6fcf5"); // Very Light Mint Button
+        root.style.setProperty("--color-btnHoverSecondary", "#20c997"); // Mint Green Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#20c997"); // Mint Green Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#38d9a9"); // Lighter Mint Green Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#f4fdf8"); // Pale Mint Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#20c997"); // Mint Green Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#38d9a9"); // Lighter Mint Green Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#20c997"); // Mint Green Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#38d9a9"); // Lighter Mint Green Card Text
+        root.style.setProperty("--color-cardBorder", "#20c997"); // Mint Green Card Border
+        root.style.setProperty("--color-cardBorderHover", "#38d9a9"); // Lighter Mint Green Card Border Hover
+        root.style.setProperty("--color-footerBg", "#f4fdf8"); // Pale Mint Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#20c997"); // Mint Green Footer Text
+        root.style.setProperty("--color-footerBorder", "#38d9a9"); // Lighter Mint Green Footer Border
+        break;
+      case "theme14":
+        root.style.setProperty("--color-primary", "#b197fc"); // Soft Lavender
+        root.style.setProperty("--color-secondary", "#d0bfff"); // Lighter Lavender
+        root.style.setProperty("--color-accent", "#f3f0ff"); // Very Light Lavender
+        root.style.setProperty("--color-mainBg", "#f8f9fc"); // Pale Lavender Background
+        root.style.setProperty("--color-btnPrimary", "#b197fc"); // Soft Lavender Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#d0bfff"); // Lighter Lavender Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#f3f0ff"); // Very Light Lavender Button
+        root.style.setProperty("--color-btnHoverSecondary", "#b197fc"); // Soft Lavender Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#b197fc"); // Soft Lavender Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#d0bfff"); // Lighter Lavender Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#f8f9fc"); // Pale Lavender Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#b197fc"); // Soft Lavender Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#d0bfff"); // Lighter Lavender Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#b197fc"); // Soft Lavender Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#d0bfff"); // Lighter Lavender Card Text
+        root.style.setProperty("--color-cardBorder", "#b197fc"); // Soft Lavender Card Border
+        root.style.setProperty("--color-cardBorderHover", "#d0bfff"); // Lighter Lavender Card Border Hover
+        root.style.setProperty("--color-footerBg", "#f8f9fc"); // Pale Lavender Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#b197fc"); // Soft Lavender Footer Text
+        root.style.setProperty("--color-footerBorder", "#d0bfff"); // Lighter Lavender Footer Border
+        break;
+      case "theme15":
+        root.style.setProperty("--color-primary", "#ff6b6b"); // Light Coral
+        root.style.setProperty("--color-secondary", "#ff8787"); // Soft Pink
+        root.style.setProperty("--color-accent", "#ffe3e3"); // Very Light Pink
+        root.style.setProperty("--color-mainBg", "#fff5f5"); // Pale Pink Background
+        root.style.setProperty("--color-btnPrimary", "#ff6b6b"); // Light Coral Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#ff8787"); // Soft Pink Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#ffe3e3"); // Very Light Pink Button
+        root.style.setProperty("--color-btnHoverSecondary", "#ff6b6b"); // Light Coral Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#ff6b6b"); // Light Coral Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#ff8787"); // Soft Pink Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#fff5f5"); // Pale Pink Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#ff6b6b"); // Light Coral Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#ff8787"); // Soft Pink Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#ff6b6b"); // Light Coral Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#ff8787"); // Soft Pink Card Text
+        root.style.setProperty("--color-cardBorder", "#ff6b6b"); // Light Coral Card Border
+        root.style.setProperty("--color-cardBorderHover", "#ff8787"); // Soft Pink Card Border Hover
+        root.style.setProperty("--color-footerBg", "#fff5f5"); // Pale Pink Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#ff6b6b"); // Light Coral Footer Text
+        root.style.setProperty("--color-footerBorder", "#ff8787"); // Soft Pink Footer Border
+        break;
+      case "theme16":
+        root.style.setProperty("--color-primary", "#00b4d8"); // Aqua Blue
+        root.style.setProperty("--color-secondary", "#90e0ef"); // Light Aqua
+        root.style.setProperty("--color-accent", "#caf0f8"); // Very Light Aqua
+        root.style.setProperty("--color-mainBg", "#e0fbfc"); // Pale Aqua Background
+        root.style.setProperty("--color-btnPrimary", "#00b4d8"); // Aqua Blue Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#90e0ef"); // Light Aqua Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#caf0f8"); // Very Light Aqua Button
+        root.style.setProperty("--color-btnHoverSecondary", "#00b4d8"); // Aqua Blue Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#00b4d8"); // Aqua Blue Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#90e0ef"); // Light Aqua Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#e0fbfc"); // Pale Aqua Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#00b4d8"); // Aqua Blue Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#90e0ef"); // Light Aqua Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#00b4d8"); // Aqua Blue Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#90e0ef"); // Light Aqua Card Text
+        root.style.setProperty("--color-cardBorder", "#00b4d8"); // Aqua Blue Card Border
+        root.style.setProperty("--color-cardBorderHover", "#90e0ef"); // Light Aqua Card Border Hover
+        root.style.setProperty("--color-footerBg", "#e0fbfc"); // Pale Aqua Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#00b4d8"); // Aqua Blue Footer Text
+        root.style.setProperty("--color-footerBorder", "#90e0ef"); // Light Aqua Footer Border
+        break;
+      case "theme17":
+        root.style.setProperty("--color-primary", "#ff8c00"); // Vivid Orange
+        root.style.setProperty("--color-secondary", "#ffa500"); // Bright Orange
+        root.style.setProperty("--color-accent", "#ffd700"); // Gold
+        root.style.setProperty("--color-mainBg", "#fffacd"); // Light Golden Background
+        root.style.setProperty("--color-btnPrimary", "#ff8c00"); // Vivid Orange Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#ffa500"); // Bright Orange Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#ffd700"); // Gold Button
+        root.style.setProperty("--color-btnHoverSecondary", "#ff8c00"); // Vivid Orange Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#ff8c00"); // Vivid Orange Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#ffa500"); // Bright Orange Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#fffacd"); // Light Golden Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#ff8c00"); // Vivid Orange Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#ffa500"); // Bright Orange Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#ff8c00"); // Vivid Orange Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#ffa500"); // Bright Orange Card Text
+        root.style.setProperty("--color-cardBorder", "#ff8c00"); // Vivid Orange Card Border
+        root.style.setProperty("--color-cardBorderHover", "#ffa500"); // Bright Orange Card Border Hover
+        root.style.setProperty("--color-footerBg", "#fffacd"); // Light Golden Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#ff8c00"); // Vivid Orange Footer Text
+        root.style.setProperty("--color-footerBorder", "#ffa500"); // Bright Orange Footer Border
+        break;
+      case "theme18":
+        root.style.setProperty("--color-primary", "#00aaff"); // Frost Blue
+        root.style.setProperty("--color-secondary", "#66ccff"); // Light Frost Blue
+        root.style.setProperty("--color-accent", "#cceeff"); // Very Light Frost Blue
+        root.style.setProperty("--color-mainBg", "#f0faff"); // Pale Frost Blue Background
+        root.style.setProperty("--color-btnPrimary", "#00aaff"); // Frost Blue Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#66ccff"); // Light Frost Blue Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#cceeff"); // Very Light Frost Blue Button
+        root.style.setProperty("--color-btnHoverSecondary", "#00aaff"); // Frost Blue Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#00aaff"); // Frost Blue Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#66ccff"); // Light Frost Blue Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#f0faff"); // Pale Frost Blue Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#00aaff"); // Frost Blue Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#66ccff"); // Light Frost Blue Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#00aaff"); // Frost Blue Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#66ccff"); // Light Frost Blue Card Text
+        root.style.setProperty("--color-cardBorder", "#00aaff"); // Frost Blue Card Border
+        root.style.setProperty("--color-cardBorderHover", "#66ccff"); // Light Frost Blue Card Border Hover
+        root.style.setProperty("--color-footerBg", "#f0faff"); // Pale Frost Blue Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#00aaff"); // Frost Blue Footer Text
+        root.style.setProperty("--color-footerBorder", "#66ccff"); // Light Frost Blue Footer Border
+        break;
+      case "theme19":
+        root.style.setProperty("--color-primary", "#ff7e5f"); // Coral
+        root.style.setProperty("--color-secondary", "#feb47b"); // Soft Coral
+        root.style.setProperty("--color-accent", "#ffe1c4"); // Very Light Coral
+        root.style.setProperty("--color-mainBg", "#fff5eb"); // Pale Coral Background
+        root.style.setProperty("--color-btnPrimary", "#ff7e5f"); // Coral Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#feb47b"); // Soft Coral Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#ffe1c4"); // Very Light Coral Button
+        root.style.setProperty("--color-btnHoverSecondary", "#ff7e5f"); // Coral Button Hover
+        root.style.setProperty("--color-sectionTitle", "#212529"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#ff7e5f"); // Coral Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#212529"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#feb47b"); // Soft Coral Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#fff5eb"); // Pale Coral Navbar Background
+        root.style.setProperty("--color-navbarText", "#212529"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#ff7e5f"); // Coral Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#feb47b"); // Soft Coral Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#212529"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#ff7e5f"); // Coral Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#212529"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#feb47b"); // Soft Coral Card Text
+        root.style.setProperty("--color-cardBorder", "#ff7e5f"); // Coral Card Border
+        root.style.setProperty("--color-cardBorderHover", "#feb47b"); // Soft Coral Card Border Hover
+        root.style.setProperty("--color-footerBg", "#fff5eb"); // Pale Coral Footer Background
+        root.style.setProperty("--color-footerTitle", "#212529"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#ff7e5f"); // Coral Footer Text
+        root.style.setProperty("--color-footerBorder", "#feb47b"); // Soft Coral Footer Border
+        break;
+      case "theme20":
+        root.style.setProperty("--color-primary", "#ff4e50"); // Vivid Red
+        root.style.setProperty("--color-secondary", "#fc913a"); // Bright Orange
+        root.style.setProperty("--color-accent", "#f9d423"); // Bright Yellow
+        root.style.setProperty("--color-mainBg", "#ffffff"); // White Background
+        root.style.setProperty("--color-btnPrimary", "#ff4e50"); // Vivid Red Button
+        root.style.setProperty("--color-btnTextPrimary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnHoverPrimary", "#fc913a"); // Bright Orange Button Hover
+        root.style.setProperty("--color-btnTextSecondary", "#ffffff"); // White Button Text
+        root.style.setProperty("--color-btnSecondary", "#f9d423"); // Bright Yellow Button
+        root.style.setProperty("--color-btnHoverSecondary", "#ff4e50"); // Vivid Red Button Hover
+        root.style.setProperty("--color-sectionTitle", "#2c3e50"); // Dark Gray Section Title
+        root.style.setProperty("--color-sectionSubtitle", "#fc913a"); // Bright Orange Section Subtitle
+        root.style.setProperty("--color-textPrimary", "#2c3e50"); // Dark Gray Text
+        root.style.setProperty("--color-textSecondary", "#f9d423"); // Bright Yellow Text
+        root.style.setProperty("--color-textInPrimary", "#ffffff"); // White Text in Primary
+        root.style.setProperty("--color-navbarBg", "#ffffff"); // White Navbar Background
+        root.style.setProperty("--color-navbarText", "#2c3e50"); // Dark Gray Navbar Text
+        root.style.setProperty("--color-navbarActive", "#ff4e50"); // Vivid Red Active Navbar Item
+        root.style.setProperty("--color-navbarBorder", "#fc913a"); // Bright Orange Navbar Border
+        root.style.setProperty("--color-bannerTextPrimary", "#2c3e50"); // Dark Gray Banner Text
+        root.style.setProperty("--color-bannerTextSecondary", "#ff4e50"); // Vivid Red Banner Text
+        root.style.setProperty("--color-cardBgPrimary", "#ffffff"); // White Card Background
+        root.style.setProperty("--color-cardBgSecondary", "#f8f9fa"); // Light Gray Card Background
+        root.style.setProperty("--color-cardTextPrimary", "#2c3e50"); // Dark Gray Card Text
+        root.style.setProperty("--color-cardTextSecondary", "#fc913a"); // Bright Orange Card Text
+        root.style.setProperty("--color-cardBorder", "#ff4e50"); // Vivid Red Card Border
+        root.style.setProperty("--color-cardBorderHover", "#fc913a"); // Bright Orange Card Border Hover
+        root.style.setProperty("--color-footerBg", "#ffffff"); // White Footer Background
+        root.style.setProperty("--color-footerTitle", "#2c3e50"); // Dark Gray Footer Title
+        root.style.setProperty("--color-footerText", "#ff4e50"); // Vivid Red Footer Text
+        root.style.setProperty("--color-footerBorder", "#fc913a"); // Bright Orange Footer Border
+        break;
     }
   };
 

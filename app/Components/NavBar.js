@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Icon from "./Icon";
 import NavBarItems from "./NavBarItems";
 import TicketBtn from "./TicketBtn";
-import ThemeSwitcher from "./ThemeSwitcher";
 import { useRouter } from "next/navigation";
 
 const NavBar = () => {
@@ -45,7 +44,6 @@ const NavBar = () => {
         </div>
         <NavBarItems />
         <TicketBtn />
-        <ThemeSwitcher />
       </div>
 
       <div className="fixed top-0 px-4 py-2 w-full bg-navbarBg text-navbarText font-semibold flex flex-col items-center text-center md:hidden z-40">
