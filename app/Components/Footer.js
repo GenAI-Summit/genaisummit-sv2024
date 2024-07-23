@@ -41,7 +41,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-footerBg text-footerText">
+    <div className="flex flex-col bg-color5 text-color7">
       <div className="flex p-7 justify-between flex-wrap items-start">
         <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between items-center mt-5">
           <Link href="/" className="w-fit">
@@ -68,13 +68,13 @@ const Footer = () => {
           </Link>
         </div>
         <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5">
-          <div className="text-footerTitle text-lg md:text-xl font-bold mb-1">
+          <div className="text-color1 text-lg md:text-xl font-bold mb-1">
             Summit Info
           </div>
           <div>Nov 1 - Nov 3, 2024</div>
           <span>
             <Link
-              className="hover:text-primary ease-in-out duration-300"
+              className="hover:text-color1 ease-in-out duration-300"
               href="https://santaclaraconventioncenter.com/"
               target="_blank"
             >
@@ -84,7 +84,7 @@ const Footer = () => {
           <div>genaix@gptdao.ai</div>
           <span>
             <Link
-              className="hover:text-primary ease-in-out duration-300"
+              className="hover:text-color1 ease-in-out duration-300"
               href="https://linktr.ee/gptdao"
               target="_blank"
             >
@@ -93,7 +93,7 @@ const Footer = () => {
           </span>
         </div>
         <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5">
-          <div className="text-footerTitle text-lg md:text-xl font-bold mb-1">
+          <div className="text-color1 text-lg md:text-xl font-bold mb-1">
             Quick Links
           </div>
           <div className="flex flex-col text-lg">
@@ -101,7 +101,7 @@ const Footer = () => {
               <span key={item.name}>
                 <Link
                   href={item.link}
-                  className="hover:text-primary ease-in-out duration-300"
+                  className="hover:text-color1 ease-in-out duration-300"
                 >
                   {item.name}
                 </Link>
@@ -110,7 +110,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="w-full md:w-[35%] flex flex-col justify-center mt-5">
-          <div className="text-footerTitle text-lg md:text-xl font-bold mb-2">
+          <div className="text-color1 text-lg md:text-xl font-bold mb-2">
             Stay Connected
           </div>
           <span className="text-sm mb-2">
@@ -131,16 +131,22 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-footerBorder">
+      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-color7">
         <div className="text-sm">
           <span className="text-sm">
-            <Link href="/privacy" className="hover:text-primary">
+            <Link
+              href="/privacy"
+              className="hover:text-color1 ease-in-out duration-300"
+            >
               Privacy Policy
             </Link>
           </span>
           <span className="text-sm"> | </span>
           <span className="text-sm">
-            <Link href="/terms" className="hover:text-primary">
+            <Link
+              href="/terms"
+              className="hover:text-color1 ease-in-out duration-300"
+            >
               Terms of Service
             </Link>
           </span>

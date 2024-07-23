@@ -6,41 +6,41 @@ import { usePathname } from "next/navigation";
 
 const NavBar = ({ closeDrawer }) => {
   const pathname = usePathname();
-  const hoverEffect =
-    "hover:text-navbarActive transition duration-300 ease-in-out";
+  const hoverEffect = "hover:text-color1 transition duration-300 ease-in-out";
+  const activeEffect = "text-color1";
 
   return (
     <>
       <Link
-        className={`${pathname === "/" || pathname === "/home" ? "text-barActive" : ""} ${hoverEffect}`}
+        className={`${pathname === "/" || pathname === "/home" ? activeEffect : ""} ${hoverEffect}`}
         href="/"
         onClick={closeDrawer}
       >
         HOME
       </Link>
       <Link
-        className={`${pathname === "/partners" ? "text-barActive" : ""} ${hoverEffect}`}
+        className={`${pathname === "/partners" ? activeEffect : ""} ${hoverEffect}`}
         href="/partners"
         onClick={closeDrawer}
       >
         PARTNERS
       </Link>
       <Link
-        className={`${pathname === "/speakers" ? "text-barActive" : ""} ${hoverEffect}`}
+        className={`${pathname === "/speakers" ? activeEffect : ""} ${hoverEffect}`}
         href="/speakers"
         onClick={closeDrawer}
       >
         SPEAKERS
       </Link>
       <Link
-        className={`${pathname === "/exhibitors" ? "text-barActive" : ""} ${hoverEffect}`}
+        className={`${pathname === "/exhibitors" ? activeEffect : ""} ${hoverEffect}`}
         href="/exhibitors"
         onClick={closeDrawer}
       >
         EXHIBITORS
       </Link>
       <Link
-        className={`${pathname === "/agenda" ? "text-barActive" : ""} ${hoverEffect}`}
+        className={`${pathname === "/agenda" ? activeEffect : ""} ${hoverEffect}`}
         href="/agenda"
         onClick={closeDrawer}
       >

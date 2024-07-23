@@ -23,7 +23,7 @@ const SpeakerCard = ({ speaker }) => {
   return (
     <>
       <div
-        className="w-full h-auto group relative bg-cardBgPrimary text-cardTextPrimary border-2 border-cardBorder cursor-pointer hover:border-cardBorderHover ease-in-out duration-300 overflow-hidden"
+        className="w-full h-auto group relative bg-color7 text-color5 border-2 border-color1 cursor-pointer hover:border-color2 ease-in-out duration-300 overflow-hidden"
         onClick={openDrawer}
       >
         <Image
@@ -47,7 +47,7 @@ const SpeakerCard = ({ speaker }) => {
         <SpeakerDetail speaker={speaker} />
         <div>
           <span
-            className="mt-2 cursor-pointer text-base font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-primary"
+            className="mt-2 cursor-pointer text-base font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color1"
             onClick={onSpeakerDetail}
           >
             All Sessions by {speaker.name}

@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "./Contexts/Theme";
+// import { ThemeProvider } from "./Contexts/Theme";
 import Navbar from "./Components/NavBar";
 import Footer from "./Components/Footer";
 import FloatFotter from "./Components/FloatFooter";
@@ -17,14 +17,12 @@ const RootLayout = ({ children }) => {
     <html lang="en">
       <link rel="icon" href="/images/icons/favicon.ico" sizes="any" />
       <body className={inter.className}>
-        <ThemeProvider>
-          <Navbar />
-          <div className="pt-10 pb-5 flex flex-col items-center text-center bg-mainBg text-textPrimary">
-            {children}
-          </div>
-          <FloatFotter />
-          <Footer />
-        </ThemeProvider>
+        <Navbar />
+        <div className="pt-10 pb-5 flex flex-col items-center text-center bg-color3">
+          {children}
+        </div>
+        <FloatFotter />
+        <Footer />
       </body>
     </html>
   );

@@ -4,13 +4,13 @@ import TicketBtn from "./TicketBtn";
 const IndexTicketCard = ({ ticket }) => {
   return (
     <CardLayout>
-      <div className="h-full w-full flex flex-col items-center justify-center text-center text-cardTextPrimary gap-4 p-4 border border-cardBorder rounded-lg shadow-sm">
-        <h1 className="text-2xl font-bold">{ticket.name}</h1>
-        <p className="text-base text-cardTextSecondary">{ticket.description}</p>
+      <div className="h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4 border border-color4 rounded-lg shadow-sm">
+        <h1 className="text-2xl font-bold text-color1">{ticket.name}</h1>
+        <p className="text-base">{ticket.description}</p>
         <div className="mt-auto">
           {" "}
-          <p className="text-xl font-bold">${ticket.price}</p>
-          <p className="text-sm text-cardTextSecondary">
+          <p className="text-2xl font-bold">${ticket.price}</p>
+          <p className="text-sm">
             <span className="line-through">${ticket.originalPrice}</span>{" "}
             <span>{ticket.saveText}</span>
           </p>
