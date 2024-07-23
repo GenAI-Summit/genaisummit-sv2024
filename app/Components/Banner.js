@@ -19,7 +19,8 @@ const Banner = () => {
           </p>
           <p className="text-4xl md:text-7xl font-bold mb-4">GENAI SUMMIT</p>
           <p className="text-4xl md:text-7xl font-bold mb-4">
-            <span>Santa Clara</span> <span className="text-color1">2024</span>
+            <span>Silicon Valley</span>{" "}
+            <span className="text-color1">2024</span>
           </p>
         </div>
         <div>
