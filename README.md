@@ -13,7 +13,7 @@
  - [ ] merge exhibitors and sponsors
  - [x] deploy test
  - [ ] card abstraction
- - [ ] color
+ - [x] color
  - [ ] improve speaker card styles
  - [ ] font
  - [ ] counter

@@ -1,8 +1,10 @@
+import Icon from "./Icon";
+
 const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
   return (
     <div
       className={
-        " fixed overflow-hidden bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out z-50 " +
+        " fixed overflow-hidden bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out z-50 text-color5 " +
         (isDrawerOpen
           ? " transition-opacity opacity-100 duration-500 translate-x-0 "
           : " transition-all delay-500 opacity-0 translate-x-full ")
@@ -16,10 +18,15 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
       >
         <div className="relative w-screen max-w-lg p-7 flex flex-col space-y-6 overflow-y-scroll h-full">
           <button
-            className="fixed top-1 left-2 text-xl z-50 border-2 border-black rounded-full p-1"
+            className="fixed top-1 left-2 text-xl z-50"
             onClick={closeDrawer}
           >
-            X
+            <Icon
+              src="/images/icons/close.png"
+              alt="close"
+              width="40"
+              height="40"
+            />
           </button>
           {children}
         </div>
