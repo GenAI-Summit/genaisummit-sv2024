@@ -3,7 +3,7 @@ import Logo from "./Logo";
 
 const CompanyDetail = ({ company }) => {
   return (
-    <div className="flex flex-col items-center px-8 py-4">
+    <div className="flex flex-col items-center">
       <Link className="w-64 h-36 bg-cardBg" href={company.url} target="_blank">
         <Logo info={company} />
       </Link>
@@ -14,9 +14,7 @@ const CompanyDetail = ({ company }) => {
       >
         {company.name}
       </Link>
-      <div className="mt-4 text-left text-xl leading-9 ">
-        {company.description}
-      </div>
+      <div className="mt-4 text-left text-lg">{company.description}</div>
     </div>
   );
 };
