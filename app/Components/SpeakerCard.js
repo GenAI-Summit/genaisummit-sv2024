@@ -23,7 +23,7 @@ const SpeakerCard = ({ speaker }) => {
   return (
     <>
       <div
-        className="w-full h-auto group relative bg-color7 text-color5 border-2 border-color1 cursor-pointer hover:border-color2 ease-in-out duration-300 overflow-hidden"
+        className="w-full h-auto group relative bg-color7 text-color5 border-2 border-color3 cursor-pointer hover:border-color5 ease-in-out duration-300 overflow-hidden"
         onClick={openDrawer}
       >
         <Image
@@ -33,10 +33,10 @@ const SpeakerCard = ({ speaker }) => {
           height={400}
           loading="lazy"
         />
-        <div className="absolute bottom-0 w-full bg-white text-black bg-opacity-80 p-0.5 text-center transform group-hover:translate-y-full transition-transform duration-300 ease-in-out">
+        <div className="absolute bottom-0 w-full bg-color3 bg-opacity-80 p-0.5 text-center transform group-hover:translate-y-full transition-transform duration-300 ease-in-out">
           <div className="font-bold">{speaker.name}</div>
         </div>
-        <div className="absolute bottom-0 w-full bg-white text-black bg-opacity-80 p-0.5 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
+        <div className="absolute bottom-0 w-full bg-color5 text-color3 bg-opacity-80 p-0.5 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
           {speaker.title && <div className="font-medium">{speaker.title}</div>}
           {speaker.company && (
             <div className="font-medium">@{speaker.company}</div>
