@@ -5,7 +5,7 @@ import Icon from "./Icon";
 const SpeakerDetail = ({ speaker }) => {
   return (
     <>
-      <div className="flex flex-col items-center px-8 py-4">
+      <div className="flex flex-col items-center">
         <div className="flex items-center justify-start w-full">
           <Image
             src={speaker.image}
@@ -56,7 +56,7 @@ const SpeakerDetail = ({ speaker }) => {
             </div>
           </div>
         </div>
-        <div className="mt-4 text-left text-xl leading-9">{speaker.bio}</div>
+        <div className="mt-4 text-left text-lg">{speaker.bio}</div>
       </div>
     </>
   );
