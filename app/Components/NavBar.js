@@ -60,12 +60,21 @@ const NavBar = () => {
             className="cursor-pointer hover:bg-color3 hover:rounded-lg duration-300"
             onClick={handleClickDrawer}
           >
-            <Icon
-              src="/images/icons/drawer.png"
-              alt="drawer"
-              width="40"
-              height="40"
-            />
+            {isMenuOpen ? (
+              <Icon
+                src="/images/icons/down.png"
+                alt="close"
+                width="40"
+                height="40"
+              />
+            ) : (
+              <Icon
+                src="/images/icons/left.png"
+                alt="drawer"
+                width="40"
+                height="40"
+              />
+            )}
           </button>
         </div>
         <div
