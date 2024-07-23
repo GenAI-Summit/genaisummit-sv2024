@@ -8,7 +8,7 @@ const ShowMore = ({ target, text = "Show More" }) => {
   };
   return (
     <button
-      className="bg-btnPrimary hover:bg-btnHoverPrimary text-btnTextPrimary font-bold py-2 px-4 rounded ease-in-out duration-300"
+      className="bg-color1 hover:bg-color2 text-color7 font-bold py-2 px-4 rounded ease-in-out duration-300"
       onClick={onClick}
     >
       {text}

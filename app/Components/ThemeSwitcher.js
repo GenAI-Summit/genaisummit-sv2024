@@ -1,3 +1,4 @@
+/*
 "use client";
 
 import React, { useContext } from "react";
@@ -23,3 +24,4 @@ const ThemeSwitcher = () => {
 };
 
 export default ThemeSwitcher;
+*/

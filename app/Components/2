@@ -23,7 +23,7 @@ const CompanyCard = ({ type, company }) => {
   return (
     <>
       <div
-        className="w-full h-full bg-color7 cursor-pointer border-2 border-color7 ease-in-out duration-300 hover:border-color1 rounded-lg shadow-md"
+        className="w-full h-full bg-color7 p-8 cursor-pointer border-2 border-color7 ease-in-out duration-300 hover:border-color1 rounded-lg shadow-md"
         onClick={openDrawer}
       >
         <Logo info={company} />

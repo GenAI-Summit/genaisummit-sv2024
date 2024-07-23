@@ -16,23 +16,23 @@ const SessionCard = ({ session, showDesc = false }) => {
   return (
     <div className="w-full mt-4">
       <CardLayout>
-        <div className="flex flex-col items-start text-left">
+        <div className="flex flex-col items-start text-left text-color5">
           <div className="text-xl font-bold">
             <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
               <span>{session.type}</span>
             </span>
             <span
-              className="cursor-pointer hover:text-primary ease-in-out duration-300"
+              className="cursor-pointer hover:text-color1 ease-in-out duration-300"
               onClick={onSessionClick}
             >
               {session.topic}
             </span>
           </div>
-          <p className="text-cardTextSecondary mb-1">
+          <p className="mb-1">
             {session.start.toLocaleTimeString()} -{" "}
             {session.end.toLocaleTimeString()} | {session.date}
           </p>
-          <p className="text-cardTextSecondary mb-2">{session.room}</p>
+          <p className="mb-2">{session.room}</p>
           {session.moderators.length > 0 && (
             <div className="mb-2">
               {session.moderators.length > 1 ? (
@@ -66,18 +66,12 @@ const SessionCard = ({ session, showDesc = false }) => {
                       <SpeakerCard key={speaker.id} speaker={speaker} />
                     </div>
                     <div className="flex flex-col items-start justify-center">
-                      <p className="text-sm font-bold text-cardTextPrimary">
-                        {speaker.name}
-                      </p>
+                      <p className="text-sm font-bold">{speaker.name}</p>
                       {speaker.title && (
-                        <p className="text-xs text-cardTextSecondary">
-                          {speaker.title}
-                        </p>
+                        <p className="text-xs">{speaker.title}</p>
                       )}
                       {speaker.company && (
-                        <p className="text-xs text-cardTextSecondary">
-                          @{speaker.company}
-                        </p>
+                        <p className="text-xs">@{speaker.company}</p>
                       )}
                     </div>
                   </div>
