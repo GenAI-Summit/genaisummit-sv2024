@@ -15,7 +15,7 @@
  - [ ] card abstraction
  - [x] color
  - [ ] improve speaker card styles
- - [ ] font
+ - [x] font
  - [ ] counter
  - [ ] social media
  - [ ] drawer hook

@@ -3,7 +3,7 @@ import TicketBtn from "./TicketBtn";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden font-monaspace_neon">
+    <div className="relative w-full h-screen overflow-hidden">
       <Image
         src="/images/propaganda/santaclara_bg.webp"
         alt="Santa Clara Background"
