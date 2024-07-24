@@ -62,7 +62,7 @@ const SessionCard = ({ session, showDesc = false }) => {
               <div className="flex flex-wrap items-center gap-4">
                 {session.speakers.map((speaker) => (
                   <div key={speaker.id} className="flex gap-2 items-center">
-                    <div className="w-24 text-[8px]">
+                    <div className="w-24 text-[7px]">
                       <SpeakerCard key={speaker.id} speaker={speaker} />
                     </div>
                     <div className="flex flex-col items-start justify-center">

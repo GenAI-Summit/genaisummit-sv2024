@@ -3,7 +3,7 @@ import TicketBtn from "./TicketBtn";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden font-monaspace_neon">
       <Image
         src="/images/propaganda/santaclara_bg.webp"
         alt="Santa Clara Background"
@@ -13,7 +13,7 @@ const Banner = () => {
       />
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-900 via-gray-600 to-transparent opacity-70 z-20"></div>
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-color7 text-center p-6">
-        <div className="mb-20">
+        <div className="mb-20 font-monaspace_krypton">
           <p className="text-2xl md:text-5xl font-bold mb-4 text-color1">
             #ALLAREAI
           </p>
@@ -29,8 +29,9 @@ const Banner = () => {
           </p>
           <p className="text-xl md:text-2xl mb-6">
             <span className="font-bold">Santa Clara Convention Center</span>
-            {" | "}
-            <span className="font-bold">Santa Clara, CA</span> {" | "}
+            <span className="text-color1">|</span>
+            <span className="font-bold">Santa Clara, CA</span>
+            <span className="text-color1">|</span>
             <span className="font-bold">Nov 1 - Nov 3</span>
           </p>
           <TicketBtn />
