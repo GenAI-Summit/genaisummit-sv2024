@@ -22,7 +22,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
             onClick={closeDrawer}
           >
             <Icon
-              src="/images/icons/close.png"
+              src="/images/icons/close_with_border.svg"
               alt="close"
               width="40"
               height="40"
