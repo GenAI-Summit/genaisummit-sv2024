@@ -7,6 +7,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        monaspace_krypton: ["MonaspaceKrypton"],
+        monaspace_neon: ["MonaspaceNeon"],
+      },
       screens: {
         sm: "480px",
         md: "768px",
