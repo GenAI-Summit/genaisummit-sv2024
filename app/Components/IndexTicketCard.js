@@ -5,7 +5,7 @@ const IndexTicketCard = ({ ticket }) => {
   return (
     <CardLayout>
       <div className="h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4 border border-color4 rounded-lg shadow-sm">
-        <h1 className="text-xl font-bold text-color1">{ticket.name}</h1>
+        <h1 className="text-2xl font-bold text-color1">{ticket.name}</h1>
         <p className="text-base">{ticket.description}</p>
         <div className="mt-auto">
           {" "}
