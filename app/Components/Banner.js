@@ -29,9 +29,9 @@ const Banner = () => {
           </p>
           <p className="text-xl md:text-2xl mb-6">
             <span className="font-bold">Santa Clara Convention Center</span>
-            <span className="text-color1">|</span>
+            <span className="text-color1">{" | "}</span>
             <span className="font-bold">Santa Clara, CA</span>
-            <span className="text-color1">|</span>
+            <span className="text-color1">{" | "}</span>
             <span className="font-bold">Nov 1 - Nov 3</span>
           </p>
           <TicketBtn />
