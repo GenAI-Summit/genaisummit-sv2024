@@ -22,3 +22,4 @@
  - [ ] experience
  - [ ] chatbot
  - [x] navbar border
+ - [ ] session card badges colors
