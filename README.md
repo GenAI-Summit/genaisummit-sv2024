@@ -1,25 +1,25 @@
 # TODO
 
- - [ ] fix description in session page
+ - [x] navbar border
+ - [x] fix description in session page
  - [x] backend
- - [ ] add session to google calendar
  - [x] use speaker name in session
  - [x] pics in agenda
- - [ ] ticket page
  - [x] homepage
- - [ ] search bar
  - [x] company card styles
+ - [x] deploy test
+ - [x] color
+ - [x] font
+ - [ ] add session to google calendar
+ - [ ] ticket page
+ - [ ] search bar
  - [ ] use backend for exhibitors
  - [ ] merge exhibitors and sponsors
- - [x] deploy test
  - [ ] card abstraction
- - [x] color
  - [ ] improve speaker card styles
- - [x] font
  - [ ] counter
  - [ ] social media
  - [ ] drawer hook
  - [ ] experience
  - [ ] chatbot
- - [x] navbar border
  - [ ] session card badges colors
