@@ -18,7 +18,7 @@ const RootLayout = ({ children }) => {
       <link rel="icon" href="/images/icons/favicon.ico" sizes="any" />
       <body className={`${inter.className}`}>
         <Navbar />
-        <div className="pt-10 pb-5 flex flex-col items-center text-center bg-color3">
+        <div className="pb-5 flex flex-col items-center text-center bg-color3">
           {children}
         </div>
         <FloatFotter />
