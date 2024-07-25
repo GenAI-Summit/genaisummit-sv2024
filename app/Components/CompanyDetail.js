@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Logo from "./Logo";
 
+import parse from "html-react-parser";
+
 const CompanyDetail = ({ company }) => {
   return (
     <div className="flex flex-col items-center md:px-3 md:py-2 p-1">
@@ -15,7 +17,7 @@ const CompanyDetail = ({ company }) => {
         {company.name}
       </Link>
       <div className="mt-4 text-left text-lg md:text-xl">
-        {company.description}
+        {parse(company.description)}
       </div>
     </div>
   );

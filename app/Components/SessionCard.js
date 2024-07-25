@@ -5,6 +5,8 @@ import CardLayout from "../Layouts/CardLayout";
 import SpeakerCard from "./SpeakerCard";
 import { useRouter } from "next/navigation";
 
+import parse from "html-react-parser";
+
 const SessionCard = ({ session, showDesc = false }) => {
   const typeColorClass = getTypeColorClass(session.type);
   const router = useRouter();
@@ -79,7 +81,11 @@ const SessionCard = ({ session, showDesc = false }) => {
               </div>
             </div>
           )}
-          {showDesc && <span>{session.description}</span>}
+          {showDesc && (
+            <p className="mt-2 text-lg md:text-xl">
+              {parse(session.description)}
+            </p>
+          )}
         </div>
       </CardLayout>
     </div>
