@@ -5,7 +5,7 @@ import Icon from "./Icon";
 const SpeakerDetail = ({ speaker }) => {
   return (
     <>
-      <div className="flex flex-col items-center px-4 py-2">
+      <div className="flex flex-col items-center md:px-3 md:py-2 p-1">
         <div className="flex items-center justify-start w-full">
           <Image
             src={speaker.image}
