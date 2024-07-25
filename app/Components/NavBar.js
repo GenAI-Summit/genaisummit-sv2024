@@ -33,7 +33,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed top-0 px-4 py-2 w-full bg-color5 text-color7 font-semibold flex flex-row justify-between items-center hidden md:flex z-40 border-b-2 border-color1">
+      <div className="fixed top-0 px-4 py-2 w-full bg-color5 text-color7 font-semibold flex flex-row justify-around items-center hidden md:flex z-40 border-b-2 border-color1">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
             src="/images/icons/gptdao.png"
