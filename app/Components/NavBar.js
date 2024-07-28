@@ -36,10 +36,10 @@ const NavBar = () => {
       <div className="fixed top-0 px-4 py-2 w-full bg-color5 text-color7 font-semibold flex flex-row justify-around items-center hidden md:flex z-40 border-b-2 border-color1">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
-            src="/images/icons/gptdao.png"
+            src="/images/icons/gptdao3.png"
             alt="logo"
-            width="40"
-            height="40"
+            width="150"
+            height="150"
           />
         </div>
         <NavBarItems />
@@ -50,10 +50,10 @@ const NavBar = () => {
         <div className="w-full flex flex-row justify-between">
           <div className="cursor-pointer" onClick={onClickLogo}>
             <Icon
-              src="/images/icons/gptdao.png"
+              src="/images/icons/gptdao3.png"
               alt="GPTDAO Logo"
-              width="40"
-              height="40"
+              width="150"
+              height="150"
             />
           </div>
           <button className="cursor-pointer" onClick={handleClickDrawer}>

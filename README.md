@@ -11,7 +11,8 @@
  - [x] color
  - [x] font
  - [ ] add session to google calendar
- - [ ] ticket page
+ - [ ] ticket page height
+ - [ ] ticket page script
  - [ ] search bar
  - [ ] use backend for exhibitors
  - [ ] merge exhibitors and sponsors

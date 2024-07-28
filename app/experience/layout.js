@@ -1,5 +1,5 @@
 const ExperienceLayout = ({ children }) => {
-  return <div className="w-full h-full mt-10 px-5">{children}</div>;
+  return <div className="w-full h-full pt-20 px-5">{children}</div>;
 };
 
 export default ExperienceLayout;
