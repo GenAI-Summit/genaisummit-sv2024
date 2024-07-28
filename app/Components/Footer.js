@@ -47,7 +47,7 @@ const Footer = () => {
           <Link href="/" className="w-fit">
             <Icon
               className="icon"
-              src="/images/icons/gptdao2.png"
+              src="/images/icons/gptdao3.png"
               alt="GPTDAO Logo"
               width="200"
               height="200"
