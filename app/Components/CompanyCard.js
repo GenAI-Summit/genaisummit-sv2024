@@ -6,7 +6,7 @@ import Drawer from "./Drawer";
 import CompanyDetail from "./CompanyDetail";
 import { useRouter } from "next/navigation";
 
-const CompanyCard = ({ type, company }) => {
+const CompanyCard = ({ company }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
@@ -17,7 +17,7 @@ const CompanyCard = ({ type, company }) => {
     setIsDrawerOpen(false);
   };
   const onCompanyDetail = () => {
-    router.push(`/${type}/${company.id}`);
+    router.push(`/org/${company.id}`);
   };
 
   return (
