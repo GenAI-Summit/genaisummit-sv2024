@@ -15,7 +15,7 @@ const Banner = () => {
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-color7 text-center p-6 gap-y-10">
         <div className="font-monaspace_krypton">
           <p className="text-2xl md:text-5xl font-bold mb-4 text-color1">
-            #ALLAREAI
+            #AIAREALL
           </p>
           <p className="text-4xl md:text-7xl font-bold mb-4">GENAI SUMMIT</p>
           <p className="text-4xl md:text-7xl font-bold mb-4">
