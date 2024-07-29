@@ -10,12 +10,12 @@
  - [x] deploy test
  - [x] color
  - [x] font
+ - [x] use backend for exhibitors
+ - [x] merge exhibitors and sponsors
  - [ ] add session to google calendar
  - [ ] ticket page height
  - [ ] ticket page script
  - [ ] search bar
- - [ ] use backend for exhibitors
- - [ ] merge exhibitors and sponsors
  - [ ] card abstraction
  - [ ] improve speaker card styles
  - [ ] counter

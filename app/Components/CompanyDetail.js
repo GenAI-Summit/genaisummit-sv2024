@@ -9,14 +9,8 @@ const CompanyDetail = ({ company }) => {
       <Link className="w-64 h-36 bg-cardBg" href={company.url} target="_blank">
         <Logo info={company} />
       </Link>
-      <Link
-        href={company.url}
-        target="_blank"
-        className="mt-4 text-2xl font-bold hover:text-color1 duration-300 ease-in-out"
-      >
-        {company.name}
-      </Link>
-      <div className="mt-4 text-left text-lg md:text-xl">
+      <div className="mt-4 text-2xl font-bold">{company.name}</div>
+      <div className="mt-2 text-left text-lg md:text-xl">
         {parse(company.description)}
       </div>
     </div>
