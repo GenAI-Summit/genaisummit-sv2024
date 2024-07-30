@@ -1,6 +1,7 @@
 import SpeakerDetail from "../../Components/SpeakerDetail";
 import SessionCard from "../../Components/SessionCard";
 import SectionLayout from "../../Layouts/SectionLayout";
+import SubSectionLayout from "../../Layouts/SubSectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
 import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
 
@@ -17,11 +18,11 @@ const SpeakerPage = async ({ params }) => {
         </div>
       </SectionLayout>
       {sessions && sessions.length > 0 && (
-        <SectionLayout title="Sessions">
+        <SubSectionLayout title="Sessions" textAlign="text-left">
           {sessions.map((session) => (
             <SessionCard key={session.id} session={session} />
           ))}
-        </SectionLayout>
+        </SubSectionLayout>
       )}
     </div>
   );
