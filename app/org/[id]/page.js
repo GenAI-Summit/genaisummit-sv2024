@@ -7,7 +7,7 @@ const SponsorPage = async ({ params }) => {
   const org = await getOrgData(params.id);
   return (
     <div className="w-full">
-      <SectionLayout title="Sponsor">
+      <SectionLayout title="Sponsor" goBackFlag={true}>
         <div className="w-full mt-4">
           <CardLayout>
             <CompanyDetail company={org} />
