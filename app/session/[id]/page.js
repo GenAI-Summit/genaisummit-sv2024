@@ -6,7 +6,7 @@ const SessionPage = async ({ params }) => {
   const session = await getSessionData(params.id);
   return (
     <div className="w-full">
-      <SectionLayout title="Session">
+      <SectionLayout title="Session" goBackFlag={true}>
         <SessionCard session={session} showDesc={true} />
       </SectionLayout>
     </div>

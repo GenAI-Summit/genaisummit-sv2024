@@ -12,6 +12,7 @@
  - [x] font
  - [x] use backend for exhibitors
  - [x] merge exhibitors and sponsors
+ - [x] counter
  - [ ] previous events
  - [ ] add session to google calendar
  - [ ] ticket page height
@@ -19,7 +20,7 @@
  - [ ] search bar
  - [ ] card abstraction
  - [ ] improve speaker card styles
- - [ ] counter
+ - [ ] countdown
  - [ ] social media
  - [ ] drawer hook
  - [ ] experience

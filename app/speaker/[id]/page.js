@@ -10,7 +10,7 @@ const SpeakerPage = async ({ params }) => {
   const sessions = await getSessionsData(speaker.name);
   return (
     <div className="w-full">
-      <SectionLayout title="Speaker">
+      <SectionLayout title="Speaker" goBackFlag={true}>
         <div className="w-full mt-4">
           <CardLayout>
             <SpeakerDetail speaker={speaker} />

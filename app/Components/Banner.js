@@ -1,6 +1,7 @@
 import Image from "next/image";
 import TicketBtn from "./TicketBtn";
 import AddToCalendarBtn from "./AddToCalendarBtn";
+import NumberRoller from "./Counter/NumberRoller";
 
 const Banner = () => {
   return (
