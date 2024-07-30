@@ -26,3 +26,4 @@
  - [ ] chatbot
  - [ ] session card badges colors
  - [ ] back button
+ - [ ] go to top button
