@@ -1,5 +1,6 @@
 import Image from "next/image";
 import TicketBtn from "./TicketBtn";
+import AddToCalendarBtn from "./AddToCalendarBtn";
 
 const Banner = () => {
   return (
@@ -34,7 +35,10 @@ const Banner = () => {
             <span className="text-color1">{" | "}</span>
             <span className="font-bold">Nov 1 - Nov 3</span>
           </p>
+        </div>
+        <div className="flex flex-col md:flex-row gap-4">
           <TicketBtn />
+          <AddToCalendarBtn />
         </div>
       </div>
     </div>
