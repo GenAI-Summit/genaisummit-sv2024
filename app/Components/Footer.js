@@ -44,7 +44,7 @@ const Footer = () => {
     <div className="flex flex-col bg-color5 text-color7 border-t-2 border-color1">
       <div className="flex p-7 justify-between flex-wrap items-start">
         <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between items-center mt-5">
-          <Link href="/" className="w-fit">
+          <Link href="https://gptdao.ai" className="w-fit" target="_blank">
             <Icon
               className="icon"
               src="/images/icons/gptdao3.png"

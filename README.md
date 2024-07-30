@@ -12,6 +12,7 @@
  - [x] font
  - [x] use backend for exhibitors
  - [x] merge exhibitors and sponsors
+ - [ ] previous events
  - [ ] add session to google calendar
  - [ ] ticket page height
  - [ ] ticket page script
@@ -24,3 +25,4 @@
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
+ - [ ] back button
