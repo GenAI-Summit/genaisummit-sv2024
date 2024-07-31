@@ -1,7 +1,7 @@
 import Image from "next/image";
 import TicketBtn from "./TicketBtn";
 import AddToCalendarBtn from "./AddToCalendarBtn";
-import NumberRoller from "./Counter/NumberRoller";
+import CountdownTimer from "./Counter/CountdownTimer";
 
 const Banner = () => {
   return (
@@ -26,9 +26,9 @@ const Banner = () => {
           </p>
         </div>
         <div>
-          <p className="text-2xl md:text-6xl font-bold mb-4">
-            Discover What’s Next in AI
-          </p>
+          <div className="text-2xl md:text-6xl font-bold mb-4">
+            <CountdownTimer time="2024-11-01T00:00:00" />
+          </div>
           <p className="text-xl md:text-2xl mb-6">
             <span className="font-bold">Santa Clara Convention Center</span>
             <span className="text-color1">{" | "}</span>
