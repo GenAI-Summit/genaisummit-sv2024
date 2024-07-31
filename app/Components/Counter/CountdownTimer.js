@@ -25,15 +25,15 @@ const CountdownTimer = ({ time }) => {
   const sec = seconds % 60;
 
   return (
-    <div className="text-2xl md:text-6xl font-bold mb-4">
+    <div className="text-2xl md:text-6xl font-bold mb-4 font-monaspace_neon">
       <span className="text-color1">{days}</span>
-      <span className="text-lg md:text-2xl">Days </span>
+      <span className="text-lg md:text-2xl"> Days </span>
       <span className="text-color1">{hours}</span>
-      <span className="text-lg md:text-2xl">Hours </span>
+      <span className="text-lg md:text-2xl"> Hours </span>
       <span className="text-color1">{minutes}</span>
-      <span className="text-lg md:text-2xl">Minutes </span>
+      <span className="text-lg md:text-2xl"> Minutes </span>
       <span className="text-color1">{sec}</span>
-      <span className="text-lg md:text-2xl">Seconds</span>
+      <span className="text-lg md:text-2xl"> Seconds</span>
     </div>
   );
 };
