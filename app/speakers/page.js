@@ -29,7 +29,6 @@ const SpeakersPage = () => {
         speaker.company.toLowerCase().includes(lowerCaseText)
       );
     });
-    console.log(filteredSpeakers);
     setFilteredSpeakers(filteredSpeakers);
   };
   return (
