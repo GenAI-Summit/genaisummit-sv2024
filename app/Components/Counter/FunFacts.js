@@ -1,5 +1,5 @@
-import CounterCard from "./CounterCard";
 import Image from "next/image";
+import NumberRoller from "./NumberRoller";
 
 const FunFacts = () => {
   const data = [
@@ -36,7 +36,12 @@ const FunFacts = () => {
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
       {data.map((item, index) => (
         <div key={index} className="w-[35%] md:w-[18%] z-10">
-          <CounterCard title={item.title} start={item.start} end={item.end} />
+          <div className="text-4xl md:text-6xl text-color1 font-bold">
+            <NumberRoller start={item.start} end={item.end} />
+            <div className="text-2xl md:text-3xl text-color7 font-semibold">
+              {item.title}
+            </div>
+          </div>
         </div>
       ))}
     </div>
