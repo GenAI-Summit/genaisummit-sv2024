@@ -13,6 +13,8 @@
  - [x] use backend for exhibitors
  - [x] merge exhibitors and sponsors
  - [x] counter
+ - [x] back button
+ - [x] countdown
  - [ ] previous events
  - [ ] add session to google calendar
  - [ ] ticket page height
@@ -20,11 +22,9 @@
  - [ ] search bar
  - [ ] card abstraction
  - [ ] improve speaker card styles
- - [ ] countdown
  - [ ] social media
  - [ ] drawer hook
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
- - [ ] back button
  - [ ] go to top button
