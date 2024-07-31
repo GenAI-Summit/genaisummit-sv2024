@@ -30,8 +30,8 @@ const FunFacts = () => {
         src="/images/propaganda/funfacts_bg.png"
         alt="Fun Facts Background"
         quality={100}
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
       />
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
       {data.map((item, index) => (
