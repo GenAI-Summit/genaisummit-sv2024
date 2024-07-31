@@ -9,8 +9,8 @@ const Banner = () => {
       <Image
         src="/images/propaganda/santaclara_bg.webp"
         alt="Santa Clara Background"
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{ objectFit: "cover" }}
         className="z-10"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-900 via-gray-600 to-transparent opacity-70 z-20"></div>
