@@ -28,3 +28,5 @@
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
+ - [ ] 404 page
+ - [ ] subscribe

@@ -1,9 +1,9 @@
-const SearchBar = () => {
+const SearchBar = ({ onChange }) => {
   return (
-    <div>
-      <label htmlFor="search">Search:</label>
-      <input type="text" placeholder="Search..." />
-    </div>
+    <>
+      <label htmlFor="search">Search: </label>
+      <input type="text" onChange={onChange} maxLength="30" />
+    </>
   );
 };
 
