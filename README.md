@@ -15,6 +15,7 @@
  - [x] counter
  - [x] back button
  - [x] countdown
+ - [x] go to top button
  - [ ] previous events
  - [ ] add session to google calendar
  - [ ] ticket page height
@@ -27,4 +28,3 @@
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
- - [ ] go to top button
