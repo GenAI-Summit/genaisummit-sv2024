@@ -75,10 +75,27 @@ const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
   return (
     <div className="relative inline-block">
       <button
-        className="bg-color1 hover:bg-color2 text-color7 font-bold py-2 px-4 rounded ease-in-out duration-300"
+        className="bg-color1 hover:bg-color2 text-color7 font-bold py-2 px-4 rounded ease-in-out duration-300 inline-flex items-center"
         onClick={handleDialog}
       >
         Add to Calendar
+        <div className="inline-block">
+          {showOptions ? (
+            <Icon
+              src="/images/icons/triangle_down.svg"
+              alt="Close"
+              width={25}
+              height={25}
+            />
+          ) : (
+            <Icon
+              src="/images/icons/triangle_up.svg"
+              alt="Open"
+              width={25}
+              height={25}
+            />
+          )}
+        </div>
       </button>
       {showOptions && (
         <div className="absolute mt-3 bg-color7 rounded-full flex w-full flex justify-center gap-8">
