@@ -6,6 +6,8 @@ import FloatFotter from "./Components/FloatFooter";
 import ScrollToTop from "./Components/ScrollToTop";
 import "./globals.css";
 
+import Script from "next/script";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -25,6 +27,10 @@ const RootLayout = ({ children }) => {
         <FloatFotter />
         <Footer />
         <ScrollToTop />
+        <Script
+          src="https://apis.google.com/js/api.js"
+          type="text/javascript"
+        ></Script>
       </body>
     </html>
   );

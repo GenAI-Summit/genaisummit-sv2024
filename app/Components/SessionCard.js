@@ -3,7 +3,6 @@
 import React from "react";
 import CardLayout from "../Layouts/CardLayout";
 import SpeakerCard from "./SpeakerCard";
-import AddToCalendarBtn from "./AddToCalendarBtn";
 import { useRouter } from "next/navigation";
 
 import parse from "html-react-parser";
@@ -91,14 +90,9 @@ const SessionCard = ({ session, showDesc = false }) => {
             </div>
           )}
           {showDesc && (
-            <>
-              <p className="mt-2 text-lg md:text-xl">
-                {parse(session.description)}
-              </p>
-              <div className="w-full flex flex-row-reverse mt-2">
-                <AddToCalendarBtn />
-              </div>
-            </>
+            <p className="mt-2 text-lg md:text-xl">
+              {parse(session.description)}
+            </p>
           )}
         </div>
       </CardLayout>
