@@ -32,3 +32,4 @@
  - [ ] subscribe
  - [ ] swr
  - [ ] agenda moderator
+ - [ ] affiliation
