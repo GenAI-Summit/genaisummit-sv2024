@@ -45,12 +45,20 @@ const SessionCard = ({ session, showDesc = false }) => {
               )}
               <div className="flex flex-wrap items-center gap-2">
                 {session.moderators.map((moderator) => (
-                  <SpeakerCard
-                    key={moderator.id}
-                    speaker={moderator}
-                    width="w-24"
-                    textSize="text-[8px]"
-                  />
+                  <div key={moderator.id} className="flex gap-2 items-center">
+                    <div className="w-24 text-[7px]">
+                      <SpeakerCard key={moderator.id} speaker={moderator} />
+                    </div>
+                    <div className="flex flex-col items-start justify-center">
+                      <p className="text-sm font-bold">{moderator.name}</p>
+                      {moderator.title && (
+                        <p className="text-xs">{moderator.title}</p>
+                      )}
+                      {moderator.company && (
+                        <p className="text-xs">@{moderator.company}</p>
+                      )}
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
