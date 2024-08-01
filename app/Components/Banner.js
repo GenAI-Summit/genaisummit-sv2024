@@ -39,7 +39,13 @@ const Banner = () => {
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           <TicketBtn />
-          <AddToCalendarBtn />
+          <AddToCalendarBtn
+            title="GENAI SUMMIT SV 2024"
+            details=""
+            location="Santa Clara Convention Center, Santa Clara, CA"
+            startDate="2024-11-01T08:00:00"
+            endDate="2024-11-03T18:00:00"
+          />
         </div>
       </div>
     </div>
