@@ -16,11 +16,11 @@
  - [x] back button
  - [x] countdown
  - [x] go to top button
+ - [x] search bar
  - [ ] previous events
  - [ ] add session to google calendar
  - [ ] ticket page height
  - [ ] ticket page script
- - [ ] search bar
  - [ ] card abstraction
  - [ ] improve speaker card styles
  - [ ] social media
@@ -31,5 +31,5 @@
  - [ ] 404 page
  - [ ] subscribe
  - [ ] swr
- - [ ] agenda moderator
- - [ ] affiliation
+ - [ ] fronted and backend schema unification
+ - [ ] interface of backend
