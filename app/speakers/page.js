@@ -11,22 +11,21 @@ const SpeakersPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const getSpeakersFromApi = async () => {
+    const getSpeakersData = async () => {
       const speakers = await getSpeakers();
       setSpeakers(speakers);
       setFilteredSpeakers(speakers);
       setLoading(false);
     };
-    getSpeakersFromApi();
+    getSpeakersData();
   }, []);
 
   const onChange = (e) => {
-    const text = e.target.value;
-    const lowerCaseText = text.toLowerCase();
+    const text = e.target.value.toLowerCase();
     const filteredSpeakers = speakers.filter((speaker) => {
       return (
-        speaker.name.toLowerCase().includes(lowerCaseText) ||
-        speaker.company.toLowerCase().includes(lowerCaseText)
+        speaker.name.toLowerCase().includes(text) ||
+        speaker.company.toLowerCase().includes(text)
       );
     });
     setFilteredSpeakers(filteredSpeakers);

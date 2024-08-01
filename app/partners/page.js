@@ -1,17 +1,68 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import Sponsors from "../Components/Sponsors";
 import Media from "../Components/Media";
 import SearchBar from "../Components/SearchBar";
+import { getSponsors, getMedia } from "/lib/api";
 
 const PartnersPage = () => {
+  const [sponsors, setSponsors] = useState([]);
+  const [media, setMedia] = useState([]);
+  const [filteredSponsors, setFilteredSponsors] = useState([]);
+  const [filteredMedia, setFilteredMedia] = useState([]);
+  const [sponsorLoading, setSponsorLoading] = useState(true);
+  const [mediaLoading, setMediaLoading] = useState(true);
+
+  const sponsorTypes = ["Platinum", "Gold", "Silver", "Special"];
+
+  useEffect(() => {
+    const getSponsorsData = async () => {
+      const data = await getSponsors();
+      setSponsors(data);
+      setFilteredSponsors(data);
+      setSponsorLoading(false);
+    };
+    const getMediaData = async () => {
+      const data = await getMedia();
+      setMedia(data);
+      setFilteredMedia(data);
+      setMediaLoading(false);
+    };
+    getSponsorsData();
+    getMediaData();
+  }, []);
+
+  const onChange = (e) => {
+    const text = e.target.value.toLowerCase();
+    const filteredSponsors = sponsors.filter((sponsor) =>
+      sponsor.name.toLowerCase().includes(text),
+    );
+    setFilteredSponsors(filteredSponsors);
+    const filteredMedia = media.filter((media) =>
+      media.name.toLowerCase().includes(text),
+    );
+    setFilteredMedia(filteredMedia);
+  };
+
   return (
     <>
       <div className="w-full flex flex-col md:flex-row">
         <div className="w-full md:w-2/5">
-          <SearchBar />
+          <SearchBar onChange={onChange} />
         </div>
         <div className="w-full">
-          <Sponsors />
-          <Media />
+          {sponsorLoading || mediaLoading ? (
+            <p>Loading...</p>
+          ) : (
+            <>
+              <Sponsors
+                sponsors={filteredSponsors}
+                sponsorTypes={sponsorTypes}
+              />
+              <Media media={filteredMedia} />
+            </>
+          )}
         </div>
       </div>
     </>
