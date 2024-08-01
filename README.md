@@ -17,6 +17,7 @@
  - [x] countdown
  - [x] go to top button
  - [x] search bar
+ - [x] 404 page
  - [ ] previous events
  - [ ] add session to google calendar
  - [ ] ticket page height
@@ -28,7 +29,6 @@
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
- - [ ] 404 page
  - [ ] subscribe
  - [ ] swr
  - [ ] fronted and backend schema unification
