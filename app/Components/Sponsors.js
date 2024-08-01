@@ -1,21 +1,21 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
 import CompanyCard from "./CompanyCard";
-import { getSponsors } from "/lib/api";
 
-const Sponsors = async () => {
-  const sponsors = await getSponsorsData();
-  const types = ["Platinum", "Gold", "Silver", "Special"];
+const Sponsors = ({ sponsorTypes, sponsors }) => {
   return (
     <>
       <SectionLayout
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
       >
-        {types.map((type) => {
+        {sponsorTypes.map((type) => {
           const filteredSponsors = sponsors.filter(
             (sponsor) => sponsor.type === type,
           );
+          if (filteredSponsors.length === 0) {
+            return null;
+          }
           return (
             <SubsectionLayout key={type} title={type} textAlign="text-left">
               <div className="w-full flex flex-wrap items-center justify-start mt-2 gap-x-8 gap-y-4">
@@ -31,11 +31,6 @@ const Sponsors = async () => {
       </SectionLayout>
     </>
   );
-};
-
-const getSponsorsData = async () => {
-  const sponsors = await getSponsors();
-  return sponsors;
 };
 
 export default Sponsors;

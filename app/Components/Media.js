@@ -3,10 +3,10 @@ import Link from "next/link";
 import SectionLayout from "../Layouts/SectionLayout";
 import Logo from "../Components/Logo";
 
-import { getMedia } from "/lib/api";
-
-const Media = async () => {
-  const media = await getMediaData();
+const Media = ({ media }) => {
+  if (media.length === 0) {
+    return null;
+  }
   return (
     <SectionLayout title="Media" description="MEDIA COVERAGE OF GENAI SUMMIT">
       <div className="w-full flex flex-wrap mt-2 items-center gap-x-8 gap-y-4 justify-start">
@@ -23,11 +23,6 @@ const Media = async () => {
       </div>
     </SectionLayout>
   );
-};
-
-const getMediaData = async () => {
-  const media = await getMedia();
-  return media;
 };
 
 export default Media;
