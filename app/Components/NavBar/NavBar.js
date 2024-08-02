@@ -60,6 +60,7 @@ const NavBar = () => {
           />
         </div>
         <NavBarItems
+          closeDrawer={closeDrawer}
           showDialog={showDialog}
           openDialog={openDialog}
           closeDialog={closeDialog}
