@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 import Logo from "./Logo";
 import Drawer from "./Drawer";
-import CompanyDetail from "./CompanyDetail";
+import OrgnizationDetail from "./OrgnizationDetail";
 import { useRouter } from "next/navigation";
 
-const CompanyCard = ({ company }) => {
+const OrgnizationCard = ({ orgnization }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
 
@@ -16,8 +16,8 @@ const CompanyCard = ({ company }) => {
   const closeDrawer = () => {
     setIsDrawerOpen(false);
   };
-  const onCompanyDetail = () => {
-    router.push(`/org/${company.id}`);
+  const onOrgnizationDetail = () => {
+    router.push(`/orgnization/${orgnization.id}`);
   };
 
   return (
@@ -26,16 +26,16 @@ const CompanyCard = ({ company }) => {
         className="w-full h-full bg-color7 cursor-pointer border-2 border-color7 ease-in-out duration-300 hover:border-color1 rounded-lg shadow-md"
         onClick={openDrawer}
       >
-        <Logo info={company} />
+        <Logo src={orgnization.logo} alt={orgnization.name} />
       </div>
       <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
-        <CompanyDetail company={company} />
+        <OrgnizationDetail orgnization={orgnization} />
         <div>
           <span
             className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color1"
-            onClick={onCompanyDetail}
+            onClick={onOrgnizationDetail}
           >
-            About {company.name}
+            About {orgnization.name}
           </span>
         </div>
       </Drawer>
@@ -43,4 +43,4 @@ const CompanyCard = ({ company }) => {
   );
 };
 
-export default CompanyCard;
+export default OrgnizationCard;

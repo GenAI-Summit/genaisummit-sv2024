@@ -1,27 +1,27 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
-import CompanyCard from "./CompanyCard";
+import OrgnizationCard from "./OrgnizationCard";
 
-const Sponsors = ({ sponsorTypes, sponsors }) => {
+const Sponsors = ({ sponsorTiers, sponsors }) => {
   return (
     <>
       <SectionLayout
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
       >
-        {sponsorTypes.map((type) => {
+        {sponsorTiers.map((tier) => {
           const filteredSponsors = sponsors.filter(
-            (sponsor) => sponsor.type === type,
+            (sponsor) => sponsor.tier === tier,
           );
           if (filteredSponsors.length === 0) {
             return null;
           }
           return (
-            <SubsectionLayout key={type} title={type} textAlign="text-left">
+            <SubsectionLayout key={tier} title={tier} textAlign="text-left">
               <div className="w-full flex flex-wrap items-center justify-start mt-2 gap-x-8 gap-y-4">
                 {filteredSponsors.map((sponsor) => (
                   <div key={sponsor.id} className="w-full h-36 md:w-48 md:h-27">
-                    <CompanyCard company={sponsor} />
+                    <OrgnizationCard orgnization={sponsor} />
                   </div>
                 ))}
               </div>

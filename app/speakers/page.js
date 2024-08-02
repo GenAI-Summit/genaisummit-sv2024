@@ -25,7 +25,7 @@ const SpeakersPage = () => {
     const filteredSpeakers = speakers.filter((speaker) => {
       return (
         speaker.name.toLowerCase().includes(text) ||
-        speaker.company.toLowerCase().includes(text)
+        speaker.orgnization.toLowerCase().includes(text)
       );
     });
     setFilteredSpeakers(filteredSpeakers);

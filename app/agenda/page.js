@@ -24,16 +24,16 @@ const AgendaPage = () => {
     const text = e.target.value.toLowerCase();
     const filteredSessions = sessions.filter((session) => {
       return (
-        session.topic.toLowerCase().includes(text) ||
+        session.name.toLowerCase().includes(text) ||
         session.speakers.some(
           (speaker) =>
             speaker.name.toLowerCase().includes(text) ||
-            speaker.company.toLowerCase().includes(text),
+            speaker.organization.toLowerCase().includes(text),
         ) ||
         session.moderators.some(
           (moderator) =>
             moderator.name.toLowerCase().includes(text) ||
-            moderator.company.toLowerCase().includes(text),
+            moderator.organization.toLowerCase().includes(text),
         )
       );
     });

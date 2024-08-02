@@ -1,31 +1,31 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
-import CompanyCard from "./CompanyCard";
+import OrgnizationCard from "./OrgnizationCard";
 import ShowMore from "./ShowMore";
 import { getSponsors } from "/lib/api";
 
-const Sponsors = async () => {
+const IndexSponsors = async () => {
   const sponsors = await getSponsorsData();
-  const types = ["Platinum", "Gold", "Silver", "Special"];
+  const tiers = ["Platinum", "Gold", "Silver", "Special"];
   return (
     <>
       <SectionLayout
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
       >
-        {types.map((type) => {
+        {tiers.map((tier) => {
           const filteredSponsors = sponsors.filter(
-            (sponsor) => sponsor.type === type,
+            (sponsor) => sponsor.tier === tier,
           );
           return (
-            <SubsectionLayout key={type} title={type} textAlign="text-center">
+            <SubsectionLayout key={tier} title={tier} textAlign="text-center">
               <div className="w-full flex flex-wrap items-center justify-center mt-2 gap-x-[3%] gap-y-4">
                 {filteredSponsors.map((sponsor) => (
                   <div
                     key={sponsor.id}
                     className="w-full h-36 md:w-[31%] md:h-27"
                   >
-                    <CompanyCard type="sponsor" company={sponsor} />
+                    <OrgnizationCard type="sponsor" orgnization={sponsor} />
                   </div>
                 ))}
               </div>
@@ -43,4 +43,4 @@ const getSponsorsData = async () => {
   return sponsors;
 };
 
-export default Sponsors;
+export default IndexSponsors;
