@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 // import { ThemeProvider } from "./Contexts/Theme";
-import Navbar from "./Components/NavBar";
+import Navbar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer";
 import FloatFotter from "./Components/FloatFooter";
 import ScrollToTop from "./Components/ScrollToTop";

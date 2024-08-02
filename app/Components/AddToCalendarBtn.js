@@ -2,27 +2,28 @@
 
 import { useState } from "react";
 import Icon from "./Icon";
+import CalendarBtnDialog from "./CalendarBtnDialog";
 
 import { createEvent } from "ics";
 import { saveAs } from "file-saver";
 
 const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
-  const [showOptions, setShowOptions] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
+
+  const openDialog = () => {
+    setShowDialog(true);
+  };
+
+  const closeDialog = () => {
+    setShowDialog(false);
+  };
 
   const handleDialog = () => {
-    if (showOptions) {
+    if (showDialog) {
       closeDialog();
     } else {
       openDialog();
     }
-  };
-
-  const openDialog = () => {
-    setShowOptions(true);
-  };
-
-  const closeDialog = () => {
-    setShowOptions(false);
   };
 
   const onAddToGoogleCalendar = () => {
@@ -40,7 +41,6 @@ const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
   const onDownloadICS = () => {
     const startDateObj = new Date(startDate);
     const endDateObj = new Date(endDate);
-
     const event = {
       start: [
         startDateObj.getFullYear(),
@@ -60,64 +60,82 @@ const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
       description: details,
       location,
     };
-
     createEvent(event, (error, value) => {
       if (error) {
         console.error(error);
         return;
       }
-
       const blob = new Blob([value], { type: "text/calendar;charset=utf-8" });
       saveAs(blob, `${title.replace(/\s/g, "_")}.ics`);
     });
   };
 
   return (
-    <div className="relative inline-block">
-      <button
-        className="bg-color1 hover:bg-color2 text-color7 font-bold py-2 px-4 rounded ease-in-out duration-300 inline-flex items-center"
+    <>
+      <div
+        className="cursor-pointer hidden md:inline-block rounded bg-color1 hover:bg-color2 ease-in-out duration-300"
+        onMouseEnter={openDialog}
+        onMouseLeave={closeDialog}
+      >
+        <div className="text-color7 font-bold py-2 px-4 inline-flex items-center">
+          Add to Calendar
+          <div className="inline-block">
+            {showDialog ? (
+              <Icon
+                src="/images/icons/triangle_up.svg"
+                alt="Close"
+                width={25}
+                height={25}
+              />
+            ) : (
+              <Icon
+                src="/images/icons/triangle_down.svg"
+                alt="Open"
+                width={25}
+                height={25}
+              />
+            )}
+          </div>
+        </div>
+        {showDialog && (
+          <CalendarBtnDialog
+            onAddToGoogleCalendar={onAddToGoogleCalendar}
+            onDownloadICS={onDownloadICS}
+          />
+        )}
+      </div>
+      <div
+        className="cursor-pointer md:hidden relative inline-block rounded bg-color1 hover:bg-color2 ease-in-out duration-300"
         onClick={handleDialog}
       >
-        Add to Calendar
-        <div className="inline-block">
-          {showOptions ? (
-            <Icon
-              src="/images/icons/triangle_down.svg"
-              alt="Close"
-              width={25}
-              height={25}
-            />
-          ) : (
-            <Icon
-              src="/images/icons/triangle_up.svg"
-              alt="Open"
-              width={25}
-              height={25}
-            />
-          )}
-        </div>
-      </button>
-      {showOptions && (
-        <div className="absolute mt-3 bg-color7 rounded-full flex w-full flex justify-center gap-8">
-          <div className="cursor-pointer p-0.5" onClick={onAddToGoogleCalendar}>
-            <Icon
-              src="/images/icons/google_calendar.webp"
-              alt="Google Calendar"
-              width={35}
-              height={35}
-            />
-          </div>
-          <div className="cursor-pointer p-0.5" onClick={onDownloadICS}>
-            <Icon
-              src="/images/icons/apple_calendar.webp"
-              alt="Apple Calendar"
-              width={35}
-              height={35}
-            />
+        <div className="text-color7 font-bold py-2 px-4 inline-flex items-center">
+          Add to Calendar
+          <div className="inline-block">
+            {showDialog ? (
+              <Icon
+                src="/images/icons/triangle_up.svg"
+                alt="Close"
+                width={25}
+                height={25}
+              />
+            ) : (
+              <Icon
+                src="/images/icons/triangle_down.svg"
+                alt="Open"
+                width={25}
+                height={25}
+              />
+            )}
           </div>
         </div>
-      )}
-    </div>
+        {showDialog && (
+          <CalendarBtnDialog
+            onAddToGoogleCalendar={onAddToGoogleCalendar}
+            onDownloadICS={onDownloadICS}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

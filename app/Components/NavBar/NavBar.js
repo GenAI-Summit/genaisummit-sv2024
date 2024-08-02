@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import Icon from "./Icon";
+import Icon from "../Icon";
 import NavBarItems from "./NavBarItems";
-import TicketBtn from "./TicketBtn";
+import TicketBtn from "../TicketBtn";
 import { useRouter } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showDialog, setShowDialog] = useState(false);
   const router = useRouter();
 
   const openDrawer = () => {
@@ -18,11 +19,27 @@ const NavBar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleClickDrawer = () => {
+  const handleDrawer = () => {
     if (!isMenuOpen) {
       openDrawer();
     } else {
       closeDrawer();
+    }
+  };
+
+  const openDialog = () => {
+    setShowDialog(true);
+  };
+
+  const closeDialog = () => {
+    setShowDialog(false);
+  };
+
+  const handleDialog = () => {
+    if (!showDialog) {
+      openDialog();
+    } else {
+      closeDialog();
     }
   };
 
@@ -42,7 +59,12 @@ const NavBar = () => {
             height="150"
           />
         </div>
-        <NavBarItems />
+        <NavBarItems
+          showDialog={showDialog}
+          openDialog={openDialog}
+          closeDialog={closeDialog}
+          handleDialog={handleDialog}
+        />
         <TicketBtn />
       </div>
 
@@ -56,7 +78,7 @@ const NavBar = () => {
               height="150"
             />
           </div>
-          <button className="cursor-pointer" onClick={handleClickDrawer}>
+          <button className="cursor-pointer" onClick={handleDrawer}>
             {isMenuOpen ? (
               <Icon
                 src="/images/icons/close.svg"
@@ -77,7 +99,13 @@ const NavBar = () => {
         <div
           className={`${!isMenuOpen ? "hidden" : ""} md:hidden flex flex-col text-center justify-center gap-4 pb-4`}
         >
-          <NavBarItems closeDrawer={closeDrawer} />
+          <NavBarItems
+            closeDrawer={closeDrawer}
+            showDialog={showDialog}
+            openDialog={openDialog}
+            closeDialog={closeDialog}
+            handleDialog={handleDialog}
+          />
         </div>
       </div>
     </>
