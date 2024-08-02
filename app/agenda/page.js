@@ -42,8 +42,10 @@ const AgendaPage = () => {
 
   return (
     <div className="w-full flex flex-col md:flex-row">
-      <div className="w-full md:w-2/5">
-        <SearchBar onChange={onChange} />
+      <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
+        <div className="w-full md:w-[80%]">
+          <SearchBar onChange={onChange} />
+        </div>
       </div>
       <div className="w-full">
         {loading ? <p>Loading...</p> : <Agenda sessions={filteredSessions} />}

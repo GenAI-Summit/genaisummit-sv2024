@@ -32,9 +32,11 @@ const SpeakersPage = () => {
     setFilteredSpeakers(filteredSpeakers);
   };
   return (
-    <div className="w-full flex flex-col md:flex-row">
-      <div className="w-full md:w-2/5">
-        <SearchBar onChange={onChange} />
+    <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
+      <div className="w-full md:w-2/5 flex justify-center md:max-w-96">
+        <div className="w-full md:w-[80%]">
+          <SearchBar onChange={onChange} />
+        </div>
       </div>
       <div className="w-full">
         {loading ? <p>Loading...</p> : <Speakers speakers={filteredSpeakers} />}
