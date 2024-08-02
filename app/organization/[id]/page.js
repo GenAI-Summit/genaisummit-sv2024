@@ -1,16 +1,16 @@
-import OrgnizationDetail from "../../Components/OrgnizationDetail";
-import { getOrgnizationById } from "/lib/api";
+import OrganizationDetail from "../../Components/OrganizationDetail";
+import { getOrganizationById } from "/lib/api";
 import SectionLayout from "../../Layouts/SectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
 
 const SponsorPage = async ({ params }) => {
-  const orgnization = await getOrgnizationData(params.id);
+  const organization = await getOrganizationData(params.id);
   return (
     <div className="w-full">
       <SectionLayout title="Sponsor" goBackFlag={true}>
         <div className="w-full mt-4">
           <CardLayout>
-            <OrgnizationDetail orgnization={orgnization} />
+            <OrganizationDetail organization={organization} />
           </CardLayout>
         </div>
       </SectionLayout>
@@ -18,8 +18,8 @@ const SponsorPage = async ({ params }) => {
   );
 };
 
-const getOrgnizationData = async (id) => {
-  const orgnization = await getOrgnizationById(id);
+const getOrganizationData = async (id) => {
+  const orgnization = await getOrganizationById(id);
   return orgnization;
 };
 
