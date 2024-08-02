@@ -14,7 +14,7 @@ const BackToTopButton = () => {
         document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (scrollPosition / documentHeight) * 100;
 
-      setIsVisible(scrollPosition > 300);
+      setIsVisible(scrollPosition > 1);
       setProgress(scrolled);
     };
 
