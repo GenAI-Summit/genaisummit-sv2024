@@ -19,7 +19,8 @@
  - [x] search bar
  - [x] 404 page
  - [x] add to calendar
- - [ ] previous events
+ - [x] previous events
+ - [x] fronted and backend schema unification
  - [ ] ticket page height
  - [ ] ticket page script
  - [ ] card abstraction
@@ -31,5 +32,4 @@
  - [ ] session card badges colors
  - [ ] subscribe
  - [ ] swr
- - [ ] fronted and backend schema unification
  - [ ] interface of backend
