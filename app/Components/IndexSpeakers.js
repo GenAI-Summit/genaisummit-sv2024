@@ -39,7 +39,9 @@ const IndexSpeakers = async () => {
             </div>
           ))}
         </div>
-        <ShowMore target="/speakers" text="View All Speakers" />
+        <div className="mt-4">
+          <ShowMore target="/speakers" text="View All Speakers" />
+        </div>
       </SectionLayout>
     </>
   );

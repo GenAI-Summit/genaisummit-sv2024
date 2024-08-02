@@ -46,11 +46,9 @@ const SessionCard = ({ session, showDesc = false }) => {
           <p className="mb-2">{session.location}</p>
           {session.moderators.length > 0 && (
             <div className="mb-2">
-              {session.moderators.length > 1 ? (
-                <div className="font-semibold">Moderators:</div>
-              ) : (
-                <div className="font-semibold">Moderator:</div>
-              )}
+              <div className="font-semibold mb-1">
+                Moderator{session.moderators.length > 1 ? "s" : ""}:
+              </div>
               <div className="flex flex-wrap items-center gap-2">
                 {session.moderators.map((moderator) => (
                   <div key={moderator.id} className="flex gap-2 items-center">
@@ -73,11 +71,9 @@ const SessionCard = ({ session, showDesc = false }) => {
           )}
           {session.speakers.length > 0 && (
             <div className="mb-2">
-              {session.speakers.length > 1 ? (
-                <div className="font-semibold">Speakers:</div>
-              ) : (
-                <div className="font-semibold">Speaker:</div>
-              )}
+              <div className="font-semibold mb-1">
+                Speaker{session.speakers.length > 1 ? "s" : ""}:
+              </div>
               <div className="flex flex-wrap items-center gap-4">
                 {session.speakers.map((speaker) => (
                   <div key={speaker.id} className="flex gap-2 items-center">

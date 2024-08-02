@@ -32,7 +32,9 @@ const IndexSponsors = async () => {
             </SubsectionLayout>
           );
         })}
-        <ShowMore target="/partners" text="View All Sponsors" />
+        <div className="mt-4">
+          <ShowMore target="/partners" text="View All Sponsors" />
+        </div>
       </SectionLayout>
     </>
   );

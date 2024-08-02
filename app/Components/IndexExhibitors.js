@@ -15,7 +15,9 @@ const Exhibitors = async () => {
           </div>
         ))}
       </div>
-      <ShowMore target="/exhibitors" text="View All Exhibitors" />
+      <div className="mt-4">
+        <ShowMore target="/exhibitors" text="View All Exhibitors" />
+      </div>
     </SectionLayout>
   );
 };
