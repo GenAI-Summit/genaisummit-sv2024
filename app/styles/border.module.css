@@ -1,6 +1,8 @@
 .border {
   position: relative;
 	color: #ff9900;
+  padding-bottom: 8px;
+  padding-right: 8px;
 }
 
 .border::before,
