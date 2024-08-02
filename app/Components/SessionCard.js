@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import parse from "html-react-parser";
 
 const SessionCard = ({ session, showDesc = false }) => {
-  const typeColorClass = getTypeColorClass(session.type);
+  const typeColorClass = getTypeColorClass(session.tag);
   const router = useRouter();
 
   const onSessionClick = () => {
@@ -21,20 +21,20 @@ const SessionCard = ({ session, showDesc = false }) => {
         <div className="flex flex-col items-start text-left text-color5 md:px-3 md:py-2 p-1">
           <div className="text-xl font-bold">
             <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
-              <span>{session.type}</span>
+              <span>{session.tag}</span>
             </span>
             <span
               className="cursor-pointer hover:text-color1 ease-in-out duration-300"
               onClick={onSessionClick}
             >
-              {session.topic}
+              {session.name}
             </span>
           </div>
           <p className="mb-1">
             {session.start.toLocaleTimeString()} -{" "}
             {session.end.toLocaleTimeString()} | {session.date}
           </p>
-          <p className="mb-2">{session.room}</p>
+          <p className="mb-2">{session.location}</p>
           {session.moderators.length > 0 && (
             <div className="mb-2">
               {session.moderators.length > 1 ? (
@@ -54,7 +54,7 @@ const SessionCard = ({ session, showDesc = false }) => {
                         <p className="text-xs">{moderator.title}</p>
                       )}
                       {moderator.company && (
-                        <p className="text-xs">@{moderator.company}</p>
+                        <p className="text-xs">@{moderator.orgnization}</p>
                       )}
                     </div>
                   </div>
@@ -81,7 +81,7 @@ const SessionCard = ({ session, showDesc = false }) => {
                         <p className="text-xs">{speaker.title}</p>
                       )}
                       {speaker.company && (
-                        <p className="text-xs">@{speaker.company}</p>
+                        <p className="text-xs">@{speaker.orgnization}</p>
                       )}
                     </div>
                   </div>
@@ -90,9 +90,7 @@ const SessionCard = ({ session, showDesc = false }) => {
             </div>
           )}
           {showDesc && (
-            <p className="mt-2 text-lg md:text-xl">
-              {parse(session.description)}
-            </p>
+            <div className="mt-2 text-lg md:text-xl">{parse(session.desc)}</div>
           )}
         </div>
       </CardLayout>

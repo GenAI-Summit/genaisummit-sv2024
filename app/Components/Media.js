@@ -17,7 +17,7 @@ const Media = ({ media }) => {
             target="_blank"
             className="w-full h-36 md:w-48 md:h-27 bg-color7 cursor-pointer border-2 border-color7 ease-in-out duration-300 hover:border-color1 rounded-lg shadow-md"
           >
-            <Logo info={item} />
+            <Logo src={item.logo} alt={item.name} />
           </Link>
         ))}
       </div>

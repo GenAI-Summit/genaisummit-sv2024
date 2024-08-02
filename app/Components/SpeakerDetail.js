@@ -10,7 +10,7 @@ const SpeakerDetail = ({ speaker }) => {
       <div className="flex flex-col items-center md:px-3 md:py-2 p-1">
         <div className="flex items-center justify-start w-full">
           <Image
-            src={speaker.image}
+            src={speaker.avatar}
             alt={speaker.name}
             width={150}
             height={150}
@@ -22,7 +22,9 @@ const SpeakerDetail = ({ speaker }) => {
               <div className="text-base font-medium">{speaker.title}</div>
             )}
             {speaker.company && (
-              <div className="text-base font-medium">@{speaker.company}</div>
+              <div className="text-base font-medium">
+                @{speaker.orgnization}
+              </div>
             )}
             <div className="flex gap-1 mt-1">
               {speaker.website && (

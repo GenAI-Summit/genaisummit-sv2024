@@ -24,6 +24,7 @@ const IntroCarousel = () => {
         width={800}
         height={500}
         className="rounded-lg"
+        loading="lazy"
       />
     </div>
   );

@@ -14,7 +14,7 @@ const PartnersPage = () => {
   const [sponsorLoading, setSponsorLoading] = useState(true);
   const [mediaLoading, setMediaLoading] = useState(true);
 
-  const sponsorTypes = ["Platinum", "Gold", "Silver", "Special"];
+  const sponsorTiers = ["Platinum", "Gold", "Silver", "Special"];
 
   useEffect(() => {
     const getSponsorsData = async () => {
@@ -58,7 +58,7 @@ const PartnersPage = () => {
             <>
               <Sponsors
                 sponsors={filteredSponsors}
-                sponsorTypes={sponsorTypes}
+                sponsorTiers={sponsorTiers}
               />
               <Media media={filteredMedia} />
             </>
