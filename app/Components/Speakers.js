@@ -11,10 +11,7 @@ const Speakers = ({ speakers }) => {
       >
         <div className="w-full flex flex-wrap mt-2 gap-x-10 gap-y-10 justify-center md:justify-start">
           {speakers.map((speaker) => (
-            <div
-              key={speaker.id}
-              className={`w-32 md:w-36 pr-[8px] pt-[8px] ${styles.border}`}
-            >
+            <div key={speaker.id} className={`w-32 md:w-36 ${styles.border}`}>
               <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="mt-2 flex flex-col justify-center items-start">
                 <p className="text-color2 text-[14px] font-bold">
