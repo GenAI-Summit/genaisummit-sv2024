@@ -62,8 +62,8 @@ const SessionCard = ({ session, showDesc = false }) => {
                       {moderator.title && (
                         <p className="text-xs">{moderator.title}</p>
                       )}
-                      {moderator.company && (
-                        <p className="text-xs">@{moderator.orgnization}</p>
+                      {moderator.organization && (
+                        <p className="text-xs">@{moderator.organization}</p>
                       )}
                     </div>
                   </div>
@@ -89,8 +89,8 @@ const SessionCard = ({ session, showDesc = false }) => {
                       {speaker.title && (
                         <p className="text-xs">{speaker.title}</p>
                       )}
-                      {speaker.company && (
-                        <p className="text-xs">@{speaker.orgnization}</p>
+                      {speaker.organization && (
+                        <p className="text-xs">@{speaker.organization}</p>
                       )}
                     </div>
                   </div>

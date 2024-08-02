@@ -38,8 +38,8 @@ const SpeakerCard = ({ speaker }) => {
         </div>
         <div className="absolute bottom-0 w-full bg-color2 text-color3 bg-opacity-80 p-0.5 text-center transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out">
           {speaker.title && <div className="font-medium">{speaker.title}</div>}
-          {speaker.company && (
-            <div className="font-medium">@{speaker.orgnization}</div>
+          {speaker.organization && (
+            <div className="font-medium">@{speaker.organization}</div>
           )}
         </div>
       </div>
