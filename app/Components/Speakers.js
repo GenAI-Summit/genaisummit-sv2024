@@ -1,3 +1,4 @@
+import styles from "../styles/border.module.css";
 import SectionLayout from "../Layouts/SectionLayout";
 import SpeakerCard from "./SpeakerCard";
 
@@ -10,19 +11,20 @@ const Speakers = ({ speakers }) => {
       >
         <div className="w-full flex flex-wrap mt-2 gap-x-10 gap-y-10 justify-center md:justify-start">
           {speakers.map((speaker) => (
-            <div key={speaker.id} className="w-32 md:w-36">
+            <div
+              key={speaker.id}
+              className={`w-32 md:w-36 pr-[8px] pt-[8px] ${styles.border}`}
+            >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-2 flex flex-col justify-center items-center">
-                <p className="text-center text-color2 text-[14px] font-bold">
+              <div className="mt-2 flex flex-col justify-center items-start">
+                <p className="text-color2 text-[14px] font-bold">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-center text-color5 text-[12px]">
-                    {speaker.title}
-                  </p>
+                  <p className="text-color5 text-[12px]">{speaker.title}</p>
                 )}
                 {speaker.organization && (
-                  <p className="text-center text-color5 text-[12px]">
+                  <p className="text-color5 text-[12px]">
                     @{speaker.organization}
                   </p>
                 )}

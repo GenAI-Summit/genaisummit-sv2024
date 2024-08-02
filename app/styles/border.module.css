@@ -1,0 +1,26 @@
+.border {
+  position: relative;
+	color: #ff9900;
+}
+
+.border::before,
+.border::after {
+  content: '';
+  position: absolute;
+  background-color: currentColor;
+}
+
+.border::before {
+  bottom: 0;
+  right: 0;
+  width: 6px;
+  height: calc(30%);
+}
+
+.border::after {
+  bottom: 0;
+  right: 0;
+  width: calc(30%);
+  height: 6px;
+}
+
