@@ -1,6 +1,6 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
-import OrgnizationCard from "./OrgnizationCard";
+import OrganizationCard from "./OrganizationCard";
 import ShowMore from "./ShowMore";
 import { getSponsors } from "/lib/api";
 
@@ -25,7 +25,7 @@ const IndexSponsors = async () => {
                     key={sponsor.id}
                     className="w-full h-36 md:w-[31%] md:h-27"
                   >
-                    <OrgnizationCard type="sponsor" orgnization={sponsor} />
+                    <OrganizationCard type="sponsor" organization={sponsor} />
                   </div>
                 ))}
               </div>

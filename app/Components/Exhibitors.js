@@ -1,5 +1,5 @@
 import SectionLayout from "../Layouts/SectionLayout";
-import OrgnizationCard from "../Components/OrgnizationCard";
+import OrganizationCard from "../Components/OrganizationCard";
 
 const Exhibitors = ({ exhibitors }) => {
   return (
@@ -7,7 +7,7 @@ const Exhibitors = ({ exhibitors }) => {
       <div className="w-full flex flex-wrap mt-2 items-center gap-x-8 gap-y-4">
         {exhibitors.map((exhibitor) => (
           <div key={exhibitor.id} className="w-full h-36 md:w-48 md:h-27">
-            <OrgnizationCard orgnization={exhibitor} />
+            <OrganizationCard organization={exhibitor} />
           </div>
         ))}
       </div>

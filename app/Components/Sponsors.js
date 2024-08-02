@@ -1,6 +1,6 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
-import OrgnizationCard from "./OrgnizationCard";
+import OrganizationCard from "./OrganizationCard";
 
 const Sponsors = ({ sponsorTiers, sponsors }) => {
   return (
@@ -21,7 +21,7 @@ const Sponsors = ({ sponsorTiers, sponsors }) => {
               <div className="w-full flex flex-wrap items-center justify-start mt-2 gap-x-8 gap-y-4">
                 {filteredSponsors.map((sponsor) => (
                   <div key={sponsor.id} className="w-full h-36 md:w-48 md:h-27">
-                    <OrgnizationCard orgnization={sponsor} />
+                    <OrganizationCard organization={sponsor} />
                   </div>
                 ))}
               </div>

@@ -21,9 +21,9 @@ const SpeakerDetail = ({ speaker }) => {
             {speaker.title && (
               <div className="text-base font-medium">{speaker.title}</div>
             )}
-            {speaker.company && (
+            {speaker.organization && (
               <div className="text-base font-medium">
-                @{speaker.orgnization}
+                @{speaker.organization}
               </div>
             )}
             <div className="flex gap-1 mt-1">

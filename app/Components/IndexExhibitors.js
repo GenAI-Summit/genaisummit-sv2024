@@ -1,5 +1,5 @@
 import SectionLayout from "../Layouts/SectionLayout";
-import OrgnizationCard from "../Components/OrgnizationCard";
+import OrganizationCard from "../Components/OrganizationCard";
 import ShowMore from "../Components/ShowMore";
 
 import { getExhibitors } from "/lib/api";
@@ -11,7 +11,7 @@ const Exhibitors = async () => {
       <div className="flex flex-wrap justify-around items-center gap-y-4 gap-x-4 md:justify-between">
         {exhibitors.map((exhibitor) => (
           <div key={exhibitor.id} className="w-full h-36 md:w-[23%] md:h-27">
-            <OrgnizationCard type="exhibitor" orgnization={exhibitor} />
+            <OrganizationCard type="exhibitor" organization={exhibitor} />
           </div>
         ))}
       </div>
