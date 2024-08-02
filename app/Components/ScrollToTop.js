@@ -1,50 +1,64 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const ScrollToTop = () => {
+const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      if (window.pageYOffset > 300) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const documentHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (scrollPosition / documentHeight) * 100;
+
+      setIsVisible(scrollPosition > 300);
+      setProgress(scrolled);
     };
 
-    window.addEventListener("scroll", toggleVisibility);
-
-    return () => window.removeEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const circleRadius = 24;
+  const circumference = 2 * Math.PI * circleRadius;
+  const offset = circumference - (progress / 100) * circumference;
+
   return (
-    <>
-      {isVisible && (
-        <div
-          onClick={scrollToTop}
-          className="fixed bottom-28 right-10 cursor-pointer z-50 transition-opacity duration-300"
-          style={{ opacity: isVisible ? true : false }}
-        >
-          <Image
-            src="/images/icons/goToTop.svg"
-            alt="Go to top"
-            width={40}
-            height={40}
-          />
-        </div>
-      )}
-    </>
+    <button
+      type="button"
+      className={`fixed bottom-24 right-7 w-14 h-14 flex items-center justify-center rounded-full bg-color7 text-color1 shadow-md transition-opacity ${isVisible ? "opacity-100" : "opacity-0"}`}
+      aria-label="Back to top"
+      onClick={scrollToTop}
+    >
+      <span className="absolute inset-0 flex items-center justify-center">
+        <svg width="52" height="52" className="rotate-[-90deg]">
+          <circle
+            cx="26"
+            cy="26"
+            r="24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="4"
+            strokeDasharray={circumference}
+            strokeDashoffset={offset}
+          ></circle>
+        </svg>
+      </span>
+      <Image
+        src="/images/icons/rocket.svg"
+        alt="Rocket"
+        width={24}
+        height={24}
+      />
+    </button>
   );
 };
 
-export default ScrollToTop;
+export default BackToTopButton;
