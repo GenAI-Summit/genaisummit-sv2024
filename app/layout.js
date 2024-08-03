@@ -11,14 +11,15 @@ import Script from "next/script";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Generative AI Summit 2024",
-  description: "Generative AI Summit 2024, Santa Clara, CA",
+  title: "Generative AI Summit Silicon Valley 2024",
+  description:
+    "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
 };
 
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
-      <link rel="icon" href="/images/icons/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className}`}>
         <Navbar />
         <div className="pb-5 flex flex-col items-center text-center bg-color3">
