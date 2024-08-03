@@ -19,7 +19,7 @@ const SessionCard = ({ session, showDesc = false }) => {
     <div className="w-full mt-4">
       <CardLayout>
         <div className="flex flex-col items-start text-left text-color5 md:px-3 md:py-2 p-1">
-          <div className="text-xl font-bold">
+          <div className="text-xl font-bold mb-2">
             <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
               <span>{session.tag}</span>
             </span>
@@ -30,7 +30,7 @@ const SessionCard = ({ session, showDesc = false }) => {
               {session.name}
             </span>
           </div>
-          <p className="mb-1">
+          <p className="mb-2">
             {session.start.toLocaleTimeString([], {
               hour: "2-digit",
               minute: "2-digit",

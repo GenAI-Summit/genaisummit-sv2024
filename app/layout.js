@@ -14,6 +14,22 @@ export const metadata = {
   title: "Generative AI Summit Silicon Valley 2024",
   description:
     "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
+  openGraph: {
+    type: "website",
+    url: "https://preview.gptdao.ai/",
+    title: "Generative AI Summit Silicon Valley 2024",
+    description:
+      "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
+    images: [
+      {
+        url: "/images/propaganda/banner_seo.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Generative AI Summit Silicon Valley 2024",
+      },
+    ],
+    siteName: "Generative AI Summit Silicon Valley 2024",
+  },
 };
 
 const RootLayout = ({ children }) => {
