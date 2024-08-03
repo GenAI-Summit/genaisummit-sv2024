@@ -33,7 +33,7 @@ const BackToTopButton = () => {
   return (
     <button
       type="button"
-      className={`fixed bottom-24 right-7 w-14 h-14 flex items-center justify-center rounded-full bg-color7 text-color1 shadow-md transition-opacity ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`fixed bottom-24 right-7 w-14 h-14 flex items-center justify-center rounded-full bg-color7 text-color1 shadow-md transition-opacity ${isVisible ? "opacity-100" : "opacity-0"} z-20`}
       aria-label="Back to top"
       onClick={scrollToTop}
     >

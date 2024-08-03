@@ -33,3 +33,4 @@
  - [ ] subscribe
  - [ ] swr
  - [ ] interface of backend
+ - [ ] dynamic images for seo
