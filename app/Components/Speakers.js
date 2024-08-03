@@ -13,17 +13,13 @@ const Speakers = ({ speakers }) => {
           {speakers.map((speaker) => (
             <div key={speaker.id} className={`w-32 md:w-36 ${styles.border}`}>
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-2 flex flex-col justify-center items-start">
-                <p className="text-color2 text-[14px] font-bold">
-                  {speaker.name}
-                </p>
+              <div className="mt-2 flex flex-col justify-center items-start text-color5">
+                <p className="text-[14px] font-bold">{speaker.name}</p>
                 {speaker.title && (
-                  <p className="text-color5 text-[12px]">{speaker.title}</p>
+                  <p className="text-[12px]">{speaker.title}</p>
                 )}
                 {speaker.organization && (
-                  <p className="text-color5 text-[12px]">
-                    @{speaker.organization}
-                  </p>
+                  <p className="text-[12px]">@{speaker.organization}</p>
                 )}
               </div>
             </div>
