@@ -21,11 +21,9 @@
  - [x] add to calendar
  - [x] previous events
  - [x] fronted and backend schema unification
- - [x] swr
- - [ ] ticket page height
- - [ ] ticket page script
+ - [x] improve speaker card styles
+ - [ ] swr in ssr
  - [ ] card abstraction
- - [ ] improve speaker card styles
  - [ ] social media
  - [ ] drawer hook
  - [ ] experience
