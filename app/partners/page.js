@@ -1,49 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Loader from "../Components/Loader";
+import Error from "../Components/Error";
 import Sponsors from "../Components/Sponsors";
 import Media from "../Components/Media";
 import SearchBar from "../Components/SearchBar";
-import { getSponsors, getMedia } from "/lib/api";
+import useExhibitors from "../Hooks/useExhibitors";
 
 const PartnersPage = () => {
-  const [sponsors, setSponsors] = useState([]);
-  const [media, setMedia] = useState([]);
-  const [filteredSponsors, setFilteredSponsors] = useState([]);
-  const [filteredMedia, setFilteredMedia] = useState([]);
-  const [sponsorLoading, setSponsorLoading] = useState(true);
-  const [mediaLoading, setMediaLoading] = useState(true);
-
-  const sponsorTiers = ["Platinum", "Gold", "Silver", "Special"];
-
-  useEffect(() => {
-    const getSponsorsData = async () => {
-      const data = await getSponsors();
-      setSponsors(data);
-      setFilteredSponsors(data);
-      setSponsorLoading(false);
-    };
-    const getMediaData = async () => {
-      const data = await getMedia();
-      setMedia(data);
-      setFilteredMedia(data);
-      setMediaLoading(false);
-    };
-    getSponsorsData();
-    getMediaData();
-  }, []);
+  const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
+  const [text, setText] = useState("");
 
   const onChange = (e) => {
-    const text = e.target.value.toLowerCase();
-    const filteredSponsors = sponsors.filter((sponsor) =>
-      sponsor.name.toLowerCase().includes(text),
-    );
-    setFilteredSponsors(filteredSponsors);
-    const filteredMedia = media.filter((media) =>
-      media.name.toLowerCase().includes(text),
-    );
-    setFilteredMedia(filteredMedia);
+    setText(e.target.value.toLowerCase());
   };
+
+  const filteredSponsors = sponsors?.filter((sponsor) =>
+    sponsor.name.toLowerCase().includes(text),
+  );
+
+  const filteredMedia = media?.filter((media) =>
+    media.name.toLowerCase().includes(text),
+  );
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <>
@@ -54,17 +41,8 @@ const PartnersPage = () => {
           </div>
         </div>
         <div className="w-full">
-          {sponsorLoading || mediaLoading ? (
-            <p>Loading...</p>
-          ) : (
-            <>
-              <Sponsors
-                sponsors={filteredSponsors}
-                sponsorTiers={sponsorTiers}
-              />
-              <Media media={filteredMedia} />
-            </>
-          )}
+          <Sponsors sponsors={filteredSponsors} sponsorTiers={sponsorTiers} />
+          <Media media={filteredMedia} />
         </div>
       </div>
     </>

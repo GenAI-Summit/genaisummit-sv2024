@@ -1,44 +1,43 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Loader from "../Components/Loader";
+import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Agenda from "../Components/Agenda";
-import { getSessions } from "/lib/api";
+import useSessions from "../Hooks/useSessions";
 
 const AgendaPage = () => {
-  const [sessions, setSessions] = useState([]);
-  const [filteredSessions, setFilteredSessions] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const getSessionsData = async () => {
-      const data = await getSessions();
-      setSessions(data);
-      setFilteredSessions(data);
-      setLoading(false);
-    };
-    getSessionsData();
-  }, []);
+  const [text, setText] = useState("");
+  const { sessions, isLoading, isError } = useSessions();
 
   const onChange = (e) => {
-    const text = e.target.value.toLowerCase();
-    const filteredSessions = sessions.filter((session) => {
-      return (
-        session.name.toLowerCase().includes(text) ||
-        session.speakers.some(
-          (speaker) =>
-            speaker.name.toLowerCase().includes(text) ||
-            speaker.organization.toLowerCase().includes(text),
-        ) ||
-        session.moderators.some(
-          (moderator) =>
-            moderator.name.toLowerCase().includes(text) ||
-            moderator.organization.toLowerCase().includes(text),
-        )
-      );
-    });
-    setFilteredSessions(filteredSessions);
+    setText(e.target.value.toLowerCase());
   };
+
+  const filteredSessions = sessions?.filter((session) => {
+    return (
+      session.name.toLowerCase().includes(text) ||
+      session.speakers.some(
+        (speaker) =>
+          speaker.name.toLowerCase().includes(text) ||
+          speaker.organization.toLowerCase().includes(text),
+      ) ||
+      session.moderators.some(
+        (moderator) =>
+          moderator.name.toLowerCase().includes(text) ||
+          moderator.organization.toLowerCase().includes(text),
+      )
+    );
+  });
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
@@ -48,7 +47,7 @@ const AgendaPage = () => {
         </div>
       </div>
       <div className="w-full">
-        {loading ? <p>Loading...</p> : <Agenda sessions={filteredSessions} />}
+        <Agenda sessions={filteredSessions} />
       </div>
     </div>
   );

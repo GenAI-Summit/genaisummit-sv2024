@@ -1,36 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Loader from "../Components/Loader";
+import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Speakers from "../Components/Speakers";
-import { getSpeakers } from "/lib/api";
+import useSpeakers from "../Hooks/useSpeakers";
 
 const SpeakersPage = () => {
-  const [speakers, setSpeakers] = useState([]);
-  const [filteredSpeakers, setFilteredSpeakers] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { speakers, isLoading, isError } = useSpeakers();
+  const [text, setText] = useState("");
 
-  useEffect(() => {
-    const getSpeakersData = async () => {
-      const speakers = await getSpeakers();
-      setSpeakers(speakers);
-      setFilteredSpeakers(speakers);
-      setLoading(false);
-    };
-    getSpeakersData();
-  }, []);
+  const filteredSpeakers = speakers?.filter((speaker) => {
+    return (
+      speaker.name.toLowerCase().includes(text) ||
+      speaker.organization.toLowerCase().includes(text) ||
+      speaker.title.toLowerCase().includes(text)
+    );
+  });
 
   const onChange = (e) => {
-    const text = e.target.value.toLowerCase();
-    const filteredSpeakers = speakers.filter((speaker) => {
-      return (
-        speaker.name.toLowerCase().includes(text) ||
-        speaker.organization.toLowerCase().includes(text) ||
-        speaker.title.toLowerCase().includes(text)
-      );
-    });
-    setFilteredSpeakers(filteredSpeakers);
+    setText(e.target.value.toLowerCase());
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
+
   return (
     <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
       <div className="w-full md:w-2/5 flex justify-center md:max-w-96">
@@ -39,7 +39,7 @@ const SpeakersPage = () => {
         </div>
       </div>
       <div className="w-full">
-        {loading ? <p>Loading...</p> : <Speakers speakers={filteredSpeakers} />}
+        <Speakers speakers={filteredSpeakers} />
       </div>
     </div>
   );
