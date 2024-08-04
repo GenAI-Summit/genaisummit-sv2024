@@ -1,32 +1,31 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import Loader from "../Components/Loader";
+import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Exhibitors from "../Components/Exhibitors";
-import { getExhibitors } from "/lib/api";
+import useExhibitors from "../Hooks/useExhibitors";
 
 const ExhibitorsPage = () => {
-  const [exhibitors, setExhibitors] = useState([]);
-  const [filteredExhibitors, setFilteredExhibitors] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const { exhibitors, isLoading, isError } = useExhibitors();
+  const [text, setText] = useState("");
 
-  useEffect(() => {
-    const getExhibitorsData = async () => {
-      const exhibitors = await getExhibitors();
-      setExhibitors(exhibitors);
-      setFilteredExhibitors(exhibitors);
-      setLoading(false);
-    };
-    getExhibitorsData();
-  }, []);
+  const filteredExhibitors = exhibitors?.filter((exhibitor) => {
+    return exhibitor.name.toLowerCase().includes(text);
+  });
 
   const onChange = (e) => {
-    const text = e.target.value.toLowerCase();
-    const filteredExhibitors = exhibitors.filter((exhibitor) => {
-      return exhibitor.name.toLowerCase().includes(text);
-    });
-    setFilteredExhibitors(filteredExhibitors);
+    setText(e.target.value.toLowerCase());
   };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
@@ -36,11 +35,7 @@ const ExhibitorsPage = () => {
         </div>
       </div>
       <div className="w-full">
-        {loading ? (
-          <p>Loading...</p>
-        ) : (
-          <Exhibitors exhibitors={filteredExhibitors} />
-        )}
+        <Exhibitors exhibitors={filteredExhibitors} />
       </div>
     </div>
   );
