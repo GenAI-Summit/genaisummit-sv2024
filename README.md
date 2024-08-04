@@ -21,6 +21,7 @@
  - [x] add to calendar
  - [x] previous events
  - [x] fronted and backend schema unification
+ - [x] swr
  - [ ] ticket page height
  - [ ] ticket page script
  - [ ] card abstraction
@@ -31,6 +32,5 @@
  - [ ] chatbot
  - [ ] session card badges colors
  - [ ] subscribe
- - [ ] swr
  - [ ] interface of backend
  - [ ] dynamic images for seo
