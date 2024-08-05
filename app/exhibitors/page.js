@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
@@ -11,9 +11,11 @@ const ExhibitorsPage = () => {
   const { exhibitors, isLoading, isError } = useExhibitors();
   const [text, setText] = useState("");
 
-  const filteredExhibitors = exhibitors?.filter((exhibitor) => {
-    return exhibitor.name.toLowerCase().includes(text);
-  });
+  const filteredExhibitors = useMemo(() => {
+    return exhibitors?.filter((exhibitor) => {
+      return exhibitor.name.toLowerCase().includes(text);
+    });
+  }, [exhibitors, text]);
 
   const onChange = (e) => {
     setText(e.target.value.toLowerCase());

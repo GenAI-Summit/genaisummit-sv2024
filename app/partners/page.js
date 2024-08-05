@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import Sponsors from "../Components/Sponsors";
@@ -16,13 +16,15 @@ const PartnersPage = () => {
     setText(e.target.value.toLowerCase());
   };
 
-  const filteredSponsors = sponsors?.filter((sponsor) =>
-    sponsor.name.toLowerCase().includes(text),
-  );
+  const filteredSponsors = useMemo(() => {
+    return sponsors?.filter((sponsor) =>
+      sponsor.name.toLowerCase().includes(text),
+    );
+  }, [sponsors, text]);
 
-  const filteredMedia = media?.filter((media) =>
-    media.name.toLowerCase().includes(text),
-  );
+  const filteredMedia = useMemo(() => {
+    return media?.filter((media) => media.name.toLowerCase().includes(text));
+  }, [media, text]);
 
   if (isLoading) {
     return <Loader />;
