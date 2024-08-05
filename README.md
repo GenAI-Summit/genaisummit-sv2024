@@ -22,14 +22,15 @@
  - [x] previous events
  - [x] fronted and backend schema unification
  - [x] improve speaker card styles
+ - [ ] subscribe
  - [ ] swr in ssr
  - [ ] card abstraction
- - [ ] social media
+ - [ ] speakers social media
  - [ ] drawer hook
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
- - [ ] subscribe
  - [ ] interface of backend
  - [ ] dynamic images for seo
  - [ ] tickets test
+ - [ ] share pages
