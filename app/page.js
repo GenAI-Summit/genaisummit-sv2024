@@ -5,6 +5,7 @@ import IndexSponsors from "./Components/IndexSponsors";
 import IndexExhibitors from "./Components/IndexExhibitors";
 import IndexTickets from "./Components/IndexTickets";
 import IndexIntro from "./Components/IndexIntro";
+import Subscribe from "./Components/Subscribe";
 
 const Index = () => {
   return (
@@ -19,6 +20,7 @@ const Index = () => {
         <IndexSpeakers />
         <IndexExhibitors />
         <IndexTickets />
+        <Subscribe />
       </div>
     </div>
   );
