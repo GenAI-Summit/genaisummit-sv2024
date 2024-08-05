@@ -32,3 +32,4 @@
  - [ ] subscribe
  - [ ] interface of backend
  - [ ] dynamic images for seo
+ - [ ] tickets test
