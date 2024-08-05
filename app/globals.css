@@ -21,13 +21,3 @@
     src: url(/fonts/MonaspaceKrypton-Regular.woff2) format('woff2');
   }
 }
-
-
-@layer components {
-  .custom-checkbox + .checkbox-span {
-    background-image: url('/images/icons/checkbox.svg');
-  }
-  .custom-checkbox:checked + .checkbox-span {
-    background-image: url('/images/icons/checkbox_checked.svg');
-  }
-}

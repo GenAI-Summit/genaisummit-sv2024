@@ -11,7 +11,7 @@ const Filter = ({ name, options, selected, onSelect }) => {
   };
 
   return (
-    <div className="flex flex-col gap-2 text-start text-color5 border-t-2 border-color5 pt-2">
+    <div className="flex flex-col gap-2 text-start text-color5">
       <div
         className="flex items-center justify-between cursor-pointer"
         onClick={onClick}
@@ -41,7 +41,7 @@ const Filter = ({ name, options, selected, onSelect }) => {
             return (
               <div
                 key={index}
-                className="flex items-center gap-2 cursor-pointer"
+                className="flex items-center gap-1 cursor-pointer"
                 onClick={() => onSelect(option)}
               >
                 {selected.includes(option) ? (
@@ -59,7 +59,7 @@ const Filter = ({ name, options, selected, onSelect }) => {
                     height={30}
                   />
                 )}
-                <div className="text-lg flex items-center gap-2">{option}</div>
+                <div className="text-lg">{option}</div>
               </div>
             );
           })}
