@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
@@ -11,13 +11,15 @@ const SpeakersPage = () => {
   const { speakers, isLoading, isError } = useSpeakers();
   const [text, setText] = useState("");
 
-  const filteredSpeakers = speakers?.filter((speaker) => {
-    return (
-      speaker.name.toLowerCase().includes(text) ||
-      speaker.organization.toLowerCase().includes(text) ||
-      speaker.title.toLowerCase().includes(text)
-    );
-  });
+  const filteredSpeakers = useMemo(() => {
+    return speakers?.filter((speaker) => {
+      return (
+        speaker.name.toLowerCase().includes(text) ||
+        speaker.organization.toLowerCase().includes(text) ||
+        speaker.title.toLowerCase().includes(text)
+      );
+    });
+  }, [speakers, text]);
 
   const onChange = (e) => {
     setText(e.target.value.toLowerCase());

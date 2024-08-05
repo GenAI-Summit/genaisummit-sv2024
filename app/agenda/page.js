@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
@@ -15,21 +15,23 @@ const AgendaPage = () => {
     setText(e.target.value.toLowerCase());
   };
 
-  const filteredSessions = sessions?.filter((session) => {
-    return (
-      session.name.toLowerCase().includes(text) ||
-      session.speakers.some(
-        (speaker) =>
-          speaker.name.toLowerCase().includes(text) ||
-          speaker.organization.toLowerCase().includes(text),
-      ) ||
-      session.moderators.some(
-        (moderator) =>
-          moderator.name.toLowerCase().includes(text) ||
-          moderator.organization.toLowerCase().includes(text),
-      )
-    );
-  });
+  const filteredSessions = useMemo(() => {
+    return sessions?.filter((session) => {
+      return (
+        session.name.toLowerCase().includes(text) ||
+        session.speakers.some(
+          (speaker) =>
+            speaker.name.toLowerCase().includes(text) ||
+            speaker.organization.toLowerCase().includes(text),
+        ) ||
+        session.moderators.some(
+          (moderator) =>
+            moderator.name.toLowerCase().includes(text) ||
+            moderator.organization.toLowerCase().includes(text),
+        )
+      );
+    });
+  }, [sessions, text]);
 
   if (isLoading) {
     return <Loader />;
