@@ -2,7 +2,7 @@ import Icon from "./Icon";
 
 const CalendarBtnDialog = ({ onAddToGoogleCalendar, onDownloadICS }) => {
   return (
-    <div className="absolute bg-color7 rounded-full flex justify-center px-4">
+    <div className="w-48 absolute bg-color7 rounded-full flex justify-around px-4">
       <div className="cursor-pointer" onClick={onAddToGoogleCalendar}>
         <Icon
           src="/images/icons/google_calendar.webp"
