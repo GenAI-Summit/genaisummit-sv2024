@@ -1,42 +1,26 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import CheckBox from "./SVG/CheckBox";
+import { WrapperArrowLeft, WrapperArrowDown } from "./SVG/WrapperArrows";
 
 const Filter = ({ name, options, selected, onSelect }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isWrapperOpen, setIsWrapperOpen] = useState(false);
 
-  const onClick = () => {
-    setIsOpen(!isOpen);
+  const onClickWrapper = () => {
+    setIsWrapperOpen(!isWrapperOpen);
   };
 
   return (
     <div className="flex flex-col gap-2 text-start text-color5">
       <div
         className="flex items-center justify-between cursor-pointer"
-        onClick={onClick}
+        onClick={onClickWrapper}
       >
         <h3 className="text-xl font-bold">{name}</h3>
-        {isOpen ? (
-          <Image
-            src="/images/icons/arrow_down.svg"
-            alt="up"
-            width={20}
-            height={20}
-            onClick={onClick}
-          />
-        ) : (
-          <Image
-            src="/images/icons/arrow_left.svg"
-            alt="down"
-            width={20}
-            height={20}
-            onClick={onClick}
-          />
-        )}
+        {isWrapperOpen ? <WrapperArrowDown /> : <WrapperArrowLeft />}
       </div>
-      {isOpen && (
+      {isWrapperOpen && (
         <div className="flex flex-col gap-2">
           {options.map((option, index) => {
             return (
