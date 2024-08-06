@@ -59,7 +59,9 @@ const Filter = ({ name, options, selected, onSelect }) => {
                     height={30}
                   />
                 )}
-                <div className="text-lg">{option}</div>
+                <div className="text-lg">
+                  {option.length === 0 ? "TBD" : option}
+                </div>
               </div>
             );
           })}
