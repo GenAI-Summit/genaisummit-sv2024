@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import CheckBox from "./SVG/CheckBox";
 
 const Filter = ({ name, options, selected, onSelect }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -39,29 +40,8 @@ const Filter = ({ name, options, selected, onSelect }) => {
         <div className="flex flex-col gap-2">
           {options.map((option, index) => {
             return (
-              <div
-                key={index}
-                className="flex items-center gap-1 cursor-pointer"
-                onClick={() => onSelect(option)}
-              >
-                {selected.includes(option) ? (
-                  <Image
-                    src="/images/icons/checkbox_checked.svg"
-                    alt="checked"
-                    width={30}
-                    height={30}
-                  />
-                ) : (
-                  <Image
-                    src="/images/icons/checkbox.svg"
-                    alt="unchecked"
-                    width={30}
-                    height={30}
-                  />
-                )}
-                <div className="text-lg">
-                  {option.length === 0 ? "TBD" : option}
-                </div>
+              <div key={index} onClick={() => onSelect(option)}>
+                <CheckBox checked={selected.includes(option)} label={option} />
               </div>
             );
           })}
