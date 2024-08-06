@@ -4,6 +4,7 @@ import Navbar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer";
 import FloatFotter from "./Components/FloatFooter";
 import ScrollToTop from "./Components/ScrollToTop";
+import ShareBar from "./Components/ShareBar";
 import "./globals.css";
 
 import Script from "next/script";
@@ -41,6 +42,9 @@ const RootLayout = ({ children }) => {
         <Navbar />
         <div className="pb-5 flex flex-col items-center text-center bg-color3">
           {children}
+          <div className="mt-4">
+            <ShareBar />
+          </div>
         </div>
         <FloatFotter />
         <Footer />

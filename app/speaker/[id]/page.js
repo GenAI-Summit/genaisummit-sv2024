@@ -3,6 +3,7 @@ import SessionCard from "../../Components/SessionCard";
 import SectionLayout from "../../Layouts/SectionLayout";
 import SubSectionLayout from "../../Layouts/SubSectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
+import ShareBar from "../../Components/ShareBar";
 import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
 
 const SpeakerPage = async ({ params }) => {
