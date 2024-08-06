@@ -42,7 +42,7 @@ const RootLayout = ({ children }) => {
         <Navbar />
         <div className="pb-5 flex flex-col items-center text-center bg-color3">
           {children}
-          <div className="mt-4">
+          <div className="m-4">
             <ShareBar />
           </div>
         </div>
