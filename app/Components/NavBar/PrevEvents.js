@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Icon from "../Icon";
+import Triangle from "../SVG/Triangle";
 
 const NavBar = ({
   hoverEffect,
@@ -27,24 +27,10 @@ const NavBar = ({
         onMouseOver={openDialog}
         onMouseLeave={closeDialog}
       >
-        <div className="inline-flex items-center">
+        <div className="inline-flex items-center gap-1">
           PREVIOUS EVENT
           <div className="inline-block">
-            {showDialog ? (
-              <Icon
-                src="/images/icons/triangle_up.svg"
-                alt="triangle up"
-                width={20}
-                height={20}
-              />
-            ) : (
-              <Icon
-                src="/images/icons/triangle_down.svg"
-                alt="triangle down"
-                width={20}
-                height={20}
-              />
-            )}
+            <Triangle isOpen={showDialog} />
           </div>
         </div>
         {showDialog && (
@@ -66,24 +52,10 @@ const NavBar = ({
       <div
         className={`relative md:hidden inline-block cursor-pointer ${showDialog ? "text-color1" : ""}`}
       >
-        <div className="inline-flex items-center" onClick={handleDialog}>
+        <div className="inline-flex items-center gap-1" onClick={handleDialog}>
           PREVIOUS EVENT
           <div className="inline-block">
-            {showDialog ? (
-              <Icon
-                src="/images/icons/triangle_up.svg"
-                alt="triangle up"
-                width={20}
-                height={20}
-              />
-            ) : (
-              <Icon
-                src="/images/icons/triangle_down.svg"
-                alt="triangle down"
-                width={20}
-                height={20}
-              />
-            )}
+            <Triangle isOpen={showDialog} />
           </div>
         </div>
         {showDialog && (
