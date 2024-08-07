@@ -16,7 +16,7 @@ const Filter = ({ name, options, selected, onSelect }) => {
       className={`flex flex-col gap-2 text-start ${isWrapperOpen ? "text-color2" : "text-color5"}`}
     >
       <div
-        className="flex items-center justify-between cursor-pointer ease-in-out transition-all duration-300 hover:text-color2"
+        className="flex items-center justify-between cursor-pointer md:ease-in-out md:transition-all md:duration-300 md:hover:text-color2"
         onClick={onClickWrapper}
       >
         <h3 className="text-xl font-bold">{name}</h3>
