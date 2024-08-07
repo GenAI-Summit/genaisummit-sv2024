@@ -47,7 +47,7 @@ const IndexSpeakers = async () => {
 
 const getSpeakersData = async () => {
   const speakers = await getSpeakers();
-  return speakers.slice(0, 12);
+  return speakers;
 };
 
 export default IndexSpeakers;
