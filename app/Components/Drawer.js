@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import Close from "./SVG/Close";
 
 const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
   return (
@@ -21,12 +21,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
             className="fixed top-1 left-2 text-xl z-50"
             onClick={closeDrawer}
           >
-            <Icon
-              src="/images/icons/close_with_border.svg"
-              alt="close"
-              width="40"
-              height="40"
-            />
+            <Close />
           </button>
           {children}
         </div>

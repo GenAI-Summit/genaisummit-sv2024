@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Search from "./SVG/Search";
 
 // to-[#bd0099]
 
@@ -6,12 +6,7 @@ const SearchBar = ({ onChange }) => {
   return (
     <div className="w-full flex rounded-full shadow-lg bg-gradient-to-r from-color1 to-color2 p-2 text-color5">
       <div className="flex p-1 justify-center items-center rounded-full bg-color7">
-        <Image
-          src="/images/icons/search.svg"
-          alt="search"
-          width={30}
-          height={30}
-        />
+        <Search />
       </div>
       <input
         type="text"

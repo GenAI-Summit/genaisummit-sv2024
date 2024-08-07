@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Icon from "../Icon";
+import Burger from "../SVG/Burger";
 import NavBarItems from "./NavBarItems";
 import TicketBtn from "../TicketBtn";
 import { useRouter } from "next/navigation";
@@ -79,22 +80,8 @@ const NavBar = () => {
               height="150"
             />
           </div>
-          <button className="cursor-pointer" onClick={handleDrawer}>
-            {isMenuOpen ? (
-              <Icon
-                src="/images/icons/close.svg"
-                alt="close"
-                width="40"
-                height="40"
-              />
-            ) : (
-              <Icon
-                src="/images/icons/burger.svg"
-                alt="drawer"
-                width="40"
-                height="40"
-              />
-            )}
+          <button onClick={handleDrawer}>
+            <Burger isOpen={isMenuOpen} />
           </button>
         </div>
         <div
