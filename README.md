@@ -24,6 +24,7 @@
  - [x] improve speaker card styles
  - [x] share pages
  - [ ] banners
+ - [ ] animations
  - [ ] subscribe
  - [ ] swr in ssr
  - [ ] card abstraction
@@ -35,3 +36,4 @@
  - [ ] interface of backend
  - [ ] dynamic images for seo
  - [ ] tickets test
+ - [ ] buy ticket bar on mobile
