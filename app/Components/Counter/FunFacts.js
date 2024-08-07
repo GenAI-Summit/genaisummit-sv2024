@@ -6,7 +6,7 @@ const FunFacts = () => {
     {
       title: "Attendees",
       start: 0,
-      end: 3000,
+      end: 5000,
     },
     {
       title: "Speakers",
