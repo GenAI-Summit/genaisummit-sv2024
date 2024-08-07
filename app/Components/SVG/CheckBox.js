@@ -1,7 +1,7 @@
 const CheckBox = ({ label, checked }) => {
   return (
     <div
-      className={`flex items-center gap-1 cursor-pointer group ${checked ? "text-color2" : "text-color5"}`}
+      className={`flex items-center gap-1 cursor-pointer ${checked ? "text-color2" : "text-color5"}`}
     >
       <svg
         className="w-6 h-6 text-color5"
@@ -12,7 +12,7 @@ const CheckBox = ({ label, checked }) => {
       >
         <rect x="2" y="2" width="20" height="20" rx="2" stroke-width="2" />
         <path
-          className={`text-color2 ${checked ? "" : "hidden"} group-hover:block`}
+          className={`text-color2 ${checked ? "" : "hidden"}`}
           d="M5 12 L10 17 L19 8"
           stroke-width="2"
           stroke-linecap="round"
