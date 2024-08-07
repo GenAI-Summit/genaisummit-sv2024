@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Icon from "./Icon";
 import CalendarBtnDialog from "./CalendarBtnDialog";
 import Triangle from "./SVG/Triangle";
 
@@ -100,21 +99,7 @@ const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
         <div className="text-color7 font-bold py-2 px-4 inline-flex items-center">
           Add to Calendar
           <div className="inline-block">
-            {showDialog ? (
-              <Icon
-                src="/images/icons/triangle_up.svg"
-                alt="Close"
-                width={25}
-                height={25}
-              />
-            ) : (
-              <Icon
-                src="/images/icons/triangle_down.svg"
-                alt="Open"
-                width={25}
-                height={25}
-              />
-            )}
+            <Triangle isOpen={showDialog} />
           </div>
         </div>
         {showDialog && (
