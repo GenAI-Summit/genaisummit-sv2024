@@ -9,14 +9,14 @@ const FunFacts = () => {
       end: 5000,
     },
     {
-      title: "Speakers",
-      start: 0,
-      end: 150,
-    },
-    {
       title: "Exhibitors",
       start: 0,
       end: 300,
+    },
+    {
+      title: "Speakers",
+      start: 0,
+      end: 150,
     },
     {
       title: "Sessions",
