@@ -9,7 +9,10 @@ const NumberRoller = ({ start, end }) => {
     const interval = setInterval(() => {
       const d = start < end ? (end - start) / 150 : (start - end) / 150;
       setCount((prevCount) => {
-        if (prevCount != end) {
+        if (prevCount < end) {
+          if (Math.abs(prevCount - end) < d) {
+            return end;
+          }
           return start < end
             ? Math.ceil(prevCount + d)
             : Math.floor(prevCount - d);
@@ -20,7 +23,7 @@ const NumberRoller = ({ start, end }) => {
     return () => clearInterval(interval);
   }, [start, end]);
 
-  return <div>{count}</div>;
+  return <div>{count === end ? count + "+" : count}</div>;
 };
 
 export default NumberRoller;
