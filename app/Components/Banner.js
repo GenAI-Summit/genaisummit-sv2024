@@ -1,4 +1,3 @@
-import Image from "next/image";
 import TicketBtn from "./TicketBtn";
 import AddToCalendarBtn from "./AddToCalendarBtn";
 import CountdownTimer from "./Counter/CountdownTimer";
@@ -6,12 +5,13 @@ import CountdownTimer from "./Counter/CountdownTimer";
 const Banner = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      <Image
-        src="/images/propaganda/santaclara_bg.webp"
-        alt="Santa Clara Background"
-        fill
-        style={{ objectFit: "cover" }}
-        className="z-10"
+      <video
+        src="/videos/promotion.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-900 via-gray-600 to-transparent opacity-70 z-20"></div>
       <div className="relative z-20 flex flex-col items-center justify-center h-full text-color7 text-center p-6 gap-y-10">
