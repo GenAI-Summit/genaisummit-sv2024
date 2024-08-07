@@ -13,13 +13,10 @@ import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
 const PartnersPage = () => {
   const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
   const [text, setText] = useState("");
+  const textLower = text.toLowerCase();
 
   const [selectedCategories, setSelectedCategories] = useState([]);
   const { categories } = useExhibitorsIndex();
-
-  const onChange = (e) => {
-    setText(e.target.value.toLowerCase());
-  };
 
   const onSelectCategory = (category) => {
     if (selectedCategories.includes(category)) {
@@ -29,19 +26,26 @@ const PartnersPage = () => {
     }
   };
 
+  const onReset = () => {
+    setSelectedCategories([]);
+    setText("");
+  };
+
   const filteredSponsors = useMemo(() => {
     return sponsors?.filter((sponsor) => {
       return (
-        sponsor.name.toLowerCase().includes(text) &&
+        sponsor.name.toLowerCase().includes(textLower) &&
         (selectedCategories.length === 0 ||
           sponsor.categories.some((c) => selectedCategories.includes(c)))
       );
     });
-  }, [sponsors, text, selectedCategories]);
+  }, [sponsors, textLower, selectedCategories]);
 
   const filteredMedia = useMemo(() => {
-    return media?.filter((media) => media.name.toLowerCase().includes(text));
-  }, [media, text]);
+    return media?.filter((media) =>
+      media.name.toLowerCase().includes(textLower),
+    );
+  }, [media, textLower]);
 
   if (isLoading) {
     return <Loader />;
@@ -56,7 +60,7 @@ const PartnersPage = () => {
       <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
         <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
           <div className="w-full md:w-[80%] flex flex-col gap-y-4">
-            <SearchBar onChange={onChange} />
+            <SearchBar text={text} setText={setText} />
             {categories && (
               <Filter
                 name="Categories"
@@ -65,6 +69,12 @@ const PartnersPage = () => {
                 onSelect={onSelectCategory}
               />
             )}
+            <button
+              onClick={onReset}
+              className="bg-color1 text-color7 p-2 rounded-lg hover:bg-color2 w-full ease-in-out duration-300"
+            >
+              Reset
+            </button>
           </div>
         </div>
         <div className="w-full">

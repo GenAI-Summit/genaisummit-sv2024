@@ -18,7 +18,7 @@ const ExhibitorsPage = () => {
   const filteredExhibitors = useMemo(() => {
     return exhibitors?.filter(
       (exhibitor) =>
-        exhibitor.name.toLowerCase().includes(text) &&
+        exhibitor.name.toLowerCase().includes(text.toLowerCase()) &&
         (selectedCategories.length === 0 ||
           exhibitor.categories.some((c) => selectedCategories.includes(c))),
     );
@@ -30,10 +30,6 @@ const ExhibitorsPage = () => {
     } else {
       setSelectedCategories([...selectedCategories, category]);
     }
-  };
-
-  const onChange = (e) => {
-    setText(e.target.value.toLowerCase());
   };
 
   if (isLoading) {
@@ -48,7 +44,7 @@ const ExhibitorsPage = () => {
     <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
       <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
         <div className="w-full md:w-[80%] flex flex-col gap-y-4">
-          <SearchBar onChange={onChange} />
+          <SearchBar text={text} setText={setText} />
           {categories && (
             <Filter
               name="Categories"
