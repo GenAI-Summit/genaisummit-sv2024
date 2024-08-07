@@ -14,21 +14,13 @@ const PartnersPage = () => {
   const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
   const [text, setText] = useState("");
 
-  const [selectedTiers, setSelectedTiers] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const { tiers, categories } = useExhibitorsIndex();
+  const { categories } = useExhibitorsIndex();
 
   const onChange = (e) => {
     setText(e.target.value.toLowerCase());
   };
 
-  const onSelectTier = (tier) => {
-    if (selectedTiers.includes(tier)) {
-      setSelectedTiers(selectedTiers.filter((t) => t !== tier));
-    } else {
-      setSelectedTiers([...selectedTiers, tier]);
-    }
-  };
   const onSelectCategory = (category) => {
     if (selectedCategories.includes(category)) {
       setSelectedCategories(selectedCategories.filter((c) => c !== category));
@@ -41,12 +33,11 @@ const PartnersPage = () => {
     return sponsors?.filter((sponsor) => {
       return (
         sponsor.name.toLowerCase().includes(text) &&
-        (selectedTiers.length === 0 || selectedTiers.includes(sponsor.tier)) &&
         (selectedCategories.length === 0 ||
           sponsor.categories.some((c) => selectedCategories.includes(c)))
       );
     });
-  }, [sponsors, text, selectedTiers, selectedCategories]);
+  }, [sponsors, text, selectedCategories]);
 
   const filteredMedia = useMemo(() => {
     return media?.filter((media) => media.name.toLowerCase().includes(text));
@@ -66,14 +57,6 @@ const PartnersPage = () => {
         <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
           <div className="w-full md:w-[80%] flex flex-col gap-y-4">
             <SearchBar onChange={onChange} />
-            {tiers && (
-              <Filter
-                name="Tiers"
-                options={tiers}
-                selected={selectedTiers}
-                onSelect={onSelectTier}
-              />
-            )}
             {categories && (
               <Filter
                 name="Categories"

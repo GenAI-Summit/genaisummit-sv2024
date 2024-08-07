@@ -8,13 +8,11 @@ const useExhibitorsIndex = () => {
     fetcher,
   );
 
-  const tiers = data?.data["booth-tiers"].map((tier) => tier.name);
   const categories = data?.data["booth-categories"].map(
     (category) => category.name,
   );
 
   return {
-    tiers,
     categories,
     isLoading,
     isError: error,
