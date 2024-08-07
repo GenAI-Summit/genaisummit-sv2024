@@ -5,6 +5,7 @@ import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
+import ResetBtn from "../Components/ResetBtn";
 import Exhibitors from "../Components/Exhibitors";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
@@ -14,6 +15,11 @@ const ExhibitorsPage = () => {
   const [text, setText] = useState("");
   const [selectedCategories, setSelectedCategories] = useState([]);
   const { categories } = useExhibitorsIndex();
+
+  const onReset = () => {
+    setText("");
+    setSelectedCategories([]);
+  };
 
   const filteredExhibitors = useMemo(() => {
     return exhibitors?.filter(
@@ -53,6 +59,7 @@ const ExhibitorsPage = () => {
               onSelect={onSelectCategory}
             />
           )}
+          <ResetBtn onReset={onReset} />
         </div>
       </div>
       <div className="w-full">

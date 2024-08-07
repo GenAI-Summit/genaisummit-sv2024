@@ -7,6 +7,7 @@ import Sponsors from "../Components/Sponsors";
 import Media from "../Components/Media";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
+import ResetBtn from "../Components/ResetBtn";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
 
@@ -69,12 +70,7 @@ const PartnersPage = () => {
                 onSelect={onSelectCategory}
               />
             )}
-            <button
-              onClick={onReset}
-              className="bg-color1 text-color7 p-2 rounded-lg hover:bg-color2 w-full ease-in-out duration-300"
-            >
-              Reset
-            </button>
+            <ResetBtn onReset={onReset} />
           </div>
         </div>
         <div className="w-full">
