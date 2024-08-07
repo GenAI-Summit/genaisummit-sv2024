@@ -5,6 +5,7 @@ import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
+import ResetBtn from "../Components/ResetBtn";
 import Agenda from "../Components/Agenda";
 import useSessions from "../Hooks/useSessions";
 import useSessionsIndex from "../Hooks/useSessionsIndex";
@@ -21,6 +22,14 @@ const AgendaPage = () => {
   const [selectedDates, setSelectedDates] = useState([]);
   const { tags, tracks, locations } = useSessionsIndex();
   const { dates } = useDates();
+
+  const onReset = () => {
+    setText("");
+    setSelectedTags([]);
+    setSelectedTracks([]);
+    setSelectedLocations([]);
+    setSelectedDates([]);
+  };
 
   const onSelectedTag = (tag) => {
     if (selectedTags.includes(tag)) {
@@ -133,6 +142,7 @@ const AgendaPage = () => {
               onSelect={onSelectedDate}
             />
           )}
+          <ResetBtn onReset={onReset} />
         </div>
       </div>
       <div className="w-full">

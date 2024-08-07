@@ -22,6 +22,8 @@
  - [x] previous events
  - [x] fronted and backend schema unification
  - [x] improve speaker card styles
+ - [x] share pages
+ - [ ] banners
  - [ ] subscribe
  - [ ] swr in ssr
  - [ ] card abstraction
@@ -33,4 +35,3 @@
  - [ ] interface of backend
  - [ ] dynamic images for seo
  - [ ] tickets test
- - [ ] share pages
