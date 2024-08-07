@@ -5,30 +5,39 @@ const IndexTickets = () => {
   const tickets = [
     {
       id: 1,
-      name: "General Admission",
-      price: 199.0,
-      originalPrice: 299.0,
-      saveText: "Save $100 until Sept 1",
+      name: "One-Day Pass",
+      price: 99.0,
+      originalPrice: 129.0,
+      saveText: "Save $30 until Sept 1",
       description:
-        "Enjoy access to in-person sessions, partner showcases, and delicious food, with keynote viewing available from on-site broadcasting areas.",
+        "Gain access to all sessions, workshops, and networking opportunities for any single day of the summit.",
     },
     {
       id: 2,
-      name: "VIP Admission",
-      price: 599.0,
-      originalPrice: 799.0,
-      saveText: "Save $200 until Sept 1",
+      name: "Three-Day Pass",
+      price: 149.0,
+      originalPrice: 199.0,
+      saveText: "Save $50 until Sept 1",
       description:
-        "Enjoy all the benefits of General Admission, plus exclusive access to VIP lounges, priority seating, and more.",
+        "Enjoy comprehensive access to all sessions, workshops, and networking events across the entire three-day summit.",
     },
     {
       id: 3,
       name: "Student Pass",
       price: 99.0,
-      originalPrice: 199.0,
-      saveText: "Save $100 until Sept 1",
+      originalPrice: 149.0,
+      saveText: "Save $50 until Sept 1",
       description:
-        "Enjoy all the benefits of General Admission at a discounted rate. Must provide valid student ID.",
+        "Specially priced for students, this ticket provides full three-day access to all summit activities and sessions.",
+    },
+    {
+      id: 4,
+      name: "VIP Admission",
+      price: 1099.0,
+      originalPrice: 1299.0,
+      saveText: "Save $200 per ticket until Sept 1",
+      description:
+        "Experience the summit with exclusive benefits including all-session access, VIP dinner, and premium networking events.",
     },
   ];
   return (

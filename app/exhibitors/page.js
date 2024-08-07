@@ -12,28 +12,17 @@ import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
 const ExhibitorsPage = () => {
   const { exhibitors, isLoading, isError } = useExhibitors();
   const [text, setText] = useState("");
-  const [selectedTiers, setSelectedTiers] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
-  const { tiers, categories } = useExhibitorsIndex();
+  const { categories } = useExhibitorsIndex();
 
   const filteredExhibitors = useMemo(() => {
     return exhibitors?.filter(
       (exhibitor) =>
         exhibitor.name.toLowerCase().includes(text) &&
-        (selectedTiers.length === 0 ||
-          selectedTiers.includes(exhibitor.tier)) &&
         (selectedCategories.length === 0 ||
           exhibitor.categories.some((c) => selectedCategories.includes(c))),
     );
-  }, [exhibitors, text, selectedTiers, selectedCategories]);
-
-  const onSelectTier = (tier) => {
-    if (selectedTiers.includes(tier)) {
-      setSelectedTiers(selectedTiers.filter((t) => t !== tier));
-    } else {
-      setSelectedTiers([...selectedTiers, tier]);
-    }
-  };
+  }, [exhibitors, text, selectedCategories]);
 
   const onSelectCategory = (category) => {
     if (selectedCategories.includes(category)) {
@@ -60,14 +49,6 @@ const ExhibitorsPage = () => {
       <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
         <div className="w-full md:w-[80%] flex flex-col gap-y-4">
           <SearchBar onChange={onChange} />
-          {tiers && (
-            <Filter
-              name="Tiers"
-              options={tiers}
-              selected={selectedTiers}
-              onSelect={onSelectTier}
-            />
-          )}
           {categories && (
             <Filter
               name="Categories"
