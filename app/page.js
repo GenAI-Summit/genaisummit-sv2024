@@ -15,7 +15,7 @@ const Index = () => {
         <IndexIntro />
       </div>
       <FunFacts />
-      <div className="w-full px-5 md:w-3/4">
+      <div className="w-full px-5 md:w-3/4 flex flex-col gap-5">
         <IndexSponsors />
         <IndexSpeakers />
         <IndexExhibitors />
