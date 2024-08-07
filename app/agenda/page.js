@@ -12,6 +12,7 @@ import useDates from "../Hooks/useDates";
 
 const AgendaPage = () => {
   const [text, setText] = useState("");
+  const textLower = text.toLowerCase();
   const { sessions, isLoading, isError } = useSessions();
 
   const [selectedTags, setSelectedTags] = useState([]);
@@ -20,10 +21,6 @@ const AgendaPage = () => {
   const [selectedDates, setSelectedDates] = useState([]);
   const { tags, tracks, locations } = useSessionsIndex();
   const { dates } = useDates();
-
-  const onChange = (e) => {
-    setText(e.target.value.toLowerCase());
-  };
 
   const onSelectedTag = (tag) => {
     if (selectedTags.includes(tag)) {
@@ -60,16 +57,16 @@ const AgendaPage = () => {
   const filteredSessions = useMemo(() => {
     return sessions?.filter((session) => {
       return (
-        (session.name.toLowerCase().includes(text) ||
+        (session.name.toLowerCase().includes(textLower) ||
           session.speakers.some(
             (speaker) =>
-              speaker.name.toLowerCase().includes(text) ||
-              speaker.organization.toLowerCase().includes(text),
+              speaker.name.toLowerCase().includes(textLower) ||
+              speaker.organization.toLowerCase().includes(textLower),
           ) ||
           session.moderators.some(
             (moderator) =>
-              moderator.name.toLowerCase().includes(text) ||
-              moderator.organization.toLowerCase().includes(text),
+              moderator.name.toLowerCase().includes(textLower) ||
+              moderator.organization.toLowerCase().includes(textLower),
           )) &&
         (selectedTags.length === 0 || selectedTags.includes(session.tag)) &&
         (selectedTracks.length === 0 ||
@@ -84,7 +81,7 @@ const AgendaPage = () => {
     });
   }, [
     sessions,
-    text,
+    textLower,
     selectedTags,
     selectedTracks,
     selectedLocations,
@@ -103,7 +100,7 @@ const AgendaPage = () => {
     <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
       <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
         <div className="w-full md:w-[80%] flex flex-col gap-y-4">
-          <SearchBar onChange={onChange} />
+          <SearchBar text={text} setText={setText} />
           {tags && (
             <Filter
               name="Tags"
