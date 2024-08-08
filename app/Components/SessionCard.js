@@ -41,7 +41,7 @@ const SessionCard = ({ session, showDesc = false }) => {
               minute: "2-digit",
             })}
             {" | "}
-            {new Date(session.start).toLocaleDateString()}
+            {session.start.toLocaleDateString()}
           </p>
           <p className="mb-2">{session.location}</p>
           {session.moderators.length > 0 && (
