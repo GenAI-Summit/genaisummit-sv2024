@@ -8,7 +8,10 @@ const Media = ({ media }) => {
     return null;
   }
   return (
-    <SectionLayout title="Media" description="MEDIA COVERAGE OF GENAI SUMMIT">
+    <SectionLayout
+      title="Media"
+      description="MEDIA COVERAGE OF LAST GENAI SUMMIT"
+    >
       <div className="w-full flex flex-wrap mt-2 items-center gap-x-8 gap-y-4 justify-start">
         {media.map((item) => (
           <Link
