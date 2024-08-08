@@ -19,6 +19,9 @@ const IndexSponsors = async () => {
           const filteredSponsors = sponsors.filter(
             (sponsor) => sponsor.tier === tier,
           );
+          if (filteredSponsors.length === 0) {
+            return null;
+          }
           return (
             <SubsectionLayout key={tier} title={tier} textAlign="text-center">
               <div className="w-full flex flex-wrap items-center justify-center mt-2 gap-x-[3%] gap-y-4">
