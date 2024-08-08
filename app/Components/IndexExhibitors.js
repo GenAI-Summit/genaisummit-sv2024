@@ -15,7 +15,10 @@ const Exhibitors = async () => {
     >
       <div className="flex flex-wrap justify-around items-center gap-y-4 gap-x-4 md:justify-between">
         {exhibitors.map((exhibitor) => (
-          <div key={exhibitor.id} className="w-full h-36 md:w-[23%] md:h-27">
+          <div
+            key={exhibitor.id}
+            className="w-full h-36 md:w-[23%] md:h-27 md:min-w-48 md:min-h-27"
+          >
             <OrganizationCard type="exhibitor" organization={exhibitor} />
           </div>
         ))}
