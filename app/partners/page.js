@@ -10,6 +10,7 @@ import Filter from "../Components/Filter";
 import ResetBtn from "../Components/ResetBtn";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
+import PartnersIntro from "../Components/Intro/PartnersIntro";
 
 const PartnersPage = () => {
   const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
@@ -57,10 +58,11 @@ const PartnersPage = () => {
   }
 
   return (
-    <>
-      <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
+    <div className="w-full flex flex-col gap-y-8">
+      <PartnersIntro />
+      <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
         <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
-          <div className="w-full md:w-[80%] flex flex-col gap-y-4">
+          <div className="w-full flex flex-col gap-y-4">
             <SearchBar text={text} setText={setText} />
             {categories && (
               <Filter
@@ -78,7 +80,7 @@ const PartnersPage = () => {
           <Media media={filteredMedia} />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

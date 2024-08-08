@@ -1,5 +1,6 @@
 import SpeakerDetail from "../../Components/SpeakerDetail";
 import SessionCard from "../../Components/SessionCard";
+import GoBackController from "../../Components/GoBackController";
 import SectionLayout from "../../Layouts/SectionLayout";
 import SubSectionLayout from "../../Layouts/SubSectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
@@ -10,7 +11,7 @@ const SpeakerPage = async ({ params }) => {
   const sessions = await getSessionsData(speaker.name);
   return (
     <div className="w-full">
-      <SectionLayout title="Speaker" goBackFlag={true}>
+      <SectionLayout title="Speaker" widget={<GoBackController />}>
         <div className="w-full mt-4">
           <CardLayout>
             <SpeakerDetail speaker={speaker} />

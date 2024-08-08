@@ -1,12 +1,13 @@
 import SectionLayout from "../../Layouts/SectionLayout";
 import SessionCard from "../../Components/SessionCard";
+import GoBackController from "../../Components/GoBackController";
 import { getSessionById } from "/lib/api";
 
 const SessionPage = async ({ params }) => {
   const session = await getSessionData(params.id);
   return (
     <div className="w-full">
-      <SectionLayout title="Session" goBackFlag={true}>
+      <SectionLayout title="Session" widget={<GoBackController />}>
         <SessionCard session={session} showDesc={true} />
       </SectionLayout>
     </div>

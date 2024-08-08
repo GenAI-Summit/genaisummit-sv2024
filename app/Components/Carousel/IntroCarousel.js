@@ -1,14 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Zoom from "react-medium-image-zoom";
+import "../../styles/zoom.css";
 import Image from "next/image";
 
-const IntroCarousel = () => {
+const IntroCarousel = ({ images }) => {
   const [index, setIndex] = useState(0);
-  const images = [
-    "/images/propaganda/intro1.jpg",
-    "/images/propaganda/intro2.jpg",
-  ];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -17,7 +15,7 @@ const IntroCarousel = () => {
     return () => clearInterval(interval);
   }, [images.length]);
   return (
-    <div className="intro-carousel">
+    <Zoom>
       <Image
         src={images[index]}
         alt="intro-carousel"
@@ -26,7 +24,7 @@ const IntroCarousel = () => {
         className="rounded-lg"
         loading="lazy"
       />
-    </div>
+    </Zoom>
   );
 };
 
