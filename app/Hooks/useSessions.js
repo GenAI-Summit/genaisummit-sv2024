@@ -8,26 +8,30 @@ const useSessions = () => {
     fetcher,
   );
 
+  const sessions = data?.data.map((session) => ({
+    id: session.id,
+    name: session.name,
+    desc: session.desc,
+    start: new Date(session.start),
+    end: new Date(session.end),
+    speakers: session.speakers
+      .filter((speaker) => speaker.session_role === "speaker")
+      .map((speaker) => ({
+        ...speaker,
+        name: speaker.name.replace(/_RANK_\d+_/, ""),
+      })),
+    moderators: session.speakers.filter(
+      (speaker) => speaker.session_role === "moderator",
+    ),
+    tag: session.tags.length > 0 ? session.tags[0] : "Other",
+    tracks: session.tracks,
+    location: session.location,
+  }));
+
+  console.log("===== DEBUG =====", sessions);
+
   return {
-    sessions: data?.data.map((session) => ({
-      id: session.id,
-      name: session.name,
-      desc: session.desc,
-      start: new Date(session.start),
-      end: new Date(session.end),
-      speakers: session.speakers
-        .filter((speaker) => speaker.session_role === "speaker")
-        .map((speaker) => ({
-          ...speaker,
-          name: speaker.name.replace(/_RANK_\d+_/, ""),
-        })),
-      moderators: session.speakers.filter(
-        (speaker) => speaker.session_role === "moderator",
-      ),
-      tag: session.tags.length > 0 ? session.tags[0] : "Other",
-      tracks: session.tracks,
-      location: session.location,
-    })),
+    sessions,
     isLoading,
     isError: error,
   };
