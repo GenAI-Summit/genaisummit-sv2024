@@ -11,12 +11,16 @@ const NavBar = ({
 }) => {
   const prevEvents = [
     {
-      name: "GenAI Summit SF 2024",
+      name: "GenAI Summit SV 2024",
       url: "https://genaisummit.ai/",
     },
     {
       name: "GenAI Summit SV 2023",
       url: "https://sv2023.genaisummit.ai/",
+    },
+    {
+      name: "Asian American Pioneer Medal",
+      url: "https://whova.com/web/%40T7QrhsNC554UYE6QJFdroR4bM1b%40T66riJ8tOCVLsk%3D/",
     },
   ];
 
@@ -28,7 +32,7 @@ const NavBar = ({
         onMouseLeave={closeDialog}
       >
         <div className="inline-flex items-center gap-1">
-          PREVIOUS EVENT
+          PREVIOUS EVENTS
           <div className="inline-block">
             <Triangle isOpen={showDialog} />
           </div>
