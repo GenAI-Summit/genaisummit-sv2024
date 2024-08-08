@@ -1,15 +1,13 @@
-import GoBackController from "../Components/GoBackController";
-
-const SectionLayout = ({ title, description, children, goBackFlag }) => {
+const SectionLayout = ({ title, description, children, widget }) => {
   return (
-    <div className="text-left mt-2 mb-6">
-      {goBackFlag ? (
+    <div className="w-full text-left mt-2 mb-6">
+      {widget ? (
         <div className="flex flex-row items-center justify-between">
           <div>
             <div className="bg-color1 w-10 h-1 mt-2" />
             <div className="text-3xl font-bold mt-2 text-color5">{title}</div>
           </div>
-          <GoBackController />
+          {widget && <div className="flex flex-row gap-x-2">{widget}</div>}
         </div>
       ) : (
         <>

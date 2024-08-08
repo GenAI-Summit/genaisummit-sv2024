@@ -9,6 +9,7 @@ import ResetBtn from "../Components/ResetBtn";
 import Exhibitors from "../Components/Exhibitors";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
+import ExhibitorsIntro from "../Components/Intro/ExhibitorsIntro";
 
 const ExhibitorsPage = () => {
   const { exhibitors, isLoading, isError } = useExhibitors();
@@ -47,23 +48,26 @@ const ExhibitorsPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
-      <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
-        <div className="w-full md:w-[80%] flex flex-col gap-y-4">
-          <SearchBar text={text} setText={setText} />
-          {categories && (
-            <Filter
-              name="Categories"
-              options={categories}
-              selected={selectedCategories}
-              onSelect={onSelectCategory}
-            />
-          )}
-          <ResetBtn onReset={onReset} />
+    <div className="w-full flex flex-col gap-y-8">
+      <ExhibitorsIntro />
+      <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+        <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
+          <div className="w-full flex flex-col gap-y-4">
+            <SearchBar text={text} setText={setText} />
+            {categories && (
+              <Filter
+                name="Categories"
+                options={categories}
+                selected={selectedCategories}
+                onSelect={onSelectCategory}
+              />
+            )}
+            <ResetBtn onReset={onReset} />
+          </div>
         </div>
-      </div>
-      <div className="w-full">
-        <Exhibitors exhibitors={filteredExhibitors} />
+        <div className="w-full">
+          <Exhibitors exhibitors={filteredExhibitors} />
+        </div>
       </div>
     </div>
   );

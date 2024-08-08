@@ -5,7 +5,9 @@ import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Speakers from "../Components/Speakers";
+import ResetBtn from "../Components/ResetBtn";
 import useSpeakers from "../Hooks/useSpeakers";
+import SpeakersIntro from "../Components/Intro/SpeakersIntro";
 
 const SpeakersPage = () => {
   const { speakers, isLoading, isError } = useSpeakers();
@@ -21,8 +23,8 @@ const SpeakersPage = () => {
     });
   }, [speakers, text]);
 
-  const onChange = (e) => {
-    setText(e.target.value.toLowerCase());
+  const onReset = () => {
+    setText("");
   };
 
   if (isLoading) {
@@ -34,14 +36,18 @@ const SpeakersPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
-      <div className="w-full md:w-2/5 flex justify-center md:max-w-96">
-        <div className="w-full md:w-[80%]">
-          <SearchBar onChange={onChange} />
+    <div className="w-full flex flex-col gap-y-8">
+      <SpeakersIntro />
+      <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+        <div className="w-full md:w-2/5 flex justify-center md:max-w-96">
+          <div className="w-full flex flex-col gap-y-4">
+            <SearchBar text={text} setText={setText} />
+            <ResetBtn onReset={onReset} />
+          </div>
         </div>
-      </div>
-      <div className="w-full">
-        <Speakers speakers={filteredSpeakers} />
+        <div className="w-full">
+          <Speakers speakers={filteredSpeakers} />
+        </div>
       </div>
     </div>
   );

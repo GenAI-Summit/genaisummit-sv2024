@@ -2,6 +2,7 @@ import SectionLayout from "../Layouts/SectionLayout";
 import SubsectionLayout from "../Layouts/SubSectionLayout";
 import OrganizationCard from "./OrganizationCard";
 import ShowMore from "./ShowMore";
+import RegisterBtn from "./RegisterBtn";
 import { getSponsors } from "/lib/api";
 
 const IndexSponsors = async () => {
@@ -12,6 +13,7 @@ const IndexSponsors = async () => {
       <SectionLayout
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
+        widget={<RegisterBtn text="Become Our Sponsor" />}
       >
         {tiers.map((tier) => {
           const filteredSponsors = sponsors.filter(

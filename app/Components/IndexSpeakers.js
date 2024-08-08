@@ -1,6 +1,7 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SpeakerCard from "./SpeakerCard";
 import ShowMore from "./ShowMore";
+import RegisterBtn from "./RegisterBtn";
 import { getSpeakers } from "/lib/api";
 
 import styles from "../styles/border.module.css";
@@ -13,6 +14,7 @@ const IndexSpeakers = async () => {
       <SectionLayout
         title="Speakers"
         description="LISTEN TO THE EVENT SPEAKERS"
+        widget={<RegisterBtn text="Become Our Speaker" />}
       >
         <div className="flex flex-wrap justify-between gap-x-2 gap-y-10">
           {speakers.map((speaker) => (

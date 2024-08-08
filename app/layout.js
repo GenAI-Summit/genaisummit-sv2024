@@ -24,7 +24,7 @@ export const metadata = {
       "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
     images: [
       {
-        url: "/images/propaganda/banner_seo.jpg",
+        url: "/images/propaganda/banner_seo.webp",
         width: 1200,
         height: 630,
         alt: "Generative AI Summit Silicon Valley 2024",

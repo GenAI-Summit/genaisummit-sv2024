@@ -106,9 +106,9 @@ const AgendaPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-4">
+    <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
       <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
-        <div className="w-full md:w-[80%] flex flex-col gap-y-4">
+        <div className="w-full flex flex-col gap-y-4">
           <SearchBar text={text} setText={setText} />
           {tags && (
             <Filter
