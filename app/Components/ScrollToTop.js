@@ -38,7 +38,7 @@ const BackToTopButton = () => {
       onClick={scrollToTop}
     >
       <span className="absolute inset-0 flex items-center justify-center">
-        <svg width="52" height="52">
+        <svg width="52" height="52" className="rotate-[-90deg]">
           <circle
             cx="26"
             cy="26"

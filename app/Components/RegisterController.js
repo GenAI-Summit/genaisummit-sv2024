@@ -1,9 +1,9 @@
-"use client";
-
-import { useState } from "react";
-
 const RegisterController = () => {
-
+  return (
+    <div>
+      <h1>Register Controller</h1>
+    </div>
+  );
 };
 
 export default RegisterController;
