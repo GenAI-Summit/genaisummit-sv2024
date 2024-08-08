@@ -1,5 +1,9 @@
 "use client";
 
-const RegisterController = () => {};
+import { useState } from "react";
+
+const RegisterController = () => {
+
+};
 
 export default RegisterController;
