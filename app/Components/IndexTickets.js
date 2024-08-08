@@ -32,7 +32,7 @@ const IndexTickets = () => {
     },
     {
       id: 4,
-      name: "VIP Admission",
+      name: "VIP Pass",
       price: 1099.0,
       originalPrice: 1299.0,
       saveText: "Save $200 per ticket until Sept 1",
