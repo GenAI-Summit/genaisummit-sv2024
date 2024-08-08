@@ -26,6 +26,7 @@
  - [x] banners
  - [x] buy ticket bar on mobile
  - [ ] animations
+ - [ ] adjust medium screens
  - [ ] subscribe
  - [ ] swr in ssr
  - [ ] card abstraction
