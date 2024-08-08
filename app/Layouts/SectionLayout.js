@@ -5,9 +5,11 @@ const SectionLayout = ({ title, description, children, widget }) => {
         <div className="flex flex-row items-center justify-between">
           <div>
             <div className="bg-color1 w-10 h-1 mt-2" />
-            <div className="text-3xl font-bold mt-2 text-color5">{title}</div>
+            <div className="text-2xl md:text-3xl font-bold mt-2 text-color5">
+              {title}
+            </div>
           </div>
-          {widget && <div className="flex flex-row gap-x-2">{widget}</div>}
+          <div className="hidden md:block">{widget}</div>
         </div>
       ) : (
         <>
