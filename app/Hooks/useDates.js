@@ -8,7 +8,14 @@ const useDates = () => {
     fetcher,
   );
 
-  const dates = data?.data.map((date) => new Date(date).toLocaleDateString());
+  console.log(data);
+
+  const dates = data?.data.map((date) =>
+    new Date(`${date}T00:00:00Z`).toLocaleDateString("en-US", {
+      timeZone: "UTC",
+    }),
+  );
+  console.log(dates);
 
   return {
     dates,
