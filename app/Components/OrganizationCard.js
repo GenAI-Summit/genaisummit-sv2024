@@ -20,6 +20,10 @@ const OrganizationCard = ({ organization }) => {
     router.push(`/organization/${organization.id}`);
   };
 
+  const openUrl = (url) => {
+    window.open(url, "_blank");
+  };
+
   return (
     <>
       <div
@@ -30,13 +34,25 @@ const OrganizationCard = ({ organization }) => {
       </div>
       <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
         <OrganizationDetail organization={organization} />
-        <div>
-          <span
-            className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color1"
-            onClick={onOrganizationDetail}
-          >
-            About {organization.name}
-          </span>
+        <div className="flex flex-col gap-2">
+          {organization.url && (
+            <div>
+              <span
+                className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color1"
+                onClick={() => openUrl(organization.url)}
+              >
+                Official Website
+              </span>
+            </div>
+          )}
+          <div>
+            <span
+              className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color1"
+              onClick={onOrganizationDetail}
+            >
+              About {organization.name}
+            </span>
+          </div>
         </div>
       </Drawer>
     </>
