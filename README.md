@@ -23,7 +23,8 @@
  - [x] fronted and backend schema unification
  - [x] improve speaker card styles
  - [x] share pages
- - [ ] banners
+ - [x] banners
+ - [x] buy ticket bar on mobile
  - [ ] animations
  - [ ] subscribe
  - [ ] swr in ssr
@@ -36,4 +37,3 @@
  - [ ] interface of backend
  - [ ] dynamic images for seo
  - [ ] tickets test
- - [ ] buy ticket bar on mobile
