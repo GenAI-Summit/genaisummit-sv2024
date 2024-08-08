@@ -1,10 +1,10 @@
 const CheckBox = ({ label, checked }) => {
   return (
     <div
-      className={`flex items-center gap-1 cursor-pointer group ${checked ? "text-color2" : "text-color5"}`}
+      className={`flex items-center gap-1 cursor-pointer ${checked ? "text-color2" : "text-color5"}`}
     >
       <svg
-        className="w-6 h-6 text-color5"
+        className="w-6 h-6 text-color5 group"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
