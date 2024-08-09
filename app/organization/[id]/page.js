@@ -3,11 +3,12 @@ import GoBackController from "../../Components/GoBackController";
 import { getOrganizationById } from "/lib/api";
 import SectionLayout from "../../Layouts/SectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
+import SectionEnter from "../../Motions/SectionEnter";
 
 const SponsorPage = async ({ params }) => {
   const organization = await getOrganizationData(params.id);
   return (
-    <div className="w-full">
+    <SectionEnter>
       <SectionLayout title="Sponsor" widget={<GoBackController />}>
         <div className="w-full mt-4">
           <CardLayout>
@@ -15,7 +16,7 @@ const SponsorPage = async ({ params }) => {
           </CardLayout>
         </div>
       </SectionLayout>
-    </div>
+    </SectionEnter>
   );
 };
 

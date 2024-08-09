@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "file-saver": "^2.0.5",
+    "framer-motion": "^11.3.24",
     "html-react-parser": "^5.1.12",
     "ics": "^3.7.6",
     "next": "14.2.4",

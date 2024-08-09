@@ -5,25 +5,30 @@ import SectionLayout from "../../Layouts/SectionLayout";
 import SubSectionLayout from "../../Layouts/SubSectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
 import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
+import SectionEnter from "../../Motions/SectionEnter";
 
 const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);
   const sessions = await getSessionsData(speaker.name);
   return (
     <div className="w-full">
-      <SectionLayout title="Speaker" widget={<GoBackController />}>
-        <div className="w-full mt-4">
-          <CardLayout>
-            <SpeakerDetail speaker={speaker} />
-          </CardLayout>
-        </div>
-      </SectionLayout>
+      <SectionEnter>
+        <SectionLayout title="Speaker" widget={<GoBackController />}>
+          <div className="w-full mt-4">
+            <CardLayout>
+              <SpeakerDetail speaker={speaker} />
+            </CardLayout>
+          </div>
+        </SectionLayout>
+      </SectionEnter>
       {sessions && sessions.length > 0 && (
-        <SubSectionLayout title="Sessions" textAlign="text-left">
-          {sessions.map((session) => (
-            <SessionCard key={session.id} session={session} />
-          ))}
-        </SubSectionLayout>
+        <SectionEnter>
+          <SubSectionLayout title="Sessions" textAlign="text-left">
+            {sessions.map((session) => (
+              <SessionCard key={session.id} session={session} />
+            ))}
+          </SubSectionLayout>
+        </SectionEnter>
       )}
     </div>
   );

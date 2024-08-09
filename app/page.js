@@ -6,21 +6,34 @@ import IndexExhibitors from "./Components/IndexExhibitors";
 import IndexTickets from "./Components/IndexTickets";
 import IndexIntro from "./Components/Intro/IndexIntro";
 import Subscribe from "./Components/Subscribe";
+import SectionEnter from "./Motions/SectionEnter";
 
 const Index = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-5">
       <Banner />
       <div className="w-full md:w-3/4 px-5">
-        <IndexIntro />
+        <SectionEnter>
+          <IndexIntro />
+        </SectionEnter>
       </div>
       <FunFacts />
       <div className="w-full md:w-3/4 flex flex-col gap-5 px-5">
-        <IndexSponsors />
-        <IndexSpeakers />
-        <IndexExhibitors />
-        <IndexTickets />
-        <Subscribe />
+        <SectionEnter>
+          <IndexSponsors />
+        </SectionEnter>
+        <SectionEnter>
+          <IndexSpeakers />
+        </SectionEnter>
+        <SectionEnter>
+          <IndexExhibitors />
+        </SectionEnter>
+        <SectionEnter>
+          <IndexTickets />
+        </SectionEnter>
+        <SectionEnter>
+          <Subscribe />
+        </SectionEnter>
       </div>
     </div>
   );

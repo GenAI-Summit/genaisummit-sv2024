@@ -1,5 +1,6 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubSectionLayout from "../Layouts/SubSectionLayout";
+import SectionEnter from "../Motions/SectionEnter";
 
 const PrivacyPage = () => {
   const privacyPolicy = [
@@ -58,17 +59,22 @@ const PrivacyPage = () => {
     },
   ];
   return (
-    <SectionLayout title="Privacy Policy">
-      {privacyPolicy.map((section, index) => (
-        <SubSectionLayout key={index} title={`${index + 1}. ${section.title}`}>
-          {section.paragraphs.map((paragraph, index) => (
-            <p key={index} className="mb-3">
-              {paragraph}
-            </p>
-          ))}
-        </SubSectionLayout>
-      ))}
-    </SectionLayout>
+    <SectionEnter>
+      <SectionLayout title="Privacy Policy">
+        {privacyPolicy.map((section, index) => (
+          <SubSectionLayout
+            key={index}
+            title={`${index + 1}. ${section.title}`}
+          >
+            {section.paragraphs.map((paragraph, index) => (
+              <p key={index} className="mb-3">
+                {paragraph}
+              </p>
+            ))}
+          </SubSectionLayout>
+        ))}
+      </SectionLayout>
+    </SectionEnter>
   );
 };
 

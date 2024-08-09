@@ -1,5 +1,6 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SubSectionLayout from "../Layouts/SubSectionLayout";
+import SectionEnter from "../Motions/SectionEnter";
 
 const TermsPage = () => {
   const terms = [
@@ -97,17 +98,22 @@ const TermsPage = () => {
     },
   ];
   return (
-    <SectionLayout title="Terms & Conditions">
-      {terms.map((section, index) => (
-        <SubSectionLayout key={index} title={`${index + 1}. ${section.title}`}>
-          {section.paragraphs.map((paragraph, index) => (
-            <p key={index} className="mb-3">
-              {paragraph}
-            </p>
-          ))}
-        </SubSectionLayout>
-      ))}
-    </SectionLayout>
+    <SectionEnter>
+      <SectionLayout title="Terms & Conditions">
+        {terms.map((section, index) => (
+          <SubSectionLayout
+            key={index}
+            title={`${index + 1}. ${section.title}`}
+          >
+            {section.paragraphs.map((paragraph, index) => (
+              <p key={index} className="mb-3">
+                {paragraph}
+              </p>
+            ))}
+          </SubSectionLayout>
+        ))}
+      </SectionLayout>
+    </SectionEnter>
   );
 };
 

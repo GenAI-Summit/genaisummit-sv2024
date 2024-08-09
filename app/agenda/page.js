@@ -10,6 +10,7 @@ import Agenda from "../Components/Agenda";
 import useSessions from "../Hooks/useSessions";
 import useSessionsIndex from "../Hooks/useSessionsIndex";
 import useDates from "../Hooks/useDates";
+import SectionEnter from "../Motions/SectionEnter";
 
 const AgendaPage = () => {
   const [text, setText] = useState("");
@@ -106,49 +107,51 @@ const AgendaPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
-      <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
-        <div className="w-full flex flex-col gap-y-4">
-          <SearchBar text={text} setText={setText} />
-          {tags && (
-            <Filter
-              name="Tags"
-              options={tags}
-              selected={selectedTags}
-              onSelect={onSelectedTag}
-            />
-          )}
-          {tracks && (
-            <Filter
-              name="Tracks"
-              options={tracks}
-              selected={selectedTracks}
-              onSelect={onSelectedTrack}
-            />
-          )}
-          {locations && (
-            <Filter
-              name="Locations"
-              options={locations}
-              selected={selectedLocations}
-              onSelect={onSelectedLocation}
-            />
-          )}
-          {dates && (
-            <Filter
-              name="Dates"
-              options={dates}
-              selected={selectedDates}
-              onSelect={onSelectedDate}
-            />
-          )}
-          <ResetBtn onReset={onReset} />
+    <SectionEnter>
+      <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+        <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
+          <div className="w-full flex flex-col gap-y-4">
+            <SearchBar text={text} setText={setText} />
+            {tags && (
+              <Filter
+                name="Tags"
+                options={tags}
+                selected={selectedTags}
+                onSelect={onSelectedTag}
+              />
+            )}
+            {tracks && (
+              <Filter
+                name="Tracks"
+                options={tracks}
+                selected={selectedTracks}
+                onSelect={onSelectedTrack}
+              />
+            )}
+            {locations && (
+              <Filter
+                name="Locations"
+                options={locations}
+                selected={selectedLocations}
+                onSelect={onSelectedLocation}
+              />
+            )}
+            {dates && (
+              <Filter
+                name="Dates"
+                options={dates}
+                selected={selectedDates}
+                onSelect={onSelectedDate}
+              />
+            )}
+            <ResetBtn onReset={onReset} />
+          </div>
+        </div>
+        <div className="w-full">
+          <Agenda sessions={filteredSessions} />
         </div>
       </div>
-      <div className="w-full">
-        <Agenda sessions={filteredSessions} />
-      </div>
-    </div>
+    </SectionEnter>
   );
 };
 

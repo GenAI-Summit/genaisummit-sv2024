@@ -11,6 +11,7 @@ import ResetBtn from "../Components/ResetBtn";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
 import PartnersIntro from "../Components/Intro/PartnersIntro";
+import SectionEnter from "../Motions/SectionEnter";
 
 const PartnersPage = () => {
   const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
@@ -59,27 +60,31 @@ const PartnersPage = () => {
 
   return (
     <div className="w-full flex flex-col gap-y-8">
-      <PartnersIntro />
-      <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
-        <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
-          <div className="w-full flex flex-col gap-y-4">
-            <SearchBar text={text} setText={setText} />
-            {categories && (
-              <Filter
-                name="Categories"
-                options={categories}
-                selected={selectedCategories}
-                onSelect={onSelectCategory}
-              />
-            )}
-            <ResetBtn onReset={onReset} />
+      <SectionEnter>
+        <PartnersIntro />
+      </SectionEnter>
+      <SectionEnter>
+        <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
+          <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
+            <div className="w-full flex flex-col gap-y-4">
+              <SearchBar text={text} setText={setText} />
+              {categories && (
+                <Filter
+                  name="Categories"
+                  options={categories}
+                  selected={selectedCategories}
+                  onSelect={onSelectCategory}
+                />
+              )}
+              <ResetBtn onReset={onReset} />
+            </div>
+          </div>
+          <div className="w-full">
+            <Sponsors sponsors={filteredSponsors} sponsorTiers={sponsorTiers} />
+            <Media media={filteredMedia} />
           </div>
         </div>
-        <div className="w-full">
-          <Sponsors sponsors={filteredSponsors} sponsorTiers={sponsorTiers} />
-          <Media media={filteredMedia} />
-        </div>
-      </div>
+      </SectionEnter>
     </div>
   );
 };
