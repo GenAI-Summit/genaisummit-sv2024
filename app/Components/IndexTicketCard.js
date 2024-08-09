@@ -15,7 +15,7 @@ const IndexTicketCard = ({ ticket }) => {
           {" "}
           <p className="line-through">${ticket.originalPrice}</p>
           <p className="text-2xl font-bold">${ticket.price}</p>
-          <p className="text-sm">
+          <p className="text-sm text-color1">
             <span>{ticket.saveText}</span>
           </p>
         </div>
