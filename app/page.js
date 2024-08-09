@@ -17,7 +17,9 @@ const Index = () => {
           <IndexIntro />
         </SectionEnter>
       </div>
-      <FunFacts />
+      <SectionEnter>
+        <FunFacts />
+      </SectionEnter>
       <div className="w-full md:w-3/4 flex flex-col gap-5 px-5">
         <SectionEnter>
           <IndexSponsors />
