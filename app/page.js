@@ -8,6 +8,8 @@ import IndexIntro from "./Components/Intro/IndexIntro";
 import Subscribe from "./Components/Subscribe";
 import SectionEnter from "./Motions/SectionEnter";
 
+export const runtime = "edge";
+
 const Index = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-5">
