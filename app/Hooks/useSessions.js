@@ -28,8 +28,6 @@ const useSessions = () => {
     location: session.location,
   }));
 
-  console.log("===== DEBUG =====", sessions);
-
   return {
     sessions,
     isLoading,
