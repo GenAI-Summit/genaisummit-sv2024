@@ -41,7 +41,7 @@ const IndexTickets = () => {
       name: "VIP Pass",
       price: 1099.0,
       originalPrice: 1499.0,
-      saveText: "Save $200 per ticket until Sept 1",
+      saveText: "Save $400 until Sept 1",
       description: [
         "Experience the summit with exclusive benefits including all-session access, VIP dinner, and premium networking events.",
         "All-session access, VIP dinner with speakers, and premium networking events.",
