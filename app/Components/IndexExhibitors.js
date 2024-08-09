@@ -13,7 +13,7 @@ const Exhibitors = async () => {
       description="MEET OUR EXHIBITIORS"
       widget={<RegisterBtn text="Become Our Exhibitor" />}
     >
-      <div className="flex flex-wrap justify-around items-center gap-y-4 gap-x-4 md:justify-between">
+      <div className="flex flex-wrap justify-start items-center gap-y-4 gap-x-4">
         {exhibitors.map((exhibitor) => (
           <div
             key={exhibitor.id}
