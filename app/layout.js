@@ -37,6 +37,9 @@ export const metadata = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://tally.so/widgets/embed.js" />
+      </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className}`}>
         <Navbar />
