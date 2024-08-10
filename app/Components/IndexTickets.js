@@ -47,12 +47,22 @@ const IndexTickets = () => {
         "All-session access, VIP dinner with speakers, and premium networking events.",
       ],
     },
+    {
+      id: 5,
+      name: "Booth Area",
+      price: 1999.0,
+      originalPrice: 2999.0,
+      saveText: "Save $1000 until Sept 1",
+      description: [
+        "Located in the exhibition area, provides 8 x 6 feet space including 96 x 26.5 inch table with height of 29 inch. Publication materials such as roll-up banners/posters are welcomed among the area.",
+      ],
+    },
   ];
   return (
     <SectionLayout title="Get Tickets Now">
-      <div className="flex flex-col md:flex-row justify-between gap-4 w-full">
+      <div className="flex flex-col flex-wrap md:flex-row justify-around gap-4 w-full">
         {tickets.map((ticket) => (
-          <div className="w-full md:w-1/3" key={ticket.id}>
+          <div className="w-full md:w-[30%]" key={ticket.id}>
             <IndexTicketCard ticket={ticket} />
           </div>
         ))}
