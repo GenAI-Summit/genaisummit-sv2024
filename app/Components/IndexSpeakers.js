@@ -20,18 +20,20 @@ const IndexSpeakers = async () => {
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-1/4 md:w-[16%] ${styles.border}`}
+              className={`w-1/4 lg:w-[16%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="mt-2 flex flex-col items-start justify-center gap-y-1 text-color5">
-                <p className="font-bold md:text-[14px] text-[8px]">
+                <p className="font-bold text-[8px] md:text-[12px] lg:text-[14px]">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="md:text-[12px] text-[7px]">{speaker.title}</p>
+                  <p className="text-[7px] md:text-[10px] lg:text-[12px]">
+                    {speaker.title}
+                  </p>
                 )}
                 {speaker.organization && (
-                  <p className="md:text-[12px] text-[7px]">
+                  <p className="text-[7px] md:text-[10px] lg:text-[12px]">
                     @{speaker.organization}
                   </p>
                 )}
