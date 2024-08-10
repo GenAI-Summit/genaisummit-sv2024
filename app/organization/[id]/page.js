@@ -5,6 +5,8 @@ import SectionLayout from "../../Layouts/SectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
 import SectionEnter from "../../Motions/SectionEnter";
 
+export const runtime = "edge";
+
 const SponsorPage = async ({ params }) => {
   const organization = await getOrganizationData(params.id);
   return (
