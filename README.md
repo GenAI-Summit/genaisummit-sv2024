@@ -25,8 +25,11 @@
  - [x] share pages
  - [x] banners
  - [x] buy ticket bar on mobile
- - [ ] animations
+ - [x] animations
  - [ ] adjust medium screens
+ - [ ] add exhibitor ticket
+ - [ ] replace pics in index
+ - [ ] new features
  - [ ] subscribe
  - [ ] swr in ssr
  - [ ] card abstraction
