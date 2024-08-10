@@ -27,8 +27,8 @@ const IntroCarousel = ({ images }) => {
       <Image
         src={images[index]}
         alt="intro-carousel"
-        width={800}
-        height={500}
+        width={1600}
+        height={900}
         className="rounded-lg"
         loading="lazy"
       />

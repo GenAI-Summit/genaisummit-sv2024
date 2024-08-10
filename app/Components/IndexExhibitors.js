@@ -13,11 +13,11 @@ const Exhibitors = async () => {
       description="MEET OUR EXHIBITIORS"
       widget={<RegisterBtn text="Become Our Exhibitor" />}
     >
-      <div className="flex flex-wrap justify-around items-center gap-y-4 gap-x-4">
+      <div className="flex flex-wrap justify-start items-center gap-y-4 gap-x-[7%] md:gap-x-[2%] lg:gap-x-[1%]">
         {exhibitors.map((exhibitor) => (
           <div
             key={exhibitor.id}
-            className="w-full h-36 md:w-[23%] md:h-27 md:min-w-48 md:min-h-27"
+            className="w-[46%] h-36 md:w-[23%] md:h-27 lg:w-[19%] lg:h-27"
           >
             <OrganizationCard type="exhibitor" organization={exhibitor} />
           </div>
