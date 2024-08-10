@@ -6,7 +6,7 @@ const sponsorTiers = ["Platinum", "Gold", "Silver", "Special"];
 
 const useExhibitors = () => {
   const { data, isLoading, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_API_URL}/exhibitors`,
+    "https://api.gptdao.ai/exhibitors",
     fetcher,
   );
 

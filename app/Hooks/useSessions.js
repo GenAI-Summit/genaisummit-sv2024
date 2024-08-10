@@ -4,7 +4,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const useSessions = () => {
   const { data, isLoading, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_API_URL}/agenda`,
+    "https://api.gptdao.ai/agenda",
     fetcher,
   );
 

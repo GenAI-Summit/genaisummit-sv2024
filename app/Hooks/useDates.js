@@ -4,7 +4,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const useDates = () => {
   const { data, isLoading, error } = useSWR(
-    `${process.env.NEXT_PUBLIC_API_URL}/index/dates`,
+    "https://api.gptdao.ai/index/dates",
     fetcher,
   );
 
