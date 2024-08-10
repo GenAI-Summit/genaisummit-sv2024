@@ -7,6 +7,8 @@ import CardLayout from "../../Layouts/CardLayout";
 import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
 import SectionEnter from "../../Motions/SectionEnter";
 
+export const runtime = "edge";
+
 const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);
   const sessions = await getSessionsData(speaker.name);
