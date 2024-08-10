@@ -8,8 +8,11 @@ const IndexIntro = () => {
     "We are at the forefront of a new technological wave, with generative AI revealing a future of infinite possibilities. With over 5000 attendees, 300 startups, and more than 1000 developers, the summit brings together the world's most cutting-edge entrepreneurial teams and investment institutions to jointly explore the future of this field.",
   ];
   const images = [
-    "/images/propaganda/index_intro1.jpg",
-    "/images/propaganda/index_intro2.jpg",
+    "/images/propaganda/index_intro1.webp",
+    "/images/propaganda/index_intro2.webp",
+    "/images/propaganda/index_intro3.webp",
+    "/images/propaganda/index_intro4.webp",
+    "/images/propaganda/index_intro5.webp",
   ];
   return (
     <Intro

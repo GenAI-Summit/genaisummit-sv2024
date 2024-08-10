@@ -8,8 +8,11 @@ const IndexIntro = () => {
     "Our sponsorship packages offer a range of benefits, including prominent logo placement, speaking opportunities, and exclusive networking events. By aligning your brand with this groundbreaking summit, you'll position your company as a leader in the AI revolution. Join us in shaping the future of AI and forge valuable connections that will drive your business forward in the years to come.",
   ];
   const images = [
-    "/images/propaganda/index_intro1.jpg",
-    "/images/propaganda/index_intro2.jpg",
+    "/images/propaganda/index_intro1.webp",
+    "/images/propaganda/index_intro2.webp",
+    "/images/propaganda/index_intro3.webp",
+    "/images/propaganda/index_intro4.webp",
+    "/images/propaganda/index_intro5.webp",
   ];
   return (
     <>

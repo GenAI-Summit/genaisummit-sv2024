@@ -8,8 +8,8 @@ const IndexIntro = () => {
     "As a speaker, you'll join a roster of distinguished voices from across the AI landscape. Whether you're presenting cutting-edge research, sharing real-world applications, or exploring the ethical implications of AI, your contribution will be invaluable. This is your chance to influence the direction of generative AI, network with industry peers, and establish yourself as a thought leader in one of the most exciting fields of our time.",
   ];
   const images = [
-    "/images/propaganda/speakers_intro1.jpg",
-    "/images/propaganda/speakers_intro2.jpg",
+    "/images/propaganda/speakers_intro1.webp",
+    "/images/propaganda/speakers_intro2.webp",
   ];
   return (
     <>

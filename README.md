@@ -26,9 +26,9 @@
  - [x] banners
  - [x] buy ticket bar on mobile
  - [x] animations
+ - [x] add exhibitor ticket
+ - [x] replace pics in index
  - [ ] adjust medium screens
- - [ ] add exhibitor ticket
- - [ ] replace pics in index
  - [ ] new features
  - [ ] subscribe
  - [ ] swr in ssr
