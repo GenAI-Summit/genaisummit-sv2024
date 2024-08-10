@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Logo from "./Logo";
 
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 
 const OrganizationDetail = ({ organization }) => {
   return (
@@ -15,7 +15,7 @@ const OrganizationDetail = ({ organization }) => {
       </Link>
       <div className="mt-4 text-2xl font-bold">{organization.name}</div>
       <div className="mt-2 text-left text-lg md:text-xl">
-        {parse(organization.desc)}
+        {organization.desc}
       </div>
     </div>
   );
