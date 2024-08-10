@@ -1,8 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "./Icon";
-
-// import parse from "html-react-parser";
+import ParsedHtml from "./ParsedHtml";
 
 const SpeakerDetail = ({ speaker }) => {
   return (
@@ -63,7 +62,7 @@ const SpeakerDetail = ({ speaker }) => {
           </div>
         </div>
         <div className="mt-4 text-left text-lg md:text-xl">
-          {speaker.bio}
+          <ParsedHtml html={speaker.bio} />
         </div>
       </div>
     </>

@@ -28,9 +28,11 @@
  - [x] animations
  - [x] add exhibitor ticket
  - [x] replace pics in index
+ - [x] tickets test
  - [ ] adjust medium screens
  - [ ] new features
  - [ ] subscribe
+ - [ ] optimize files structure
  - [ ] swr in ssr
  - [ ] card abstraction
  - [ ] speakers social media
@@ -40,4 +42,3 @@
  - [ ] session card badges colors
  - [ ] interface of backend
  - [ ] dynamic images for seo
- - [ ] tickets test
