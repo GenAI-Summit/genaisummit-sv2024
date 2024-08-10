@@ -16,7 +16,7 @@ const IndexSpeakers = async () => {
         description="LISTEN TO THE EVENT SPEAKERS"
         widget={<RegisterBtn text="Become Our Speaker" />}
       >
-        <div className="flex flex-wrap justify-between gap-x-2 gap-y-10">
+        <div className="flex flex-wrap justify-around gap-x-2 gap-y-10">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
