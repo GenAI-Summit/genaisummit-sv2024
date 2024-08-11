@@ -6,7 +6,7 @@ import Burger from "../SVG/Burger";
 import NavBarItems from "./NavBarItems";
 import TicketBtn from "../TicketBtn";
 import { useRouter } from "next/navigation";
-import MenuDropDown from "../../Motions/MenuDropDown";
+import DropDown from "../../Motions/DropDown";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -86,7 +86,7 @@ const NavBar = () => {
             <Burger isOpen={isMenuOpen} />
           </button>
         </div>
-        <MenuDropDown isOpen={isMenuOpen}>
+        <DropDown isOpen={isMenuOpen}>
           <div
             className={`${!isMenuOpen ? "hidden" : ""} lg:hidden flex flex-col text-center justify-center gap-6 py-6`}
           >
@@ -98,7 +98,7 @@ const NavBar = () => {
               handleDialog={handleDialog}
             />
           </div>
-        </MenuDropDown>
+        </DropDown>
       </div>
     </>
   );

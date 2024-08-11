@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Triangle from "../SVG/Triangle";
+import DropDowm from "../../Motions/DropDown";
 
 const NavBar = ({
   hoverEffect,
@@ -54,28 +55,33 @@ const NavBar = ({
         )}
       </div>
       <div
-        className={`relative md:hidden inline-block cursor-pointer ${showDialog ? "text-color1" : ""}`}
+        className={`relative md:hidden inline-block ${showDialog ? "text-color1" : ""}`}
       >
-        <div className="inline-flex items-center gap-1" onClick={handleDialog}>
+        <div
+          className="inline-flex items-center cursor-pointer gap-1"
+          onClick={handleDialog}
+        >
           PREVIOUS EVENT
           <div className="inline-block">
             <Triangle isOpen={showDialog} />
           </div>
         </div>
-        {showDialog && (
-          <>
-            {prevEvents.map((event, index) => (
-              <Link
-                key={index}
-                className="block p-2 rounded text-color7 hover:text-color1 ease-in-out duration-300"
-                href={event.url}
-                target="_blank"
-              >
-                {event.name}
-              </Link>
-            ))}
-          </>
-        )}
+        <DropDowm isOpen={showDialog}>
+          {showDialog && (
+            <div className="mt-4 flex flex-col gap-y-4">
+              {prevEvents.map((event, index) => (
+                <Link
+                  key={index}
+                  className="block p-2 rounded text-color7 hover:text-color1 ease-in-out duration-300"
+                  href={event.url}
+                  target="_blank"
+                >
+                  {event.name}
+                </Link>
+              ))}
+            </div>
+          )}
+        </DropDowm>
       </div>
     </>
   );

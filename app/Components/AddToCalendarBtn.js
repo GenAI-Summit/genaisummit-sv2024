@@ -98,7 +98,7 @@ const AddToCalendarBtn = ({
         )}
       </div>
       <div
-        className="w-48 cursor-pointer md:hidden relative inline-block rounded bg-color1 hover:bg-color2 ease-in-out duration-300"
+        className={`w-48 cursor-pointer md:hidden relative inline-block rounded bg-color1 hover:bg-color2 ease-in-out duration-300 ${width}`}
         onClick={handleDialog}
       >
         <div className="text-color7 font-bold py-2 px-4 inline-flex items-center gap-1">
