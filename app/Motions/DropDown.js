@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 
-const MenuDropDown = ({ children, isOpen }) => {
+const DropDown = ({ children, isOpen }) => {
   return (
     <AnimatePresence>
       {isOpen && (
@@ -20,4 +20,4 @@ const MenuDropDown = ({ children, isOpen }) => {
   );
 };
 
-export default MenuDropDown;
+export default DropDown;

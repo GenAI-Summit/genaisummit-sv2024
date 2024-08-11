@@ -28,27 +28,27 @@ const FunFacts = () => {
       symbol: "+",
     },
     {
-      title: "Management",
+      title: "AI Developers",
       start: 0,
-      end: 18,
-      symbol: "%",
-    },
-    {
-      title: "C-Level",
-      start: 0,
-      end: 14,
+      end: 35,
       symbol: "%",
     },
     {
       title: "Founders",
       start: 0,
-      end: 10,
+      end: 20,
       symbol: "%",
     },
     {
-      title: "Developers",
+      title: "VCs",
       start: 0,
-      end: 8,
+      end: 15,
+      symbol: "%",
+    },
+    {
+      title: "Media/KOLs",
+      start: 0,
+      end: 10,
       symbol: "%",
     },
   ];
