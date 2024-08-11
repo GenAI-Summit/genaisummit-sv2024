@@ -38,8 +38,9 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
-          <TicketBtn />
+          <TicketBtn width="w-48" />
           <AddToCalendarBtn
+            width="w-48"
             title="GENAI SUMMIT SV 2024"
             details=""
             location="Santa Clara Convention Center, Santa Clara, CA"

@@ -7,7 +7,14 @@ import Triangle from "./SVG/Triangle";
 import { createEvent } from "ics";
 import { saveAs } from "file-saver";
 
-const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
+const AddToCalendarBtn = ({
+  title,
+  details,
+  location,
+  startDate,
+  endDate,
+  width,
+}) => {
   const [showDialog, setShowDialog] = useState(false);
 
   const openDialog = () => {
@@ -73,7 +80,7 @@ const AddToCalendarBtn = ({ title, details, location, startDate, endDate }) => {
   return (
     <>
       <div
-        className="w-48 cursor-pointer hidden md:block rounded bg-color1 hover:bg-color2 ease-in-out duration-300"
+        className={`cursor-pointer hidden md:block rounded bg-color1 hover:bg-color2 ease-in-out duration-300 ${width ? width : "w-48"}`}
         onMouseEnter={openDialog}
         onMouseLeave={closeDialog}
       >
