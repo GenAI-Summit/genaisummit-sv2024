@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 // import { ThemeProvider } from "./Contexts/Theme";
 import Navbar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer";
-import FloatFotter from "./Components/FloatFooter";
 import ScrollToTop from "./Components/ScrollToTop";
 import ShareBar from "./Components/ShareBar";
 import "./globals.css";
@@ -53,7 +52,6 @@ const RootLayout = ({ children }) => {
             <ShareBar />
           </div>
         </div>
-        <FloatFotter />
         <Footer />
         <ScrollToTop />
         <Script
