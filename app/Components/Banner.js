@@ -1,5 +1,6 @@
 import TicketBtn from "./TicketBtn";
 import AddToCalendarBtn from "./AddToCalendarBtn";
+import SubscribeBtn from "./SubscribeBtn";
 import CountdownTimer from "./Counter/CountdownTimer";
 
 const Banner = () => {
@@ -38,6 +39,7 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row gap-4">
+          <SubscribeBtn width="w-48" />
           <TicketBtn width="w-48" />
           <AddToCalendarBtn
             width="w-48"

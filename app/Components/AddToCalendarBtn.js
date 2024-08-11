@@ -80,7 +80,7 @@ const AddToCalendarBtn = ({
   return (
     <>
       <div
-        className={`cursor-pointer hidden md:block rounded bg-color1 hover:bg-color2 ease-in-out duration-300 ${width ? width : "w-48"}`}
+        className={`cursor-pointer hidden md:block rounded bg-color1 hover:bg-color2 ease-in-out duration-300 ${width}`}
         onMouseEnter={openDialog}
         onMouseLeave={closeDialog}
       >

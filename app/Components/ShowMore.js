@@ -1,4 +1,5 @@
 "use client";
+
 import { useRouter } from "next/navigation";
 
 const ShowMore = ({ target, text = "Show More" }) => {

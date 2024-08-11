@@ -5,7 +5,6 @@ import IndexSponsors from "./Components/IndexSponsors";
 import IndexExhibitors from "./Components/IndexExhibitors";
 import IndexTickets from "./Components/IndexTickets";
 import IndexIntro from "./Components/Intro/IndexIntro";
-import Subscribe from "./Components/Subscribe";
 import SectionEnter from "./Motions/SectionEnter";
 
 export const runtime = "edge";
@@ -34,9 +33,6 @@ const Index = () => {
         </SectionEnter>
         <SectionEnter>
           <IndexTickets />
-        </SectionEnter>
-        <SectionEnter>
-          <Subscribe />
         </SectionEnter>
       </div>
     </div>
