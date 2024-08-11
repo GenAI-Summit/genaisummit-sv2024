@@ -20,7 +20,7 @@ import {
 import { usePathname } from "next/navigation";
 
 const ShareBar = () => {
-  const url = `${process.env.NEXT_PUBLIC_BASE_URL}${usePathname()}`;
+  const url = `https://genaisummit.ai${usePathname()}`;
   return (
     <div>
       <div className="bg-color1 w-10 h-1 mt-2" />
