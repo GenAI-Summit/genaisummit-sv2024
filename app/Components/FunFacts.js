@@ -28,15 +28,15 @@ const FunFacts = () => {
       symbol: "+",
     },
     {
-      title: "AI Developers",
+      title: "Founders/CEOs",
       start: 0,
-      end: 35,
+      end: 53,
       symbol: "%",
     },
     {
-      title: "Founders",
+      title: "AI Developers",
       start: 0,
-      end: 20,
+      end: 35,
       symbol: "%",
     },
     {
