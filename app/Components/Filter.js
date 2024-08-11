@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CheckBox from "./SVG/CheckBox";
 import WrapperArrow from "./SVG/WrapperArrow";
+import DropDown from "../Motions/DropDown";
 
 const Filter = ({ name, options, selected, onSelect }) => {
   const [isWrapperOpen, setIsWrapperOpen] = useState(false);
@@ -24,13 +25,18 @@ const Filter = ({ name, options, selected, onSelect }) => {
       </div>
       {isWrapperOpen && (
         <div className="flex flex-col gap-2">
-          {options.map((option, index) => {
-            return (
-              <div key={index} onClick={() => onSelect(option)}>
-                <CheckBox checked={selected.includes(option)} label={option} />
-              </div>
-            );
-          })}
+          <DropDown isOpen={isWrapperOpen}>
+            {options.map((option, index) => {
+              return (
+                <div key={index} onClick={() => onSelect(option)}>
+                  <CheckBox
+                    checked={selected.includes(option)}
+                    label={option}
+                  />
+                </div>
+              );
+            })}
+          </DropDown>
         </div>
       )}
     </div>
