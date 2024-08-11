@@ -74,18 +74,19 @@ const NavBar = () => {
         <div className="w-full flex flex-row justify-between">
           <div className="cursor-pointer" onClick={onClickLogo}>
             <Icon
-              src="/images/icons/gptdao3.png"
+              src="/images/icons/gptdao4.png"
               alt="GPTDAO Logo"
-              width="150"
-              height="150"
+              width="30"
+              height="30"
             />
           </div>
+          <TicketBtn width="w-48" />
           <button onClick={handleDrawer}>
             <Burger isOpen={isMenuOpen} />
           </button>
         </div>
         <div
-          className={`${!isMenuOpen ? "hidden" : ""} lg:hidden flex flex-col text-center justify-center gap-4 pb-4`}
+          className={`${!isMenuOpen ? "hidden" : ""} lg:hidden flex flex-col text-center justify-center gap-6 py-6`}
         >
           <NavBarItems
             closeDrawer={closeDrawer}

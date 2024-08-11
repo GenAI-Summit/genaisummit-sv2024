@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-const NumberRoller = ({ start, end }) => {
+const NumberRoller = ({ start, end, symbol }) => {
   const [count, setCount] = useState(start);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const NumberRoller = ({ start, end }) => {
     return () => clearInterval(interval);
   }, [start, end]);
 
-  return <div>{count === end ? count + "+" : count}</div>;
+  return <div>{count === end ? count + `${symbol}` : count}</div>;
 };
 
 export default NumberRoller;

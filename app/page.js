@@ -1,5 +1,5 @@
 import Banner from "./Components/Banner";
-import FunFacts from "./Components/Counter/FunFacts";
+import FunFacts from "./Components/FunFacts";
 import IndexSpeakers from "./Components/IndexSpeakers";
 import IndexSponsors from "./Components/IndexSponsors";
 import IndexExhibitors from "./Components/IndexExhibitors";
