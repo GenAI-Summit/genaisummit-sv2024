@@ -29,7 +29,7 @@
  - [x] add exhibitor ticket
  - [x] replace pics in index
  - [x] tickets test
- - [ ] adjust medium screens
+ - [x] adjust medium screens
  - [ ] new features
  - [ ] subscribe
  - [ ] optimize files structure
