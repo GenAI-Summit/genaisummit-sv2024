@@ -30,6 +30,7 @@
  - [x] replace pics in index
  - [x] tickets test
  - [x] adjust medium screens
+ - [ ] github width
  - [ ] new features
  - [ ] subscribe
  - [ ] optimize files structure
