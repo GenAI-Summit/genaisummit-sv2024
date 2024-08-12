@@ -12,8 +12,8 @@ const NavBar = ({
 }) => {
   const prevEvents = [
     {
-      name: "GenAI Summit SV 2024",
-      url: "https://genaisummit.ai/",
+      name: "GenAI Summit SF 2024",
+      url: "https://sf2024.genaisummit.ai/",
     },
     {
       name: "GenAI Summit SV 2023",
