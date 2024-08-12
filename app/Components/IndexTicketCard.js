@@ -4,7 +4,16 @@ import TicketBtn from "./TicketBtn";
 const IndexTicketCard = ({ ticket }) => {
   return (
     <CardLayout>
-      <div className="h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4 border border-color4 rounded-lg shadow-sm">
+      <div className="relative h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4 border border-color4 rounded-lg shadow-sm">
+        <div className="absolute top-0 left-0 w-full h-full transition-opacity duration-300 ease-in-out opacity-50 hover:opacity-90 overflow-hidden">
+          <span
+            className={`absolute top-8 right-[-3.75rem] z-10 inline-block w-52 h-8 leading-8 text-center text-white text-base font-normal 
+                         transform rotate-45 border border-dashed border-white shadow-md bg-emerald-600
+                         after:content-[''] after:absolute after:top-0 after:left-0 after:w-full after:h-full after:bg-black after:opacity-10`}
+          >
+            Early Bird
+          </span>
+        </div>
         <h1 className="text-2xl font-bold text-color1">{ticket.name}</h1>
         {ticket.description.map((desc, index) => (
           <p key={index} className="text-base">
