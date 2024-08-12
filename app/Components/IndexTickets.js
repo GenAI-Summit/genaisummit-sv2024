@@ -54,7 +54,7 @@ const IndexTickets = () => {
       originalPrice: 2999.0,
       saveText: "Save $1000 until Sept 1",
       description: [
-        "Located in the exhibition area, provides 8 x 6 feet space including 96 x 26.5 inch table with height of 29 inch. Publication materials such as roll-up banners/posters are welcomed among the area.",
+        "Exhibition area, this space provides 8 x 6 feet of space, including a 96 x 26.5-inch table with a height of 29 inches. Publication materials, such as roll-up banners and posters, are welcomed.",
       ],
     },
   ];
