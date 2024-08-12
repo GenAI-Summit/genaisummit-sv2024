@@ -60,15 +60,17 @@ const IndexTickets = () => {
   ];
   return (
     <SectionLayout title="Get Tickets Now">
-      <div className="flex flex-col flex-wrap md:flex-row justify-start gap-4 w-full">
-        {tickets.map((ticket) => (
-          <div
-            className="w-full md:w-[48%] 2xl:w-[30%] 2xl:max-w-[430px]"
-            key={ticket.id}
-          >
-            <IndexTicketCard ticket={ticket} />
-          </div>
-        ))}
+      <div className="flex flex-col items-center w-full">
+        <div className="flex flex-wrap justify-start gap-x-2 gap-y-4 w-full max-w-[1400px]">
+          {tickets.map((ticket) => (
+            <div
+              className="w-full md:w-[48%] 2xl:w-[30%] 2xl:max-w-[430px]"
+              key={ticket.id}
+            >
+              <IndexTicketCard ticket={ticket} />
+            </div>
+          ))}
+        </div>
       </div>
     </SectionLayout>
   );
