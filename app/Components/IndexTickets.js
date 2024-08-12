@@ -10,7 +10,6 @@ const IndexTickets = () => {
       originalPrice: 129.0,
       saveText: "Save $30 until Sept 1",
       description: [
-        "Gain access to all sessions, workshops, and networking opportunities for any single day of the summit.",
         "Access to all sessions, workshops, and networking opportunities for any single day of the summit.",
       ],
     },
@@ -21,7 +20,6 @@ const IndexTickets = () => {
       originalPrice: 199.0,
       saveText: "Save $50 until Sept 1",
       description: [
-        "Enjoy comprehensive access to all sessions, workshops, and networking events across the entire three-day summit.",
         "Access to all sessions, workshops, and networking events across the entire three-day summit.",
       ],
     },
@@ -32,7 +30,6 @@ const IndexTickets = () => {
       originalPrice: 149.0,
       saveText: "Save $50 until Sept 1",
       description: [
-        "Specially priced for students, this ticket provides full three-day access to all summit activities and sessions.",
         "Access to all summit activities and sessions. Must purchase with a valid .edu email address.",
       ],
     },
@@ -43,7 +40,6 @@ const IndexTickets = () => {
       originalPrice: 1499.0,
       saveText: "Save $400 until Sept 1",
       description: [
-        "Experience the summit with exclusive benefits including all-session access, VIP dinner, and premium networking events.",
         "All-session access, VIP dinner with speakers, and premium networking events.",
       ],
     },
