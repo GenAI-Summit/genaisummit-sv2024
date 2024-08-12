@@ -39,7 +39,7 @@ const NavBar = ({
           </div>
         </div>
         {showDialog && (
-          <div className="absolute bg-color7 shadow-md rounded-md z-10">
+          <div className="absolute bg-color7 shadow-lg rounded-md z-10 p-2">
             {prevEvents.map((event, index) => (
               <Link
                 key={index}
