@@ -1,5 +1,5 @@
 import CardLayout from "../Layouts/CardLayout";
-import TicketBtn from "./TicketBtn";
+import TicketBtn from "./Button/TicketBtn";
 
 const IndexTicketCard = ({ ticket }) => {
   return (

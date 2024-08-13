@@ -5,7 +5,7 @@ import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Speakers from "../Components/Speakers";
-import ResetBtn from "../Components/ResetBtn";
+import ResetBtn from "../Components/Button/ResetBtn";
 import useSpeakers from "../Hooks/useSpeakers";
 import SpeakersIntro from "../Components/Intro/SpeakersIntro";
 import SectionEnter from "../Motions/SectionEnter";

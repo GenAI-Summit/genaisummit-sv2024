@@ -5,7 +5,7 @@ import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
-import ResetBtn from "../Components/ResetBtn";
+import ResetBtn from "../Components/Button/ResetBtn";
 import Exhibitors from "../Components/Exhibitors";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";

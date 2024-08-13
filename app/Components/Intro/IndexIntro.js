@@ -1,5 +1,5 @@
 import Intro from "./Intro";
-import TicketBtn from "../TicketBtn";
+import TicketBtn from "../Button/TicketBtn";
 
 const IndexIntro = () => {
   const title = "Build the Future";

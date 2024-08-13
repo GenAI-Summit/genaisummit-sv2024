@@ -1,7 +1,7 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import SpeakerCard from "./SpeakerCard";
-import ShowMore from "./ShowMore";
-import RegisterBtn from "./RegisterBtn";
+import ShowMore from "./Button/ShowMore";
+import RegisterBtn from "./Button/RegisterBtn";
 import { getSpeakers } from "/lib/api";
 
 import styles from "../styles/border.module.css";

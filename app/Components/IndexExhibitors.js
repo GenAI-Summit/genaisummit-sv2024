@@ -1,7 +1,7 @@
 import SectionLayout from "../Layouts/SectionLayout";
 import OrganizationCard from "./OrganizationCard";
-import ShowMore from "./ShowMore";
-import RegisterBtn from "./RegisterBtn";
+import ShowMore from "./Button/ShowMore";
+import RegisterBtn from "./Button/RegisterBtn";
 
 import { getExhibitors } from "/lib/api";
 

@@ -5,7 +5,7 @@ import Loader from "../Components/Loader";
 import Error from "../Components/Error";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
-import ResetBtn from "../Components/ResetBtn";
+import ResetBtn from "../Components/Button/ResetBtn";
 import Agenda from "../Components/Agenda";
 import useSessions from "../Hooks/useSessions";
 import useSessionsIndex from "../Hooks/useSessionsIndex";
