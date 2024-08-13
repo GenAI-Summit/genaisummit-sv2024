@@ -30,9 +30,9 @@
  - [x] replace pics in index
  - [x] tickets test
  - [x] adjust medium screens
+ - [x] subscribe
  - [ ] github width
  - [ ] new features
- - [ ] subscribe
  - [ ] optimize files structure
  - [ ] swr in ssr
  - [ ] card abstraction
