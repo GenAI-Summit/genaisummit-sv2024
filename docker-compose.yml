@@ -5,7 +5,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: runtime
     image: genaisummit-sv2024:1.0
     container_name: GenAI-Summit-SV2024-Web
     restart: unless-stopped
