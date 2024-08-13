@@ -1,6 +1,6 @@
 import SectionLayout from "../../Layouts/SectionLayout";
 import SessionCard from "../../Components/SessionCard";
-import GoBackController from "../../Components/GoBackController";
+import GoBackController from "../../Components/Button/GoBackController";
 import { getSessionById } from "/lib/api";
 import SectionEnter from "../../Motions/SectionEnter";
 
