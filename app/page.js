@@ -1,9 +1,9 @@
 import Banner from "./Components/Banner";
 import FunFacts from "./Components/FunFacts";
-import IndexSpeakers from "./Components/IndexSpeakers";
-import IndexSponsors from "./Components/IndexSponsors";
-import IndexExhibitors from "./Components/IndexExhibitors";
-import IndexTickets from "./Components/IndexTickets";
+import IndexSpeakers from "./Components/IndexSections/IndexSpeakers";
+import IndexSponsors from "./Components/IndexSections/IndexSponsors";
+import IndexExhibitors from "./Components/IndexSections/IndexExhibitors";
+import IndexTickets from "./Components/IndexSections/IndexTickets";
 import IndexIntro from "./Components/Intro/IndexIntro";
 import SectionEnter from "./Motions/SectionEnter";
 

@@ -1,8 +1,8 @@
-import SectionLayout from "../Layouts/SectionLayout";
-import SubsectionLayout from "../Layouts/SubSectionLayout";
-import OrganizationCard from "./OrganizationCard";
-import ShowMore from "./Button/ShowMore";
-import RegisterBtn from "./Button/RegisterBtn";
+import SectionLayout from "../../Layouts/SectionLayout";
+import SubsectionLayout from "../../Layouts/SubSectionLayout";
+import OrganizationCard from "../OrganizationCard";
+import ShowMore from "../Button/ShowMore";
+import RegisterBtn from "../Button/RegisterBtn";
 import { getSponsors } from "/lib/api";
 
 const IndexSponsors = async () => {
