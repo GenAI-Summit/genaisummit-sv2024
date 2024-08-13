@@ -1,6 +1,6 @@
-import TicketBtn from "./TicketBtn";
-import AddToCalendarBtn from "./AddToCalendarBtn";
-import SubscribeBtn from "./SubscribeBtn";
+import TicketBtn from "./Button/TicketBtn";
+import AddToCalendarBtn from "./Button/AddToCalendarBtn";
+import SubscribeBtn from "./Button/SubscribeBtn";
 import CountdownTimer from "./Counter/CountdownTimer";
 
 const Banner = () => {

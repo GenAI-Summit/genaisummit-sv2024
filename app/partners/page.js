@@ -7,7 +7,7 @@ import Sponsors from "../Components/Sponsors";
 import Media from "../Components/Media";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
-import ResetBtn from "../Components/ResetBtn";
+import ResetBtn from "../Components/Button/ResetBtn";
 import useExhibitors from "../Hooks/useExhibitors";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
 import PartnersIntro from "../Components/Intro/PartnersIntro";

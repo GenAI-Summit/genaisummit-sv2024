@@ -7,7 +7,7 @@ const Intro = ({ title, paragraphs, images, widget }) => {
       <div className="w-full flex flex-col 2xl:flex-row items-start justify-between">
         <div className="w-full 2xl:w-[48%]">
           {paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-lg text-color5 mb-4">
+            <p key={index} className="text-lg text-color8 mb-4">
               {paragraph}
             </p>
           ))}

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import CalendarBtnDialog from "./CalendarBtnDialog";
-import Triangle from "./SVG/Triangle";
+import Triangle from "../SVG/Triangle";
 
 import { createEvent } from "ics";
 import { saveAs } from "file-saver";

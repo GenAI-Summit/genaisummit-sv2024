@@ -1,5 +1,5 @@
 import Intro from "./Intro";
-import RegisterBtn from "../RegisterBtn";
+import RegisterBtn from "../Button/RegisterBtn";
 
 const IndexIntro = () => {
   const title = "Power the Future";
