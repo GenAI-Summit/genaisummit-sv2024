@@ -5,7 +5,7 @@ import CountdownTimer from "./Counter/CountdownTimer";
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       <video
         src="/videos/promotion.mp4"
         autoPlay
@@ -15,7 +15,7 @@ const Banner = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-gray-900 via-gray-600 to-transparent opacity-50 z-20"></div>
-      <div className="relative z-20 flex flex-col items-center justify-center h-full text-color7 text-center p-6 gap-y-10">
+      <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-color7 text-center p-6 gap-y-10">
         <div className="font-monaspace_krypton">
           <p className="text-2xl md:text-5xl font-bold mb-4 text-color1">
             #AIAREALL

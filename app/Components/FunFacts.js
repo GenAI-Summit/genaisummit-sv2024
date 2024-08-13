@@ -53,7 +53,7 @@ const FunFacts = () => {
     },
   ];
   return (
-    <div className="relative w-full h-auto py-10 flex flex-wrap justify-center items-center gap-x-12 gap-y-12 overflow-hidden my-8">
+    <div className="relative w-full h-auto py-10 overflow-hidden my-8 flex justify-center items-center">
       <Image
         src="/images/propaganda/funfacts_bg.png"
         alt="Fun Facts Background"
@@ -62,20 +62,22 @@ const FunFacts = () => {
         style={{ objectFit: "cover" }}
       />
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-      {data.map((item, index) => (
-        <div key={index} className="w-[35%] md:w-[18%] z-10">
-          <div className="text-4xl md:text-6xl text-color1 font-bold">
-            <NumberRoller
-              start={item.start}
-              end={item.end}
-              symbol={item.symbol}
-            />
-            <div className="text-2xl md:text-3xl text-color7 font-semibold">
-              {item.title}
+      <div className="z-10 w-full flex flex-wrap justify-center items-center gap-x-12 gap-y-12 max-w-maxWidth">
+        {data.map((item, index) => (
+          <div key={index} className="w-[35%] md:w-[18%] z-10">
+            <div className="text-4xl md:text-6xl text-color1 font-bold">
+              <NumberRoller
+                start={item.start}
+                end={item.end}
+                symbol={item.symbol}
+              />
+              <div className="text-2xl md:text-3xl text-color7 font-semibold">
+                {item.title}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
