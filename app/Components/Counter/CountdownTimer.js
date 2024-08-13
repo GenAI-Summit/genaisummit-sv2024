@@ -24,15 +24,18 @@ const CountdownTimer = ({ time }) => {
   const minutes = Math.floor((seconds % 3600) / 60);
   const sec = seconds % 60;
 
+  const textColor =
+    "bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent";
+
   return (
     <div className="text-2xl md:text-6xl font-bold mb-4 font-monaspace_neon">
-      <span className="text-color1">{days}</span>
+      <span className={textColor}>{days}</span>
       <span className="text-lg md:text-2xl"> Days </span>
-      <span className="text-color1">{hours}</span>
+      <span className={textColor}>{hours}</span>
       <span className="text-lg md:text-2xl"> Hours </span>
-      <span className="text-color1">{minutes}</span>
+      <span className={textColor}>{minutes}</span>
       <span className="text-lg md:text-2xl"> Minutes </span>
-      <span className="text-color1">{sec}</span>
+      <span className={textColor}>{sec}</span>
       <span className="text-lg md:text-2xl"> Seconds</span>
     </div>
   );

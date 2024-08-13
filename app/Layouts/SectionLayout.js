@@ -4,8 +4,8 @@ const SectionLayout = ({ title, description, children, widget }) => {
       {widget ? (
         <div className="flex flex-row items-center justify-between">
           <div>
-            <div className="bg-color1 w-10 h-1 mt-2" />
-            <div className="text-2xl md:text-3xl font-bold mt-2 text-color5">
+            <div className="bg-gradient-to-r from-color1 to-color2 w-10 h-1 mt-2" />
+            <div className="text-3xl font-bold mt-2 bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
               {title}
             </div>
           </div>
@@ -13,8 +13,10 @@ const SectionLayout = ({ title, description, children, widget }) => {
         </div>
       ) : (
         <>
-          <div className="bg-color1 w-10 h-1 mt-2" />
-          <div className="text-3xl font-bold mt-2 text-color5">{title}</div>
+          <div className="bg-gradient-to-r from-color1 to-color2 w-10 h-1 mt-2" />
+          <div className="text-3xl font-bold mt-2 bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
+            {title}
+          </div>
         </>
       )}
       {description && <div className="mt-1 text-color2">{description}</div>}

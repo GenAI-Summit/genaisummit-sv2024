@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import CalendarBtnDialog from "./CalendarBtnDialog";
-import Triangle from "../SVG/Triangle";
+// import Triangle from "../SVG/Triangle";
 
 import { createEvent } from "ics";
 import { saveAs } from "file-saver";
@@ -79,41 +79,37 @@ const AddToCalendarBtn = ({
 
   return (
     <>
-      <div
-        className={`cursor-pointer hidden md:block rounded bg-color1 hover:bg-color2 ease-in-out duration-300 ${width}`}
+      <button
+        className={`hidden md:block relative group z-0 ${width}`}
         onMouseEnter={openDialog}
         onMouseLeave={closeDialog}
       >
-        <div className="text-color7 font-bold py-2 px-4 inline-flex items-center gap-1">
-          Add to Calendar
-          <div className="inline-block">
-            <Triangle isOpen={showDialog} />
-          </div>
+        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-color1 to-color2"></div>
+        <div className="m-[1.5px] rounded-full bg-color6 px-4 py-2 transition-colors duration-300 hover:bg-gray-700">
+          <span className="h-full w-full rounded-full bg-gradient-to-br from-color1 to-color2 bg-clip-text font-light text-transparent">
+            Add to Calendar
+          </span>
         </div>
-        {showDialog && (
-          <CalendarBtnDialog
-            onAddToGoogleCalendar={onAddToGoogleCalendar}
-            onDownloadICS={onDownloadICS}
-          />
-        )}
-      </div>
-      <div
-        className={`w-48 cursor-pointer md:hidden relative inline-block rounded bg-color1 hover:bg-color2 ease-in-out duration-300 ${width}`}
+      </button>
+      <button
+        className={`md:hidden relative rounded relative group z-0 ${width}`}
         onClick={handleDialog}
       >
-        <div className="text-color7 font-bold py-2 px-4 inline-flex items-center gap-1">
-          Add to Calendar
-          <div className="inline-block">
-            <Triangle isOpen={showDialog} />
-          </div>
+        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-color1 to-color2"></div>
+        <div className="m-[1.5px] rounded-full bg-color6 px-4 py-2 transition-colors duration-300 hover:bg-gray-700">
+          <span className="h-full w-full rounded-full bg-gradient-to-br from-color1 to-color2 bg-clip-text font-light text-transparent">
+            Add to Calendar
+          </span>
         </div>
-        {showDialog && (
-          <CalendarBtnDialog
-            onAddToGoogleCalendar={onAddToGoogleCalendar}
-            onDownloadICS={onDownloadICS}
-          />
-        )}
-      </div>
+      </button>
+      {showDialog && (
+        <CalendarBtnDialog
+          onAddToGoogleCalendar={onAddToGoogleCalendar}
+          onDownloadICS={onDownloadICS}
+          isOpen={showDialog}
+          onClose={closeDialog}
+        />
+      )}
     </>
   );
 };

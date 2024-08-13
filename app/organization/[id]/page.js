@@ -1,5 +1,5 @@
 import OrganizationDetail from "../../Components/OrganizationDetail";
-import GoBackController from "../../Components/GoBackController";
+import GoBackController from "../../Components/Button/GoBackController";
 import { getOrganizationById } from "/lib/api";
 import SectionLayout from "../../Layouts/SectionLayout";
 import CardLayout from "../../Layouts/CardLayout";

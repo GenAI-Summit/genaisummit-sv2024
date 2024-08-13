@@ -1,6 +1,6 @@
 import SpeakerDetail from "../../Components/SpeakerDetail";
 import SessionCard from "../../Components/SessionCard";
-import GoBackController from "../../Components/GoBackController";
+import GoBackController from "../../Components/Button/GoBackController";
 import SectionLayout from "../../Layouts/SectionLayout";
 import SubSectionLayout from "../../Layouts/SubSectionLayout";
 import CardLayout from "../../Layouts/CardLayout";

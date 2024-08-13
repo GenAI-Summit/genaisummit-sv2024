@@ -1,5 +1,5 @@
 import SectionLayout from "../../Layouts/SectionLayout";
-import IndexTicketCard from "../IndexTicketCard";
+import IndexTicketCard from "./IndexTicketCard";
 
 const IndexTickets = () => {
   const tickets = [
