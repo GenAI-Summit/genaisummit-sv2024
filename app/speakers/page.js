@@ -37,14 +37,14 @@ const SpeakersPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col gap-y-8">
+    <div className="w-full flex flex-col gap-y-14 mt-10">
       <SectionEnter>
         <SpeakersIntro />
       </SectionEnter>
       <SectionEnter>
-        <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
-          <div className="w-full md:w-2/5 flex justify-center md:max-w-96">
-            <div className="w-full flex flex-col gap-y-4">
+        <div className="w-full flex flex-col lg:flex-row gap-y-10 lg:gap-x-8">
+          <div className="w-full lg:w-2/5 flex justify-center lg:max-w-96">
+            <div className="w-full flex flex-col gap-y-6">
               <SearchBar text={text} setText={setText} />
               <ResetBtn onReset={onReset} />
             </div>

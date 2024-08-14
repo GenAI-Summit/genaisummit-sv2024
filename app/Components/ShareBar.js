@@ -23,9 +23,9 @@ const ShareBar = () => {
   const url = `https://genaisummit.ai${usePathname()}`;
   return (
     <div>
-      <div className="bg-color1 w-10 h-1 mt-2" />
+      <div className="w-10 h-1 mt-2 bg-gradient-to-br from-color1 to-color2" />
       <div className="flex justify-center gap-2 items-center">
-        <div className="text-color5 font-bold">Share on:</div>
+        <div className="text-color8 font-bold">Share on:</div>
         <TwitterShareButton url={url}>
           <XIcon size={32} round={true} />
         </TwitterShareButton>

@@ -13,19 +13,21 @@ const Filter = ({ name, options, selected, onSelect }) => {
   };
 
   return (
-    <div
-      className={`flex flex-col gap-2 text-start ${isWrapperOpen ? "text-color2" : "text-color5"}`}
-    >
+    <div className="flex flex-col gap-2 text-start">
       <div
-        className="flex items-center justify-between cursor-pointer md:ease-in-out md:transition-all md:duration-300 md:hover:text-color2"
+        className="flex items-center justify-between cursor-pointer group"
         onClick={onClickWrapper}
       >
-        <h3 className="text-xl font-bold">{name}</h3>
+        <span
+          className={`text-xl font-bold ${isWrapperOpen ? "bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent" : "text-color8"} group-hover:bg-gradient-to-br group-hover:from-color1 group-hover:to-color2 group-hover:bg-clip-text group-hover:text-transparent ease-in-out transition-all duration-300`}
+        >
+          {name}
+        </span>
         <WrapperArrow isOpen={isWrapperOpen} />
       </div>
       {isWrapperOpen && (
-        <div className="flex flex-col gap-2">
-          <DropDown isOpen={isWrapperOpen}>
+        <DropDown isOpen={isWrapperOpen}>
+          <div className="flex flex-col gap-3 my-2">
             {options.map((option, index) => {
               return (
                 <div key={index} onClick={() => onSelect(option)}>
@@ -36,8 +38,8 @@ const Filter = ({ name, options, selected, onSelect }) => {
                 </div>
               );
             })}
-          </DropDown>
-        </div>
+          </div>
+        </DropDown>
       )}
     </div>
   );

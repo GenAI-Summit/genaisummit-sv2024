@@ -30,6 +30,7 @@ module.exports = {
         color7: "#8B949E",
         color8: "#F5F5F5",
         color9: "#161B22",
+        color10: "#924cf5",
       },
     },
   },

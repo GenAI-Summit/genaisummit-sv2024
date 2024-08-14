@@ -52,13 +52,13 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed top-0 px-4 py-2 w-full bg-color6 text-color8 flex flex-row justify-around items-center hidden lg:flex z-40 border-b-2 border-color8">
+      <div className="fixed top-4 px-6 py-2 lg:w-3/4 max-w-maxWidth shadow-md rounded-lg bg-color8 text-color6 flex flex-row justify-around items-center hidden lg:flex z-40">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
-            src="/images/icons/gptdao3.png"
+            src="/images/icons/favicon.ico"
             alt="logo"
-            width="150"
-            height="150"
+            width="30"
+            height="30"
           />
         </div>
         <NavBarItems
@@ -68,20 +68,20 @@ const NavBar = () => {
           closeDialog={closeDialog}
           handleDialog={handleDialog}
         />
-        <TicketBtn />
+        <TicketBtn mode="day" />
       </div>
 
-      <div className="fixed top-0 px-4 py-2 w-full bg-color6 text-color8 flex flex-col items-center text-center lg:hidden z-40 border-b-2 border-color8">
+      <div className="fixed top-4 px-6 py-2 w-[95%] shadow-md rounded-lg bg-color8 text-color6 flex flex-col items-center text-center lg:hidden z-40">
         <div className="w-full flex flex-row justify-between">
           <div className="cursor-pointer" onClick={onClickLogo}>
             <Icon
-              src="/images/icons/gptdao4.png"
+              src="/images/icons/favicon.ico"
               alt="GPTDAO Logo"
               width="30"
               height="30"
             />
           </div>
-          <TicketBtn width="w-48" />
+          <TicketBtn width="w-48" mode="day" />
           <button onClick={handleDrawer}>
             <Burger isOpen={isMenuOpen} />
           </button>

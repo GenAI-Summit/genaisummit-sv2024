@@ -15,30 +15,37 @@ const IndexSponsors = async () => {
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
         widget={<RegisterBtn text="Become Our Sponsor" />}
       >
-        {tiers.map((tier) => {
-          const filteredSponsors = sponsors.filter(
-            (sponsor) => sponsor.tier === tier,
-          );
-          if (filteredSponsors.length === 0) {
-            return null;
-          }
-          return (
-            <SubsectionLayout key={tier} title={tier} textAlign="text-center">
-              <div className="w-full flex flex-wrap items-center justify-center mt-2 gap-x-[3%] gap-y-4">
-                {filteredSponsors.map((sponsor) => (
-                  <div
-                    key={sponsor.id}
-                    className="w-full h-36 md:w-[31%] md:h-27"
-                  >
-                    <OrganizationCard type="sponsor" organization={sponsor} />
+        <div className="w-full mt-6 flex flex-col gap-y-12 md:gap-y-16 justify-center items-center">
+          {tiers.map((tier) => {
+            const filteredSponsors = sponsors.filter(
+              (sponsor) => sponsor.tier === tier,
+            );
+            if (filteredSponsors.length === 0) {
+              return null;
+            }
+            return (
+              <div className="w-full" key={tier}>
+                <SubsectionLayout title={tier} textAlign="text-center">
+                  <div className="w-full flex flex-wrap items-center justify-center gap-x-[3%] gap-y-4">
+                    {filteredSponsors.map((sponsor) => (
+                      <div
+                        key={sponsor.id}
+                        className="w-full h-36 md:w-[31%] md:h-27"
+                      >
+                        <OrganizationCard
+                          type="sponsor"
+                          organization={sponsor}
+                        />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </SubsectionLayout>
               </div>
-            </SubsectionLayout>
-          );
-        })}
-        <div className="mt-4">
-          <ShowMore target="/partners" text="View All Sponsors" />
+            );
+          })}
+          <div>
+            <ShowMore target="/partners" text="View All Sponsors" />
+          </div>
         </div>
       </SectionLayout>
     </>

@@ -27,7 +27,7 @@ const OrganizationCard = ({ organization }) => {
   return (
     <>
       <div
-        className="w-full h-full bg-color7 cursor-pointer border-2 border-color7 ease-in-out duration-300 hover:border-color1 rounded-lg shadow-md"
+        className="w-full h-full bg-color8/[0.1] cursor-pointer border-2 border-color6 ease-in-out transition duration-300 hover:border-color8 rounded-lg shadow-md"
         onClick={openDrawer}
       >
         <Logo src={organization.logo} alt={organization.name} />

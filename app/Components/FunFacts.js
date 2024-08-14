@@ -53,7 +53,7 @@ const FunFacts = () => {
     },
   ];
   return (
-    <div className="relative w-full h-auto py-10 overflow-hidden my-8 flex justify-center items-center">
+    <div className="relative w-full h-auto py-10 md:py-16 lg:py-20 overflow-hidden flex justify-center items-center">
       <Image
         src="/images/propaganda/funfacts_bg.png"
         alt="Fun Facts Background"
@@ -61,17 +61,17 @@ const FunFacts = () => {
         fill
         style={{ objectFit: "cover" }}
       />
-      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-      <div className="z-10 w-full flex flex-wrap justify-center items-center gap-x-12 gap-y-12 max-w-maxWidth">
+      <div className="absolute inset-0 bg-black opacity-60 z-0"></div>
+      <div className="z-10 w-full flex flex-wrap justify-center items-center gap-x-12 gap-y-16 md:gap-y-24 lg:gap-y-32 max-w-maxWidth">
         {data.map((item, index) => (
           <div key={index} className="w-[35%] md:w-[18%] z-10">
-            <div className="text-4xl md:text-6xl text-color1 font-bold">
+            <div className="font-monaspace_neon text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-color3 via-color4 to-color5 text-transparent bg-clip-text">
               <NumberRoller
                 start={item.start}
                 end={item.end}
                 symbol={item.symbol}
               />
-              <div className="text-2xl md:text-3xl text-color7 font-semibold">
+              <div className="mt-2 md:mt-5 text-lg md:text-xl lg:text-2xl text-color8">
                 {item.title}
               </div>
             </div>
