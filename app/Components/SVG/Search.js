@@ -6,14 +6,14 @@ const Search = () => {
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="text-color5"
+      className="text-color8"
     >
       <circle
         cx="13"
         cy="13"
         r="10"
         className="stroke-current"
-        strokeWidth="3"
+        strokeWidth="2"
       />
       <line
         x1="18.7071"
@@ -21,7 +21,7 @@ const Search = () => {
         x2="26"
         y2="26"
         className="stroke-current"
-        strokeWidth="3"
+        strokeWidth="2"
         strokeLinecap="round"
       />
     </svg>

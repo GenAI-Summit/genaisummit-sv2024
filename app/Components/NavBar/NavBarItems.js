@@ -10,10 +10,8 @@ const NavBarItems = ({
   handleDialog,
 }) => {
   const pathname = usePathname();
-  const hoverEffect =
-    "hover:bg-gradient-to-br from-color1 to-color2 hover:bg-clip-text hover:text-transparent transition duration-300 ease-in-out";
-  const activeEffect =
-    "bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent";
+  const hoverEffect = "hover:font-semibold duration-300 ease-in-out";
+  const activeEffect = "font-semibold";
 
   const close = () => {
     closeDrawer();

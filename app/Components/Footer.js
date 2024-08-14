@@ -4,6 +4,10 @@ import Link from "next/link";
 import Icon from "./Icon";
 
 const Footer = () => {
+  const textEffect =
+    "bg-gradient-to-br from-color1 to-color2 text-transparent bg-clip-text";
+  const hoverEffect =
+    "hover:bg-gradient-to-br hover:from-color1 hover:to-color2 hover:bg-clip-text hover:text-transparent ease-in-out duration-300";
   const socialMedia = [
     {
       name: "x",
@@ -41,9 +45,9 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-color5 text-color7 border-t-2 border-color1">
-      <div className="flex p-7 justify-between flex-wrap items-start">
-        <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between items-center mt-5">
+    <div className="flex flex-col bg-color6 text-color8 border-t border-color8">
+      <div className="flex p-7 justify-between flex-wrap items-start gap-y-10">
+        <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between md:gap-y-8 items-center mt-5">
           <Link href="https://gptdao.ai" className="w-fit" target="_blank">
             <Icon
               className="icon"
@@ -67,14 +71,14 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5">
-          <div className="text-color1 text-lg md:text-xl font-bold mb-1">
-            Summit Info
+        <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5 gap-y-6">
+          <div className="text-lg md:text-xl font-bold">
+            <span className={textEffect}>Summit Info</span>
           </div>
           <div>Nov 1 - Nov 3, 2024</div>
           <span>
             <Link
-              className="hover:text-color1 ease-in-out duration-300"
+              className={hoverEffect}
               href="https://santaclaraconventioncenter.com/"
               target="_blank"
             >
@@ -84,7 +88,7 @@ const Footer = () => {
           <div>genaix@gptdao.ai</div>
           <span>
             <Link
-              className="hover:text-color1 ease-in-out duration-300"
+              className={hoverEffect}
               href="https://linktr.ee/gptdao"
               target="_blank"
             >
@@ -92,28 +96,23 @@ const Footer = () => {
             </Link>
           </span>
         </div>
-        <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5">
-          <div className="text-color1 text-lg md:text-xl font-bold mb-1">
-            Quick Links
+        <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5 gap-y-6">
+          <div className="text-lg md:text-xl font-bold">
+            <span className={textEffect}>Quick Links</span>
           </div>
-          <div className="flex flex-col text-lg">
-            {quickLinks.map((item) => (
-              <span key={item.name}>
-                <Link
-                  href={item.link}
-                  className="hover:text-color1 ease-in-out duration-300"
-                >
-                  {item.name}
-                </Link>
-              </span>
-            ))}
-          </div>
+          {quickLinks.map((item) => (
+            <span key={item.name}>
+              <Link href={item.link} className={hoverEffect}>
+                {item.name}
+              </Link>
+            </span>
+          ))}
         </div>
-        <div className="w-full md:w-[35%] flex flex-col justify-center mt-5">
-          <div className="text-color1 text-lg md:text-xl font-bold mb-2">
-            Stay Connected
+        <div className="w-full md:w-[35%] flex flex-col justify-center mt-5 gap-y-6">
+          <div className="text-lg md:text-xl font-bold">
+            <span className={textEffect}>Stay Connected</span>
           </div>
-          <span className="text-sm mb-2">
+          <span className="text-base mb-2 leading-8">
             We sincerely invite you to join us, bring your creativity and ideas,
             and explore the future of generative AI together. Please contact us
             for more information.
@@ -134,19 +133,13 @@ const Footer = () => {
       <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-color7">
         <div className="text-sm">
           <span className="text-sm">
-            <Link
-              href="/privacy"
-              className="hover:text-color1 ease-in-out duration-300"
-            >
+            <Link href="/privacy" className={hoverEffect}>
               Privacy Policy
             </Link>
           </span>
           <span className="text-sm"> | </span>
           <span className="text-sm">
-            <Link
-              href="/terms"
-              className="hover:text-color1 ease-in-out duration-300"
-            >
+            <Link href="/terms" className={hoverEffect}>
               Terms of Service
             </Link>
           </span>

@@ -1,28 +1,28 @@
 .border {
   position: relative;
-	color: #ff9900;
-  padding-bottom: 8px;
-  padding-right: 8px;
+  padding: 12px;
 }
 
 .border::before,
 .border::after {
   content: '';
   position: absolute;
-  background-color: currentColor;
+  background: linear-gradient(to right, #FF11E7, #3971FF);
 }
 
 .border::before {
   bottom: 0;
   right: 0;
-  width: 6px;
-  height: calc(30%);
+  width: 3px;
+  height: calc(40%);
+  background: linear-gradient(to bottom, #FF11E7, #3971FF);
+  clip-path: polygon(0 10px, 100% 100%, 100% 100%, 0 100%);
 }
 
 .border::after {
   bottom: 0;
   right: 0;
-  width: calc(30%);
-  height: 6px;
+  width: calc(40%);
+  height: 3px;
+  clip-path: polygon(10px 0, 100% 100%, 100% 100%, 100% 0);
 }
-

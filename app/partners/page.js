@@ -59,14 +59,14 @@ const PartnersPage = () => {
   }
 
   return (
-    <div className="w-full flex flex-col gap-y-8">
+    <div className="w-full flex flex-col gap-y-14 mt-10">
       <SectionEnter>
         <PartnersIntro />
       </SectionEnter>
       <SectionEnter>
-        <div className="w-full flex flex-col md:flex-row gap-y-4 md:gap-x-8">
-          <div className="w-full md:w-2/5 md:max-w-96 flex justify-center">
-            <div className="w-full flex flex-col gap-y-4">
+        <div className="w-full flex flex-col lg:flex-row gap-y-4 lg:gap-x-8">
+          <div className="w-full lg:w-2/5 flex justify-center lg:max-w-96">
+            <div className="w-full flex flex-col gap-y-6">
               <SearchBar text={text} setText={setText} />
               {categories && (
                 <Filter
@@ -79,9 +79,16 @@ const PartnersPage = () => {
               <ResetBtn onReset={onReset} />
             </div>
           </div>
-          <div className="w-full">
-            <Sponsors sponsors={filteredSponsors} sponsorTiers={sponsorTiers} />
-            <Media media={filteredMedia} />
+          <div className="w-full flex flex-col gap-y-16">
+            <div className="w-full">
+              <Sponsors
+                sponsors={filteredSponsors}
+                sponsorTiers={sponsorTiers}
+              />
+            </div>
+            <div className="w-full">
+              <Media media={filteredMedia} />
+            </div>
           </div>
         </div>
       </SectionEnter>

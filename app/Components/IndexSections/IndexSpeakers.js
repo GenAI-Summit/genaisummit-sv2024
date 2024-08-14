@@ -16,14 +16,14 @@ const IndexSpeakers = async () => {
         description="LISTEN TO THE EVENT SPEAKERS"
         widget={<RegisterBtn text="Become Our Speaker" />}
       >
-        <div className="flex flex-wrap justify-around gap-x-2 gap-y-10">
+        <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[9%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-1/4 lg:w-[16%] ${styles.border}`}
+              className={`w-[27%] md:w-[28%] lg:w-[19%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-2 flex flex-col items-start justify-center gap-y-1 text-color5">
+              <div className="mt-2 flex flex-col items-start justify-center gap-y-4 text-color8">
                 <p className="font-bold text-[8px] md:text-[12px] lg:text-[14px]">
                   {speaker.name}
                 </p>
@@ -41,7 +41,7 @@ const IndexSpeakers = async () => {
             </div>
           ))}
         </div>
-        <div className="mt-4">
+        <div className="mt-6 md:mt-8">
           <ShowMore target="/speakers" text="View All Speakers" />
         </div>
       </SectionLayout>

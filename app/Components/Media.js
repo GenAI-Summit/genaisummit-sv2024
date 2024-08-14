@@ -1,7 +1,6 @@
-import Link from "next/link";
-
 import SectionLayout from "../Layouts/SectionLayout";
-import Logo from "../Components/Logo";
+import Link from "next/link";
+import Logo from "./Logo";
 
 const Media = ({ media }) => {
   if (media.length === 0) {
@@ -12,13 +11,13 @@ const Media = ({ media }) => {
       title="Media"
       description="MEDIA COVERAGE OF THE LAST GENAI SUMMIT"
     >
-      <div className="w-full flex flex-wrap mt-2 items-center gap-x-[7%] lg:gap-x-4 gap-y-4 justify-start">
+      <div className="w-full flex flex-wrap mt-6 items-center gap-x-[4%] md:gap-x-[4%] lg:gap-x-[2%] gap-y-6 md:gap-y-8 lg:gap-y-4 justify-start">
         {media.map((item) => (
           <Link
             key={item.id}
             href={item.url}
             target="_blank"
-            className="w-[46%] h-36 lg:w-48 lg:h-27 bg-color7 cursor-pointer border-2 border-color7 ease-in-out duration-300 hover:border-color1 rounded-lg shadow-md"
+            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23%] lg:h-27 bg-color8/[0.1] cursor-pointer border-2 border-color6 ease-in-out duration-300 hover:border-color8 rounded-lg shadow-md"
           >
             <Logo src={item.logo} alt={item.name} />
           </Link>

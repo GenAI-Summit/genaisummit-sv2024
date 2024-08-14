@@ -2,11 +2,11 @@ const SubSectionLayout = ({ title, children, textAlign }) => {
   return (
     <>
       <div
-        className={`w-full text-xl md:text-2xl font-semibold mt-5 text-color5 ${textAlign}`}
+        className={`py-6 w-full text-xl md:text-2xl lg:text-3xl font-semibold text-color8 font-monaspace_neon ${textAlign}`}
       >
         {title}
       </div>
-      <div className="w-full h-full flex flex-col">{children}</div>
+      <div className="w-full h-full flex flex-col gap-y-6">{children}</div>
     </>
   );
 };
