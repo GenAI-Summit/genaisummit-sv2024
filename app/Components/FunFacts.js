@@ -55,13 +55,13 @@ const FunFacts = () => {
   return (
     <div className="relative w-full h-auto py-10 md:py-16 lg:py-20 overflow-hidden flex justify-center items-center">
       <Image
-        src="/images/propaganda/funfacts_bg.jpg"
+        src="/images/propaganda/funfacts_bg.png"
         alt="Fun Facts Background"
         quality={100}
         fill
         style={{ objectFit: "cover" }}
       />
-      <div className="absolute inset-0 bg-black opacity-40 z-0"></div>
+      <div className="absolute inset-0 bg-black opacity-35 z-0"></div>
       <div className="z-10 w-full flex flex-wrap justify-center items-center gap-x-12 gap-y-16 md:gap-y-24 lg:gap-y-32 max-w-maxWidth">
         {data.map((item, index) => (
           <div key={index} className="w-[35%] md:w-[18%] z-10">
