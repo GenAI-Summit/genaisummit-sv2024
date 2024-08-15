@@ -53,7 +53,7 @@ const IndexTickets = () => {
       price: 1999.0,
       originalPrice: 2999.0,
       saveText: "Save $1000 until Sept 1",
-      url: "https://whova.com/portal/registration/genai_202405/omcbwhih",
+      url: "https://whova.com/portal/registration/genai_202405/exhibitor",
       description: [
         "Exhibition area, this space provides 8 x 6 feet of space, including a 96 x 26.5-inch table with a height of 29 inches. Publication materials, such as roll-up banners and posters, are welcomed.",
       ],
