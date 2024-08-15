@@ -6,7 +6,7 @@ const FunFacts = () => {
     {
       title: "Attendees",
       start: 0,
-      end: 5000,
+      end: 10000,
       symbol: "+",
     },
     {
@@ -73,7 +73,7 @@ const FunFacts = () => {
                   symbol={item.symbol}
                 />
               </span>
-              <p className="mt-2 md:mt-5 text-lg md:text-xl lg:text-2xl text-color8">
+              <p className="mt-2 md:mt-5 md:text-xl lg:text-2xl text-color8">
                 {item.title}
               </p>
             </div>
