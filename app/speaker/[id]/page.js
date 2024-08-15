@@ -13,10 +13,10 @@ const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);
   const sessions = await getSessionsData(speaker.name);
   return (
-    <div className="w-full">
+    <div className="w-full mt-10">
       <SectionEnter>
         <SectionLayout title="Speaker" widget={<GoBackController />}>
-          <div className="w-full mt-4">
+          <div className="w-full mt-6">
             <CardLayout>
               <SpeakerDetail speaker={speaker} />
             </CardLayout>
@@ -24,13 +24,17 @@ const SpeakerPage = async ({ params }) => {
         </SectionLayout>
       </SectionEnter>
       {sessions && sessions.length > 0 && (
-        <SectionEnter>
-          <SubSectionLayout title="Sessions" textAlign="text-left">
-            {sessions.map((session) => (
-              <SessionCard key={session.id} session={session} />
-            ))}
-          </SubSectionLayout>
-        </SectionEnter>
+        <div className="w-full mt-8">
+          <SectionEnter>
+            <SubSectionLayout title="Sessions" textAlign="text-left">
+              <div className="w-full flex flex-col gap-y-10">
+                {sessions.map((session) => (
+                  <SessionCard key={session.id} session={session} />
+                ))}
+              </div>
+            </SubSectionLayout>
+          </SectionEnter>
+        </div>
       )}
     </div>
   );

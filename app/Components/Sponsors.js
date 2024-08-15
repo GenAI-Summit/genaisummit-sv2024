@@ -9,7 +9,7 @@ const Sponsors = ({ sponsorTiers, sponsors }) => {
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
       >
-        <div className="w-full mt-6 flex flex-col gap-y-12 md:gap-y-16 justify-start items-center">
+        <div className="w-full flex flex-col gap-y-12 md:gap-y-16 justify-start items-center">
           {sponsorTiers.map((tier) => {
             const filteredSponsors = sponsors.filter(
               (sponsor) => sponsor.tier === tier,

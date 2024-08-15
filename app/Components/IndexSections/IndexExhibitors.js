@@ -11,9 +11,9 @@ const Exhibitors = async () => {
     <SectionLayout
       title="Exhibitiors"
       description="MEET OUR EXHIBITIORS"
-      widget={<RegisterBtn text="Become Our Exhibitor" />}
+      widget={<RegisterBtn text="Become Our Exhibitor" mode="day" />}
     >
-      <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-8 md:gap-y-8 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[1%]">
+      <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-7 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[1%]">
         {exhibitors.map((exhibitor) => (
           <div
             key={exhibitor.id}
@@ -24,7 +24,7 @@ const Exhibitors = async () => {
         ))}
       </div>
       <div className="mt-6 md:mt-8">
-        <ShowMore target="/exhibitors" text="View All Exhibitors" />
+        <ShowMore target="/exhibitors" text="View All Exhibitors" mode="day" />
       </div>
     </SectionLayout>
   );

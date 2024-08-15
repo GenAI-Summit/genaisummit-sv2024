@@ -19,7 +19,7 @@ const Filter = ({ name, options, selected, onSelect }) => {
         onClick={onClickWrapper}
       >
         <span
-          className={`text-xl font-bold ${isWrapperOpen ? "bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent" : "text-color8"} group-hover:bg-gradient-to-br group-hover:from-color1 group-hover:to-color2 group-hover:bg-clip-text group-hover:text-transparent ease-in-out transition-all duration-300`}
+          className={`text-xl font-semibold ${isWrapperOpen ? "bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent" : "text-color6"} group-hover:bg-gradient-to-br group-hover:from-color1 group-hover:to-color2 group-hover:bg-clip-text group-hover:text-transparent ease-in-out transition-all duration-300`}
         >
           {name}
         </span>

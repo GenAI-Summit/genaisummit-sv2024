@@ -1,6 +1,6 @@
 const CardLayout = ({ children }) => {
   return (
-    <div className="w-full h-full bg-color8/[0.1] shadow-md rounded-lg p-4">
+    <div className="w-full h-full bg-color13 shadow-lg rounded-lg p-4">
       {children}
     </div>
   );

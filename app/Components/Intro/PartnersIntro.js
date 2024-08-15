@@ -20,7 +20,7 @@ const IndexIntro = () => {
         title={title}
         paragraphs={paragraphs}
         images={images}
-        widget={<RegisterBtn text="Become Our Sponsor" />}
+        widget={<RegisterBtn text="Become Our Sponsor" mode="day" />}
       />
     </>
   );

@@ -17,7 +17,7 @@ const IndexIntro = () => {
         title={title}
         paragraphs={paragraphs}
         images={images}
-        widget={<RegisterBtn text="Become Our Speaker" />}
+        widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       />
     </>
   );

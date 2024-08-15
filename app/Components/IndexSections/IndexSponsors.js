@@ -13,7 +13,7 @@ const IndexSponsors = async () => {
       <SectionLayout
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
-        widget={<RegisterBtn text="Become Our Sponsor" />}
+        widget={<RegisterBtn text="Become Our Sponsor" mode="day" />}
       >
         <div className="w-full mt-6 flex flex-col gap-y-12 md:gap-y-16 justify-center items-center">
           {tiers.map((tier) => {
@@ -44,7 +44,7 @@ const IndexSponsors = async () => {
             );
           })}
           <div>
-            <ShowMore target="/partners" text="View All Sponsors" />
+            <ShowMore target="/partners" text="View All Sponsors" mode="day" />
           </div>
         </div>
       </SectionLayout>
