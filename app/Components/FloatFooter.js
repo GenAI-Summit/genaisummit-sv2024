@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import TicketBtn from "./TicketBtn";
+import TicketBtn from "./Button/TicketBtn";
 
 const FloatFooter = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -18,10 +18,10 @@ const FloatFooter = () => {
   return (
     <div
       className={`
-    fixed bottom-0 w-full bg-color5 text-color7 p-4 shadow-lg md:hidden flex justify-between items-center z-40 border-t-2 border-color1 ${isVisible ? "opacity-100" : "opacity-0"}`}
+    fixed bottom-4 w-[95%] bg-color13 text-color6 px-4 py-2 shadow-lg rounded-lg md:hidden flex justify-between items-center z-40 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
-      <span className="font-bold">$99 – $1099</span>
-      <TicketBtn />
+      <span className="font-semibold">$99 – $1099</span>
+      <TicketBtn mode="day" fill={true} />
     </div>
   );
 };

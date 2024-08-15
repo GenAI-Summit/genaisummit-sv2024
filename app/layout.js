@@ -4,6 +4,7 @@ import Navbar from "./Components/NavBar/NavBar";
 import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import ShareBar from "./Components/ShareBar";
+import FloatFooter from "./Components/FloatFooter";
 import "./globals.css";
 
 import Script from "next/script";
@@ -51,6 +52,7 @@ const RootLayout = ({ children }) => {
           <div className="mt-32 mb-10">
             <ShareBar />
           </div>
+          <FloatFooter />
         </div>
         <Footer />
         <ScrollToTop />
