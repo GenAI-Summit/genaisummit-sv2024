@@ -41,5 +41,4 @@
  - [ ] experience
  - [ ] chatbot
  - [ ] session card badges colors
- - [ ] interface of backend
  - [ ] dynamic images for seo

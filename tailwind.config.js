@@ -48,6 +48,8 @@ module.exports = {
         colorSessionType5: "#262A53",
         colorSessionType6: "#262A53",
         colorSessionType7: "#ADCCC7",
+        colorNavBarBg: "#F3F3F3",
+        colorNavBarText: "#1F2935",
       },
     },
   },
