@@ -31,7 +31,7 @@
  - [x] tickets test
  - [x] adjust medium screens
  - [x] subscribe
- - [ ] github width
+ - [x] github width
  - [ ] new features
  - [ ] optimize files structure
  - [ ] swr in ssr
