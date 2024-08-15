@@ -18,7 +18,7 @@ const FunFacts = () => {
     {
       title: "Speakers",
       start: 0,
-      end: 150,
+      end: 200,
       symbol: "+",
     },
     {
