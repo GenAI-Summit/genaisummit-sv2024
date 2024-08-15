@@ -99,20 +99,24 @@ const TermsPage = () => {
   ];
   return (
     <SectionEnter>
-      <SectionLayout title="Terms & Conditions">
-        {terms.map((section, index) => (
-          <SubSectionLayout
-            key={index}
-            title={`${index + 1}. ${section.title}`}
-          >
-            {section.paragraphs.map((paragraph, index) => (
-              <p key={index} className="mb-3">
-                {paragraph}
-              </p>
+      <div className="w-full mt-10">
+        <SectionLayout title="Terms & Conditions">
+          <div className="w-full mt-6">
+            {terms.map((section, index) => (
+              <SubSectionLayout
+                key={index}
+                title={`${index + 1}. ${section.title}`}
+              >
+                {section.paragraphs.map((paragraph, index) => (
+                  <p key={index} className="text-color8 text-lg">
+                    {paragraph}
+                  </p>
+                ))}
+              </SubSectionLayout>
             ))}
-          </SubSectionLayout>
-        ))}
-      </SectionLayout>
+          </div>
+        </SectionLayout>
+      </div>
     </SectionEnter>
   );
 };

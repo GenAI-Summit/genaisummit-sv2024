@@ -38,7 +38,7 @@ const SpeakerCard = ({ speaker }) => {
         <SpeakerDetail speaker={speaker} />
         <div>
           <span
-            className="mt-2 cursor-pointer text-base font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color1"
+            className="mt-2 cursor-pointer text-base font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color6"
             onClick={onSpeakerDetail}
           >
             All Sessions by {speaker.name}

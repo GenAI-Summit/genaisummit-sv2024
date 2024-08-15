@@ -16,7 +16,7 @@ const Speakers = ({ speakers }) => {
               className={`w-[30%] md:w-[18%] lg:w-[20%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-4 flex flex-col justify-center items-start text-color8 gap-y-4">
+              <div className="mt-4 flex flex-col justify-center items-start text-color6 gap-y-4">
                 <p className="text-[8px] md:text-[12px] lg:text-[14px] font-bold">
                   {speaker.name}
                 </p>

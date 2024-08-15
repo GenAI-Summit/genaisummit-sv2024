@@ -22,7 +22,7 @@ const Index = () => {
       <SectionEnter>
         <FunFacts />
       </SectionEnter>
-      <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-20 px-5">
+      <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-40 px-5">
         <SectionEnter>
           <IndexSponsors />
         </SectionEnter>

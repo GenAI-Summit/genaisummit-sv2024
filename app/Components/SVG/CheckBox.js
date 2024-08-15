@@ -1,6 +1,6 @@
 const CheckBox = ({ label, checked }) => {
   return (
-    <div className="inline-block flex items-center gap-3 cursor-pointer text-color8">
+    <div className="inline-block flex items-center gap-3 cursor-pointer text-color6">
       <svg
         className="w-6 h-6"
         viewBox="0 0 24 24"

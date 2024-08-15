@@ -9,11 +9,15 @@ import SectionEnter from "../../Motions/SectionEnter";
 const SessionPage = async ({ params }) => {
   const session = await getSessionData(params.id);
   return (
-    <SectionEnter>
-      <SectionLayout title="Session" widget={<GoBackController />}>
-        <SessionCard session={session} showDesc={true} />
-      </SectionLayout>
-    </SectionEnter>
+    <div className="w-full mt-10">
+      <SectionEnter>
+        <SectionLayout title="Session" widget={<GoBackController />}>
+          <div className="w-full mt-6">
+            <SessionCard session={session} showDesc={true} />
+          </div>
+        </SectionLayout>
+      </SectionEnter>
+    </div>
   );
 };
 

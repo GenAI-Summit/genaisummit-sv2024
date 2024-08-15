@@ -11,13 +11,15 @@ const SponsorPage = async ({ params }) => {
   const organization = await getOrganizationData(params.id);
   return (
     <SectionEnter>
-      <SectionLayout title="Sponsor" widget={<GoBackController />}>
-        <div className="w-full mt-4">
-          <CardLayout>
-            <OrganizationDetail organization={organization} />
-          </CardLayout>
-        </div>
-      </SectionLayout>
+      <div className="w-full mt-10">
+        <SectionLayout title="Sponsor" widget={<GoBackController />}>
+          <div className="w-full mt-6">
+            <CardLayout>
+              <OrganizationDetail organization={organization} />
+            </CardLayout>
+          </div>
+        </SectionLayout>
+      </div>
     </SectionEnter>
   );
 };

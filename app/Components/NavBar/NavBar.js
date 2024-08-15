@@ -52,7 +52,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed top-4 px-6 py-2 lg:w-3/4 max-w-maxWidth shadow-md rounded-lg bg-color8 text-color6 flex flex-row justify-around items-center hidden lg:flex z-40">
+      <div className="fixed top-4 px-6 py-2 lg:w-3/4 max-w-maxWidth shadow-lg rounded-lg bg-color13 text-color6 flex flex-row justify-around items-center hidden lg:flex z-40">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
             src="/images/icons/favicon.ico"

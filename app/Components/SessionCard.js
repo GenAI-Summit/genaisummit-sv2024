@@ -15,21 +15,21 @@ const SessionCard = ({ session, showDesc = false }) => {
   };
 
   return (
-    <div className="w-full mt-4">
+    <div className="w-full">
       <CardLayout>
-        <div className="flex flex-col items-start text-left text-color5 md:px-3 md:py-2 p-1">
-          <div className="text-xl font-bold mb-2">
-            <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
+        <div className="flex flex-col items-start text-left text-color6 md:p-4 p-2">
+          <div className="text-xl font-bold mb-4">
+            <span className={`${typeColorClass} p-0.5 mr-4 rounded`}>
               <span>{session.tag}</span>
             </span>
             <span
-              className="cursor-pointer hover:text-color1 ease-in-out duration-300"
+              className="cursor-pointer hover:bg-gradient-to-br hover:from-color1 hover:to-color2 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-10"
               onClick={onSessionClick}
             >
               {session.name}
             </span>
           </div>
-          <p className="mb-2">
+          <p className="mb-4">
             {session.start.toLocaleTimeString([], {
               hour: "2-digit",
               minute: "2-digit",
@@ -42,15 +42,15 @@ const SessionCard = ({ session, showDesc = false }) => {
             {" | "}
             {session.start.toLocaleDateString()}
           </p>
-          <p className="mb-2">{session.location}</p>
+          <p className="mb-4">{session.location}</p>
           {session.moderators.length > 0 && (
             <div className="mb-2">
-              <div className="font-semibold mb-1">
+              <div className="font-semibold mb-4">
                 Moderator{session.moderators.length > 1 ? "s" : ""}:
               </div>
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap items-center gap-8">
                 {session.moderators.map((moderator) => (
-                  <div key={moderator.id} className="flex gap-2 items-center">
+                  <div key={moderator.id} className="flex gap-4 items-center">
                     <div className="w-24 text-[7px]">
                       <SpeakerCard key={moderator.id} speaker={moderator} />
                     </div>
@@ -69,17 +69,17 @@ const SessionCard = ({ session, showDesc = false }) => {
             </div>
           )}
           {session.speakers.length > 0 && (
-            <div className="mb-2">
-              <div className="font-semibold mb-1">
+            <div className="mb-4">
+              <div className="font-semibold mb-4">
                 Speaker{session.speakers.length > 1 ? "s" : ""}:
               </div>
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-8">
                 {session.speakers.map((speaker) => (
-                  <div key={speaker.id} className="flex gap-2 items-center">
+                  <div key={speaker.id} className="flex gap-4 items-center">
                     <div className="w-24 text-[7px]">
                       <SpeakerCard key={speaker.id} speaker={speaker} />
                     </div>
-                    <div className="flex flex-col items-start justify-center">
+                    <div className="ml-3 flex flex-col items-start justify-center gap-y-3">
                       <p className="text-sm font-bold">{speaker.name}</p>
                       {speaker.title && (
                         <p className="text-xs">{speaker.title}</p>
@@ -94,7 +94,7 @@ const SessionCard = ({ session, showDesc = false }) => {
             </div>
           )}
           {showDesc && (
-            <div className="mt-2 text-lg md:text-xl">
+            <div className="mt-4 text-lg md:text-xl">
               <ParsedHtml html={session.desc} />
             </div>
           )}

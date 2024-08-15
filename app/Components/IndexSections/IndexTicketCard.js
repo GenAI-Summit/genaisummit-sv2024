@@ -14,12 +14,10 @@ const IndexTicketCard = ({ ticket }) => {
             Early Bird
           </span>
         </div>
-        <div className="relative h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4 border border-color8/[0.1] rounded-lg shadow-sm">
-          <h1 className="text-2xl font-bold bg-gradient-to-br from-color3 via-color4 to-color5 bg-clip-text text-transparent">
-            {ticket.name}
-          </h1>
+        <div className="relative h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4 border border-color12/[0.1] rounded-lg shadow-sm">
+          <h1 className="text-2xl font-bold text-color10">{ticket.name}</h1>
           {ticket.description.map((desc, index) => (
-            <p key={index} className="text-base text-color8 leading-6">
+            <p key={index} className="text-base text-color6 leading-6">
               {desc}
             </p>
           ))}
@@ -33,7 +31,7 @@ const IndexTicketCard = ({ ticket }) => {
               <span>{ticket.saveText}</span>
             </p>
           </div>
-          <TicketBtn mode="night" />
+          <TicketBtn mode="day" />
         </div>
       </div>
     </CardLayout>

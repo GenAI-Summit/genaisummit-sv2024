@@ -2,9 +2,9 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
+import CardLayout from "../Layouts/CardLayout";
 import SectionEnter from "../Motions/SectionEnter";
 import SectionLayout from "../Layouts/SectionLayout";
-import CardLayout from "../Layouts/CardLayout";
 
 const CTCT_SCRIPT_SRC =
   "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
@@ -23,15 +23,19 @@ const SubscribePage = () => {
 
   return (
     <SectionEnter>
-      <SectionLayout
-        title="Get Updates"
-        description="SUBSCRIBE TO OUR NEWSLETTER TO GET THE LATEST UPDATES"
-      >
-        <CardLayout>
-          {CtctScript}
-          <div className="ctct-inline-form" data-form-id={CTCT_FORM_ID} />
-        </CardLayout>
-      </SectionLayout>
+      <div className="w-full mt-10">
+        <SectionLayout
+          title="Get Updates"
+          description="SUBSCRIBE TO OUR NEWSLETTER TO GET THE LATEST UPDATES"
+        >
+          <div className="w-full mt-6">
+            <CardLayout>
+              {CtctScript}
+              <div className="ctct-inline-form" data-form-id={CTCT_FORM_ID} />
+            </CardLayout>
+          </div>
+        </SectionLayout>
+      </div>
     </SectionEnter>
   );
 };

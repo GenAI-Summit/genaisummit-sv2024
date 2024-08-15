@@ -8,9 +8,11 @@ const Agenda = ({ sessions }) => {
         title="Agenda"
         description="MAXIMIZE YOUR JOURNEY AT THE AI SUMMIT"
       >
-        {sessions.map((session) => (
-          <SessionCard key={session.id} session={session} />
-        ))}
+        <div className="w-full mt-6 flex flex-col gap-y-10">
+          {sessions.map((session) => (
+            <SessionCard key={session.id} session={session} />
+          ))}
+        </div>
       </SectionLayout>
     </>
   );
