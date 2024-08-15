@@ -18,10 +18,16 @@ const FloatFooter = () => {
   return (
     <div
       className={`
-    fixed bottom-4 w-[95%] bg-color13 text-color6 px-4 py-2 shadow-lg rounded-lg md:hidden flex justify-between items-center z-40 ${isVisible ? "opacity-100" : "opacity-0"}`}
+    fixed bottom-4 w-[95%] text-color6 pt-[2.5px] bg-gradient-to-r from-color1 to-color2 shadow-lg rounded-lg md:hidden z-30 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
-      <span className="font-semibold">$99 – $1099</span>
-      <TicketBtn mode="day" fill={true} url="https://whova.com/portal/registration/genai_202405/" />
+      <div className="bg-color13 z-40 px-4 py-2 flex justify-between items-center">
+        <span className="font-semibold">$99 – $1099</span>
+        <TicketBtn
+          mode="day"
+          fill={true}
+          url="https://whova.com/portal/registration/genai_202405/"
+        />
+      </div>
     </div>
   );
 };
