@@ -42,7 +42,6 @@ const NavBarItems = ({
             initial="initial"
             variants={{
               initial: { color: "colorNavBarText" },
-              hover: { scale: 1.05 },
             }}
           >
             {item.name}
@@ -52,7 +51,7 @@ const NavBarItems = ({
               variants={{
                 hover: { scaleX: 1 },
               }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.3 }}
             />
           </motion.span>
         </Link>
