@@ -1,5 +1,5 @@
 import TicketBtn from "./Button/TicketBtn";
-// import AddToCalendarBtn from "./Button/AddToCalendarBtn";
+import AddToCalendarBtn from "./Button/AddToCalendarBtn";
 import SubscribeBtn from "./Button/SubscribeBtn";
 import CountdownTimer from "./Counter/CountdownTimer";
 
@@ -44,10 +44,12 @@ const Banner = () => {
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn width="w-48" />
             <TicketBtn
+              fill={true}
               width="w-48"
-              mode="night"
+              mode="day"
               url="https://whova.com/portal/registration/genai_202405/"
             />
+            <AddToCalendarBtn width="w-48" />
           </div>
         </div>
       </div>
