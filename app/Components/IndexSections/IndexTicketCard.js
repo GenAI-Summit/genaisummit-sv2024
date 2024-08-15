@@ -15,26 +15,29 @@ const IndexTicketCard = ({ ticket }) => {
           </span>
         </div>
         <CardLayout>
-          <div className="relative h-full w-full flex flex-col items-center justify-center text-center text-color5 gap-4 p-4">
-            <h1 className="text-2xl font-bold text-color10">{ticket.name}</h1>
-            {ticket.description.map((desc, index) => (
-              <p key={index} className="text-base text-color6 leading-6">
-                {desc}
-              </p>
-            ))}
-            <div className="mt-6 flex flex-col gap-y-2">
-              {" "}
-              <p className="line-through text-color7">
-                ${ticket.originalPrice}
-              </p>
-              <p className="text-2xl font-bold bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
-                ${ticket.price}
-              </p>
-              <p className="text-sm text-color7">
-                <span>{ticket.saveText}</span>
-              </p>
+          <div className="relative h-full w-full flex flex-col items-center justify-between text-center text-color5 gap-4 p-4">
+            <div className="w-full flex flex-col gap-y-4">
+              <h1 className="text-2xl font-bold text-color10">{ticket.name}</h1>
+              {ticket.description.map((desc, index) => (
+                <p key={index} className="text-base text-color6 leading-6">
+                  {desc}
+                </p>
+              ))}
             </div>
-            <TicketBtn mode="day" url={ticket.url} />
+            <div className="flex flex-col gap-y-4">
+              <div className="flex flex-col gap-y-1">
+                <p className="line-through text-color7">
+                  ${ticket.originalPrice}
+                </p>
+                <p className="text-2xl font-bold bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
+                  ${ticket.price}
+                </p>
+                <p className="text-sm text-color7">
+                  <span>{ticket.saveText}</span>
+                </p>
+              </div>
+              <TicketBtn mode="day" url={ticket.url} />
+            </div>
           </div>
         </CardLayout>
       </div>
