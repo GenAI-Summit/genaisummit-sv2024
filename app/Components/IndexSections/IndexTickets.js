@@ -49,7 +49,18 @@ const IndexTickets = () => {
     },
     {
       id: 5,
-      name: "Booth Area",
+      name: "Booth Area A",
+      price: 3999.0,
+      originalPrice: 5999.0,
+      saveText: "Save $2000 until Sept 1",
+      url: "https://whova.com/portal/registration/genai_202405/exhibitor",
+      description: [
+        "Exhibition area, this space provides 16 x 6 feet of space, including two 96 x 26.5-inch table with a height of 29 inches. Publication materials, such as roll-up banners and posters, are welcomed. Area A exhibitors are welcome to choose their own booth location within the booth area.",
+      ],
+    },
+    {
+      id: 6,
+      name: "Booth Area B",
       price: 1999.0,
       originalPrice: 2999.0,
       saveText: "Save $1000 until Sept 1",
