@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react";
 import Loader from "../Components/Loader";
 import Error from "../Components/Error";
-import Sponsors from "../Components/Sponsors";
+// import Sponsors from "../Components/Sponsors";
 import Media from "../Components/Media";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
@@ -14,7 +14,8 @@ import PartnersIntro from "../Components/Intro/PartnersIntro";
 import SectionEnter from "../Motions/SectionEnter";
 
 const PartnersPage = () => {
-  const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
+  //const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
+  const { media, isLoading, isError } = useExhibitors();
   const [text, setText] = useState("");
   const textLower = text.toLowerCase();
 
@@ -34,6 +35,7 @@ const PartnersPage = () => {
     setText("");
   };
 
+  /*
   const filteredSponsors = useMemo(() => {
     return sponsors?.filter((sponsor) => {
       return (
@@ -43,6 +45,7 @@ const PartnersPage = () => {
       );
     });
   }, [sponsors, textLower, selectedCategories]);
+  */
 
   const filteredMedia = useMemo(() => {
     return media?.filter((media) =>
@@ -81,12 +84,6 @@ const PartnersPage = () => {
           </div>
           <div className="w-full flex flex-col gap-y-24">
             <div className="w-full">
-              <Sponsors
-                sponsors={filteredSponsors}
-                sponsorTiers={sponsorTiers}
-              />
-            </div>
-            <div className="w-full">
               <Media media={filteredMedia} />
             </div>
           </div>
@@ -97,3 +94,11 @@ const PartnersPage = () => {
 };
 
 export default PartnersPage;
+/*
+            <div className="w-full">
+              <Sponsors
+                sponsors={filteredSponsors}
+                sponsorTiers={sponsorTiers}
+              />
+            </div>
+            */
