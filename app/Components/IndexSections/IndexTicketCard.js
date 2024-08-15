@@ -34,7 +34,7 @@ const IndexTicketCard = ({ ticket }) => {
                 <span>{ticket.saveText}</span>
               </p>
             </div>
-            <TicketBtn mode="day" />
+            <TicketBtn mode="day" url={ticket.url} />
           </div>
         </CardLayout>
       </div>

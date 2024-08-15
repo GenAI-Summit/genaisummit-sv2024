@@ -19,7 +19,12 @@ const IndexIntro = () => {
       title={title}
       paragraphs={paragraphs}
       images={images}
-      widget={<TicketBtn mode="day" />}
+      widget={
+        <TicketBtn
+          mode="day"
+          url="https://whova.com/portal/registration/genai_202405/"
+        />
+      }
     />
   );
 };

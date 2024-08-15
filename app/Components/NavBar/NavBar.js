@@ -68,7 +68,7 @@ const NavBar = () => {
           closeDialog={closeDialog}
           handleDialog={handleDialog}
         />
-        <TicketBtn mode="day" />
+        <TicketBtn mode="day" url="https://whova.com/portal/registration/genai_202405/" />
       </div>
 
       <div className="fixed top-4 px-6 py-2 w-[95%] shadow-md rounded-lg bg-color8 text-color6 flex flex-col items-center text-center lg:hidden z-40">
@@ -81,7 +81,7 @@ const NavBar = () => {
               height="30"
             />
           </div>
-          <TicketBtn width="w-48" mode="day" />
+          <TicketBtn width="w-48" mode="day" url="https://whova.com/portal/registration/genai_202405/" />
           <button onClick={handleDrawer}>
             <Burger isOpen={isMenuOpen} />
           </button>

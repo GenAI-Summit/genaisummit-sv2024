@@ -9,6 +9,7 @@ const IndexTickets = () => {
       price: 99.0,
       originalPrice: 129.0,
       saveText: "Save $30 until Sept 1",
+      url: "https://whova.com/portal/registration/genai_202405/",
       description: [
         "Access to all sessions, workshops, and networking opportunities for any single day of the summit.",
       ],
@@ -19,6 +20,7 @@ const IndexTickets = () => {
       price: 149.0,
       originalPrice: 199.0,
       saveText: "Save $50 until Sept 1",
+      url: "https://whova.com/portal/registration/genai_202405/",
       description: [
         "Access to all sessions, workshops, and networking events across the entire three-day summit.",
       ],
@@ -29,6 +31,7 @@ const IndexTickets = () => {
       price: 99.0,
       originalPrice: 149.0,
       saveText: "Save $50 until Sept 1",
+      url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
       description: [
         "Access to all summit activities and sessions. Must purchase with a valid .edu email address.",
       ],
@@ -39,6 +42,7 @@ const IndexTickets = () => {
       price: 1099.0,
       originalPrice: 1499.0,
       saveText: "Save $400 until Sept 1",
+      url: "https://whova.com/portal/registration/genai_202405/",
       description: [
         "All-session access, VIP dinner with speakers, and premium networking events.",
       ],
@@ -49,6 +53,7 @@ const IndexTickets = () => {
       price: 1999.0,
       originalPrice: 2999.0,
       saveText: "Save $1000 until Sept 1",
+      url: "https://whova.com/portal/registration/genai_202405/omcbwhih",
       description: [
         "Exhibition area, this space provides 8 x 6 feet of space, including a 96 x 26.5-inch table with a height of 29 inches. Publication materials, such as roll-up banners and posters, are welcomed.",
       ],
