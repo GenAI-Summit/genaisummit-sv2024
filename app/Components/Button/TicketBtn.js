@@ -1,12 +1,14 @@
 import Link from "next/link";
 
-const TicketBtn = ({ width, mode, fill }) => {
+const TicketBtn = ({
+  width,
+  mode,
+  fill,
+  url = "https://whova.com/portal/registration/genai_202405/",
+}) => {
   if (mode === "night") {
     return (
-      <Link
-        href="https://whova.com/portal/registration/genai_202405/"
-        target="_blank"
-      >
+      <Link href={url} target="_blank">
         <button
           className={`
           group relative z-0 ${width}`}
@@ -23,10 +25,7 @@ const TicketBtn = ({ width, mode, fill }) => {
   }
   if (fill) {
     return (
-      <Link
-        href="https://whova.com/portal/registration/genai_202405/"
-        target="_blank"
-      >
+      <Link href={url} target="_blank">
         <button
           className={`
             group relative z-0 ${width}`}
@@ -41,10 +40,7 @@ const TicketBtn = ({ width, mode, fill }) => {
     );
   }
   return (
-    <Link
-      href="https://whova.com/portal/registration/genai_202405/"
-      target="_blank"
-    >
+    <Link href={url} target="_blank">
       <button
         className={`
           group relative z-0 ${width}`}
