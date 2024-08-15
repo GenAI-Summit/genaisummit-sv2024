@@ -23,7 +23,7 @@ const NumberRoller = ({ start, end, symbol }) => {
     return () => clearInterval(interval);
   }, [start, end]);
 
-  return <div>{count === end ? count + `${symbol}` : count}</div>;
+  return <>{count === end ? count + `${symbol}` : count}</>;
 };
 
 export default NumberRoller;
