@@ -17,7 +17,7 @@ const Media = ({ media }) => {
             key={item.id}
             href={item.url}
             target="_blank"
-            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23.5%] lg:h-27 bg-color13 cursor-pointer border-2 border-color11 ease-in-out duration-300 hover:border-color12 rounded-lg shadow-md"
+            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23.5%] lg:h-27 bg-color13 cursor-pointer border-2 border-colorCardBorder ease-in-out duration-300 hover:border-colorCardBorderHover rounded-lg shadow-md"
           >
             <Logo src={item.logo} alt={item.name} />
           </Link>

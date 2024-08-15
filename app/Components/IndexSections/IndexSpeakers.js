@@ -16,11 +16,11 @@ const IndexSpeakers = async () => {
         description="LISTEN TO THE EVENT SPEAKERS"
         widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       >
-        <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[9%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
+        <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[4%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-[27%] md:w-[28%] lg:w-[19%] ${styles.border}`}
+              className={`w-[48%] md:w-[28%] lg:w-[19%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="mt-4 flex flex-col items-start justify-center gap-y-4 text-color6">
@@ -28,12 +28,12 @@ const IndexSpeakers = async () => {
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-[10px] md:text-[12px] lg:text-[14px]">
+                  <p className="text-[11px] md:text-[12px] lg:text-[14px]">
                     {speaker.title}
                   </p>
                 )}
                 {speaker.organization && (
-                  <p className="text-[10px] md:text-[12px] lg:text-[14px]">
+                  <p className="text-[11px] md:text-[12px] lg:text-[14px]">
                     @{speaker.organization}
                   </p>
                 )}

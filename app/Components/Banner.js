@@ -1,5 +1,5 @@
 import TicketBtn from "./Button/TicketBtn";
-import AddToCalendarBtn from "./Button/AddToCalendarBtn";
+// import AddToCalendarBtn from "./Button/AddToCalendarBtn";
 import SubscribeBtn from "./Button/SubscribeBtn";
 import CountdownTimer from "./Counter/CountdownTimer";
 
@@ -44,14 +44,6 @@ const Banner = () => {
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn width="w-48" />
             <TicketBtn width="w-48" mode="night" />
-            <AddToCalendarBtn
-              width="w-48"
-              title="GENAI SUMMIT SV 2024"
-              details=""
-              location="Santa Clara Convention Center, Santa Clara, CA"
-              startDate="2024-11-01T08:00:00"
-              endDate="2024-11-03T18:00:00"
-            />
           </div>
         </div>
       </div>
@@ -60,3 +52,13 @@ const Banner = () => {
 };
 
 export default Banner;
+/*
+            <AddToCalendarBtn
+              width="w-48"
+              title="GENAI SUMMIT SV 2024"
+              details=""
+              location="Santa Clara Convention Center, Santa Clara, CA"
+              startDate="2024-11-01T08:00:00"
+              endDate="2024-11-03T18:00:00"
+            />
+*/
