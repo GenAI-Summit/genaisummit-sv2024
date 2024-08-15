@@ -107,19 +107,19 @@ const SessionCard = ({ session, showDesc = false }) => {
 const getTypeColorClass = (type) => {
   switch (type) {
     case "Keynote":
-      return "bg-color1 text-white";
+      return "bg-colorSessionType1 text-white";
     case "Panel":
-      return "bg-color4 text-white";
+      return "bg-colorSessionType2 text-white";
     case "Seminar":
-      return "bg-color3 text-white";
+      return "bg-colorSessionType3 text-white";
     case "Workshop":
-      return "bg-color4 text-white";
+      return "bg-colorSessionType4 text-white";
     case "Startup Demo":
-      return "bg-color5 text-white";
+      return "bg-colorSessionType5 text-white";
     case "Fireside Chat":
-      return "bg-color6 text-white";
+      return "bg-colorSessionType6 text-white";
     default:
-      return "bg-color5 text-white";
+      return "bg-colorSessionType7 text-white";
   }
 };
 
