@@ -1,8 +1,9 @@
 import Link from "next/link";
 import DropDowm from "../../Motions/DropDown";
+import { motion } from "framer-motion";
+import WrapperArrow from "../SVG/WrapperArrow";
 
 const NavBar = ({
-  hoverEffect,
   closeDrawer,
   openDialog,
   closeDialog,
@@ -27,26 +28,42 @@ const NavBar = ({
   return (
     <>
       <div
-        className={"hidden lg:inline-block"}
+        className="hidden lg:inline-block"
         onMouseOver={openDialog}
         onMouseLeave={closeDialog}
       >
-        <div
-          className={`inline-flex items-center gap-1 cursor-pointer ${hoverEffect}`}
-        >
+        <div className="inline-flex items-center gap-1 cursor-pointer">
           PREVIOUS EVENTS
         </div>
         {showDialog && (
-          <div className="absolute bg-color8 shadow-lg rounded-md z-10 py-4 px-6">
+          <div className="absolute top-10 right-[12.5%] bg-color8 shadow-lg rounded-md z-10 py-4 px-6">
             {prevEvents.map((event, index) => (
               <div key={index} className="block p-2">
                 <Link
                   href={event.url}
-                  className="cursor-pointer text-color6 hover:font-semibold ease-in-out duration-300"
+                  className="cursor-pointer text-colorNavBarText"
                   target="_blank"
                   onClick={closeDrawer}
                 >
-                  {event.name}
+                  <motion.span
+                    className="relative"
+                    whileHover="hover"
+                    initial="initial"
+                    variants={{
+                      initial: { color: "colorNavBarText" },
+                    }}
+                  >
+                    {event.name}
+
+                    <motion.div
+                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-colorNavBarText"
+                      initial={{ scaleX: 0 }}
+                      variants={{
+                        hover: { scaleX: 1 },
+                      }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.span>
                 </Link>
               </div>
             ))}
@@ -58,10 +75,11 @@ const NavBar = ({
         className={`relative lg:hidden inline-block ${showDialog ? "text-color1" : ""}`}
       >
         <div
-          className={`inline-flex items-center cursor-pointer gap-1 text-color6 ease-in-out duration-300 ${hoverEffect}`}
+          className="inline-flex items-center cursor-pointer gap-1 text-color6"
           onClick={handleDialog}
         >
-          PREVIOUS EVENT
+          <span>PREVIOUS EVENT</span>
+          <WrapperArrow isOpen={showDialog} />
         </div>
         <DropDowm isOpen={showDialog}>
           {showDialog && (
@@ -69,11 +87,29 @@ const NavBar = ({
               {prevEvents.map((event, index) => (
                 <div key={index} className="block">
                   <Link
-                    className="text-color6 hover:font-semibold ease-in-out duration-300"
                     href={event.url}
                     target="_blank"
+                    className="text-colorNavBarText"
                   >
-                    {event.name}
+                    <motion.span
+                      className="relative"
+                      whileHover="hover"
+                      initial="initial"
+                      variants={{
+                        initial: { color: "colorNavBarText" },
+                      }}
+                    >
+                      {event.name}
+
+                      <motion.div
+                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-colorNavBarText"
+                        initial={{ scaleX: 0 }}
+                        variants={{
+                          hover: { scaleX: 1 },
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.span>
                   </Link>
                 </div>
               ))}
