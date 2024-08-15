@@ -122,7 +122,7 @@ const Footer = () => {
               <Link href={item.link} target="_blank" key={item.name}>
                 <Icon
                   className="icon"
-                  src={`/images/icons/${item.name}.png`}
+                  src={`/images/icons/${item.name}.svg`}
                   alt={item.name}
                 />
               </Link>
