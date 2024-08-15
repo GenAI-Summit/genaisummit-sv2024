@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PrevEvents from "./PrevEvents";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const NavBarItems = ({
   closeDrawer,
@@ -18,43 +19,44 @@ const NavBarItems = ({
     closeDialog();
   };
 
+  const items = [
+    { name: "HOME", path: ["/", "/home"] },
+    { name: "PARTNERS", path: ["/partners"] },
+    { name: "SPEAKERS", path: ["/speakers"] },
+    { name: "EXHIBITORS", path: ["/exhibitors"] },
+    { name: "AGENDA", path: ["/agenda"] },
+  ];
+
   return (
     <>
-      <Link
-        className={`${pathname === "/" || pathname === "/home" ? activeEffect : ""} ${hoverEffect}`}
-        href="/"
-        onClick={close}
-      >
-        HOME
-      </Link>
-      <Link
-        className={`${pathname === "/partners" ? activeEffect : ""} ${hoverEffect}`}
-        href="/partners"
-        onClick={close}
-      >
-        PARTNERS
-      </Link>
-      <Link
-        className={`${pathname === "/speakers" ? activeEffect : ""} ${hoverEffect}`}
-        href="/speakers"
-        onClick={closeDrawer}
-      >
-        SPEAKERS
-      </Link>
-      <Link
-        className={`${pathname === "/exhibitors" ? activeEffect : ""} ${hoverEffect}`}
-        href="/exhibitors"
-        onClick={close}
-      >
-        EXHIBITORS
-      </Link>
-      <Link
-        className={`${pathname === "/agenda" ? activeEffect : ""} ${hoverEffect}`}
-        href="/agenda"
-        onClick={close}
-      >
-        AGENDA
-      </Link>
+      {items.map((item, index) => (
+        <Link
+          className={`${item.path.includes(pathname) ? activeEffect : ""}`}
+          href={item.path[0]}
+          onClick={close}
+          key={index}
+        >
+          <motion.span
+            className="relative"
+            whileHover="hover"
+            initial="initial"
+            variants={{
+              initial: { color: "colorNavBarText" },
+              hover: { scale: 1.05 },
+            }}
+          >
+            {item.name}
+            <motion.div
+              className="absolute bottom-0 left-0 right-0 h-0.5 bg-colorNavBarText"
+              initial={{ scaleX: 0 }}
+              variants={{
+                hover: { scaleX: 1 },
+              }}
+              transition={{ duration: 0.2 }}
+            />
+          </motion.span>
+        </Link>
+      ))}
       <PrevEvents
         closeDrawer={closeDrawer}
         showDialog={showDialog}
