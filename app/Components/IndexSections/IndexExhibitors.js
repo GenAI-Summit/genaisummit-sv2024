@@ -17,7 +17,7 @@ const Exhibitors = async () => {
         {exhibitors.map((exhibitor) => (
           <div
             key={exhibitor.id}
-            className="w-[48%] h-36 md:w-[23.5%] md:h-27 lg:w-[19%] lg:h-27"
+            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[19%] lg:h-27"
           >
             <OrganizationCard type="exhibitor" organization={exhibitor} />
           </div>
