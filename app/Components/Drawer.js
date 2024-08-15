@@ -14,12 +14,12 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
       <DrawerEnter isOpen={isDrawerOpen}>
         <div
           className={
-            " w-screen max-w-lg right-0 absolute bg-color13 h-full shadow-xl transform  "
+            " w-screen max-w-lg fixed right-0 top-[5%] bg-color13 h-[90%] shadow-lg rounded-lg transform  "
           }
         >
           <div className="relative w-screen max-w-lg p-7 flex flex-col space-y-6 overflow-y-scroll h-full">
             <button
-              className="fixed top-1 left-2 text-xl z-50"
+              className="fixed top-3 left-3 text-xl z-50"
               onClick={closeDrawer}
             >
               <Close />

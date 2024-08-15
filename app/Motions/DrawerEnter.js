@@ -20,8 +20,6 @@ const DrawerEnter = ({ isOpen, children }) => {
             type: "spring",
             duration: 1,
             delay: 0.2,
-            mass: 1.2,
-            damping: 12,
             ease: "easeIn",
           }}
           className="w-full h-full overflow-hidden"

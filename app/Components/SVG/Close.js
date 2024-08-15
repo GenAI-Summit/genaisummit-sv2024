@@ -5,16 +5,9 @@ const Close = () => {
       viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle
-        cx="16"
-        cy="16"
-        r="15"
-        className="fill-color7 stroke-color8"
-        strokeWidth="2"
-      />
       <path
         d="M10 10 L22 22 M10 22 L22 10"
-        className="stroke-color8"
+        className="stroke-color6"
         strokeWidth="2"
         strokeLinecap="round"
       />
