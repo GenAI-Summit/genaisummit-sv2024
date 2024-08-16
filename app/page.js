@@ -4,7 +4,7 @@ import IndexSpeakers from "./Components/IndexSections/IndexSpeakers";
 // import IndexSponsors from "./Components/IndexSections/IndexSponsors";
 import IndexMedia from "./Components/IndexSections/IndexMedia";
 import IndexExhibitors from "./Components/IndexSections/IndexExhibitors";
-import IndexTickets from "./Components/IndexSections/IndexTickets";
+import Tickets from "./Components/Tickets";
 import IndexIntro from "./Components/Intro/IndexIntro";
 import SectionEnter from "./Motions/SectionEnter";
 
@@ -33,7 +33,7 @@ const Index = () => {
           <IndexExhibitors />
         </SectionEnter>
         <SectionEnter>
-          <IndexTickets />
+          <Tickets />
         </SectionEnter>
       </div>
     </div>

@@ -43,12 +43,7 @@ const Banner = () => {
           </p>
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn width="w-48" />
-            <TicketBtn
-              fill={true}
-              width="w-48"
-              mode="day"
-              url="https://whova.com/portal/registration/genai_202405/"
-            />
+            <TicketBtn fill={true} width="w-48" mode="day" url="/tickets" />
           </div>
         </div>
       </div>
