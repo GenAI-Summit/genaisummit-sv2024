@@ -45,7 +45,7 @@ const RootLayout = ({ children }) => {
         />
       </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={`${inter.className}`}>
+      <body className={inter.className}>
         <div className="pb-5 flex flex-col items-center text-center bg-colorMainBg">
           <Navbar />
           {children}

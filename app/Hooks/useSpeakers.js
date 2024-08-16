@@ -19,6 +19,8 @@ const useSpeakers = () => {
       name: speaker.name.replace(/_RANK_\d+_/, ""),
     }));
 
+  console.log(speakers);
+
   return {
     speakers,
     isLoading,
