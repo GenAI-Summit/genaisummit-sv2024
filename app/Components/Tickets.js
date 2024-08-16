@@ -1,7 +1,7 @@
-import SectionLayout from "../../Layouts/SectionLayout";
-import IndexTicketCard from "./IndexTicketCard";
+import SectionLayout from "../Layouts/SectionLayout";
+import IndexTicketCard from "./TicketCard";
 
-const IndexTickets = () => {
+const Tickets = ({ widget }) => {
   const tickets = [
     {
       id: 1,
@@ -71,8 +71,11 @@ const IndexTickets = () => {
     },
   ];
   return (
-    <SectionLayout title="Get Tickets Now">
-      <div className="mt-8 md:mt-10 flex flex-wrap justify-start md:gap-x-[4%] lg:gap-x-[3%] gap-y-8">
+    <SectionLayout title="Get Tickets Now" widget={widget}>
+      <div
+        className="mt-8 md:mt-10 flex flex-wrap justify-start md:gap-x-[4%] lg:gap-x-[3%] gap-y-8"
+        id="tickets-section"
+      >
         {tickets.map((ticket) => (
           <div className="w-full md:w-[48%] lg:w-[31%]" key={ticket.id}>
             <IndexTicketCard ticket={ticket} />
@@ -83,4 +86,4 @@ const IndexTickets = () => {
   );
 };
 
-export default IndexTickets;
+export default Tickets;
