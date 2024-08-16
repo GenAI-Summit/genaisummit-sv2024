@@ -7,6 +7,8 @@ import ShareBar from "./Components/ShareBar";
 import FloatFooter from "./Components/FloatFooter";
 import "./globals.css";
 
+import { GoogleAnalytics } from "@next/third-parties/google";
+
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -61,6 +63,7 @@ const RootLayout = ({ children }) => {
           type="text/javascript"
         ></Script>
       </body>
+      <GoogleAnalytics gaId="G-6ETB3L7DWM" />
     </html>
   );
 };
