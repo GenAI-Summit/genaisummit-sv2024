@@ -8,18 +8,7 @@ const useSpeakers = () => {
     fetcher,
   );
 
-  const speakers = data?.data
-    .sort((a, b) => {
-      const rankA = parseInt(a.name.match(/_RANK_(\d+)_/)[1]);
-      const rankB = parseInt(b.name.match(/_RANK_(\d+)_/)[1]);
-      return rankA - rankB;
-    })
-    .map((speaker) => ({
-      ...speaker,
-      name: speaker.name.replace(/_RANK_\d+_/, ""),
-    }));
-
-  console.log(speakers);
+  const speakers = data?.data;
 
   return {
     speakers,
