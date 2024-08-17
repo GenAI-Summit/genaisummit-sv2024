@@ -24,7 +24,7 @@ const TicketBtn = ({
         onClick={() => onClick(url)}
       >
         <div className="m-[1.5px] rounded-full px-4 py-2 bg-gradient-to-br from-color1 to-color2  group-hover:bg-gradient-to-br group-hover:from-color15 group-hover:to-color14 transition-colors ease-in-out duration-300">
-          <span className="h-full w-full rounded-full text-color8">
+          <span className="h-full w-full rounded-full text-color8 font-light">
             Buy Tickets
           </span>
         </div>
