@@ -37,37 +37,39 @@ const NavBar = ({
         </div>
         {showDialog && (
           <DropDown isOpen={showDialog}>
-            <div className="absolute top-10 right-[13%] bg-color8 shadow-lg rounded-md z-30 py-4 px-6">
-              {prevEvents.map((event, index) => (
-                <div key={index} className="block p-2">
-                  <Link
-                    href={event.url}
-                    className="cursor-pointer text-colorNavBarText"
-                    target="_blank"
-                    onClick={closeDrawer}
-                  >
-                    <motion.span
-                      className="relative"
-                      whileHover="hover"
-                      initial="initial"
-                      variants={{
-                        initial: { color: "colorNavBarText" },
-                      }}
+            <div className="absolute top-10 right-[13%] pt-[2.5px] bg-gradient-to-r from-color1 to-color2 shadow-lg rounded-md z-30">
+              <div className="bg-color8 z-40 py-4 px-6">
+                {prevEvents.map((event, index) => (
+                  <div key={index} className="block p-2">
+                    <Link
+                      href={event.url}
+                      className="cursor-pointer text-colorNavBarText"
+                      target="_blank"
+                      onClick={closeDrawer}
                     >
-                      {event.name}
-
-                      <motion.div
-                        className="absolute bottom-0 left-0 right-0 h-0.5 bg-colorNavBarText"
-                        initial={{ scaleX: 0 }}
+                      <motion.span
+                        className="relative"
+                        whileHover="hover"
+                        initial="initial"
                         variants={{
-                          hover: { scaleX: 1 },
+                          initial: { color: "colorNavBarText" },
                         }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </motion.span>
-                  </Link>
-                </div>
-              ))}
+                      >
+                        {event.name}
+
+                        <motion.div
+                          className="absolute bottom-0 left-0 right-0 h-0.5 bg-colorNavBarText"
+                          initial={{ scaleX: 0 }}
+                          variants={{
+                            hover: { scaleX: 1 },
+                          }}
+                          transition={{ duration: 0.3 }}
+                        />
+                      </motion.span>
+                    </Link>
+                  </div>
+                ))}
+              </div>
             </div>
           </DropDown>
         )}
