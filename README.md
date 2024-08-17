@@ -8,5 +8,4 @@
  - [ ] drawer hook
  - [ ] experience
  - [ ] chatbot
- - [ ] session card badges colors
  - [ ] dynamic images for seo
