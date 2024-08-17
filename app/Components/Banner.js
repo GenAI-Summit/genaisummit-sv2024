@@ -18,12 +18,12 @@ const Banner = () => {
       <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-color8 text-center p-6 gap-y-12 md:gap-y-14 lg:gap-y-16">
         <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-10">
           <p>
-            <span className="text-3xl md:text-4xl lg:text-5xl bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
+            <span className="text-2xl md:text-4xl lg:text-5xl bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
               #AIAREALL
             </span>
           </p>
-          <p className="text-3xl md:text-4xl lg:text-7xl">GENAI SUMMIT</p>
-          <p className="text-3xl md:text-4xl lg:text-7xl">
+          <p className="text-2xl md:text-4xl lg:text-7xl">GENAI SUMMIT</p>
+          <p className="text-2xl md:text-4xl lg:text-7xl">
             <span>Silicon Valley</span>{" "}
             <span className="bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
               2024
@@ -31,16 +31,14 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex flex-col items-center gap-y-8 md:gap-y-8 lg:gap-y-10">
-          <div className="text-2xl lg:text-6xl">
+          <div className="text-xl md:text-3xl lg:text-6xl">
             <CountdownTimer time="2024-11-01T00:00:00" />
           </div>
-          <p className="text-base md:text-lg lg:text-xl">
-            <span>Santa Clara Convention Center</span>
-            <span>{" | "}</span>
-            <span>Santa Clara, CA</span>
-            <span>{" | "}</span>
-            <span>Nov 1 - Nov 3</span>
-          </p>
+          <div className="flex flex-col text-base md:text-lg lg:text-xl gap-y-2 lg:gap-y-4">
+            <p>Santa Clara Convention Center</p>
+            <p>Santa Clara, CA</p>
+            <p>Nov 1 - Nov 3</p>
+          </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn width="w-48" />
             <TicketBtn fill={true} width="w-48" mode="day" url="/tickets" />
