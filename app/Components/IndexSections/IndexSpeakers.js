@@ -35,17 +35,17 @@ const IndexSpeakers = () => {
               className={`w-[48%] md:w-[28%] lg:w-[19%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-4 flex flex-col items-start justify-center gap-y-2 md:gap-y-4 text-color6">
-                <p className="font-bold text-[14px] md:text-[14px] lg:text-[16px]">
+              <div className="mt-4 flex flex-col items-start justify-center gap-y-2 md:gap-y-3 text-color6">
+                <p className="font-bold text-[14px] md:text-[14px] lg:text-[20px]">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-[11px] md:text-[12px] lg:text-[14px]">
+                  <p className="text-[11px] md:text-[12px] lg:text-[16px]">
                     {speaker.title}
                   </p>
                 )}
                 {speaker.organization && (
-                  <p className="text-[11px] md:text-[12px] lg:text-[14px]">
+                  <p className="text-[11px] md:text-[12px] lg:text-[16px]">
                     @{speaker.organization}
                   </p>
                 )}
