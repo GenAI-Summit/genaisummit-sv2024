@@ -1,13 +1,25 @@
+"use client";
+
 import SectionLayout from "../../Layouts/SectionLayout";
 import SpeakerCard from "../SpeakerCard";
 import ShowMore from "../Button/ShowMore";
 import RegisterBtn from "../Button/RegisterBtn";
-import { getSpeakers } from "/lib/api";
+import useSpeakers from "../../Hooks/useSpeakers";
+import Loader from "../Loader";
+import Error from "../Error";
+//import { getIndexSpeakers } from "/lib/api";
 
 import styles from "../../styles/border.module.css";
 
-const IndexSpeakers = async () => {
-  const speakers = await getSpeakersData();
+const IndexSpeakers = () => {
+  const { indexSpeakers, isLoading, isError } = useSpeakers();
+
+  if (isLoading) {
+    return <Loader />;
+  }
+  if (isError) {
+    return <Error />;
+  }
 
   return (
     <>
@@ -17,7 +29,7 @@ const IndexSpeakers = async () => {
         widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       >
         <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[4%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
-          {speakers.map((speaker) => (
+          {indexSpeakers.map((speaker) => (
             <div
               key={speaker.id}
               className={`w-[48%] md:w-[28%] lg:w-[19%] ${styles.border}`}
@@ -49,9 +61,11 @@ const IndexSpeakers = async () => {
   );
 };
 
+/*
 const getSpeakersData = async () => {
-  const speakers = await getSpeakers();
+  const speakers = await getIndexSpeakers();
   return speakers;
 };
+*/
 
 export default IndexSpeakers;

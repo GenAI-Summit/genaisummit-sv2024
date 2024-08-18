@@ -8,10 +8,36 @@ const useSpeakers = () => {
     fetcher,
   );
 
-  const speakers = data?.data;
+  const speakers = [];
+  const indexSpeakers = [];
+
+  data?.data.forEach((speaker) => {
+    let name = speaker.name;
+    const isIndexed = name.startsWith("_INDEX_");
+
+    if (isIndexed) {
+      name = name.slice(7);
+    }
+
+    const processedSpeaker = {
+      id: speaker.id,
+      name: name,
+      bio: speaker.bio,
+      title: speaker.title,
+      organization: speaker.organization,
+      avatar: speaker.avatar,
+    };
+
+    speakers.push(processedSpeaker);
+
+    if (isIndexed) {
+      indexSpeakers.push(processedSpeaker);
+    }
+  });
 
   return {
     speakers,
+    indexSpeakers,
     isLoading,
     isError: error,
   };
