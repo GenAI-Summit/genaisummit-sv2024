@@ -69,7 +69,7 @@ const PrivacyPage = () => {
                 title={`${index + 1}. ${section.title}`}
               >
                 {section.paragraphs.map((paragraph, index) => (
-                  <p key={index} className="text-color8 text-lg">
+                  <p key={index} className="text-color6 text-lg">
                     {paragraph}
                   </p>
                 ))}
