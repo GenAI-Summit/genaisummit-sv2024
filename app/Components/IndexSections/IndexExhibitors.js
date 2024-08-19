@@ -17,8 +17,8 @@ const Exhibitors = () => {
   // const exhibitors = await getExhibitiorsData();
   return (
     <SectionLayout
-      title="Exhibitiors"
-      description="MEET OUR EXHIBITIORS"
+      title="Exhibitors"
+      description="MEET OUR EXHIBITORS"
       widget={<RegisterBtn text="Become Our Exhibitor" mode="day" />}
     >
       <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-7 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[1%]">
