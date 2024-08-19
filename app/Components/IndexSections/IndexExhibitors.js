@@ -2,11 +2,17 @@ import SectionLayout from "../../Layouts/SectionLayout";
 import OrganizationCard from "../OrganizationCard";
 import ShowMore from "../Button/ShowMore";
 import RegisterBtn from "../Button/RegisterBtn";
+import Loader from "../Loader";
+import Error from "../Error";
+import useExhibitors from "../../Hooks/useExhibitors";
 
-import { getExhibitors } from "/lib/api";
+// import { getExhibitors } from "/lib/api";
 
-const Exhibitors = async () => {
-  const exhibitors = await getExhibitiorsData();
+const Exhibitors = () => {
+  const { exhibitors, isLoading, isError } = useExhibitors();
+  if (isLoading) return <Loader />;
+  if (isError) return <Error />;
+  // const exhibitors = await getExhibitiorsData();
   return (
     <SectionLayout
       title="Exhibitiors"
@@ -30,9 +36,11 @@ const Exhibitors = async () => {
   );
 };
 
+/*
 const getExhibitiorsData = async () => {
   const exhibitors = await getExhibitors();
   return exhibitors.slice(0, 12);
 };
+*/
 
 export default Exhibitors;
