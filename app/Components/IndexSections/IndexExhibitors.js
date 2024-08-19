@@ -1,3 +1,5 @@
+"use client";
+
 import SectionLayout from "../../Layouts/SectionLayout";
 import OrganizationCard from "../OrganizationCard";
 import ShowMore from "../Button/ShowMore";
