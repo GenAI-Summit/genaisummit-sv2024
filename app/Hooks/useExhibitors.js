@@ -10,8 +10,11 @@ const useExhibitors = () => {
     fetcher,
   );
 
+  const attendees = data?.data.filter(
+    (exhibitor) => exhibitor.tier === "Attendee",
+  );
   const exhibitors = data?.data.filter(
-    (exhibitor) => exhibitor.tier !== "Media",
+    (exhibitor) => exhibitor.tier !== "Attendee" && exhibitor.tier !== "Media",
   );
   const media = data?.data.filter((exhibitor) => exhibitor.tier === "Media");
   const sponsors = data?.data.filter((exhibitor) =>
@@ -19,6 +22,7 @@ const useExhibitors = () => {
   );
 
   return {
+    attendees,
     exhibitors,
     media,
     sponsors,

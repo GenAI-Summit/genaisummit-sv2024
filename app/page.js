@@ -3,6 +3,7 @@ import FunFacts from "./Components/FunFacts";
 import IndexSpeakers from "./Components/IndexSections/IndexSpeakers";
 // import IndexSponsors from "./Components/IndexSections/IndexSponsors";
 import IndexMedia from "./Components/IndexSections/IndexMedia";
+import Attendees from "./Components/IndexSections/Attendees";
 import IndexExhibitors from "./Components/IndexSections/IndexExhibitors";
 import Tickets from "./Components/Tickets";
 import IndexIntro from "./Components/Intro/IndexIntro";
@@ -28,6 +29,9 @@ const Index = () => {
         </SectionEnter>
         <SectionEnter>
           <IndexSpeakers />
+        </SectionEnter>
+        <SectionEnter>
+          <Attendees />
         </SectionEnter>
         <SectionEnter>
           <IndexExhibitors />
