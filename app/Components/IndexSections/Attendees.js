@@ -13,7 +13,7 @@ const Attendees = () => {
   if (isError) return <Error />;
   return (
     <SectionLayout
-      title="Previous Participants"
+      title="Active Attendees"
       description="THE WORLD'S LEADING COMPANIES ATTENDED GENAI SUMMIT, 29-31 MAY 2024."
     >
       <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-7 lg:gap-y-6 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[2%]">
