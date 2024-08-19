@@ -51,6 +51,7 @@ module.exports = {
         colorNavBarBg: "#F3F3F3",
         colorNavBarText: "#1F2935",
         colorOrganizationCardBg: "#F3F3F3",
+        colorOrganizationCardBoarderHover: "#B699FF",
       },
     },
   },
