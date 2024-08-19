@@ -38,7 +38,7 @@ module.exports = {
         color15: "#DB10C7",
         colorMainBg: "#F4F4F4",
         colorCardBg: "#F3F3F3",
-        colorCardBorder: "#F0F0F0",
+        colorCardBorder: "#E4E4E4",
         colorCardBorderHover: "#B699FF",
         colorSearchBar: "#B699FF",
         colorSessionType1: "#FF7676",
