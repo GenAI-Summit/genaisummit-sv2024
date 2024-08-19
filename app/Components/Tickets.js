@@ -55,7 +55,7 @@ const Tickets = ({ widget }) => {
       saveText: "Save $2000 until Sept 1",
       url: "https://whova.com/portal/registration/genai_202405/exhibitor",
       description: [
-        "Exhibition area, this space provides 16 x 6 feet of space, including two 96 x 26.5-inch table with a height of 29 inches. Publication materials, such as roll-up banners and posters, are welcomed. Area A exhibitors are welcome to choose their own booth location within the booth area.",
+        "Located in the Exhibition Area and provides a space of 16 x 6 feet. Includes two tables measuring 96 x 26.5 inches, with a height of 29 inches. Publication materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included. Type A Exhibitors can also choose their booth location on a first-come, first-served basis. The Whova Lead Scan feature (helps track every attendee who stops by through scanning) is included.",
       ],
     },
     {
@@ -66,7 +66,7 @@ const Tickets = ({ widget }) => {
       saveText: "Save $1000 until Sept 1",
       url: "https://whova.com/portal/registration/genai_202405/exhibitor",
       description: [
-        "Exhibition area, this space provides 8 x 6 feet of space, including a 96 x 26.5-inch table with a height of 29 inches. Publication materials, such as roll-up banners and posters, are welcomed.",
+        "Located in the Exhibition Area and provides a space of 8 x 6 feet. Includes one table measuring 96 x 26.5 inches, with a height of 29 inches. Publication materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included."
       ],
     },
   ];
