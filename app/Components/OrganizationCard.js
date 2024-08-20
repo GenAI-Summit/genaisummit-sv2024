@@ -5,6 +5,7 @@ import Logo from "./Logo";
 import Drawer from "./Drawer";
 import OrganizationDetail from "./OrganizationDetail";
 import { useRouter } from "next/navigation";
+import TextHover from "../Motions/TextHover";
 
 const OrganizationCard = ({ organization }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -36,23 +37,21 @@ const OrganizationCard = ({ organization }) => {
         <OrganizationDetail organization={organization} />
         <div className="flex flex-col gap-2">
           {organization.url && (
-            <div>
-              <span
-                className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-theme1Light1"
-                onClick={() => openUrl(organization.url)}
-              >
-                Official Website
-              </span>
-            </div>
-          )}
-          <div>
-            <span
-              className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-theme1Light1"
-              onClick={onOrganizationDetail}
+            <p
+              className="cursor-pointer mt-2 text-left font-medium"
+              onClick={() => openUrl(organization.url)}
             >
+              <TextHover color="theme1Light1">Official Website</TextHover>
+            </p>
+          )}
+          <p
+            className="cursor-pointer mt-2 text-left font-medium"
+            onClick={onOrganizationDetail}
+          >
+            <TextHover color="theme1Light1">
               About {organization.name}
-            </span>
-          </div>
+            </TextHover>
+          </p>
         </div>
       </Drawer>
     </>
