@@ -23,7 +23,7 @@ const SessionCard = ({ session, showDesc = false }) => {
               <span>{session.tag}</span>
             </span>
             <span
-              className="cursor-pointer hover:bg-gradient-to-br hover:from-color1 hover:to-color2 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-10"
+              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1SessionCardTitleHoverColor1 hover:via-SessionCardTitleHoverColor2 hover:via-SessionCardTitleHoverColor3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-10"
               onClick={onSessionClick}
             >
               {session.name}

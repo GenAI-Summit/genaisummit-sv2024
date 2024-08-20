@@ -37,7 +37,7 @@ const NavBar = ({
         </div>
         {showDialog && (
           <DropDown isOpen={showDialog}>
-            <div className="absolute top-10 right-[13%] pt-[2.5px] bg-gradient-to-r from-color1 to-color2 shadow-lg rounded-lg z-30">
+            <div className="absolute top-10 right-[13%] pt-[2.5px] bg-gradient-to-r from-theme1CardBorderColor1 via-theme1CardBorderColor2 to-theme1CardBorderColor3 shadow-lg rounded-lg z-30">
               <div className="w-full h-full bg-color8 z-40 py-4 px-6 rounded-lg">
                 {prevEvents.map((event, index) => (
                   <div key={index} className="block p-2">

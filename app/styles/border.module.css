@@ -7,7 +7,7 @@
 .border::after {
   content: '';
   position: absolute;
-  background: linear-gradient(to right, #FF11E7, #3971FF);
+  background: linear-gradient(to right, #EFFF00, #15FFEE, #15C1FF);
 }
 
 .border::before {
@@ -15,7 +15,7 @@
   right: 0;
   width: 3px;
   height: calc(40%);
-  background: linear-gradient(to bottom, #FF11E7, #3971FF);
+  background: linear-gradient(to bottom, #EFFF00, #15FFEE, #15C1FF);
   clip-path: polygon(0 10px, 100% 100%, 100% 100%, 0 100%);
 }
 

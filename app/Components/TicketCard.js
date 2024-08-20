@@ -15,9 +15,11 @@ const IndexTicketCard = ({ ticket }) => {
           </span>
         </div>
         <CardLayout>
-          <div className="relative h-full w-full flex flex-col items-center justify-between text-center text-color5 gap-4 p-4">
-            <div className="w-full flex flex-col gap-y-4">
-              <h1 className="text-2xl font-bold text-color10">{ticket.name}</h1>
+          <div className="relative h-full w-full flex flex-col items-center justify-between text-center text-color5 gap-4 p-4 rounded-lg">
+            <div className="w-full flex flex-col gap-y-4 rounded-lg">
+              <h1 className="text-2xl font-semibold text-theme1TicketText1">
+                {ticket.name}
+              </h1>
               {ticket.description.map((desc, index) => (
                 <p key={index} className="text-base text-color6 leading-6">
                   {desc}
@@ -26,13 +28,13 @@ const IndexTicketCard = ({ ticket }) => {
             </div>
             <div className="flex flex-col gap-y-4">
               <div className="flex flex-col gap-y-1">
-                <p className="line-through text-color7">
+                <p className="line-through text-theme1TicketText2">
                   ${ticket.originalPrice}
                 </p>
-                <p className="text-2xl font-bold bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent">
+                <p className="text-2xl font-bold bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
                   ${ticket.price}
                 </p>
-                <p className="text-sm text-color7">
+                <p className="text-sm text-theme1TicketText2">
                   <span>{ticket.saveText}</span>
                 </p>
               </div>

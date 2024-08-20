@@ -66,7 +66,7 @@ const FunFacts = () => {
         {data.map((item, index) => (
           <div key={index} className="w-[35%] md:w-[18%] z-10">
             <div>
-              <span className="font-monaspace_neon text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-color1 to-color2 text-transparent bg-clip-text">
+              <span className="font-monaspace_neon text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-theme1FunFactsColor1 via-theme1FunFactsColor2 to-theme1FunFactsColor3 text-transparent bg-clip-text">
                 <NumberRoller
                   start={item.start}
                   end={item.end}

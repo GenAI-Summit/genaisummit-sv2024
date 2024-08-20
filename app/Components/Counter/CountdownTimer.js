@@ -25,7 +25,7 @@ const CountdownTimer = ({ time }) => {
   const sec = seconds % 60;
 
   const textColor =
-    "bg-gradient-to-br from-color1 to-color2 bg-clip-text text-transparent";
+    "bg-gradient-to-br from-theme1CountDownNumberColor1 via-theme1CountDownNumberColor2 to-theme1CountDownNumberColor3 bg-clip-text text-transparent";
 
   return (
     <div className="text-2xl md:text-4xl lg:text-6xl font-monaspace_neon">

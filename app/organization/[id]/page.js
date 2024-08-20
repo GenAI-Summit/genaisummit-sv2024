@@ -12,7 +12,7 @@ const SponsorPage = async ({ params }) => {
   return (
     <SectionEnter>
       <div className="w-full mt-10">
-        <SectionLayout title="Sponsor" widget={<GoBackController />}>
+        <SectionLayout title="Organization" widget={<GoBackController />}>
           <div className="w-full mt-6">
             <CardLayout>
               <OrganizationDetail organization={organization} />

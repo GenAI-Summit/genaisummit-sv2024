@@ -23,8 +23,8 @@ const TicketBtn = ({
             group relative z-0 ${width}`}
         onClick={() => onClick(url)}
       >
-        <div className="m-[1.5px] rounded-full px-4 py-2 bg-gradient-to-br from-color1 to-color2  group-hover:bg-gradient-to-br group-hover:from-color15 group-hover:to-color14 transition-colors ease-in-out duration-300">
-          <span className="h-full w-full rounded-full text-color8 font-light">
+        <div className="m-[1.5px] rounded-full px-4 py-2 bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3  group-hover:bg-gradient-to-br group-hover:from-theme1BtnHoverColor1 group-hover:via-theme1BtnHoverColor2 group-hover:to-theme1BtnHoverColor3 transition-colors ease-in-out duration-300">
+          <span className="h-full w-full rounded-full text-theme1BtnTextLight font-bold">
             Buy Tickets
           </span>
         </div>
@@ -38,9 +38,9 @@ const TicketBtn = ({
           group relative z-0 ${width}`}
         onClick={() => onClick(url)}
       >
-        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-color1 to-color2"></div>
-        <div className="m-[1.5px] rounded-full px-4 py-2 bg-color6 group-hover:bg-gray-700 transition ease-in-out duration-300">
-          <span className="h-full w-full rounded-full bg-gradient-to-br from-color1 to-color2 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
+        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3"></div>
+        <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1BtnBgDark group-hover:bg-gray-700 transition ease-in-out duration-300">
+          <span className="h-full w-full rounded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3 bg-clip-text font-bold text-transparent transition ease-in-out duration-300">
             Buy Tickets
           </span>
         </div>
@@ -53,9 +53,9 @@ const TicketBtn = ({
           group relative z-0 ${width}`}
       onClick={() => onClick(url)}
     >
-      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-color1 to-color2"></div>
-      <div className="m-[1.5px] rounded-full px-4 py-2 bg-color8 group-hover:bg-gradient-to-br group-hover:from-color1 group-hover:to-color2 transition ease-in-out duration-300">
-        <span className="h-full w-full rounded-full bg-gradient-to-br from-color1 to-color2 bg-clip-text font-light text-transparent group-hover:text-color8 transition ease-in-out duration-300">
+      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3"></div>
+      <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1BtnBgLight group-hover:bg-gradient-to-br group-hover:from-theme1BtnColor1 group-hover:via-theme1BtnColor2 group-hover:to-theme1BtnColor3 transition ease-in-out duration-300">
+        <span className="h-full w-full rounded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3 bg-clip-text font-bold text-transparent group-hover:text-theme1BtnTextLight group-hover:drop-shadow-2xl transition ease-in-out duration-300">
           Buy Tickets
         </span>
       </div>
