@@ -19,7 +19,7 @@ const IndexIntro = () => {
       title={title}
       paragraphs={paragraphs}
       images={images}
-      widget={<TicketBtn mode="day" url="/tickets" />}
+      widget={<TicketBtn mode="night" url="/tickets" />}
     />
   );
 };

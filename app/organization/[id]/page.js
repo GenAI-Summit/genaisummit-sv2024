@@ -14,7 +14,7 @@ const SponsorPage = async ({ params }) => {
       <div className="w-full mt-10">
         <SectionLayout title="Organization" widget={<GoBackController />}>
           <div className="w-full mt-6">
-            <CardLayout>
+            <CardLayout bgColor="bg-theme1Dark3">
               <OrganizationDetail organization={organization} />
             </CardLayout>
           </div>

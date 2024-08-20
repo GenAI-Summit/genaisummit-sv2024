@@ -14,7 +14,7 @@
   bottom: 0;
   right: 0;
   width: 3px;
-  height: calc(40%);
+  height: calc(50%);
   background: linear-gradient(to bottom, #EFFF00, #15FFEE, #15C1FF);
   clip-path: polygon(0 10px, 100% 100%, 100% 100%, 0 100%);
 }
@@ -22,7 +22,7 @@
 .border::after {
   bottom: 0;
   right: 0;
-  width: calc(40%);
+  width: calc(50%);
   height: 3px;
   clip-path: polygon(10px 0, 100% 100%, 100% 100%, 100% 0);
 }

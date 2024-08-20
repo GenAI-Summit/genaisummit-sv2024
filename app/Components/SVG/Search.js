@@ -6,7 +6,7 @@ const Search = () => {
       viewBox="0 0 30 30"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="text-color6"
+      className="text-theme1Light1"
     >
       <circle
         cx="13"

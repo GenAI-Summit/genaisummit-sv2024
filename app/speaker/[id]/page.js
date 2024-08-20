@@ -17,7 +17,7 @@ const SpeakerPage = async ({ params }) => {
       <SectionEnter>
         <SectionLayout title="Speaker" widget={<GoBackController />}>
           <div className="w-full mt-6">
-            <CardLayout>
+            <CardLayout bgColor="bg-theme1Dark3">
               <SpeakerDetail speaker={speaker} />
             </CardLayout>
           </div>

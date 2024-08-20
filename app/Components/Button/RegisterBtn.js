@@ -11,9 +11,9 @@ const RegisterBtn = ({ onClick, text = "Register", mode }) => {
         className="relative group z-0"
         onClick={onClick}
       >
-        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3"></div>
-        <div className="m-[1.5px] rounded-full bg-theme1BtnBgGhost px-4 py-2 transition-all ease-in-out duration-300 group-hover:bg-gradient-to-br group-hover:from-theme1BtnColor1 group-hover:via-theme1BtnColor2 group-hover:to-theme1BtnColor3">
-          <span className="w-full h-full rouonded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3 bg-clip-text text-transparent group-hover:text-theme1BtnTextLight transition-all ease-in-out duration-300 font-bold">
+        <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
+        <div className="m-[1.5px] rounded-full bg-theme1Dark1 px-4 py-2 transition-all ease-in-out duration-300 group-hover:bg-gray-800">
+          <span className="w-full h-full rouonded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent transition-all ease-in-out duration-300 font-light">
             {text}
           </span>
         </div>
@@ -31,9 +31,9 @@ const RegisterBtn = ({ onClick, text = "Register", mode }) => {
       className="relative group z-0"
       onClick={onClick}
     >
-      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-theme1BtnColor3"></div>
-      <div className="m-[1.5px] rounded-full bg-theme1BtnNightBg px-4 py-2 transition-all duration-300 hover:bg-gray-700">
-        <span className="w-full h-full rouonded-full bg-gradient-to-br from-theme1BtnColor1 via-theme1BtnColor2 to-themeBtnColor3 bg-clip-text text-transparent font-bold">
+      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
+      <div className="m-[1.5px] rounded-full bg-theme1Dark1 px-4 py-2 transition-all duration-300 hover:bg-gray-700">
+        <span className="w-full h-full rouonded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-themeColor3 bg-clip-text text-transparent font-light">
           {text}
         </span>
       </div>

@@ -1,4 +1,4 @@
-const Close = () => {
+const Close = ({ color = "stroke-black" }) => {
   return (
     <svg
       className="w-8 h-8 transition-all duration-300 ease-in-out group"
@@ -7,7 +7,7 @@ const Close = () => {
     >
       <path
         d="M10 10 L22 22 M10 22 L22 10"
-        className="stroke-color6"
+        className={color}
         strokeWidth="2"
         strokeLinecap="round"
       />

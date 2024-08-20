@@ -5,9 +5,9 @@ import Icon from "./Icon";
 
 const Footer = () => {
   const textEffect =
-    "bg-gradient-to-br from-theme1FooterTitleColor1 via-theme1FooterTitleColor2 to-theme1FooterTitleColor3 text-transparent bg-clip-text";
+    "bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 text-transparent bg-clip-text";
   const hoverEffect =
-    "hover:bg-gradient-to-br hover:from-theme1FooterTextHoverColor1 hover:via-theme1FooterTextHoverColor2 hover:to-theme1FooterTextHoverColor3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300";
+    "hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300";
   const socialMedia = [
     {
       name: "x",
@@ -45,7 +45,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-theme1FooterBg text-theme1FooterText border-t border-theme1FooterBorder">
+    <div className="flex flex-col bg-theme1Dark3 text-theme1Light1 border-t border-theme1Light1">
       <div className="flex p-7 justify-between flex-wrap items-start gap-y-10">
         <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between md:gap-y-8 items-center mt-5">
           <Link href="https://gptdao.ai" className="w-fit" target="_blank">

@@ -27,7 +27,7 @@ const OrganizationCard = ({ organization }) => {
   return (
     <>
       <div
-        className="w-full h-full bg-theme1CardBg cursor-pointer border-2 border-theme1CardBorder ease-in-out transition duration-300 hover:border-theme1CardBorderHover rounded-lg shadow-md"
+        className="w-full h-full bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out transition duration-300 hover:border-theme1Gray2 rounded-lg shadow-md"
         onClick={openDrawer}
       >
         <Logo src={organization.logo} alt={organization.name} />
@@ -38,7 +38,7 @@ const OrganizationCard = ({ organization }) => {
           {organization.url && (
             <div>
               <span
-                className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color6"
+                className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-theme1Light1"
                 onClick={() => openUrl(organization.url)}
               >
                 Official Website
@@ -47,7 +47,7 @@ const OrganizationCard = ({ organization }) => {
           )}
           <div>
             <span
-              className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-color6"
+              className="cursor-pointer mt-2 text-left font-medium ease-in-out duration-300 border-b-2 border-transparent hover:border-theme1Light1"
               onClick={onOrganizationDetail}
             >
               About {organization.name}
