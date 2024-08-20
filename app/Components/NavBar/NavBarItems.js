@@ -1,7 +1,7 @@
 import Link from "next/link";
 import PrevEvents from "./PrevEvents";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import TextHover from "../../Motions/TextHover";
 
 const NavBarItems = ({
   closeDrawer,
@@ -36,24 +36,7 @@ const NavBarItems = ({
           onClick={close}
           key={index}
         >
-          <motion.span
-            className="relative"
-            whileHover="hover"
-            initial="initial"
-            variants={{
-              initial: { color: "colorNavBarText" },
-            }}
-          >
-            {item.name}
-            <motion.div
-              className="absolute bottom-0 left-0 right-0 h-0.5 bg-colorNavBarText"
-              initial={{ scaleX: 0 }}
-              variants={{
-                hover: { scaleX: 1 },
-              }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.span>
+          <TextHover color="theme1Dark1">{item.name}</TextHover>
         </Link>
       ))}
       <PrevEvents

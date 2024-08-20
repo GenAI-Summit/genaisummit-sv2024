@@ -45,7 +45,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-theme1Dark3 text-theme1Light1 border-t border-theme1Light1">
+    <div className="flex flex-col bg-theme1Dark2 text-theme1Light1 border-t border-theme1Light1">
       <div className="flex p-7 justify-between flex-wrap items-start gap-y-10">
         <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between md:gap-y-8 items-center mt-5">
           <Link href="https://gptdao.ai" className="w-fit" target="_blank">
@@ -130,7 +130,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-color7">
+      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-theme1Light1">
         <div className="text-sm">
           <span className="text-sm">
             <Link href="/privacy" className={hoverEffect}>
