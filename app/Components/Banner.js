@@ -14,7 +14,7 @@ const Banner = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
-      <div className="absolute inset-0 w-full h-full bg-gray-700 opacity-70 z-20"></div>
+      <div className="absolute inset-0 w-full h-full bg-gray-800 opacity-70 z-20"></div>
       <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-color8 text-center p-6 gap-y-12 md:gap-y-14 lg:gap-y-16">
         <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-10">
           <p>
