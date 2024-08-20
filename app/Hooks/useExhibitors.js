@@ -10,21 +10,25 @@ const useExhibitors = () => {
     fetcher,
   );
 
-  const attendees = data?.data
-    .filter((exhibitor) => exhibitor.tier === "Attendee")
-    .sort(sorter);
-  const exhibitors = data?.data
-    .filter(
-      (exhibitor) =>
-        exhibitor.tier !== "Attendee" && exhibitor.tier !== "Media",
-    )
-    .sort(sorter);
-  const media = data?.data.filter((exhibitor) => exhibitor.tier === "Media");
-  const sponsors = data?.data.filter((exhibitor) =>
+  const processedData = data?.data.sort(sorter).map((exhibitor) => {
+    return {
+      ...exhibitor,
+      name: exhibitor.name.replace(/^_RANK_\d+_/, ""),
+    };
+  });
+
+  const attendees = processedData?.filter(
+    (exhibitor) => exhibitor.tier === "Attendee",
+  );
+  const exhibitors = processedData?.filter(
+    (exhibitor) => exhibitor.tier !== "Attendee" && exhibitor.tier !== "Media",
+  );
+  const media = processedData?.filter(
+    (exhibitor) => exhibitor.tier === "Media",
+  );
+  const sponsors = processedData?.filter((exhibitor) =>
     sponsorTiers.includes(exhibitor.tier),
   );
-
-  console.log(exhibitors);
 
   return {
     attendees,
