@@ -4,9 +4,9 @@ const SectionLayout = ({ title, description, children, widget }) => {
       {widget ? (
         <div className="flex flex-row items-start justify-between">
           <div>
-            <div className="bg-gradient-to-r from-theme1SectionTitleStripeColor1 via-theme1SectiontTitleStripeColor2 to-theme1SectionTitleStripeColor3 w-10 h-1" />
+            <div className="bg-gradient-to-r from-theme1Color1 via-theme1Color2 to-theme1Color3 w-10 h-1" />
             <div className="w-full mt-6">
-              <span className="text-3xl font-monaspace_neon bg-gradient-to-br from-theme1SectionTitleColor1 via-theme1SectionTitleColor2 to-theme1SectionTitleColor3 bg-clip-text text-transparent">
+              <span className="text-3xl font-monaspace_neon bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
                 {title}
               </span>
             </div>
@@ -15,16 +15,16 @@ const SectionLayout = ({ title, description, children, widget }) => {
         </div>
       ) : (
         <>
-          <div className="bg-gradient-to-r from-theme1SectionTitleStripeColor1 via-theme1SectiontTitleStripeColor2 to-theme1SectionTitleStripeColor3 w-10 h-1" />
+          <div className="bg-gradient-to-r from-theme1Color1 via-theme1Color2 to-theme1Color3 w-10 h-1" />
           <div className="w-full mt-6">
-            <span className="text-3xl font-monaspace_neon bg-gradient-to-br from-theme1SectionTitleColor1 via-theme1SectionTitleColor2 to-theme1SectionTitleColor3 bg-clip-text text-transparent">
+            <span className="text-3xl font-monaspace_neon bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
               {title}
             </span>
           </div>
         </>
       )}
       {description && (
-        <div className="mt-6 text-theme1SectionDescription">{description}</div>
+        <div className="mt-6 text-theme1Color2">{description}</div>
       )}
       <div className="flex flex-col items-center justify-center gap-y-10 w-full h-full">
         {children}

@@ -6,7 +6,7 @@ import ParsedHtml from "./ParsedHtml";
 const SpeakerDetail = ({ speaker }) => {
   return (
     <>
-      <div className="flex flex-col items-center md:p-4 p-2 text-color6">
+      <div className="flex flex-col items-center md:p-4 p-2">
         <div className="flex items-center gap-6 w-full">
           <div className="rounded-full overflow-hidden">
             <Image

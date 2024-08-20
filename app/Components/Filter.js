@@ -13,13 +13,13 @@ const Filter = ({ name, options, selected, onSelect }) => {
   };
 
   return (
-    <div className="flex flex-col gap-2 text-start text-theme1FilterText">
+    <div className="flex flex-col gap-2 text-start text-theme1Light1">
       <div
         className="flex items-center justify-between cursor-pointer group"
         onClick={onClickWrapper}
       >
         <span
-          className={`text-xl font-semibold ${isWrapperOpen ? "bg-gradient-to-br from-theme1FilterTitleColor1 via-theme1FilterTitleColor2 to-theme1FilterTitleColor3 bg-clip-text text-transparent" : "text-color6"} group-hover:bg-gradient-to-br group-hover:from-theme1FilterTitleColor1 group-hover:via-theme1FilterTitleColor2 group-hover:to-theme1FilterTitleColor3 group-hover:bg-clip-text group-hover:text-transparent ease-in-out transition-all duration-300`}
+          className={`text-xl font-semibold ${isWrapperOpen ? "bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent" : "text-theme1Light1"} group-hover:bg-gradient-to-br group-hover:from-theme1FilterTitleColor1 group-hover:via-theme1FilterTitleColor2 group-hover:to-theme1FilterTitleColor3 group-hover:bg-clip-text group-hover:text-transparent ease-in-out transition-all duration-300`}
         >
           {name}
         </span>

@@ -7,14 +7,14 @@ const SearchBar = ({ text, setText }) => {
     setText(e.target.value);
   };
   return (
-    <div className="w-full flex rounded-full shadow-lg bg-color8 p-1 text-color6 border border-color6">
+    <div className="w-full flex rounded-full shadow-lg bg-theme1Dark2 p-1 text-themeLight1 border border-theme1Light1">
       <div className="flex p-1 justify-center items-center rounded-full">
         <Search />
       </div>
       <input
         type="text"
         placeholder="Search..."
-        className="w-full border-none outline-none bg-transparent pl-2 placeholder-color7"
+        className="w-full border-none outline-none bg-transparent pl-2 placeholder-theme1Light1"
         onChange={onChange}
         maxLength="30"
         value={text}

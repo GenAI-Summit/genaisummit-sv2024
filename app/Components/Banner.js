@@ -14,18 +14,18 @@ const Banner = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
-      <div className="absolute inset-0 w-full h-full bg-gray-800 opacity-70 z-20"></div>
-      <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-color8 text-center p-6 gap-y-12 md:gap-y-14 lg:gap-y-16">
+      <div className="absolute inset-0 w-full h-full bg-gray-700 opacity-70 z-20"></div>
+      <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-theme1Light1 text-center p-6 gap-y-12 md:gap-y-14 lg:gap-y-16">
         <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-10">
           <p>
-            <span className="text-2xl md:text-4xl lg:text-5xl bg-gradient-to-br from-theme1BannerColor1 via-theme1BannerColor2 to-theme1BannerColor3 bg-clip-text text-transparent">
+            <span className="text-2xl md:text-4xl lg:text-5xl bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
               #AIAREALL
             </span>
           </p>
           <p className="text-2xl md:text-4xl lg:text-7xl">GENAI SUMMIT</p>
           <p className="text-2xl md:text-4xl lg:text-7xl">
             <span>Silicon Valley</span>{" "}
-            <span className="bg-gradient-to-br from-theme1BannerColor1 via-theme1BannerColor2 to-theme1BannerColor3 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
               2024
             </span>
           </p>
@@ -40,8 +40,8 @@ const Banner = () => {
             <p>Nov 1 - Nov 3</p>
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
-            <SubscribeBtn width="w-48" />
-            <TicketBtn fill={true} width="w-48" mode="day" url="/tickets" />
+            <SubscribeBtn mode="plain" width="w-48" />
+            <TicketBtn width="w-48" fill={true} mode="black" url="/tickets" />
           </div>
         </div>
       </div>

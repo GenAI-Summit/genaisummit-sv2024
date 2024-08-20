@@ -16,14 +16,14 @@ const SessionCard = ({ session, showDesc = false }) => {
 
   return (
     <div className="w-full">
-      <CardLayout>
-        <div className="flex flex-col items-start text-left text-color6 md:p-4 p-2">
+      <CardLayout bgColor="bg-theme1Dark3">
+        <div className="flex flex-col items-start text-left text-theme1Light1 md:p-4 p-2">
           <div className="text-xl font-bold mb-4">
             <span className={`${typeColorClass} p-0.5 mr-4 rounded`}>
               <span>{session.tag}</span>
             </span>
             <span
-              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1SessionCardTitleHoverColor1 hover:via-SessionCardTitleHoverColor2 hover:via-SessionCardTitleHoverColor3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-10"
+              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-10"
               onClick={onSessionClick}
             >
               {session.name}

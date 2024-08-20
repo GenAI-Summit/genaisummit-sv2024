@@ -35,7 +35,7 @@ const IndexSpeakers = () => {
               className={`w-[48%] md:w-[28%] lg:w-[19%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-4 flex flex-col items-start justify-center gap-y-2 md:gap-y-3 text-color6">
+              <div className="mt-4 flex flex-col items-start justify-center gap-y-2 md:gap-y-3 text-theme1Light1">
                 <p className="font-bold text-[14px] md:text-[14px] lg:text-[20px]">
                   {speaker.name}
                 </p>
