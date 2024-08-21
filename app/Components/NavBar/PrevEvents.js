@@ -1,6 +1,9 @@
-import DropDown from "../../Motions/DropDown";
+"use client";
+
 import TextHover from "../../Motions/TextHover";
 import WrapperArrow from "../SVG/WrapperArrow";
+
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
   const prevEvents = [
@@ -32,9 +35,15 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
         <div className="inline-flex items-center gap-1 cursor-pointer">
           PREVIOUS EVENTS
         </div>
-        {showDialog && (
-          <DropDown isOpen={showDialog}>
-            <div className="absolute top-10 right-[13%] pt-[2.5px] bg-gradient-to-r from-theme1Color1 via-theme1Color2 to-theme1Color3 shadow-lg rounded-lg z-30">
+        <AnimatePresence>
+          {showDialog && (
+            <motion.div
+              className="overflow-hidden absolute right-[13%] pt-[2.5px] bg-gradient-to-r from-theme1Color1 via-theme1Color2 to-theme1Color3 shadow-lg rounded-lg z-30"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.7, type: "spring", ease: "linear" }}
+            >
               <div className="w-full h-full bg-color8 z-40 py-4 px-6 rounded-lg">
                 {prevEvents.map((event, index) => (
                   <p
@@ -46,9 +55,9 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                   </p>
                 ))}
               </div>
-            </div>
-          </DropDown>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
 
       <div
@@ -61,9 +70,15 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
           <span>PREVIOUS EVENT</span>
           <WrapperArrow isOpen={showDialog} />
         </div>
-        {showDialog && (
-          <DropDown isOpen={showDialog}>
-            <div className="mt-6 flex flex-col gap-y-6">
+        <AnimatePresence>
+          {showDialog && (
+            <motion.div
+              className="mt-6 flex flex-col gap-y-6"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.7, type: "spring", ease: "linear" }}
+            >
               {prevEvents.map((event, index) => (
                 <p
                   key={index}
@@ -73,9 +88,9 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                   <TextHover color="theme1Dark1">{event.name}</TextHover>
                 </p>
               ))}
-            </div>
-          </DropDown>
-        )}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </>
   );

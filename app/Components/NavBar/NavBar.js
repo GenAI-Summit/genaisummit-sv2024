@@ -72,7 +72,7 @@ const NavBar = () => {
       </div>
 
       <div className="fixed top-1 px-6 py-2 w-[95%] shadow-md rounded-lg bg-colorNavBarBg flex flex-col items-center text-center lg:hidden z-40 text-theme1Dark1 opacity-[98%]">
-        <div className="w-full flex flex-row justify-between">
+        <div className="w-full flex flex-row justify-between items-center">
           <div className="cursor-pointer" onClick={onClickLogo}>
             <Icon
               src="/images/icons/favicon.ico"

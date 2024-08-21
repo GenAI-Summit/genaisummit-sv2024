@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import CalendarBtnDialog from "./CalendarBtnDialog";
+import { motion, AnimatePresence } from "framer-motion";
 // import Triangle from "../SVG/Triangle";
 
 import { createEvent } from "ics";
@@ -14,6 +15,7 @@ const AddToCalendarBtn = ({
   startDate,
   endDate,
   width,
+  mode,
 }) => {
   const [showDialog, setShowDialog] = useState(false);
 
@@ -77,6 +79,74 @@ const AddToCalendarBtn = ({
     });
   };
 
+  if (mode === "plain") {
+    return (
+      <>
+        <button
+          className={`hidden md:block relative group z-0 ${width}`}
+          onMouseEnter={openDialog}
+          onMouseLeave={closeDialog}
+        >
+          <div className="m-[1.5px] rounded-full bg-transparent px-4 py-2 transition-colors duration-300 hover:bg-theme1Dark3 border-[1.5px] border-theme1Light1">
+            <span className="h-full w-full rounded-full font-light text-theme1Light1">
+              Add to Calendar
+            </span>
+          </div>
+          {showDialog && (
+            <div className="absolute w-48 overflow-hidden">
+              <AnimatePresence>
+                <motion.div
+                  className="w-full"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.7, type: "spring", ease: "linear" }}
+                >
+                  <CalendarBtnDialog
+                    onAddToGoogleCalendar={onAddToGoogleCalendar}
+                    onDownloadICS={onDownloadICS}
+                    isOpen={showDialog}
+                    onClose={closeDialog}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          )}
+        </button>
+        <button
+          className={`md:hidden relative rounded relative group z-0 ${width}`}
+          onClick={handleDialog}
+        >
+          <div className="m-[1.5px] rounded-full bg-transparent px-4 py-2 transition-colors duration-300 hover:bg-theme1Dark3 border-[1.5px] border-theme1Light1">
+            <span className="h-full w-full rounded-full font-light text-theme1Light1">
+              Add to Calendar
+            </span>
+          </div>
+          {showDialog && (
+            <div className="absolute w-48 overflow-hidden">
+              <AnimatePresence>
+                <motion.div
+                  className="w-full"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.7, type: "spring", ease: "linear" }}
+                >
+                  <CalendarBtnDialog
+                    onAddToGoogleCalendar={onAddToGoogleCalendar}
+                    onDownloadICS={onDownloadICS}
+                    isOpen={showDialog}
+                    onClose={closeDialog}
+                  />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+          )}
+        </button>
+      </>
+    );
+  }
+
   return (
     <>
       <button
@@ -90,6 +160,14 @@ const AddToCalendarBtn = ({
             Add to Calendar
           </span>
         </div>
+        {showDialog && (
+          <CalendarBtnDialog
+            onAddToGoogleCalendar={onAddToGoogleCalendar}
+            onDownloadICS={onDownloadICS}
+            isOpen={showDialog}
+            onClose={closeDialog}
+          />
+        )}
       </button>
       <button
         className={`md:hidden relative rounded relative group z-0 ${width}`}
@@ -101,15 +179,15 @@ const AddToCalendarBtn = ({
             Add to Calendar
           </span>
         </div>
+        {showDialog && (
+          <CalendarBtnDialog
+            onAddToGoogleCalendar={onAddToGoogleCalendar}
+            onDownloadICS={onDownloadICS}
+            isOpen={showDialog}
+            onClose={closeDialog}
+          />
+        )}
       </button>
-      {showDialog && (
-        <CalendarBtnDialog
-          onAddToGoogleCalendar={onAddToGoogleCalendar}
-          onDownloadICS={onDownloadICS}
-          isOpen={showDialog}
-          onClose={closeDialog}
-        />
-      )}
     </>
   );
 };
