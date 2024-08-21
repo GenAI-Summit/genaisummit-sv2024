@@ -14,7 +14,7 @@ const Banner = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
-      <div className="absolute inset-0 w-full h-full bg-gray-700 opacity-70 z-20"></div>
+      <div className="absolute inset-0 w-full h-full bg-black opacity-70 z-20"></div>
       <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-theme1Light1 text-center p-6 gap-y-12 md:gap-y-14 lg:gap-y-16">
         <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-10">
           <p>
@@ -41,7 +41,13 @@ const Banner = () => {
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn mode="plain" width="w-48" />
-            <TicketBtn width="w-48" fill={true} mode="black" url="/tickets" />
+            <TicketBtn
+              width="w-48"
+              fill={true}
+              mode="black"
+              border={true}
+              url="/tickets"
+            />
           </div>
         </div>
       </div>

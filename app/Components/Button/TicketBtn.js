@@ -9,6 +9,7 @@ const TicketBtn = ({
   width,
   mode,
   fill,
+  border,
   url = "https://whova.com/portal/registration/genai_202405/",
   platforms,
 }) => {
@@ -71,10 +72,24 @@ const TicketBtn = ({
   }
 
   if (mode === "black") {
+    if (border)
+      return (
+        <button
+          className={`group relative z-0 ${width}`}
+          onClick={() => openUrl(url)}
+        >
+          <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
+          <div className="m-[1.5px] rounded-lg px-4 py-2 bg-theme1Dark1 group-hover:bg-theme1Dark3 transition ease-in-out duration-300">
+            <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-bold text-transparent transition ease-in-out duration-300">
+              Buy Tickets
+            </span>
+          </div>
+        </button>
+      );
+
     return (
       <button
-        className={`
-          group relative z-0 ${width}`}
+        className={`group relative z-0 ${width}`}
         onClick={() => openUrl(url)}
       >
         <div className="rounded-lg px-4 py-2 bg-theme1Dark1 border-[1.5px] border-theme1Dark1 group-hover:bg-theme1Dark3 group-hover:border-theme1Dark3 transition ease-in-out duration-300">
