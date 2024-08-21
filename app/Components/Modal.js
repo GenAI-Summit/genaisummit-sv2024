@@ -1,8 +1,10 @@
 import Close from "./SVG/Close";
 import ModalEnter from "../Motions/ModalEnter";
 
-const Modal = ({ children, isModalOpen, closeModal }) => {
-  if (!isModalOpen) return null;
+const Modal = ({ children, isModalOpen, closeModal, title }) => {
+  if (!isModalOpen) {
+    return null;
+  }
 
   return (
     <div
@@ -22,11 +24,12 @@ const Modal = ({ children, isModalOpen, closeModal }) => {
         `}
           onClick={(e) => e.stopPropagation()}
         >
-          <div className="relative p-6">
-            <button className="fixed top-3 right-3" onClick={closeModal}>
+          <div className="p-8">
+            <div className="fixed top-4 text-xl font-bold">{title}</div>
+            <button className="fixed top-4 right-4" onClick={closeModal}>
               <Close color="stroke-theme1Light1" />
             </button>
-            <div className="mt-4">{children}</div>
+            <div className="mt-8 p-4">{children}</div>
           </div>
         </div>
       </ModalEnter>

@@ -46,9 +46,13 @@ const TicketBtn = ({
             </span>
           </div>
         </button>
-        <Modal isModalOpen={isModalOpen} closeModal={closeModal}>
+        <Modal
+          title="Choose Your Platform"
+          isModalOpen={isModalOpen}
+          closeModal={closeModal}
+        >
           <div className="flex flex items-center justify-center">
-            <div className="flex flex-col items-start justify-center space-y-8">
+            <div className="flex flex-col items-start justify-center space-y-4">
               {platforms?.map((platform) => (
                 <div
                   className="cursor-pointer w-full flex items-center justify-start gap-4 group"
@@ -58,7 +62,7 @@ const TicketBtn = ({
                   <div className="w-20 h-20">
                     <Logo src={platform.logo} alt={platform.name} />
                   </div>
-                  <p className="text-2xl text-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 group-hover:bg-clip-text group-hover:text-transparent transition ease-in-out duration-300">
+                  <p className="text-2xl text-left text-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 group-hover:bg-clip-text group-hover:text-transparent transition ease-in-out duration-300">
                     {platform.name}
                   </p>
                 </div>
