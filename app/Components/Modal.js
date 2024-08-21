@@ -1,4 +1,5 @@
 import Close from "./SVG/Close";
+import ModalEnter from "../Motions/ModalEnter";
 
 const Modal = ({ children, isModalOpen, closeModal }) => {
   if (!isModalOpen) return null;
@@ -12,21 +13,23 @@ const Modal = ({ children, isModalOpen, closeModal }) => {
       `}
       onClick={closeModal}
     >
-      <div
-        className={`
+      <ModalEnter>
+        <div
+          className={`
           bg-theme1Dark3 w-full max-w-md m-4 rounded-lg shadow-xl
           transform transition-all duration-300 ease-in-out
           ${isModalOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"}
         `}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="relative p-6">
-          <button className="fixed top-3 right-3" onClick={closeModal}>
-            <Close color="stroke-theme1Light1" />
-          </button>
-          <div className="mt-4">{children}</div>
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="relative p-6">
+            <button className="fixed top-3 right-3" onClick={closeModal}>
+              <Close color="stroke-theme1Light1" />
+            </button>
+            <div className="mt-4">{children}</div>
+          </div>
         </div>
-      </div>
+      </ModalEnter>
     </div>
   );
 };
