@@ -18,7 +18,7 @@ const FloatFooter = () => {
   return (
     <div
       className={`
-    fixed bottom-2 w-[95%] text-color6 pt-[2.5px] bg-gradient-to-r from-theme1Color1 via-theme1Color2 to-theme1Color3 shadow-lg rounded-lg md:hidden z-30 ${isVisible ? "opacity-[98%]" : "hidden"}`}
+    fixed bottom-1 w-[95%] text-color6 pt-[2.5px] bg-gradient-to-r from-theme1Color1 via-theme1Color2 to-theme1Color3 shadow-lg rounded-lg md:hidden z-30 ${isVisible ? "opacity-[98%]" : "hidden"}`}
     >
       <div className="w-full h-full bg-color13 z-40 px-4 py-2 flex justify-between items-center rounded-lg">
         <span className="font-semibold">$99 – $1099</span>

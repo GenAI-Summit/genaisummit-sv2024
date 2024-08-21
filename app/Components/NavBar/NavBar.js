@@ -52,7 +52,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed top-2 px-6 py-2 lg:w-3/4 max-w-maxWidth shadow-lg rounded-lg bg-colorNavBarBg flex flex-row justify-around items-center hidden lg:flex z-40 text-theme1Dark1 opacity-[98%]">
+      <div className="fixed top-1 px-6 py-2 lg:w-3/4 max-w-maxWidth shadow-lg rounded-lg bg-colorNavBarBg flex flex-row justify-around items-center hidden lg:flex z-40 text-theme1Dark1 opacity-[98%]">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
             src="/images/icons/favicon.ico"
@@ -71,7 +71,7 @@ const NavBar = () => {
         <TicketBtn fill={true} mode="black" url="/tickets" />
       </div>
 
-      <div className="fixed top-2 px-6 py-2 w-[95%] shadow-md rounded-lg bg-colorNavBarBg flex flex-col items-center text-center lg:hidden z-40 text-theme1Dark1 opacity-[98%]">
+      <div className="fixed top-1 px-6 py-2 w-[95%] shadow-md rounded-lg bg-colorNavBarBg flex flex-col items-center text-center lg:hidden z-40 text-theme1Dark1 opacity-[98%]">
         <div className="w-full flex flex-row justify-between">
           <div className="cursor-pointer" onClick={onClickLogo}>
             <Icon
