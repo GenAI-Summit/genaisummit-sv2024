@@ -3,7 +3,7 @@
 import { useState } from "react";
 import CheckBox from "./SVG/CheckBox";
 import WrapperArrow from "./SVG/WrapperArrow";
-import DropDown from "../Motions/DropDown";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Filter = ({ name, options, selected, onSelect }) => {
   const [isWrapperOpen, setIsWrapperOpen] = useState(false);
@@ -25,9 +25,15 @@ const Filter = ({ name, options, selected, onSelect }) => {
         </span>
         <WrapperArrow isOpen={isWrapperOpen} />
       </div>
-      {isWrapperOpen && (
-        <DropDown isOpen={isWrapperOpen}>
-          <div className="flex flex-col gap-3 my-2">
+      <AnimatePresence>
+        {isWrapperOpen && (
+          <motion.div
+            className="flex flex-col gap-3 my-2 overflow-hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 1.0, type: "spring", ease: "linear" }}
+          >
             {options.map((option, index) => {
               return (
                 <div key={index} onClick={() => onSelect(option)}>
@@ -38,9 +44,9 @@ const Filter = ({ name, options, selected, onSelect }) => {
                 </div>
               );
             })}
-          </div>
-        </DropDown>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

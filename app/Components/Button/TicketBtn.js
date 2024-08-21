@@ -80,7 +80,7 @@ const TicketBtn = ({
         >
           <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
           <div className="m-[1.5px] rounded-lg px-4 py-2 bg-theme1Dark1 group-hover:bg-theme1Dark3 transition ease-in-out duration-300">
-            <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-bold text-transparent transition ease-in-out duration-300">
+            <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
               Buy Tickets
             </span>
           </div>
