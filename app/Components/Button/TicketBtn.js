@@ -51,7 +51,7 @@ const TicketBtn = ({
           isModalOpen={isModalOpen}
           closeModal={closeModal}
         >
-          <div className="flex flex items-center justify-center">
+          <div className="flex flex items-center justify-start">
             <div className="flex flex-col items-start justify-center space-y-4">
               {platforms?.map((platform) => (
                 <div
