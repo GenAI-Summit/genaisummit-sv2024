@@ -13,7 +13,6 @@ const TicketBtn = ({
   url = "https://whova.com/portal/registration/genai_202405/",
   platforms,
 }) => {
-  console.log("platforms", platforms);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
 
