@@ -12,14 +12,17 @@ const tickets = [
       {
         name: "Luma (Save 7%)",
         url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
       {
         name: "Eventbrite",
         url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
+        logo: "/images/icons/eventbrite.png",
       },
       {
         name: "Whova",
         url: "https://whova.com/portal/registration/genai_202405/",
+        logo: "/images/icons/whova.png",
       },
     ],
     description: [
@@ -36,14 +39,17 @@ const tickets = [
       {
         name: "Luma (Save 7%)",
         url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
       {
         name: "Eventbrite",
         url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
+        logo: "/images/icons/eventbrite.png",
       },
       {
         name: "Whova",
         url: "https://whova.com/portal/registration/genai_202405/",
+        logo: "/images/icons/whova.png",
       },
     ],
     description: [
@@ -60,14 +66,17 @@ const tickets = [
       {
         name: "Luma (Save 7%)",
         url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
       {
         name: "Eventbrite",
         url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
+        logo: "/images/icons/eventbrite.png",
       },
       {
         name: "Whova (Student Pass)",
         url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
+        logo: "/images/icons/whova.png",
       },
     ],
     description: [
@@ -84,14 +93,17 @@ const tickets = [
       {
         name: "Luma (Save 7%)",
         url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
       {
         name: "Eventbrite",
         url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
+        logo: "/images/icons/eventbrite.png",
       },
       {
         name: "Whova",
         url: "https://whova.com/portal/registration/genai_202405/",
+        logo: "/images/icons/whova.png",
       },
     ],
     description: [
@@ -108,14 +120,17 @@ const tickets = [
       {
         name: "Luma (Save 7%)",
         url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
       {
         name: "Eventbrite",
         url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
+        logo: "/images/icons/eventbrite.png",
       },
       {
         name: "Whova (Exhibitor)",
         url: "https://whova.com/portal/registration/genai_202405/exhibitor",
+        logo: "/images/icons/whova.png",
       },
     ],
     description: [
@@ -132,14 +147,17 @@ const tickets = [
       {
         name: "Luma (Save 7%)",
         url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
       {
         name: "Eventbrite",
         url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
+        logo: "/images/icons/eventbrite.png",
       },
       {
         name: "Whova (Exhibitor)",
         url: "https://whova.com/portal/registration/genai_202405/exhibitor",
+        logo: "/images/icons/whova.png",
       },
     ],
     description: [

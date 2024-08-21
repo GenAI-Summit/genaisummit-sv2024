@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Modal from "../Modal";
+import Logo from "../Logo";
 
 const TicketBtn = ({
   width,
@@ -46,16 +47,23 @@ const TicketBtn = ({
           </div>
         </button>
         <Modal isModalOpen={isModalOpen} closeModal={closeModal}>
-          <div className="flex flex-col items-center justify-center space-y-8">
-            {platforms?.map((platform) => (
-              <p
-                key={platform.name}
-                onClick={() => openUrl(platform.url)}
-                className="cursor-pointer font-monaspace_neon text-2xl text-theme1Light1 hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent transition ease-in-out duration-300"
-              >
-                {platform.name}
-              </p>
-            ))}
+          <div className="flex flex items-center justify-center">
+            <div className="flex flex-col items-start justify-center space-y-8">
+              {platforms?.map((platform) => (
+                <div
+                  className="cursor-pointer w-full flex items-center justify-start gap-4 group"
+                  key={platform.name}
+                  onClick={() => openUrl(platform.url)}
+                >
+                  <div className="w-20 h-20">
+                    <Logo src={platform.logo} alt={platform.name} />
+                  </div>
+                  <p className="text-2xl text-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 group-hover:bg-clip-text group-hover:text-transparent transition ease-in-out duration-300">
+                    {platform.name}
+                  </p>
+                </div>
+              ))}
+            </div>
           </div>
         </Modal>
       </>
