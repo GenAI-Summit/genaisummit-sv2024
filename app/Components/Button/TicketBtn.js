@@ -16,7 +16,7 @@ const TicketBtn = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
-  const params = useParams();
+  const { getParam } = useParams();
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -30,7 +30,11 @@ const TicketBtn = ({
       router.push(url);
       return;
     }
-    url = url + (params ? `?source=${encodeURIComponent(params)}` : "");
+    url =
+      url +
+      (getParam("source")
+        ? `?source=${encodeURIComponent(getParam("source"))}`
+        : "");
     window.open(url, "_blank");
   };
 

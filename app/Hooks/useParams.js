@@ -3,25 +3,32 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
+const paramList = ["source"];
+
 const useParams = () => {
   const searchParams = useSearchParams();
-  const [source, setSource] = useState("");
+  const [params, setParams] = useState({});
 
   useEffect(() => {
-    const sourceParam = searchParams.get("source");
-
-    if (sourceParam) {
-      setSource(sourceParam);
-      sessionStorage.setItem("source", sourceParam);
-    } else {
-      const storedSource = sessionStorage.getItem("source");
-      if (storedSource) {
-        setSource(storedSource);
+    const newParams = {};
+    paramList.forEach((param) => {
+      const value = searchParams.get(param);
+      if (value) {
+        newParams[param] = value;
+        sessionStorage.setItem(param, value);
+      } else {
+        const storedValue = sessionStorage.getItem(param);
+        if (storedValue) {
+          newParams[param] = storedValue;
+        }
       }
-    }
+    });
+    setParams(newParams);
   }, [searchParams]);
 
-  return source;
+  const getParam = (param) => params[param] || "";
+
+  return { params, getParam };
 };
 
 export default useParams;

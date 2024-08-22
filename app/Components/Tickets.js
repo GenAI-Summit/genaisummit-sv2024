@@ -11,7 +11,7 @@ const tickets = [
     platforms: [
       {
         name: "Whova",
-        url: "https://whova.com/portal/registration/genai_202405/",
+        url: "https://whova.com/portal/registration/genai_202405",
         logo: "/images/icons/whova.png",
       },
       {
@@ -38,7 +38,7 @@ const tickets = [
     platforms: [
       {
         name: "Whova",
-        url: "https://whova.com/portal/registration/genai_202405/",
+        url: "https://whova.com/portal/registration/genai_202405",
         logo: "/images/icons/whova.png",
       },
       {
@@ -92,7 +92,7 @@ const tickets = [
     platforms: [
       {
         name: "Whova",
-        url: "https://whova.com/portal/registration/genai_202405/",
+        url: "https://whova.com/portal/registration/genai_202405",
         logo: "/images/icons/whova.png",
       },
       {
