@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://genaisummit.ai
+
+# Sitemaps
+Sitemap: https://genaisummit.ai/sitemap.xml
