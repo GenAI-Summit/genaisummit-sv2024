@@ -52,6 +52,11 @@ const RootLayout = ({ children }) => {
           src="https://cloud.umami.is/script.js"
           data-website-id="f606f641-956b-45db-ad03-4f4c2aa2179c"
         ></script>
+        <script
+          defer
+          src="https://hello.gptdao.ai/script.js"
+          data-website-id="abca0cd7-fb79-4c0e-aae6-48ed09441129"
+        ></script>
       </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>
