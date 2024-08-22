@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Modal from "../Modal";
 import Logo from "../Logo";
+import useParams from "../../Hooks/useParams";
 
 const TicketBtn = ({
   width,
@@ -15,6 +16,7 @@ const TicketBtn = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
+  const params = useParams();
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -28,6 +30,7 @@ const TicketBtn = ({
       router.push(url);
       return;
     }
+    url = url + (params ? `?source=${encodeURIComponent(params)}` : "");
     window.open(url, "_blank");
   };
 
