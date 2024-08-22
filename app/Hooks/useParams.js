@@ -12,9 +12,9 @@ const useParams = () => {
 
     if (sourceParam) {
       setSource(sourceParam);
-      localStorage.setItem("source", sourceParam);
+      sessionStorage.setItem("source", sourceParam);
     } else {
-      const storedSource = localStorage.getItem("source");
+      const storedSource = sessionStorage.getItem("source");
       if (storedSource) {
         setSource(storedSource);
       }
