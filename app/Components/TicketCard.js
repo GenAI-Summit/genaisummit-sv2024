@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import CardLayout from "../Layouts/CardLayout";
 import TicketBtn from "./Button/TicketBtn";
+import Loader from "./Loader";
 
 const IndexTicketCard = ({ ticket }) => {
   return (
@@ -41,7 +43,9 @@ const IndexTicketCard = ({ ticket }) => {
                   <span>{ticket.saveText}</span>
                 </p>
               </div>
-              <TicketBtn mode="modal" platforms={ticket.platforms} />
+              <Suspense fallback={<Loader />}>
+                <TicketBtn mode="modal" platforms={ticket.platforms} />
+              </Suspense>
             </div>
           </div>
         </CardLayout>

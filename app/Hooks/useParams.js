@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 const paramList = ["source"];
@@ -28,7 +28,7 @@ const useParams = () => {
 
   const getParam = (param) => params[param] || "";
 
-  return <Suspense>{(params, getParam)}</Suspense>;
+  return { params, getParam };
 };
 
 export default useParams;
