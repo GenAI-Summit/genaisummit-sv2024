@@ -7,8 +7,6 @@ import CardLayout from "../../Layouts/CardLayout";
 import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
 import SectionEnter from "../../Motions/SectionEnter";
 
-// export const runtime = "edge";
-
 const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);
   const sessions = await getSessionsData(speaker.name);
@@ -38,6 +36,16 @@ const SpeakerPage = async ({ params }) => {
       )}
     </div>
   );
+};
+
+export const generateMetadata = async ({ params }) => {
+  const speaker = await getSpeakerData(params.id);
+  const bio = speaker.bio.split(". ")[0] + ".";
+  return {
+    title: `${speaker.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
+    description: bio,
+    image: speaker.image,
+  };
 };
 
 const getSpeakerData = async (id) => {

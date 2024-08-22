@@ -21,6 +21,15 @@ const SessionPage = async ({ params }) => {
   );
 };
 
+export const generateMetadata = async ({ params }) => {
+  const session = await getSessionData(params.id);
+  const desc = session.desc.split(". ")[0] + ".";
+  return {
+    title: `${session.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
+    desc,
+  };
+};
+
 const getSessionData = async (id) => {
   const session = await getSessionById(id);
   return session;

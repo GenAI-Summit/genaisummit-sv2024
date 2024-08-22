@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Speakers | GenAI Summit Silicon Valley 2024 | GPTDAO",
+};
+
 const SpeakersLayout = ({ children }) => {
   return (
     <div className="max-w-maxWidth w-full lg:w-3/4 h-full px-5 pt-20">
