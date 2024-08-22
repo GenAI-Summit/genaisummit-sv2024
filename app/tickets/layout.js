@@ -1,4 +1,8 @@
-const PrivacyLayout = ({ children }) => {
+export const metadata = {
+  title: "Tickets | GenAI Summit Silicon Valley 2024 | GPTDAO",
+};
+
+const TicketsLayout = ({ children }) => {
   return (
     <div className="max-w-maxWidth w-full lg:w-3/4 h-full pt-20 px-5">
       {children}
@@ -6,4 +10,4 @@ const PrivacyLayout = ({ children }) => {
   );
 };
 
-export default PrivacyLayout;
+export default TicketsLayout;

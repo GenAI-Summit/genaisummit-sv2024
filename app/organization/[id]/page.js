@@ -24,6 +24,16 @@ const SponsorPage = async ({ params }) => {
   );
 };
 
+export const generateMetadata = async ({ params }) => {
+  const organization = await getOrganizationData(params.id);
+  const desc = organization.desc.split(". ")[0] + ".";
+  return {
+    title: `${organization.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
+    description: desc,
+    image: organization.logo,
+  };
+};
+
 const getOrganizationData = async (id) => {
   const orgnization = await getOrganizationById(id);
   return orgnization;
