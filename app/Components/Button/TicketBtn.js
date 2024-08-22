@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
 import { useRouter } from "next/navigation";
 import Modal from "../Modal";
 import Logo from "../Logo";
@@ -40,7 +40,7 @@ const TicketBtn = ({
 
   if (mode === "modal") {
     return (
-      <>
+      <Suspense>
         <button
           className={`
           group relative z-0 ${width}`}
@@ -77,81 +77,91 @@ const TicketBtn = ({
             </div>
           </div>
         </Modal>
-      </>
+      </Suspense>
     );
   }
 
   if (mode === "black") {
     if (border)
       return (
+        <Suspense>
+          <button
+            className={`group relative z-0 ${width}`}
+            onClick={() => openUrl(url)}
+          >
+            <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
+            <div className="m-[1.5px] rounded-lg px-4 py-2 bg-theme1Dark1 group-hover:bg-theme1Dark3 transition ease-in-out duration-300">
+              <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
+                Buy Tickets
+              </span>
+            </div>
+          </button>
+        </Suspense>
+      );
+
+    return (
+      <Suspense>
         <button
           className={`group relative z-0 ${width}`}
           onClick={() => openUrl(url)}
         >
-          <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
-          <div className="m-[1.5px] rounded-lg px-4 py-2 bg-theme1Dark1 group-hover:bg-theme1Dark3 transition ease-in-out duration-300">
-            <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
+          <div className="rounded-lg px-4 py-2 bg-theme1Dark1 border-[1.5px] border-theme1Dark1 group-hover:bg-theme1Dark3 group-hover:border-theme1Dark3 transition ease-in-out duration-300">
+            <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-bold text-transparent transition ease-in-out duration-300">
               Buy Tickets
             </span>
           </div>
         </button>
-      );
-
-    return (
-      <button
-        className={`group relative z-0 ${width}`}
-        onClick={() => openUrl(url)}
-      >
-        <div className="rounded-lg px-4 py-2 bg-theme1Dark1 border-[1.5px] border-theme1Dark1 group-hover:bg-theme1Dark3 group-hover:border-theme1Dark3 transition ease-in-out duration-300">
-          <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-bold text-transparent transition ease-in-out duration-300">
-            Buy Tickets
-          </span>
-        </div>
-      </button>
+      </Suspense>
     );
   }
   if (fill) {
     return (
-      <button
-        className={`group relative z-0 ${width}`}
-        onClick={() => openUrl(url)}
-      >
-        <div className="m-[1.5px] rounded-full px-4 py-2 bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3  group-hover:bg-gradient-to-br group-hover:from-theme1Color3 group-hover:via-theme1Color2 group-hover:to-theme1Color1 transition-colors ease-in-out duration-300">
-          <span className="h-full w-full rounded-full text-theme1Light2 font-light">
-            Buy Tickets
-          </span>
-        </div>
-      </button>
+      <Suspense>
+        <button
+          className={`group relative z-0 ${width}`}
+          onClick={() => openUrl(url)}
+        >
+          <div className="m-[1.5px] rounded-full px-4 py-2 bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3  group-hover:bg-gradient-to-br group-hover:from-theme1Color3 group-hover:via-theme1Color2 group-hover:to-theme1Color1 transition-colors ease-in-out duration-300">
+            <span className="h-full w-full rounded-full text-theme1Light2 font-light">
+              Buy Tickets
+            </span>
+          </div>
+        </button>
+      </Suspense>
     );
   }
   if (mode === "night") {
     return (
-      <button
-        className={`
+      <Suspense>
+        <button
+          className={`
           group relative z-0 ${width}`}
+          onClick={() => openUrl(url)}
+        >
+          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
+          <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Dark1 group-hover:bg-gray-800 transition ease-in-out duration-300">
+            <span className="h-full w-full rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
+              Buy Tickets
+            </span>
+          </div>
+        </button>
+      </Suspense>
+    );
+  }
+  return (
+    <Suspense>
+      <button
+        className={`group relative z-0 ${width}`}
         onClick={() => openUrl(url)}
       >
         <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
-        <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Dark1 group-hover:bg-gray-800 transition ease-in-out duration-300">
+        <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 transition ease-in-out duration-300">
           <span className="h-full w-full rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
             Buy Tickets
           </span>
         </div>
       </button>
-    );
-  }
-  return (
-    <button
-      className={`group relative z-0 ${width}`}
-      onClick={() => openUrl(url)}
-    >
-      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
-      <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 transition ease-in-out duration-300">
-        <span className="h-full w-full rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-light text-transparent transition ease-in-out duration-300">
-          Buy Tickets
-        </span>
-      </div>
-    </button>
+    </Suspense>
   );
 };
 

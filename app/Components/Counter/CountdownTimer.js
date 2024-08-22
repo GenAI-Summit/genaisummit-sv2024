@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 const CountdownTimer = ({ time }) => {
   const [seconds, setSeconds] = useState(
@@ -28,16 +28,18 @@ const CountdownTimer = ({ time }) => {
     "bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent";
 
   return (
-    <div className="text-2xl md:text-4xl lg:text-6xl font-monaspace_neon">
-      <span className={textColor}>{days}</span>
-      <span className="text-base md:text-lg lg:text-2xl"> Days </span>
-      <span className={textColor}>{hours}</span>
-      <span className="text-base md:text-lg lg:text-2xl"> Hours </span>
-      <span className={textColor}>{minutes}</span>
-      <span className="text-base md:text-lg lg:text-2xl"> Minutes </span>
-      <span className={textColor}>{sec}</span>
-      <span className="text-base md:text-lg lg:text-2xl"> Seconds</span>
-    </div>
+    <Suspense>
+      <div className="text-2xl md:text-4xl lg:text-6xl font-monaspace_neon">
+        <span className={textColor}>{days}</span>
+        <span className="text-base md:text-lg lg:text-2xl"> Days </span>
+        <span className={textColor}>{hours}</span>
+        <span className="text-base md:text-lg lg:text-2xl"> Hours </span>
+        <span className={textColor}>{minutes}</span>
+        <span className="text-base md:text-lg lg:text-2xl"> Minutes </span>
+        <span className={textColor}>{sec}</span>
+        <span className="text-base md:text-lg lg:text-2xl"> Seconds</span>
+      </div>
+    </Suspense>
   );
 };
 
