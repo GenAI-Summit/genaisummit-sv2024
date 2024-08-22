@@ -10,9 +10,9 @@ const tickets = [
     saveText: "Save $30 until Sept 1",
     platforms: [
       {
-        name: "Luma (Save 7%)",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
+        name: "Whova",
+        url: "https://whova.com/portal/registration/genai_202405/",
+        logo: "/images/icons/whova.png",
       },
       {
         name: "Eventbrite",
@@ -20,9 +20,9 @@ const tickets = [
         logo: "/images/icons/eventbrite.png",
       },
       {
-        name: "Whova",
-        url: "https://whova.com/portal/registration/genai_202405/",
-        logo: "/images/icons/whova.png",
+        name: "Luma",
+        url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
     ],
     description: [
@@ -37,9 +37,9 @@ const tickets = [
     saveText: "Save $50 until Sept 1",
     platforms: [
       {
-        name: "Luma (Save 7%)",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
+        name: "Whova",
+        url: "https://whova.com/portal/registration/genai_202405/",
+        logo: "/images/icons/whova.png",
       },
       {
         name: "Eventbrite",
@@ -47,9 +47,9 @@ const tickets = [
         logo: "/images/icons/eventbrite.png",
       },
       {
-        name: "Whova",
-        url: "https://whova.com/portal/registration/genai_202405/",
-        logo: "/images/icons/whova.png",
+        name: "Luma",
+        url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
     ],
     description: [
@@ -64,9 +64,9 @@ const tickets = [
     saveText: "Save $50 until Sept 1",
     platforms: [
       {
-        name: "Luma (Save 7%)",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
+        name: "Whova (Student Pass)",
+        url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
+        logo: "/images/icons/whova.png",
       },
       {
         name: "Eventbrite",
@@ -74,9 +74,9 @@ const tickets = [
         logo: "/images/icons/eventbrite.png",
       },
       {
-        name: "Whova (Student Pass)",
-        url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
-        logo: "/images/icons/whova.png",
+        name: "Luma",
+        url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
     ],
     description: [
@@ -91,9 +91,9 @@ const tickets = [
     saveText: "Save $400 until Sept 1",
     platforms: [
       {
-        name: "Luma (Save 7%)",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
+        name: "Whova",
+        url: "https://whova.com/portal/registration/genai_202405/",
+        logo: "/images/icons/whova.png",
       },
       {
         name: "Eventbrite",
@@ -101,9 +101,9 @@ const tickets = [
         logo: "/images/icons/eventbrite.png",
       },
       {
-        name: "Whova",
-        url: "https://whova.com/portal/registration/genai_202405/",
-        logo: "/images/icons/whova.png",
+        name: "Luma",
+        url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
     ],
     description: [
@@ -118,9 +118,9 @@ const tickets = [
     saveText: "Save $2000 until Sept 1",
     platforms: [
       {
-        name: "Luma (Save 7%)",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
+        name: "Whova (Exhibitor)",
+        url: "https://whova.com/portal/registration/genai_202405/exhibitor",
+        logo: "/images/icons/whova.png",
       },
       {
         name: "Eventbrite",
@@ -128,9 +128,9 @@ const tickets = [
         logo: "/images/icons/eventbrite.png",
       },
       {
-        name: "Whova (Exhibitor)",
-        url: "https://whova.com/portal/registration/genai_202405/exhibitor",
-        logo: "/images/icons/whova.png",
+        name: "Luma",
+        url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
     ],
     description: [
@@ -145,9 +145,9 @@ const tickets = [
     saveText: "Save $1000 until Sept 1",
     platforms: [
       {
-        name: "Luma (Save 7%)",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
+        name: "Whova (Exhibitor)",
+        url: "https://whova.com/portal/registration/genai_202405/exhibitor",
+        logo: "/images/icons/whova.png",
       },
       {
         name: "Eventbrite",
@@ -155,9 +155,9 @@ const tickets = [
         logo: "/images/icons/eventbrite.png",
       },
       {
-        name: "Whova (Exhibitor)",
-        url: "https://whova.com/portal/registration/genai_202405/exhibitor",
-        logo: "/images/icons/whova.png",
+        name: "Luma",
+        url: "https://lu.ma/sc9tn1yv",
+        logo: "/images/icons/luma.png",
       },
     ],
     description: [
