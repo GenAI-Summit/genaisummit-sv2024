@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 const NumberRoller = ({ start, end, symbol }) => {
   const [count, setCount] = useState(start);
@@ -23,7 +23,7 @@ const NumberRoller = ({ start, end, symbol }) => {
     return () => clearInterval(interval);
   }, [start, end]);
 
-  return <>{count === end ? count + `${symbol}` : count}</>;
+  return <Suspense>{count === end ? count + `${symbol}` : count}</Suspense>;
 };
 
 export default NumberRoller;
