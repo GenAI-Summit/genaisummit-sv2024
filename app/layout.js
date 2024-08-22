@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
 // import { ThemeProvider } from "./Contexts/Theme";
 import Navbar from "./Components/NavBar/NavBar";
@@ -5,6 +6,7 @@ import Footer from "./Components/Footer";
 import ScrollToTop from "./Components/ScrollToTop";
 import ShareBar from "./Components/ShareBar";
 import FloatFooter from "./Components/FloatFooter";
+import Loader from "./Components/Loader";
 import "./globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -54,12 +56,16 @@ const RootLayout = ({ children }) => {
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>
         <div className="pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
-          <Navbar />
+          <Suspense fallback={<Loader />}>
+            <Navbar />
+          </Suspense>
           {children}
           <div className="mt-32 mb-10">
             <ShareBar />
           </div>
-          <FloatFooter />
+          <Suspense fallback={<Loader />}>
+            <FloatFooter />
+          </Suspense>
         </div>
         <Footer />
         <ScrollToTop />
