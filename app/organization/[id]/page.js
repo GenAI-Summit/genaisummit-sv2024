@@ -5,8 +5,6 @@ import SectionLayout from "../../Layouts/SectionLayout";
 import CardLayout from "../../Layouts/CardLayout";
 import SectionEnter from "../../Motions/SectionEnter";
 
-// export const runtime = "edge";
-
 const SponsorPage = async ({ params }) => {
   const organization = await getOrganizationData(params.id);
   return (
@@ -31,6 +29,14 @@ export const generateMetadata = async ({ params }) => {
     title: `${organization.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
     description: desc,
     image: organization.logo,
+    keywords: [
+      "GenAI Summit",
+      "Silicon Valley",
+      "GPTDAO",
+      "2024",
+      organization.name,
+      organization.categories,
+    ],
   };
 };
 
