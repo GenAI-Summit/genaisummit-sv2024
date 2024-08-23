@@ -29,7 +29,7 @@ const IndexMedia = async () => {
 
 const getMediaData = async () => {
   const media = await getMedia();
-  return media.slice(0, 12);
+  return media;
 };
 
 export default IndexMedia;

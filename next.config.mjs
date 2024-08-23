@@ -22,6 +22,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "genaisummit.ai",
+        port: "",
+        pathname: "/images/notable_attendees/**",
+      },
     ],
   },
   output: "standalone",
