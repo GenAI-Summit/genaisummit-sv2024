@@ -21,7 +21,7 @@ const Exhibitors = () => {
       description="MEET OUR EXHIBITORS"
       widget={<RegisterBtn text="Become Our Exhibitor" mode="day" />}
     >
-      <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-7 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[1%]">
+      <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-8 lg:gap-y-4 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[1%]">
         {exhibitors.map((exhibitor) => (
           <div
             key={exhibitor.id}

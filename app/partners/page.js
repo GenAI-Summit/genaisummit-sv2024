@@ -8,14 +8,15 @@ import Media from "../Components/Media";
 import SearchBar from "../Components/SearchBar";
 import Filter from "../Components/Filter";
 import ResetBtn from "../Components/Button/ResetBtn";
-import useExhibitors from "../Hooks/useExhibitors";
+// import useExhibitors from "../Hooks/useExhibitors";
+import useMedia from "../Hooks/useMedia";
 import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
 import PartnersIntro from "../Components/Intro/PartnersIntro";
 import SectionEnter from "../Motions/SectionEnter";
 
 const PartnersPage = () => {
   //const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
-  const { media, isLoading, isError } = useExhibitors();
+  const { media, isLoading, isError } = useMedia();
   const [text, setText] = useState("");
   const textLower = text.toLowerCase();
 
