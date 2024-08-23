@@ -134,7 +134,7 @@ const tickets = [
       },
     ],
     description: [
-      "Located in the Exhibition Area and provides a space of 16 x 6 feet. Includes two tables measuring 96 x 26.5 inches, with a height of 29 inches. Publication materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included. Type A Exhibitors can also choose their booth location on a first-come, first-served basis. The Whova Lead Scan feature (helps track every attendee who stops by through scanning) is included.",
+      "Located in the Exhibition Area and provides a space of 16 x 6 feet. Includes two tables measuring 96 x 26.5 inches, with a height of 29 inches. Publicity materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included. Type A Exhibitors can also choose their booth location on a first-come, first-served basis. The Whova Lead Scan feature (helps track every attendee who stops by through scanning) is included.",
     ],
   },
   {
@@ -161,7 +161,7 @@ const tickets = [
       },
     ],
     description: [
-      "Located in the Exhibition Area and provides a space of 8 x 6 feet. Includes one table measuring 96 x 26.5 inches, with a height of 29 inches. Publication materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included.",
+      "Located in the Exhibition Area and provides a space of 8 x 6 feet. Includes one table measuring 96 x 26.5 inches, with a height of 29 inches. Publicity materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included.",
     ],
   },
 ];
