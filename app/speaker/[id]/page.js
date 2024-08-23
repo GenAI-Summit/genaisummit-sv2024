@@ -45,6 +45,16 @@ export const generateMetadata = async ({ params }) => {
     title: `${speaker.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
     description: bio,
     image: speaker.image,
+    keywords: [
+      "GenAI Summit",
+      "Silicon Valley",
+      "GPTDAO",
+      "2024",
+      "Speaker",
+      speaker.name,
+      speaker.organization,
+      speaker.title,
+    ],
   };
 };
 

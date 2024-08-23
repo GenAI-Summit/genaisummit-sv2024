@@ -30,6 +30,8 @@ const useExhibitors = () => {
     sponsorTiers.includes(exhibitor.tier),
   );
 
+  console.log(exhibitors);
+
   return {
     attendees,
     exhibitors,
