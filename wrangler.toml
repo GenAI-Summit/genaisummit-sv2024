@@ -1,4 +1,0 @@
-name = "genaisummit_santaclara"
-compatibility_date = "2024-08-09"
-compatibility_flags = ["nodejs_compat"]
-pages_build_output_dir = ".vercel/output/static"
