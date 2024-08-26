@@ -44,7 +44,11 @@ const IndexTicketCard = ({ ticket }) => {
                 </p>
               </div>
               <Suspense fallback={<Loader />}>
-                <TicketBtn mode="modal" platforms={ticket.platforms} />
+                <TicketBtn
+                  mode="modal"
+                  platforms={ticket.platforms}
+                  evt={`Ticket Card - ${ticket.name} Button`}
+                />
               </Suspense>
             </div>
           </div>

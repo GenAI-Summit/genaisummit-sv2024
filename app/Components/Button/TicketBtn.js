@@ -13,6 +13,7 @@ const TicketBtn = ({
   border,
   url = "https://whova.com/portal/registration/genai_202405/",
   platforms,
+  evt = "",
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
@@ -35,13 +36,22 @@ const TicketBtn = ({
     window.open(url, "_blank");
   };
 
+  const umamiTrack = (evt) => {
+    if (typeof window !== "undefined") {
+      window.umami?.track(evt);
+    }
+  };
+
   if (mode === "modal") {
     return (
       <>
         <button
           className={`
           group relative z-0 ${width}`}
-          onClick={openModal}
+          onClick={() => {
+            openModal();
+            umamiTrack(evt);
+          }}
         >
           <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
           <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Dark1 group-hover:bg-gray-800 transition ease-in-out duration-300">
@@ -63,7 +73,7 @@ const TicketBtn = ({
                   key={platform.name}
                   onClick={() => {
                     openUrl(platform.url);
-                    window.umami.track(`click + ${platform.name}`);
+                    umamiTrack(evt + " - " + platform.name);
                   }}
                 >
                   <div className="w-20 h-20">
@@ -86,7 +96,10 @@ const TicketBtn = ({
       return (
         <button
           className={`group relative z-0 ${width}`}
-          onClick={() => openUrl(url)}
+          onClick={() => {
+            openUrl(url);
+            umamiTrack(evt);
+          }}
         >
           <div className="absolute inset-0 -z-10 rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
           <div className="m-[1.5px] rounded-lg px-4 py-2 bg-theme1Dark1 group-hover:bg-theme1Dark3 transition ease-in-out duration-300">
@@ -100,7 +113,10 @@ const TicketBtn = ({
     return (
       <button
         className={`group relative z-0 ${width}`}
-        onClick={() => openUrl(url)}
+        onClick={() => {
+          openUrl(url);
+          umamiTrack(evt);
+        }}
       >
         <div className="rounded-lg px-4 py-2 bg-theme1Dark1 border-[1.5px] border-theme1Dark1 group-hover:bg-theme1Dark3 group-hover:border-theme1Dark3 transition ease-in-out duration-300">
           <span className="h-full w-full rounded-lg bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text font-bold text-transparent transition ease-in-out duration-300">
@@ -114,7 +130,10 @@ const TicketBtn = ({
     return (
       <button
         className={`group relative z-0 ${width}`}
-        onClick={() => openUrl(url)}
+        onClick={() => {
+          openUrl(url);
+          umamiTrack(evt);
+        }}
       >
         <div className="m-[1.5px] rounded-full px-4 py-2 bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3  group-hover:bg-gradient-to-br group-hover:from-theme1Color3 group-hover:via-theme1Color2 group-hover:to-theme1Color1 transition-colors ease-in-out duration-300">
           <span className="h-full w-full rounded-full text-theme1Light2 font-light">
@@ -129,7 +148,10 @@ const TicketBtn = ({
       <button
         className={`
           group relative z-0 ${width}`}
-        onClick={() => openUrl(url)}
+        onClick={() => {
+          openUrl(url);
+          umamiTrack(evt);
+        }}
       >
         <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
         <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Dark1 group-hover:bg-gray-800 transition ease-in-out duration-300">
@@ -143,7 +165,10 @@ const TicketBtn = ({
   return (
     <button
       className={`group relative z-0 ${width}`}
-      onClick={() => openUrl(url)}
+      onClick={() => {
+        openUrl(url);
+        umamiTrack(evt);
+      }}
     >
       <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
       <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 transition ease-in-out duration-300">
