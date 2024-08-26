@@ -1,4 +1,4 @@
-import { getSpeakers, getOrganizations, getSessions } from "./lib/api";
+import { getSpeakers, getOrganizations, getSessions } from "./lib/api.js";
 
 const nextSitemapConfig = {
   siteUrl: "https://genaisummit.ai",
