@@ -7,7 +7,7 @@ const Speakers = ({ speakers }) => {
     <>
       <SectionLayout
         title="Speakers"
-        description="LISTEN TO THE EVENT SPEAKERS"
+        description="LISTEN TO THE EVENT SPEAKERS | MORE TO BE ANNOUNCED SOON"
       >
         <div className="w-full flex flex-wrap mt-12 gap-x-[5%] md:gap-x-[2%] lg:gap-x-[6%] gap-y-14 justify-start">
           {speakers.map((speaker) => (
