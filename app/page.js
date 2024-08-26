@@ -5,6 +5,7 @@ import IndexSpeakers from "./Components/IndexSections/IndexSpeakers";
 import IndexMedia from "./Components/IndexSections/IndexMedia";
 import Attendees from "./Components/IndexSections/Attendees";
 import IndexExhibitors from "./Components/IndexSections/IndexExhibitors";
+import NewFeatures from "./Components/IndexSections/NewFeatures";
 import Tickets from "./Components/Tickets";
 import IndexIntro from "./Components/Intro/IndexIntro";
 import SectionEnter from "./Motions/SectionEnter";
@@ -18,6 +19,11 @@ const Index = () => {
       <div className="max-w-maxWidth w-full lg:w-3/4 px-5">
         <SectionEnter>
           <IndexIntro />
+        </SectionEnter>
+      </div>
+      <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-40 px-5">
+        <SectionEnter>
+          <NewFeatures />
         </SectionEnter>
       </div>
       <SectionEnter>
