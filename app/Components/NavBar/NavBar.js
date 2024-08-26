@@ -68,7 +68,12 @@ const NavBar = () => {
           closeDialog={closeDialog}
           handleDialog={handleDialog}
         />
-        <TicketBtn fill={true} mode="black" url="/tickets" />
+        <TicketBtn
+          fill={true}
+          mode="black"
+          url="/tickets"
+          evt="PC NavBar Ticket Button"
+        />
       </div>
 
       <div className="fixed top-1 px-6 py-2 w-[95%] shadow-md rounded-lg bg-colorNavBarBg flex flex-col items-center text-center lg:hidden z-40 text-theme1Dark1 opacity-[98%]">
@@ -81,7 +86,13 @@ const NavBar = () => {
               height="30"
             />
           </div>
-          <TicketBtn width="w-48" fill={true} mode="black" url="/tickets" />
+          <TicketBtn
+            width="w-48"
+            fill={true}
+            mode="black"
+            url="/tickets"
+            evt="Mobile NavBar Ticket Button"
+          />
           <button onClick={handleDrawer}>
             <Burger isOpen={isMenuOpen} />
           </button>
