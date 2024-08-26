@@ -22,7 +22,7 @@ const FloatFooter = () => {
     >
       <div className="w-full h-full bg-color13 z-40 px-4 py-2 flex justify-between items-center rounded-lg">
         <span className="font-semibold">$99 – $1099</span>
-        <TicketBtn mode="black" fill={true} url="/tickets" />
+        <TicketBtn mode="black" fill={true} url="/tickets" evt="Float Footer Ticket Button" />
       </div>
     </div>
   );

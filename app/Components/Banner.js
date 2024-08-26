@@ -47,6 +47,7 @@ const Banner = () => {
               mode="black"
               border={true}
               url="/tickets"
+              evt="Banner Ticket Button"
             />
             <AddToCalendarBtn
               width="w-48"
