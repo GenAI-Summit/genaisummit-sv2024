@@ -1,5 +1,7 @@
 export const metadata = {
   title: "Partners | GenAI Summit Silicon Valley 2024 | GPTDAO",
+  description:
+    "Connect with leading organizations driving GenAI innovation. Explore partnership opportunities and collaborative initiatives in the field.",
 };
 
 const PartnersLayout = ({ children }) => {

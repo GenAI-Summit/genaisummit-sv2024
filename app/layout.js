@@ -19,7 +19,7 @@ export const metadata = {
   metadataBase: new URL("https://genausummit.ai"),
   title: "GenAI Summit Silicon Valley 2024 | GPTDAO",
   description:
-    "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
+    "Explore the future possibilities at the GenAI Summit from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
   openGraph: {
     type: "website",
     url: "https://genaisummit.ai/",
