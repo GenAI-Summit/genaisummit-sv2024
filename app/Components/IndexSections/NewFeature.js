@@ -1,0 +1,26 @@
+import Image from "next/image";
+
+// { title, description, image }
+const NewFeature = ({ feature, index }) => {
+  return (
+    <div
+      className={`w-full flex items-start md:items-center justify-between gap-8 ${
+        index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+      }`}
+    >
+      <Image
+        src={feature.image}
+        alt={feature.title}
+        width={100}
+        height={100}
+        objectFit="cover"
+      />
+      <div className="p-4">
+        <h2 className="text-2xl font-bold">{feature.title}</h2>
+        <p className="mt-4 text-xl">{feature.description}</p>
+      </div>
+    </div>
+  );
+};
+
+export default NewFeature;
