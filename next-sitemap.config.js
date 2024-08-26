@@ -1,7 +1,15 @@
 const nextSitemapConfig = {
   siteUrl: "https://genaisummit.ai",
   generateRobotsTxt: true,
-  additionalSitemaps: ["https://api.gptdao.ai/sitemap/sitemap.xml"],
+  robotsTxtOptions: {
+    policies: [
+      {
+        userAgent: "*",
+        allow: "/",
+      },
+    ],
+    additionalSitemaps: ["https://api.gptdao.ai/sitemap/sitemap.xml"],
+  },
 };
 
 export default nextSitemapConfig;
