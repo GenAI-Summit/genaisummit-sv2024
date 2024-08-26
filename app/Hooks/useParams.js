@@ -3,7 +3,15 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
-const paramList = ["source"];
+const paramList = [
+  "source",
+  "coupon",
+  "discount",
+  "utm_source",
+  "utm_medium",
+  "utm_campaign",
+  "fbclid",
+];
 
 const useParams = () => {
   const searchParams = useSearchParams();
@@ -26,9 +34,22 @@ const useParams = () => {
     setParams(newParams);
   }, [searchParams]);
 
+  // get all params as string, last last one without '&'
+  const getAllParamsStr = () => {
+    let str = "";
+    paramList.forEach((param) => {
+      if (params[param]) {
+        str += `${param}=${params[param]}&`;
+      }
+    });
+    if (str === "") {
+      return "";
+    }
+    return str.slice(0, -1);
+  };
   const getParam = (param) => params[param] || "";
 
-  return { params, getParam };
+  return { params, getParam, getAllParamsStr };
 };
 
 export default useParams;

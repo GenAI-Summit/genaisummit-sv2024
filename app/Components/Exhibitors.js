@@ -3,7 +3,10 @@ import OrganizationCard from "../Components/OrganizationCard";
 
 const Exhibitors = ({ exhibitors }) => {
   return (
-    <SectionLayout title="Exhibitors" description="MEET OUR EXHIBITORS">
+    <SectionLayout
+      title="Exhibitors"
+      description="MEET OUR EXHIBITORS | MORE TO BE ANNOUNCED SOON"
+    >
       <div className="w-full flex flex-wrap mt-6 items-center gap-x-[4%] md:gap-x-[4%] lg:gap-x-[2%] gap-y-6 md:gap-y-8 lg:gap-y-4">
         {exhibitors.map((exhibitor) => (
           <div
