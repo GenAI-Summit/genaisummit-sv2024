@@ -61,8 +61,10 @@ const TicketBtn = ({
                 <div
                   className="cursor-pointer w-full flex items-center justify-start gap-4 group"
                   key={platform.name}
-                  onClick={() => openUrl(platform.url)}
-                  data-umami-event={"click " + platform.name}
+                  onClick={() => {
+                    openUrl(platform.url);
+                    window.umami.track(`click + ${platform.name}`);
+                  }}
                 >
                   <div className="w-20 h-20">
                     <Logo src={platform.logo} alt={platform.name} />
