@@ -25,7 +25,10 @@ const newFeatures = [
 
 const NewFeatures = () => {
   return (
-    <SectionLayout title="New Features" widget={<TicketBtn mode="night" />}>
+    <SectionLayout
+      title="New Features"
+      widget={<TicketBtn mode="night" evt="New Features Ticket Button" />}
+    >
       <div className="mt-8 md:mt-10 w-full flex flex-col justify-center items-center gap-8">
         {newFeatures.map((feature, index) => (
           <NewFeature key={index} feature={feature} index={index} />
