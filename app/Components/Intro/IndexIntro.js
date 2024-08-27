@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loader from "../Loader";
 import Intro from "./Intro";
 import TicketBtn from "../Button/TicketBtn";
 
@@ -20,11 +22,13 @@ const IndexIntro = () => {
       paragraphs={paragraphs}
       images={images}
       widget={
-        <TicketBtn
-          mode="night"
-          url="/tickets"
-          evt="Index Intro Ticket Button"
-        />
+        <Suspense fallback={<Loader />}>
+          <TicketBtn
+            mode="night"
+            url="/tickets"
+            evt="Index Intro Ticket Button"
+          />
+        </Suspense>
       }
       imgAspect="aspect-[16/9]"
     />

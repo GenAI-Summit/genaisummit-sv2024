@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loader from "../Loader";
 import SectionLayout from "../../Layouts/SectionLayout";
 import IntroCarousel from "../Carousel/IntroCarousel";
 
@@ -13,7 +15,9 @@ const Intro = ({ title, paragraphs, images, widget, imgAspect }) => {
           ))}
         </div>
         <div className="w-full 2xl:w-[48%] 2xl:max-w-[700px]">
-          <IntroCarousel images={images} imgAspect={imgAspect} />
+          <Suspense fallback={<Loader />}>
+            <IntroCarousel images={images} imgAspect={imgAspect} />
+          </Suspense>
         </div>
       </div>
     </SectionLayout>

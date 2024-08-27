@@ -3,7 +3,7 @@ import CardLayout from "../Layouts/CardLayout";
 import TicketBtn from "./Button/TicketBtn";
 import Loader from "./Loader";
 
-const IndexTicketCard = ({ ticket }) => {
+const TicketCard = ({ ticket }) => {
   return (
     <>
       <div className="group/stripe relative w-full h-full">
@@ -58,4 +58,4 @@ const IndexTicketCard = ({ ticket }) => {
   );
 };
 
-export default IndexTicketCard;
+export default TicketCard;

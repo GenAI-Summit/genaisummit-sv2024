@@ -3,21 +3,28 @@
 import { useState, useEffect } from "react";
 
 const CountdownTimer = ({ time }) => {
-  const [seconds, setSeconds] = useState(
-    Math.floor((new Date(time) - new Date()) / 1000),
-  );
+  const [mounted, setMounted] = useState(false);
+  const [seconds, setSeconds] = useState(0);
 
   useEffect(() => {
-    if (seconds > 0) {
-      const intervalId = setInterval(() => {
-        setSeconds(seconds - 1);
-      }, 1000);
+    setMounted(true);
+    const calculateInitialSeconds = () => {
+      return Math.max(0, Math.floor((new Date(time) - new Date()) / 1000));
+    };
+    setSeconds(calculateInitialSeconds());
 
-      return () => {
-        clearInterval(intervalId);
-      };
-    }
-  }, [seconds]);
+    const intervalId = setInterval(() => {
+      setSeconds((prevSeconds) => {
+        if (prevSeconds <= 0) {
+          clearInterval(intervalId);
+          return 0;
+        }
+        return prevSeconds - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(intervalId);
+  }, [time]);
 
   const days = Math.floor(seconds / (3600 * 24));
   const hours = Math.floor((seconds % (3600 * 24)) / 3600);
@@ -26,6 +33,10 @@ const CountdownTimer = ({ time }) => {
 
   const textColor =
     "bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent";
+
+  if (!mounted) {
+    return null; // or a loading placeholder
+  }
 
   return (
     <div className="text-2xl md:text-4xl lg:text-6xl font-monaspace_neon">

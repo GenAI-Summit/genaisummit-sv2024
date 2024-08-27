@@ -54,8 +54,9 @@ const AttendeesCarousel = ({ attendeesArray }) => {
                   src={item.logo}
                   alt={item.name}
                   fill
-                  style={{ objectFit: "contain" }}
-                  className="p-2"
+                  sizes="100%"
+                  className="object-contain"
+                  loading="lazy"
                 />
               </div>
             </Link>

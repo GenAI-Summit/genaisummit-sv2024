@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loader from "../Loader";
 import SectionLayout from "../../Layouts/SectionLayout";
 import NewFeature from "./NewFeature";
 import TicketBtn from "../Button/TicketBtn";
@@ -27,7 +29,15 @@ const NewFeatures = () => {
   return (
     <SectionLayout
       title="New Features"
-      widget={<TicketBtn mode="night" evt="New Features Ticket Button" />}
+      widget={
+        <Suspense fallback={<Loader />}>
+          <TicketBtn
+            mode="night"
+            evt="New Features Ticket Button"
+            url="/tickets"
+          />
+        </Suspense>
+      }
     >
       <div className="mt-8 md:mt-10 w-full flex flex-col justify-center items-center gap-8">
         {newFeatures.map((feature, index) => (

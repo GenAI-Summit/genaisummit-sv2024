@@ -37,9 +37,7 @@ const TicketBtn = ({
   };
 
   const umamiTrack = (evt) => {
-    if (typeof window !== "undefined") {
-      window.umami?.track(evt);
-    }
+    window?.umami?.track(evt);
   };
 
   if (mode === "modal") {
