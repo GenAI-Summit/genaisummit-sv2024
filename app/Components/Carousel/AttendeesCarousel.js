@@ -1,11 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Logo from "../Logo";
+import Image from "next/image";
 
 const AttendeesCarousel = ({ attendeesArray }) => {
-  const [index, setIndex] = useState(0);
+  const [visibleIndex, setVisibleIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
@@ -14,7 +14,9 @@ const AttendeesCarousel = ({ attendeesArray }) => {
     const timer = setInterval(() => {
       setIsTransitioning(true);
       setTimeout(() => {
-        setIndex((prev) => (prev === attendeesArray.length - 1 ? 0 : prev + 1));
+        setVisibleIndex((prev) =>
+          prev === attendeesArray.length - 1 ? 0 : prev + 1,
+        );
         setIsTransitioning(false);
       }, 1000);
     }, 10000);
@@ -27,18 +29,40 @@ const AttendeesCarousel = ({ attendeesArray }) => {
   }
 
   return (
-    <>
-      {attendeesArray[index].map((item) => (
-        <Link
-          key={item.id}
-          className={`w-[23%] h-24 md:w-[23%] md:h-28 lg:w-[15%] lg:h-32 bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out hover:duration-300 hover:border-theme1Gray2 rounded-lg shadow-md transition-opacity duration-1000 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
-          href={item.url}
-          target="_blank"
+    <div className="w-full">
+      {attendeesArray.map((group, groupIndex) => (
+        <div
+          key={groupIndex}
+          className={`flex flex-wrap justify-start items-center gap-y-3 md:gap-y-4 lg:gap-y-4 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.5%] transition-opacity duration-1000 ${
+            visibleIndex === groupIndex
+              ? isTransitioning
+                ? "opacity-0"
+                : "opacity-100"
+              : "hidden"
+          }`}
         >
-          <Logo src={item.logo} alt={item.name} />
-        </Link>
+          {group.map((item) => (
+            <Link
+              key={item.id}
+              className="w-[23%] md:w-[23%] lg:w-[15%] bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 hover:border-theme1Gray2 rounded-lg shadow-md transition-all duration-300 flex items-center justify-center p-2"
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="relative w-full pt-[75%]">
+                <Image
+                  src={item.logo}
+                  alt={item.name}
+                  layout="fill"
+                  objectFit="contain"
+                  className="p-2"
+                />
+              </div>
+            </Link>
+          ))}
+        </div>
       ))}
-    </>
+    </div>
   );
 };
 
