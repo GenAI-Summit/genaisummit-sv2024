@@ -46,13 +46,13 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
             >
               <div className="w-full h-full bg-color8 z-40 py-4 px-6 rounded-lg">
                 {prevEvents.map((event, index) => (
-                  <p
+                  <div
                     key={index}
                     className="cursor-pointer p-2"
                     onClick={() => openUrl(event.url)}
                   >
                     <TextHover color="theme1Dark1">{event.name}</TextHover>
-                  </p>
+                  </div>
                 ))}
               </div>
             </motion.div>
@@ -80,13 +80,13 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
               transition={{ duration: 0.7, type: "spring", ease: "linear" }}
             >
               {prevEvents.map((event, index) => (
-                <p
+                <div
                   key={index}
                   className="cursor-pointer"
                   onClick={() => openUrl(event.url)}
                 >
                   <TextHover color="theme1Dark1">{event.name}</TextHover>
-                </p>
+                </div>
               ))}
             </motion.div>
           )}

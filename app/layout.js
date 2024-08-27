@@ -56,16 +56,16 @@ const RootLayout = ({ children }) => {
           name="keywords"
           content={metadata.openGraph.keywords.join(", ")}
         />
-        <script
+        <Script
           async
           src="https://tally.so/widgets/embed.js"
           crossOrigin="anonymous"
         />
-        <script
+        <Script
           defer
           src="https://hello.gptdao.ai/script.js"
           data-website-id="abca0cd7-fb79-4c0e-aae6-48ed09441129"
-        ></script>
+        />
       </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={inter.className}>
@@ -75,18 +75,24 @@ const RootLayout = ({ children }) => {
           </Suspense>
           {children}
           <div className="mt-32 mb-10">
-            <ShareBar />
+            <Suspense fallback={<Loader />}>
+              <ShareBar />
+            </Suspense>
           </div>
           <Suspense fallback={<Loader />}>
             <FloatFooter />
           </Suspense>
         </div>
-        <Footer />
-        <ScrollToTop />
+        <Suspense fallback={<Loader />}>
+          <Footer />
+        </Suspense>
+        <Suspense fallback={<Loader />}>
+          <ScrollToTop />
+        </Suspense>
         <Script
           src="https://apis.google.com/js/api.js"
           type="text/javascript"
-        ></Script>
+        />
       </body>
       <GoogleAnalytics gaId="G-6ETB3L7DWM" />
     </html>

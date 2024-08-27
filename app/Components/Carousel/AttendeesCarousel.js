@@ -53,8 +53,8 @@ const AttendeesCarousel = ({ attendeesArray }) => {
                 <Image
                   src={item.logo}
                   alt={item.name}
-                  layout="fill"
-                  objectFit="contain"
+                  fill
+                  style={{ objectFit: "contain" }}
                   className="p-2"
                 />
               </div>
