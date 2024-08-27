@@ -17,7 +17,7 @@ const AttendeesCarousel = ({ attendeesArray }) => {
         setIndex((prev) => (prev === attendeesArray.length - 1 ? 0 : prev + 1));
         setIsTransitioning(false);
       }, 1000);
-    }, 10000);
+    }, 15000);
 
     return () => clearInterval(timer);
   }, [attendeesArray]);
