@@ -37,21 +37,21 @@ const OrganizationCard = ({ organization }) => {
         <OrganizationDetail organization={organization} />
         <div className="flex flex-col gap-2">
           {organization.url && (
-            <p
+            <div
               className="cursor-pointer mt-2 text-left font-medium"
               onClick={() => openUrl(organization.url)}
             >
               <TextHover color="theme1Light1">Official Website</TextHover>
-            </p>
+            </div>
           )}
-          <p
+          <div
             className="cursor-pointer mt-2 text-left font-medium"
             onClick={onOrganizationDetail}
           >
             <TextHover color="theme1Light1">
               About {organization.name}
             </TextHover>
-          </p>
+          </div>
         </div>
       </Drawer>
     </>

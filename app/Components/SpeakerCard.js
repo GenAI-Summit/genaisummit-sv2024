@@ -37,14 +37,14 @@ const SpeakerCard = ({ speaker }) => {
       </div>
       <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
         <SpeakerDetail speaker={speaker} />
-        <p
+        <div
           className="mt-2 cursor-pointer font-medium"
           onClick={onSpeakerDetail}
         >
           <TextHover color="theme1Light1">
             All Sessions by {speaker.name}
           </TextHover>
-        </p>
+        </div>
       </Drawer>
     </>
   );
