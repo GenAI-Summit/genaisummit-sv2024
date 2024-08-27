@@ -1,10 +1,11 @@
 "use client";
 
+import { Suspense } from "react";
+import Loader from "../Loader";
 import SectionLayout from "../../Layouts/SectionLayout";
 import OrganizationCard from "../OrganizationCard";
 import ShowMore from "../Button/ShowMore";
 import RegisterBtn from "../Button/RegisterBtn";
-import Loader from "../Loader";
 import Error from "../Error";
 import useExhibitors from "../../Hooks/useExhibitors";
 
@@ -12,8 +13,12 @@ import useExhibitors from "../../Hooks/useExhibitors";
 
 const Exhibitors = () => {
   const { exhibitors, isLoading, isError } = useExhibitors();
-  if (isLoading) return <Loader />;
-  if (isError) return <Error />;
+  if (isLoading) {
+    return <Loader />;
+  }
+  if (isError) {
+    return <Error />;
+  }
   // const exhibitors = await getExhibitiorsData();
   return (
     <SectionLayout
@@ -27,12 +32,20 @@ const Exhibitors = () => {
             key={exhibitor.id}
             className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[19%] lg:h-27"
           >
-            <OrganizationCard type="exhibitor" organization={exhibitor} />
+            <Suspense fallback={<Loader />}>
+              <OrganizationCard type="exhibitor" organization={exhibitor} />
+            </Suspense>
           </div>
         ))}
       </div>
       <div className="mt-6 md:mt-8">
-        <ShowMore target="/exhibitors" text="View All Exhibitors" mode="day" />
+        <Suspense fallback={<Loader />}>
+          <ShowMore
+            target="/exhibitors"
+            text="View All Exhibitors"
+            mode="day"
+          />
+        </Suspense>
       </div>
     </SectionLayout>
   );

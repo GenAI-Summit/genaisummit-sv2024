@@ -1,5 +1,7 @@
-import Banner from "./Components/Banner";
-import FunFacts from "./Components/FunFacts";
+import { Suspense } from "react";
+import Loader from "./Components/Loader";
+import Banner from "./Components/IndexSections/Banner";
+import FunFacts from "./Components/IndexSections/FunFacts";
 import IndexSpeakers from "./Components/IndexSections/IndexSpeakers";
 // import IndexSponsors from "./Components/IndexSections/IndexSponsors";
 import IndexMedia from "./Components/IndexSections/IndexMedia";
@@ -34,13 +36,17 @@ const Index = () => {
           <IndexMedia />
         </SectionEnter>
         <SectionEnter>
-          <IndexSpeakers />
+          <Suspense fallback={<Loader />}>
+            <IndexSpeakers />
+          </Suspense>
         </SectionEnter>
         <SectionEnter>
           <Attendees />
         </SectionEnter>
         <SectionEnter>
-          <IndexExhibitors />
+          <Suspense fallback={<Loader />}>
+            <IndexExhibitors />
+          </Suspense>
         </SectionEnter>
         <SectionEnter>
           <Tickets />

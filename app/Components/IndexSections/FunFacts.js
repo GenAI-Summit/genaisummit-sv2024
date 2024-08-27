@@ -1,5 +1,7 @@
+import { Suspense } from "react";
 import Image from "next/image";
-import NumberRoller from "./Counter/NumberRoller";
+import Loader from "../Loader";
+import NumberRoller from "../Counter/NumberRoller";
 
 const FunFacts = () => {
   const data = [
@@ -66,16 +68,18 @@ const FunFacts = () => {
         {data.map((item, index) => (
           <div key={index} className="w-[35%] md:w-[18%] z-10">
             <div>
-              <span className="font-monaspace_neon text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-theme1FunFactsColor1 via-theme1FunFactsColor2 to-theme1FunFactsColor3 text-transparent bg-clip-text">
-                <NumberRoller
-                  start={item.start}
-                  end={item.end}
-                  symbol={item.symbol}
-                />
-              </span>
-              <p className="mt-2 md:mt-5 md:text-xl lg:text-2xl text-color8">
+              <div className="font-monaspace_neon text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-theme1FunFactsColor1 via-theme1FunFactsColor2 to-theme1FunFactsColor3 text-transparent bg-clip-text">
+                <Suspense fallback={<Loader />}>
+                  <NumberRoller
+                    start={item.start}
+                    end={item.end}
+                    symbol={item.symbol}
+                  />
+                </Suspense>
+              </div>
+              <div className="mt-2 md:mt-5 md:text-xl lg:text-2xl text-color8">
                 {item.title}
-              </p>
+              </div>
             </div>
           </div>
         ))}

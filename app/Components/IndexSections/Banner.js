@@ -1,7 +1,9 @@
-import TicketBtn from "./Button/TicketBtn";
-import AddToCalendarBtn from "./Button/AddToCalendarBtn";
-import SubscribeBtn from "./Button/SubscribeBtn";
-import CountdownTimer from "./Counter/CountdownTimer";
+import { Suspense } from "react";
+import Loader from "../Loader";
+import TicketBtn from "../Button/TicketBtn";
+import AddToCalendarBtn from "../Button/AddToCalendarBtn";
+import SubscribeBtn from "../Button/SubscribeBtn";
+import CountdownTimer from "../Counter/CountdownTimer";
 
 const Banner = () => {
   return (
@@ -32,7 +34,9 @@ const Banner = () => {
         </div>
         <div className="flex flex-col items-center gap-y-8 md:gap-y-8 lg:gap-y-10">
           <div className="text-xl md:text-3xl lg:text-6xl">
-            <CountdownTimer time="2024-11-01T00:00:00" />
+            <Suspense fallback={<Loader />}>
+              <CountdownTimer time="2024-11-01T00:00:00" />
+            </Suspense>
           </div>
           <div className="flex flex-col text-base md:text-lg lg:text-xl gap-y-2 lg:gap-y-4">
             <p>Santa Clara Convention Center</p>
@@ -41,23 +45,27 @@ const Banner = () => {
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn mode="plain" width="w-48" />
-            <TicketBtn
-              width="w-48"
-              fill={true}
-              mode="black"
-              border={true}
-              url="/tickets"
-              evt="Banner Ticket Button"
-            />
-            <AddToCalendarBtn
-              width="w-48"
-              mode="plain"
-              title="GENAI SUMMIT SV 2024"
-              details=""
-              location="Santa Clara Convention Center, Santa Clara, CA"
-              startDate="2024-11-01T08:00:00"
-              endDate="2024-11-03T18:00:00"
-            />
+            <Suspense fallback={<Loader />}>
+              <TicketBtn
+                width="w-48"
+                fill={true}
+                mode="black"
+                border={true}
+                url="/tickets"
+                evt="Banner Ticket Button"
+              />
+            </Suspense>
+            <Suspense fallback={<Loader />}>
+              <AddToCalendarBtn
+                width="w-48"
+                mode="plain"
+                title="GENAI SUMMIT SV 2024"
+                details=""
+                location="Santa Clara Convention Center, Santa Clara, CA"
+                startDate="2024-11-01T08:00:00"
+                endDate="2024-11-03T18:00:00"
+              />
+            </Suspense>
           </div>
         </div>
       </div>

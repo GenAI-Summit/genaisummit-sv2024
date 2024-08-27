@@ -57,12 +57,12 @@ const RootLayout = ({ children }) => {
           content={metadata.openGraph.keywords.join(", ")}
         />
         <Script
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
           src="https://tally.so/widgets/embed.js"
           crossOrigin="anonymous"
         />
         <Script
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
           src="https://hello.gptdao.ai/script.js"
           data-website-id="abca0cd7-fb79-4c0e-aae6-48ed09441129"
         />
@@ -90,7 +90,7 @@ const RootLayout = ({ children }) => {
           <ScrollToTop />
         </Suspense>
         <Script
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
           src="https://apis.google.com/js/api.js"
           type="text/javascript"
         />
