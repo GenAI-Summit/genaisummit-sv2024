@@ -63,11 +63,6 @@ const RootLayout = ({ children }) => {
         />
         <script
           defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="f606f641-956b-45db-ad03-4f4c2aa2179c"
-        ></script>
-        <script
-          defer
           src="https://hello.gptdao.ai/script.js"
           data-website-id="abca0cd7-fb79-4c0e-aae6-48ed09441129"
         ></script>
@@ -99,3 +94,11 @@ const RootLayout = ({ children }) => {
 };
 
 export default RootLayout;
+
+/*
+        <script
+          defer
+          src="https://cloud.umami.is/script.js"
+          data-website-id="f606f641-956b-45db-ad03-4f4c2aa2179c"
+        ></script>
+        */
