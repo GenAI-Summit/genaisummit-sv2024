@@ -15,6 +15,7 @@ const IndexIntro = () => {
         paragraphs={paragraphs}
         images={images}
         widget={<RegisterBtn text="Become Our Exhibitor" mode="day" />}
+        imgAspect="aspect-[4/3]"
       />
     </>
   );

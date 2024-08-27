@@ -9,7 +9,7 @@ const Attendees = async () => {
       title="Notable Attendees"
       description="THE WORLD'S LEADING COMPANIES ATTENDED GENAI SUMMIT, 29-31 MAY 2024."
     >
-      <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-3 md:gap-y-4 lg:gap-y-4 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.5%]">
+      <div className="w-full mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-3 md:gap-y-4 lg:gap-y-4 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.5%]">
         <AttendeesCarousel attendeesArray={attendeesArray} />
       </div>
     </SectionLayout>

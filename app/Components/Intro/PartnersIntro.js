@@ -21,6 +21,7 @@ const IndexIntro = () => {
         paragraphs={paragraphs}
         images={images}
         widget={<RegisterBtn text="Become Our Sponsor" mode="day" />}
+        imgAspect="aspect-[16/9] xl:aspect-[4/3]"
       />
     </>
   );

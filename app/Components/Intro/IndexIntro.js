@@ -26,6 +26,7 @@ const IndexIntro = () => {
           evt="Index Intro Ticket Button"
         />
       }
+      imgAspect="aspect-[16/9]"
     />
   );
 };
