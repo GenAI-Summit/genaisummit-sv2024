@@ -1,7 +1,13 @@
 import Close from "./SVG/Close";
 import ModalEnter from "../Motions/ModalEnter";
 
-const Modal = ({ children, isModalOpen, closeModal, title }) => {
+const Modal = ({
+  children,
+  isModalOpen,
+  closeModal,
+  title,
+  maxWidth = "max-w-md",
+}) => {
   if (!isModalOpen) {
     return null;
   }
@@ -18,7 +24,8 @@ const Modal = ({ children, isModalOpen, closeModal, title }) => {
       <ModalEnter>
         <div
           className={`
-          w-full max-w-md m-4 rounded-lg shadow-xl
+          max-h-[90vh] overflow-y-auto
+          w-full ${maxWidth} m-4 rounded-lg shadow-xl
           transform transition-all duration-300 ease-in-out
           ${isModalOpen ? "scale-100 opacity-100" : "scale-95 opacity-0"}
         `}
