@@ -146,7 +146,6 @@ const tickets = [
         "3 Tickets (1 VIP included)",
         "Pick booth location (first come/served basis) included",
         "Whova Lead Scan included for attendee tracking",
-        "Early Bird pricing: $3999 (Regular $5999)",
       ],
       [
         "Located in the exhibition area",
@@ -157,7 +156,6 @@ const tickets = [
         "2 Tickets (option to add 1 VIP for $300)",
         "Pick booth location (first come/served basis) for $100",
         "Whova Lead Scan included for attendee tracking for $500",
-        "Early Bird pricing: $1999 (Regular $2999)",
       ],
     ],
   },
@@ -197,7 +195,6 @@ const tickets = [
         "3 Tickets (1 VIP included)",
         "Pick booth location (first come/served basis) included",
         "Whova Lead Scan included for attendee tracking",
-        "Early Bird pricing: $3999 (Regular $5999)",
       ],
       [
         "Located in the exhibition area",
@@ -208,7 +205,6 @@ const tickets = [
         "2 Tickets (option to add 1 VIP for $300)",
         "Pick booth location (first come/served basis) for $100",
         "Whova Lead Scan included for attendee tracking for $500",
-        "Early Bird pricing: $1999 (Regular $2999)",
       ],
     ],
   },
