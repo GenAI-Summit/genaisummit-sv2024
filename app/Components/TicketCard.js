@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 import CardLayout from "../Layouts/CardLayout";
 import TicketBtn from "./Button/TicketBtn";
+import TicketDetail from "./Button/TicketDetail";
 import Loader from "./Loader";
 
 const TicketCard = ({ ticket }) => {
@@ -50,6 +51,14 @@ const TicketCard = ({ ticket }) => {
                   evt={`Ticket Card - ${ticket.name} Button`}
                 />
               </Suspense>
+              {ticket.benefits && (
+                <Suspense fallback={<Loader />}>
+                  <TicketDetail
+                    ticket={ticket}
+                    evt={`Ticket Card - ${ticket.name} Details`}
+                  />
+                </Suspense>
+              )}
             </div>
           </div>
         </CardLayout>

@@ -134,7 +134,31 @@ const tickets = [
       },
     ],
     description: [
-      "Located in the Exhibition Area and provides a space of 16 x 6 feet. Includes two tables measuring 96 x 26.5 inches, with a height of 29 inches. Publicity materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included. Type A Exhibitors can also choose their booth location on a first-come, first-served basis. The Whova Lead Scan feature (helps track every attendee who stops by through scanning) is included.",
+      "Showcase your innovations in our premium booth area. Includes advanced lead tracking technology.",
+    ],
+    benefits: [
+      [
+        "Located in the exhibition area",
+        "16 x 6 feet of space",
+        "Two 96 x 26.5-inch tables (29 inches high)",
+        "Publicity materials (roll-up banners and posters) allowed",
+        "WIFI coverage included",
+        "3 Tickets (1 VIP included)",
+        "Pick booth location (first come/served basis) included",
+        "Whova Lead Scan included for attendee tracking",
+        "Early Bird pricing: $3999 (Regular $5999)",
+      ],
+      [
+        "Located in the exhibition area",
+        "8 x 6 feet of space",
+        "One 96 x 26.5-inch table (29 inches high)",
+        "Publicity materials (roll-up banners and posters) allowed",
+        "WIFI coverage included",
+        "2 Tickets (option to add 1 VIP for $300)",
+        "Pick booth location (first come/served basis) for $100",
+        "Whova Lead Scan included for attendee tracking for $500",
+        "Early Bird pricing: $1999 (Regular $2999)",
+      ],
     ],
   },
   {
@@ -161,7 +185,31 @@ const tickets = [
       },
     ],
     description: [
-      "Located in the Exhibition Area and provides a space of 8 x 6 feet. Includes one table measuring 96 x 26.5 inches, with a height of 29 inches. Publicity materials such as roll-up banners and posters are welcomed. WiFi coverage is guaranteed and included.",
+      "Strategic visibility in a streamlined space. Connect with attendees efficiently in our popular exhibition area.",
+    ],
+    benefits: [
+      [
+        "Located in the exhibition area",
+        "16 x 6 feet of space",
+        "Two 96 x 26.5-inch tables (29 inches high)",
+        "Publicity materials (roll-up banners and posters) allowed",
+        "WIFI coverage included",
+        "3 Tickets (1 VIP included)",
+        "Pick booth location (first come/served basis) included",
+        "Whova Lead Scan included for attendee tracking",
+        "Early Bird pricing: $3999 (Regular $5999)",
+      ],
+      [
+        "Located in the exhibition area",
+        "8 x 6 feet of space",
+        "One 96 x 26.5-inch table (29 inches high)",
+        "Publicity materials (roll-up banners and posters) allowed",
+        "WIFI coverage included",
+        "2 Tickets (option to add 1 VIP for $300)",
+        "Pick booth location (first come/served basis) for $100",
+        "Whova Lead Scan included for attendee tracking for $500",
+        "Early Bird pricing: $1999 (Regular $2999)",
+      ],
     ],
   },
 ];
@@ -170,11 +218,11 @@ const Tickets = ({ widget }) => {
   return (
     <SectionLayout title="Get Tickets Now" widget={widget}>
       <div
-        className="mt-8 md:mt-10 flex flex-wrap justify-start md:gap-x-[4%] lg:gap-x-[3%] gap-y-8"
+        className="mt-8 md:mt-10 flex flex-wrap justify-start md:gap-x-[4%] xl:gap-x-[3%] gap-y-8"
         id="tickets-section"
       >
         {tickets.map((ticket) => (
-          <div className="w-full md:w-[48%] lg:w-[31%]" key={ticket.id}>
+          <div className="w-full md:w-[48%] xl:w-[31%]" key={ticket.id}>
             <TicketCard ticket={ticket} />
           </div>
         ))}
