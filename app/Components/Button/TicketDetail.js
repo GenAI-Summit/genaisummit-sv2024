@@ -33,7 +33,7 @@ const TicketDetail = ({ ticket, evt }) => {
         </div>
       </button>
       <Modal
-        title="Benefits"
+        title="Ticket Details"
         isModalOpen={isModalOpen}
         closeModal={closeModal}
         maxWidth="max-w-6xl"
