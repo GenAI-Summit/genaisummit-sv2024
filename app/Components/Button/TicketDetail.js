@@ -10,7 +10,7 @@ const TicketDetail = ({ ticket, evt }) => {
     setIsModalOpen(true);
   };
   const umamiTrack = (evt) => {
-    window?.umami?.trackEvent(evt);
+    window?.umami?.track(evt);
   };
 
   const closeModal = () => {
