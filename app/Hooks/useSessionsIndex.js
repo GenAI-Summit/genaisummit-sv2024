@@ -8,7 +8,7 @@ const useSessionsIndex = () => {
     fetcher,
   );
 
-  const tags = data?.data.tags.map((tag) => tag.name);
+  const tags = data?.data.tags.map((tag) => tag.name).filter((tag) => tag !== "Breakout");
   const tracks = data?.data.tracks.map((track) => track.name);
   const locations = data?.data.locations.map((location) => location.name);
 

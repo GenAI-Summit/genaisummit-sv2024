@@ -14,12 +14,9 @@ const useSessions = () => {
     desc: session.desc,
     start: new Date(session.start),
     end: new Date(session.end),
-    speakers: session.speakers
-      .filter((speaker) => speaker.session_role === "speaker")
-      .map((speaker) => ({
-        ...speaker,
-        name: speaker.name.replace(/_RANK_\d+_/, ""),
-      })),
+    speakers: session.speakers.filter(
+      (speaker) => speaker.session_role === "speaker",
+    ),
     moderators: session.speakers.filter(
       (speaker) => speaker.session_role === "moderator",
     ),

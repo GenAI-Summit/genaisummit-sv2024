@@ -17,7 +17,7 @@ const SessionCard = ({ session, showDesc = false }) => {
   return (
     <div className="w-full">
       <CardLayout bgColor="bg-theme1Dark3">
-        <div className="flex flex-col items-start text-left text-theme1Light1 md:p-4 p-2">
+        <div className="flex flex-col items-start text-left text-theme1Light1 md:p-4 p-2 text-lg">
           <div className="text-xl font-bold mb-4">
             <span className={`${typeColorClass} p-0.5 mr-4 rounded`}>
               <span>{session.tag}</span>
