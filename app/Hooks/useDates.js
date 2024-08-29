@@ -16,8 +16,8 @@ const useDates = () => {
 
   const daysMap = dates
     ? Object.fromEntries(
-        dates?.map((date, index) => [date, `DAY ${index + 1}`]),
-      )
+      dates?.map((date, index) => [date, `DAY ${index + 1}`]),
+    )
     : {};
 
   return {
