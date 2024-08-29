@@ -21,8 +21,19 @@ const AgendaPage = () => {
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedDates, setSelectedDates] = useState([]);
-  const { tags, tracks, locations, isLoading: isLoadingIndex, isError: isErrorIndex } = useSessionsIndex();
-  const { dates, daysMap, isLoading: isLoadingDates, isError: isErrorDates } = useDates();
+  const {
+    tags,
+    tracks,
+    locations,
+    isLoading: isLoadingIndex,
+    isError: isErrorIndex,
+  } = useSessionsIndex();
+  const {
+    dates,
+    daysMap,
+    isLoading: isLoadingDates,
+    isError: isErrorDates,
+  } = useDates();
 
   const onReset = () => {
     setText("");
@@ -86,9 +97,7 @@ const AgendaPage = () => {
         (selectedLocations.length === 0 ||
           selectedLocations.includes(session.location)) &&
         (selectedDates.length === 0 ||
-          selectedDates.includes(
-            new Date(session.start).toLocaleDateString(),
-          ))
+          selectedDates.includes(new Date(session.start).toLocaleDateString()))
       );
     });
   }, [

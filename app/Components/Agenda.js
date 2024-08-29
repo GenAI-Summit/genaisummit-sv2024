@@ -16,12 +16,12 @@ const Agenda = ({ sessionsByDate, daysMap }) => {
                 <SubSectionLayout key={date} title={daysMap[date]}>
                   <div className="w-full h-full flex flex-col gap-y-10">
                     {sessionsByDate[date].map((session) => (
-                    <SessionCard key={session.id} session={session} />
-                  ))}
-                </div>
-              </SubSectionLayout>
-            );
-          })}
+                      <SessionCard key={session.id} session={session} />
+                    ))}
+                  </div>
+                </SubSectionLayout>
+              );
+            })}
         </div>
       </SectionLayout>
     </>

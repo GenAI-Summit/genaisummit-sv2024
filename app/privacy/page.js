@@ -15,7 +15,7 @@ const PrivacyPage = () => {
     {
       title: "Collection of Personal Information",
       paragraphs: [
-        "2.1 We acknowledge and agree that any personal data may be processed or otherwise used by us solely to the extent required for the use of the Website, your attendance of our summit, the execution of your orders and the performance of any of your requests and in accordance with the applicable law on the protection of personal data. Personal data comprises any information relating to an identified or identifiable natural person (\"Personal Data\"). Personal Data includes, but is not limited to your name, address, e-mail address, phone number and financial details like credit card or debit card numbers.",
+        '2.1 We acknowledge and agree that any personal data may be processed or otherwise used by us solely to the extent required for the use of the Website, your attendance of our summit, the execution of your orders and the performance of any of your requests and in accordance with the applicable law on the protection of personal data. Personal data comprises any information relating to an identified or identifiable natural person ("Personal Data"). Personal Data includes, but is not limited to your name, address, e-mail address, phone number and financial details like credit card or debit card numbers.',
         "2.2 We collect, process and use the following information:",
         "Information you give us: We collect information you provide to us over the Website. This may include in particular your personal information, email address, payment details or other information uploaded by you (e.g. photos, texts etc.). Your Personal Data will be kept confidential and will only be used to complete the transaction, handle your attendance at our summit, send you our newsletter and/or provide you with other Website services.",
         "Information from other sources: We reserve the right to request information from third-parties (e.g. credit card information services) with regard to your payment behavior in order to be able to offer you certain payment options.",
@@ -47,7 +47,7 @@ const PrivacyPage = () => {
     {
       title: "Cookies",
       paragraphs: [
-        "We, along with many other websites, make use of so-called \"Cookies\". Cookies are small files that can be stored on your computer during visits to the Website. Cookies are used to facilitate your use of our services and to manage your visits. They enable our systems to recognize your browser and to offer you services, such as saving your preferences between visits to our Website. Cookies are solely saved on the computer you use while visiting our service. They are not stored on our systems.",
+        'We, along with many other websites, make use of so-called "Cookies". Cookies are small files that can be stored on your computer during visits to the Website. Cookies are used to facilitate your use of our services and to manage your visits. They enable our systems to recognize your browser and to offer you services, such as saving your preferences between visits to our Website. Cookies are solely saved on the computer you use while visiting our service. They are not stored on our systems.',
         "The help function available in the menu bar of the majority of web browsers will explain how you can prevent your browser from accepting new cookies, should you not wish to make use of the cookie functionality, how you tell your browser to inform you when you have received a new cookie or how to deactivate or delete received cookies. Some functions of our services may not be available if you set your browser to not accept cookies.",
       ],
     },
@@ -69,10 +69,10 @@ const PrivacyPage = () => {
                 title={`${index + 1}. ${section.title}`}
               >
                 <div className="w-full h-full flex flex-col gap-y-6">
-                {section.paragraphs.map((paragraph, index) => (
-                  <p key={index} className="text-lg">
-                    {paragraph}
-                  </p>
+                  {section.paragraphs.map((paragraph, index) => (
+                    <p key={index} className="text-lg">
+                      {paragraph}
+                    </p>
                   ))}
                 </div>
               </SubSectionLayout>
