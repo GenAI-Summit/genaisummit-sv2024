@@ -7,7 +7,7 @@ const TermsPage = () => {
     {
       title: "Introduction",
       paragraphs: [
-        "1.1 This website (\"Website\") is operated by GPTDAO, the organizer of the summit.",
+        '1.1 This website ("Website") is operated by GPTDAO, the organizer of the summit.',
         "1.2 Please read these Terms & Conditions carefully before using the Website. By accessing any part of the Website, you shall be deemed to have accepted these Terms & Conditions in full.",
         "1.3 GPTDAO may revise these Terms & Conditions at any time by posting an update on the Website. Your continued use of the Website after any such change constitutes your acceptance of the new Terms & Conditions. These Terms & Conditions were last updated in July 2024. GPTDAO reserves the right to change these Terms & Conditions at any time.",
         "1.4 GPTDAO reserves the right to refuse admission to the summit for any behavior, which it deems unacceptable, or for breach of these Terms & Conditions.",
@@ -93,7 +93,7 @@ const TermsPage = () => {
       title: "Disclaimer",
       paragraphs: [
         "While GPTDAO endeavors to ensure that the Website is normally available 24 hours a day, it shall not be liable if for any reason the Website is unavailable at any time or for any period. Access to the Website may be suspended temporarily and without notice in the case of system failure, maintenance or repair or for any other reasonable cause.",
-        "You acknowledge that information on the Website and any related material provided to you by GPTDAO, is provided only for general information. GPTDAO uses reasonable care in publishing materials available on GPTDAO websites, however, does not guarantee their accuracy or completeness. Materials available on GPTDAO websites are provided \"as is\" with no warranty, express or implied, and all such warranties are hereby disclaimed. GPTDAO assumes no liability for any loss, damage or expense from errors or omissions in the materials available on GPTDAO websites, whether arising in contract or otherwise.",
+        'You acknowledge that information on the Website and any related material provided to you by GPTDAO, is provided only for general information. GPTDAO uses reasonable care in publishing materials available on GPTDAO websites, however, does not guarantee their accuracy or completeness. Materials available on GPTDAO websites are provided "as is" with no warranty, express or implied, and all such warranties are hereby disclaimed. GPTDAO assumes no liability for any loss, damage or expense from errors or omissions in the materials available on GPTDAO websites, whether arising in contract or otherwise.',
       ],
     },
   ];
