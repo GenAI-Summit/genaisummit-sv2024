@@ -8,12 +8,23 @@ const useSpeakers = () => {
     fetcher,
   );
 
-  const homeSpeakers = data?.data || [];
+  const {
+    data: data2,
+    isLoading: isLoading2,
+    error: error2,
+  } = useSWR(
+    "https://api.gptdao.ai/rank/tag?tag_name=hide&type_name=speaker",
+    fetcher,
+  );
+
+  const hideSpeakers = data2?.data || [];
+  const homeSpeakers =
+    data?.data.filter((speaker) => !hideSpeakers.includes(speaker.id)) || [];
 
   return {
     homeSpeakers,
-    isLoading,
-    isError: error,
+    isLoading: isLoading || isLoading2,
+    isError: error || error2,
   };
 };
 

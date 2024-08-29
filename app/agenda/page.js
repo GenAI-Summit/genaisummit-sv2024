@@ -21,8 +21,8 @@ const AgendaPage = () => {
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
   const [selectedDates, setSelectedDates] = useState([]);
-  const { tags, tracks, locations } = useSessionsIndex();
-  const { dates } = useDates();
+  const { tags, tracks, locations, isLoading: isLoadingIndex, isError: isErrorIndex } = useSessionsIndex();
+  const { dates, daysMap, isLoading: isLoadingDates, isError: isErrorDates } = useDates();
 
   const onReset = () => {
     setText("");
@@ -86,7 +86,9 @@ const AgendaPage = () => {
         (selectedLocations.length === 0 ||
           selectedLocations.includes(session.location)) &&
         (selectedDates.length === 0 ||
-          selectedDates.includes(new Date(session.start).toLocaleDateString()))
+          selectedDates.includes(
+            new Date(session.start).toLocaleDateString(),
+          ))
       );
     });
   }, [
@@ -98,11 +100,20 @@ const AgendaPage = () => {
     selectedDates,
   ]);
 
-  if (isLoading) {
+  const sessionsByDate = useMemo(() => {
+    return filteredSessions?.reduce((acc, session) => {
+      const date = new Date(session.start).toLocaleDateString();
+      acc[date] = acc[date] || [];
+      acc[date].push(session);
+      return acc;
+    }, {});
+  }, [filteredSessions]);
+
+  if (isLoading || isLoadingIndex || isLoadingDates) {
     return <Loader />;
   }
 
-  if (isError) {
+  if (isError || isErrorIndex || isErrorDates) {
     return <Error />;
   }
 
@@ -110,8 +121,16 @@ const AgendaPage = () => {
     <SectionEnter>
       <div className="mt-10 w-full flex flex-col lg:flex-row gap-y-10 lg:gap-x-8">
         <div className="w-full lg:w-2/5 lg:max-w-96 flex justify-center">
-          <div className="w-full flex flex-col gap-y-8">
+          <div className="w-full flex flex-col gap-y-8 md:gap-y-10">
             <SearchBar text={text} setText={setText} />
+            {dates && (
+              <Filter
+                name="Dates"
+                options={dates}
+                selected={selectedDates}
+                onSelect={onSelectedDate}
+              />
+            )}
             {tags && (
               <Filter
                 name="Tags"
@@ -136,19 +155,11 @@ const AgendaPage = () => {
                 onSelect={onSelectedLocation}
               />
             )}
-            {dates && (
-              <Filter
-                name="Dates"
-                options={dates}
-                selected={selectedDates}
-                onSelect={onSelectedDate}
-              />
-            )}
             <ResetBtn onReset={onReset} />
           </div>
         </div>
         <div className="w-full">
-          <Agenda sessions={filteredSessions} />
+          <Agenda sessionsByDate={sessionsByDate} daysMap={daysMap} />
         </div>
       </div>
     </SectionEnter>

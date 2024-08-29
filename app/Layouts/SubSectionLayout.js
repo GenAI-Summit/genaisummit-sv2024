@@ -6,7 +6,7 @@ const SubSectionLayout = ({ title, children, textAlign }) => {
       >
         {title}
       </div>
-      <div className="w-full h-full flex flex-col gap-y-6">{children}</div>
+      <div className="w-full h-full">{children}</div>
     </>
   );
 };

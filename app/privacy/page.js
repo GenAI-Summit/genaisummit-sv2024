@@ -68,11 +68,13 @@ const PrivacyPage = () => {
                 key={index}
                 title={`${index + 1}. ${section.title}`}
               >
+                <div className="w-full h-full flex flex-col gap-y-6">
                 {section.paragraphs.map((paragraph, index) => (
                   <p key={index} className="text-lg">
                     {paragraph}
                   </p>
-                ))}
+                  ))}
+                </div>
               </SubSectionLayout>
             ))}
           </div>
