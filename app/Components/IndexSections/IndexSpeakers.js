@@ -6,20 +6,24 @@ import SectionLayout from "../../Layouts/SectionLayout";
 import SpeakerCard from "../SpeakerCard";
 import ShowMore from "../Button/ShowMore";
 import RegisterBtn from "../Button/RegisterBtn";
-import useSpeakers from "../../Hooks/useSpeakers";
+import useHomeSpeakers from "../../Hooks/useHomeSpeakers";
 import Error from "../Error";
 //import { getIndexSpeakers } from "/lib/api";
 
 import styles from "../../styles/border.module.css";
 
 const IndexSpeakers = () => {
-  const { indexSpeakers, isLoading, isError } = useSpeakers();
+  const { homeSpeakers, isLoading, isError } = useHomeSpeakers();
 
   if (isLoading) {
     return <Loader />;
   }
   if (isError) {
     return <Error />;
+  }
+
+  if (!homeSpeakers) {
+    return null;
   }
 
   return (
@@ -30,7 +34,7 @@ const IndexSpeakers = () => {
         widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       >
         <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[4%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
-          {indexSpeakers.map((speaker) => (
+          {homeSpeakers.map((speaker) => (
             <div
               key={speaker.id}
               className={`w-[48%] md:w-[28%] lg:w-[19%] ${styles.border}`}
