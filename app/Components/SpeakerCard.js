@@ -12,6 +12,7 @@ const SpeakerCard = ({ speaker }) => {
   const router = useRouter();
 
   const openDrawer = () => {
+    window?.umami.track(`Click ${speaker.name}`);
     setIsDrawerOpen(true);
   };
   const closeDrawer = () => {
