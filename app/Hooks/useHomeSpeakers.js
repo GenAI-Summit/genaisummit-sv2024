@@ -2,7 +2,7 @@ import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const useSpeakers = () => {
+const useHomeSpeakers = () => {
   const { data, isLoading, error } = useSWR(
     "https://api.gptdao.ai/home/speaker",
     fetcher,
@@ -28,4 +28,4 @@ const useSpeakers = () => {
   };
 };
 
-export default useSpeakers;
+export default useHomeSpeakers;

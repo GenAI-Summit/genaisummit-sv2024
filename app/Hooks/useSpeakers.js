@@ -8,7 +8,11 @@ const useSpeakers = () => {
     fetcher,
   );
 
-  const { data2, isLoading2, error2 } = useSWR(
+  const {
+    data: data2,
+    isLoading: isLoading2,
+    error: error2,
+  } = useSWR(
     "https://api.gptdao.ai/rank/tag?tag_name=hide&type_name=speaker",
     fetcher,
   );
