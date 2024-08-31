@@ -13,7 +13,6 @@ const useDates = () => {
     const normalizedDate = PTtoUTC(`${date}T00:00:00`);
     return formatToPTDate(normalizedDate);
   });
-  console.log(dates);
 
   const daysMap = dates
     ? Object.fromEntries(
