@@ -8,6 +8,7 @@ const useSessions = () => {
     fetcher,
   );
 
+  console.log(data);
   const sessions = data?.data.map((session) => ({
     id: session.id,
     name: session.name,
@@ -24,6 +25,7 @@ const useSessions = () => {
     tracks: session.tracks,
     location: session.location,
   }));
+  console.log(sessions);
 
   return {
     sessions,
