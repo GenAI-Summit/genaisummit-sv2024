@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { PTtoUTC } from "@/lib/time";
 
 const CountdownTimer = ({ time }) => {
   const [mounted, setMounted] = useState(false);
@@ -9,7 +10,7 @@ const CountdownTimer = ({ time }) => {
   useEffect(() => {
     setMounted(true);
     const calculateInitialSeconds = () => {
-      return Math.max(0, Math.floor((new Date(time) - new Date()) / 1000));
+      return Math.max(0, Math.floor((PTtoUTC(time) - new Date()) / 1000));
     };
     setSeconds(calculateInitialSeconds());
 
