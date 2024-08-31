@@ -15,6 +15,16 @@ const SessionCard = ({ session, showDesc = false }) => {
     router.push(`/session/${session.id}`);
   };
 
+  const openUrl = (time) => {
+    const day = time.getDate();
+    const month = time.getMonth() + 1;
+    const year = time.getFullYear();
+    const hour = time.getHours();
+    const min = time.getMinutes();
+    const sec = time.getSeconds();
+    window.open(`https://www.timeanddate.com/worldclock/fixedtime.html?day=${day}&month=${month}&year=${year}&hour=${hour}&min=${min}&sec=${sec}&p1=886`, "_blank");
+  };
+
   return (
     <div className="w-full">
       <CardLayout bgColor="bg-theme1Dark3">
@@ -30,7 +40,7 @@ const SessionCard = ({ session, showDesc = false }) => {
               {session.name}
             </span>
           </div>
-          <p className="mb-4">
+          <p className="mb-4 cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300" onClick={() => openUrl(session.start)}>
             {formatToPTTime(session.start)}
             {" - "}
             {formatToPTTime(session.end)}
