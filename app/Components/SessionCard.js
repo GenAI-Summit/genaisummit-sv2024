@@ -5,6 +5,7 @@ import CardLayout from "../Layouts/CardLayout";
 import SpeakerCard from "./SpeakerCard";
 import { useRouter } from "next/navigation";
 import ParsedHtml from "./ParsedHtml";
+import { formatToPTTime, formatToPTDate } from "@/lib/time";
 
 const SessionCard = ({ session, showDesc = false }) => {
   const typeColorClass = getTypeColorClass(session.tag);
@@ -30,21 +31,11 @@ const SessionCard = ({ session, showDesc = false }) => {
             </span>
           </div>
           <p className="mb-4">
-            {session.start.toLocaleTimeString("en-US", {
-              timeZone: "America/Los_Angeles",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}{" "}
+            {formatToPTTime(session.start)}
             {" - "}
-            {session.end.toLocaleTimeString("en-US", {
-              timeZone: "America/Los_Angeles",
-              hour: "2-digit",
-              minute: "2-digit",
-            })}
+            {formatToPTTime(session.end)}
             {" | "}
-            {session.start.toLocaleDateString("en-US", {
-              timeZone: "America/Los_Angeles",
-            })}
+            {formatToPTDate(session.start)}
           </p>
           <p className="mb-4">{session.location}</p>
           {session.moderators.length > 0 && (

@@ -12,6 +12,7 @@ const Agenda = ({ sessionsByDate, daysMap }) => {
         <div className="w-full mt-6 flex flex-col gap-y-4">
           {sessionsByDate &&
             Object.keys(sessionsByDate).map((date) => {
+              console.log(date);
               return (
                 <SubSectionLayout key={date} title={daysMap[date]}>
                   <div className="w-full h-full flex flex-col gap-y-10">
