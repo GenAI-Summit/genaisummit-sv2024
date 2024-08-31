@@ -11,6 +11,7 @@ import useSessions from "../Hooks/useSessions";
 import useSessionsIndex from "../Hooks/useSessionsIndex";
 import useDates from "../Hooks/useDates";
 import SectionEnter from "../Motions/SectionEnter";
+import { PTtoUTC, formatToPTDate } from "@/lib/time";
 
 const AgendaPage = () => {
   const [text, setText] = useState("");
@@ -97,7 +98,7 @@ const AgendaPage = () => {
         (selectedLocations.length === 0 ||
           selectedLocations.includes(session.location)) &&
         (selectedDates.length === 0 ||
-          selectedDates.includes(new Date(session.start).toLocaleDateString()))
+          selectedDates.includes(formatToPTDate(PTtoUTC(session.start))))
       );
     });
   }, [
@@ -111,7 +112,7 @@ const AgendaPage = () => {
 
   const sessionsByDate = useMemo(() => {
     return filteredSessions?.reduce((acc, session) => {
-      const date = new Date(session.start).toLocaleDateString();
+      const date = formatToPTDate(PTtoUTC(session.start));
       acc[date] = acc[date] || [];
       acc[date].push(session);
       return acc;
