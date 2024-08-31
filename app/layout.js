@@ -1,13 +1,12 @@
 import { Suspense } from "react";
 import { Inter } from "next/font/google";
-// import { ThemeProvider } from "./Contexts/Theme";
-import Navbar from "./Components/NavBar/NavBar";
-import Footer from "./Components/Footer";
-import ScrollToTop from "./Components/ScrollToTop";
-import ShareBar from "./Components/ShareBar";
-import FloatFooter from "./Components/FloatFooter";
-import Loader from "./Components/Loader";
-import "./globals.css";
+import Navbar from "@/components/NavBar/NavBar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import ShareBar from "@/components/ShareBar";
+import FloatFooter from "@/components/FloatFooter";
+import Loader from "@/components/Loader";
+import "@/styles/globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 

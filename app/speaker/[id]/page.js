@@ -1,11 +1,11 @@
-import SpeakerDetail from "../../Components/SpeakerDetail";
-import SessionCard from "../../Components/SessionCard";
-import GoBackController from "../../Components/Button/GoBackController";
-import SectionLayout from "../../Layouts/SectionLayout";
-import SubSectionLayout from "../../Layouts/SubSectionLayout";
-import CardLayout from "../../Layouts/CardLayout";
-import { getSpeakerById, getSessionsBySpeaker } from "/lib/api";
-import SectionEnter from "../../Motions/SectionEnter";
+import SpeakerDetail from "@/components/SpeakerDetail";
+import SessionCard from "@/components/SessionCard";
+import GoBackController from "@/components/Button/GoBackController";
+import SectionLayout from "@/layouts/SectionLayout";
+import SubSectionLayout from "@/layouts/SubSectionLayout";
+import CardLayout from "@/layouts/CardLayout";
+import { getSpeakerById, getSessionsBySpeaker } from "@/lib/api";
+import SectionEnter from "@/motions/SectionEnter";
 
 const SpeakerPage = async ({ params }) => {
   const speaker = await getSpeakerData(params.id);

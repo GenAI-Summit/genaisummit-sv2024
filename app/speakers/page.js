@@ -1,14 +1,14 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Loader from "../Components/Loader";
-import Error from "../Components/Error";
-import SearchBar from "../Components/SearchBar";
-import Speakers from "../Components/Speakers";
-import ResetBtn from "../Components/Button/ResetBtn";
-import useSpeakers from "../Hooks/useSpeakers";
-import SpeakersIntro from "../Components/Intro/SpeakersIntro";
-import SectionEnter from "../Motions/SectionEnter";
+import Loader from "@/components/Loader";
+import Error from "@/components/Error";
+import SearchBar from "@/components/SearchBar";
+import Speakers from "@/components/Speakers";
+import ResetBtn from "@/components/Button/ResetBtn";
+import useSpeakers from "@/hooks/useSpeakers";
+import SpeakersIntro from "@/components/Intro/SpeakersIntro";
+import SectionEnter from "@/motions/SectionEnter";
 
 const SpeakersPage = () => {
   const { speakers, isLoading, isError } = useSpeakers();

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Loader from "../Components/Loader";
-import Error from "../Components/Error";
-import SearchBar from "../Components/SearchBar";
-import Filter from "../Components/Filter";
-import ResetBtn from "../Components/Button/ResetBtn";
-import Exhibitors from "../Components/Exhibitors";
-import useExhibitors from "../Hooks/useExhibitors";
-import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
-import ExhibitorsIntro from "../Components/Intro/ExhibitorsIntro";
-import SectionEnter from "../Motions/SectionEnter";
+import Loader from "@/components/Loader";
+import Error from "@/components/Error";
+import SearchBar from "@/components/SearchBar";
+import Filter from "@/components/Filter";
+import ResetBtn from "@/components/Button/ResetBtn";
+import Exhibitors from "@/components/Exhibitors";
+import useExhibitors from "@/hooks/useExhibitors";
+import useExhibitorsIndex from "@/hooks/useExhibitorsIndex";
+import ExhibitorsIntro from "@/components/Intro/ExhibitorsIntro";
+import SectionEnter from "@/motions/SectionEnter";
 
 const ExhibitorsPage = () => {
   const { exhibitors, isLoading, isError } = useExhibitors();

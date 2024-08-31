@@ -1,6 +1,6 @@
-import SectionLayout from "../Layouts/SectionLayout";
-import SubSectionLayout from "../Layouts/SubSectionLayout";
-import SectionEnter from "../Motions/SectionEnter";
+import SectionLayout from "../../layouts/SectionLayout";
+import SubSectionLayout from "../../layouts/SubSectionLayout";
+import SectionEnter from "../../motions/SectionEnter";
 
 const TermsPage = () => {
   const terms = [
