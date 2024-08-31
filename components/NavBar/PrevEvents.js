@@ -1,8 +1,6 @@
 "use client";
 
-import TextHover from "@/motions/TextHover";
 import WrapperArrow from "@/components/SVG/WrapperArrow";
-
 import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
@@ -51,7 +49,24 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                     className="cursor-pointer p-2"
                     onClick={() => openUrl(event.url)}
                   >
-                    <TextHover color="theme1Dark1" text={event.name} />
+                    <motion.div
+                      className="relative inline"
+                      whileHover="hover"
+                      initial="initial"
+                      variants={{
+                        initial: { color: "theme1Dark1" },
+                      }}
+                    >
+                      {event.name}
+                      <motion.div
+                        className={"absolute bottom-0 left-0 right-0 h-0.5 bg-theme1Dark1"}
+                        initial={{ scaleX: 0 }}
+                        variants={{
+                          hover: { scaleX: 1 },
+                        }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.div>
                   </div>
                 ))}
               </div>
@@ -85,7 +100,24 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                   className="cursor-pointer"
                   onClick={() => openUrl(event.url)}
                 >
-                  <TextHover color="theme1Dark1" text={event.name} />
+                  <motion.div
+                    className="relative inline"
+                    whileHover="hover"
+                    initial="initial"
+                    variants={{
+                      initial: { color: "theme1Dark1" },
+                    }}
+                  >
+                    {event.name}
+                    <motion.div
+                      className={"absolute bottom-0 left-0 right-0 h-0.5 bg-theme1Dark1"}
+                      initial={{ scaleX: 0 }}
+                      variants={{
+                        hover: { scaleX: 1 },
+                      }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.div>
                 </div>
               ))}
             </motion.div>
