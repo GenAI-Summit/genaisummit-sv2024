@@ -15,8 +15,6 @@ const SessionCard = ({ session, showDesc = false }) => {
     router.push(`/session/${session.id}`);
   };
 
-  console.log(session.start, formatToPTTime(session.start));
-
   return (
     <div className="w-full">
       <CardLayout bgColor="bg-theme1Dark3">
