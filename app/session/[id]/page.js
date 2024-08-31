@@ -1,8 +1,8 @@
-import SectionLayout from "../../Layouts/SectionLayout";
-import SessionCard from "../../Components/SessionCard";
-import GoBackController from "../../Components/Button/GoBackController";
-import { getSessionById } from "/lib/api";
-import SectionEnter from "../../Motions/SectionEnter";
+import SectionLayout from "@/layouts/SectionLayout";
+import SessionCard from "@/components/SessionCard";
+import GoBackController from "@/components/Button/GoBackController";
+import { getSessionById } from "@/lib/api";
+import SectionEnter from "@/motions/SectionEnter";
 
 const SessionPage = async ({ params }) => {
   const session = await getSessionData(params.id);

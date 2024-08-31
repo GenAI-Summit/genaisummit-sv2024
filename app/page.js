@@ -1,16 +1,16 @@
 import { Suspense } from "react";
-import Loader from "./Components/Loader";
-import Banner from "./Components/IndexSections/Banner";
-import FunFacts from "./Components/IndexSections/FunFacts";
-import IndexSpeakers from "./Components/IndexSections/IndexSpeakers";
-// import IndexSponsors from "./Components/IndexSections/IndexSponsors";
-import IndexMedia from "./Components/IndexSections/IndexMedia";
-import Attendees from "./Components/IndexSections/Attendees";
-import IndexExhibitors from "./Components/IndexSections/IndexExhibitors";
-import NewFeatures from "./Components/IndexSections/NewFeatures";
-import Tickets from "./Components/Tickets";
-import IndexIntro from "./Components/Intro/IndexIntro";
-import SectionEnter from "./Motions/SectionEnter";
+import Loader from "@/components/Loader";
+import Banner from "@/components/IndexSections/Banner";
+import FunFacts from "@/components/IndexSections/FunFacts";
+import IndexSpeakers from "@/components/IndexSections/IndexSpeakers";
+// import IndexSponsors from "@/Components/IndexSections/IndexSponsors";
+import IndexMedia from "@/components/IndexSections/IndexMedia";
+import Attendees from "@/components/IndexSections/Attendees";
+import IndexExhibitors from "@/components/IndexSections/IndexExhibitors";
+import NewFeatures from "@/components/IndexSections/NewFeatures";
+import Tickets from "@/components/Tickets";
+import IndexIntro from "@/components/Intro/IndexIntro";
+import SectionEnter from "@/motions/SectionEnter";
 
 // export const runtime = "edge";
 

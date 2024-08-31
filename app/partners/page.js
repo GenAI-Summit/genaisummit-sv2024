@@ -1,18 +1,18 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Loader from "../Components/Loader";
-import Error from "../Components/Error";
+import Loader from "@/components/Loader";
+import Error from "@/components/Error";
 // import Sponsors from "../Components/Sponsors";
-import Media from "../Components/Media";
-import SearchBar from "../Components/SearchBar";
-import Filter from "../Components/Filter";
-import ResetBtn from "../Components/Button/ResetBtn";
+import Media from "@/components/Media";
+import SearchBar from "@/components/SearchBar";
+import Filter from "@/components/Filter";
+import ResetBtn from "@/components/Button/ResetBtn";
 // import useExhibitors from "../Hooks/useExhibitors";
-import useMedia from "../Hooks/useMedia";
-import useExhibitorsIndex from "../Hooks/useExhibitorsIndex";
-import PartnersIntro from "../Components/Intro/PartnersIntro";
-import SectionEnter from "../Motions/SectionEnter";
+import useMedia from "@/hooks/useMedia";
+import useExhibitorsIndex from "@/hooks/useExhibitorsIndex";
+import PartnersIntro from "@/components/Intro/PartnersIntro";
+import SectionEnter from "@/motions/SectionEnter";
 
 const PartnersPage = () => {
   //const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();

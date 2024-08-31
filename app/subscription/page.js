@@ -2,9 +2,9 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
-import CardLayout from "../Layouts/CardLayout";
-import SectionEnter from "../Motions/SectionEnter";
-import SectionLayout from "../Layouts/SectionLayout";
+import CardLayout from "@/layouts/CardLayout";
+import SectionEnter from "@/motions/SectionEnter";
+import SectionLayout from "@/layouts/SectionLayout";
 
 const CTCT_SCRIPT_SRC =
   "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";

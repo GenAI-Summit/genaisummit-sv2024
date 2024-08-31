@@ -1,0 +1,38 @@
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
+import Intro from "@/components/Intro/Intro";
+import TicketBtn from "@/components/Button/TicketBtn";
+
+const IndexIntro = () => {
+  const title = "Define the Future";
+  const paragraphs = [
+    "Join us in exploring the future possibilities at the GenAI Summit Silicon Valley 2024. This large-scale Generative AI conference will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center. The event is hosted by GPT DAO, the largest GenAI event brand in the world.",
+    "We are at the forefront of a new AGI wave. With over 10,000 total attendees, 150 speakers, 500 startups, 1,000 founders/CEOs, 20 international media outlets, and more than 2,000 developers, the summit brings together the world's most cutting-edge entrepreneurial teams, corp decision makers, and investment institutions to jointly explore the future of this field.",
+  ];
+  const images = [
+    "/images/propaganda/index_intro1.webp",
+    "/images/propaganda/index_intro2.webp",
+    "/images/propaganda/index_intro3.webp",
+    "/images/propaganda/index_intro4.webp",
+    "/images/propaganda/index_intro5.webp",
+  ];
+  return (
+    <Intro
+      title={title}
+      paragraphs={paragraphs}
+      images={images}
+      widget={
+        <Suspense fallback={<Loader />}>
+          <TicketBtn
+            mode="night"
+            url="/tickets"
+            evt="Index Intro Ticket Button"
+          />
+        </Suspense>
+      }
+      imgAspect="aspect-[16/9]"
+    />
+  );
+};
+
+export default IndexIntro;

@@ -1,9 +1,9 @@
-import OrganizationDetail from "../../Components/OrganizationDetail";
-import GoBackController from "../../Components/Button/GoBackController";
-import { getOrganizationById } from "/lib/api";
-import SectionLayout from "../../Layouts/SectionLayout";
-import CardLayout from "../../Layouts/CardLayout";
-import SectionEnter from "../../Motions/SectionEnter";
+import OrganizationDetail from "@/components/OrganizationDetail";
+import GoBackController from "@/components/Button/GoBackController";
+import { getOrganizationById } from "@/lib/api";
+import SectionLayout from "@/layouts/SectionLayout";
+import CardLayout from "@/layouts/CardLayout";
+import SectionEnter from "@/motions/SectionEnter";
 
 const SponsorPage = async ({ params }) => {
   const organization = await getOrganizationData(params.id);

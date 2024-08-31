@@ -1,16 +1,16 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import Loader from "../Components/Loader";
-import Error from "../Components/Error";
-import SearchBar from "../Components/SearchBar";
-import Filter from "../Components/Filter";
-import ResetBtn from "../Components/Button/ResetBtn";
-import Agenda from "../Components/Agenda";
-import useSessions from "../Hooks/useSessions";
-import useSessionsIndex from "../Hooks/useSessionsIndex";
-import useDates from "../Hooks/useDates";
-import SectionEnter from "../Motions/SectionEnter";
+import Loader from "@/components/Loader";
+import Error from "@/components/Error";
+import SearchBar from "@/components/SearchBar";
+import Filter from "@/components/Filter";
+import ResetBtn from "@/components/Button/ResetBtn";
+import Agenda from "@/components/Agenda";
+import useSessions from "@/hooks/useSessions";
+import useSessionsIndex from "@/hooks/useSessionsIndex";
+import useDates from "@/hooks/useDates";
+import SectionEnter from "@/motions/SectionEnter";
 import { PTtoUTC, formatToPTDate } from "@/lib/time";
 
 const AgendaPage = () => {
