@@ -36,7 +36,7 @@ const NavBarItems = ({
           onClick={close}
           key={index}
         >
-          <TextHover color="theme1Dark1">{item.name}</TextHover>
+          <TextHover color="theme1Dark1" text={item.name} />
         </Link>
       ))}
       <PrevEvents

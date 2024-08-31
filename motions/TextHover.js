@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-const TextHover = ({ children, color }) => {
+const TextHover = ({ text, color }) => {
   return (
     <motion.div
       className="relative inline"
@@ -12,7 +12,7 @@ const TextHover = ({ children, color }) => {
         initial: { color },
       }}
     >
-      {children}
+      {text}
       <motion.div
         className={`absolute bottom-0 left-0 right-0 h-0.5 bg-${color}`}
         initial={{ scaleX: 0 }}
