@@ -30,17 +30,21 @@ const SessionCard = ({ session, showDesc = false }) => {
             </span>
           </div>
           <p className="mb-4">
-            {session.start.toLocaleTimeString([], {
+            {session.start.toLocaleTimeString("en-US", {
+              timeZone: "America/Los_Angeles",
               hour: "2-digit",
               minute: "2-digit",
             })}{" "}
             {" - "}
-            {session.end.toLocaleTimeString([], {
+            {session.end.toLocaleTimeString("en-US", {
+              timeZone: "America/Los_Angeles",
               hour: "2-digit",
               minute: "2-digit",
             })}
             {" | "}
-            {session.start.toLocaleDateString()}
+            {session.start.toLocaleDateString("en-US", {
+              timeZone: "America/Los_Angeles",
+            })}
           </p>
           <p className="mb-4">{session.location}</p>
           {session.moderators.length > 0 && (

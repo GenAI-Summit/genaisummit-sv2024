@@ -9,8 +9,8 @@ const useDates = () => {
   );
 
   const dates = data?.data.map((date) =>
-    new Date(`${date}T00:00:00Z`).toLocaleDateString("en-US", {
-      timeZone: "UTC",
+    new Date(`${date}T00:00:00`).toLocaleDateString("en-US", {
+      timeZone: "America/Los_Angeles",
     }),
   );
 

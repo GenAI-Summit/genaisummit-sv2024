@@ -4,8 +4,6 @@ import GoBackController from "../../Components/Button/GoBackController";
 import { getSessionById } from "/lib/api";
 import SectionEnter from "../../Motions/SectionEnter";
 
-// export const runtime = "edge";
-
 const SessionPage = async ({ params }) => {
   const session = await getSessionData(params.id);
   return (
