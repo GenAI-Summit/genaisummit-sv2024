@@ -51,7 +51,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                     className="cursor-pointer p-2"
                     onClick={() => openUrl(event.url)}
                   >
-                    <TextHover color="theme1Dark1">{event.name}</TextHover>
+                    <TextHover color="theme1Dark1" text={event.name} />
                   </div>
                 ))}
               </div>
@@ -85,7 +85,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                   className="cursor-pointer"
                   onClick={() => openUrl(event.url)}
                 >
-                  <TextHover color="theme1Dark1">{event.name}</TextHover>
+                  <TextHover color="theme1Dark1" text={event.name} />
                 </div>
               ))}
             </motion.div>

@@ -41,16 +41,14 @@ const OrganizationCard = ({ organization }) => {
               className="cursor-pointer mt-2 text-left font-medium"
               onClick={() => openUrl(organization.url)}
             >
-              <TextHover color="theme1Light1">Official Website</TextHover>
+              <TextHover text="Official Website" color="theme1Light1" />
             </div>
           )}
           <div
             className="cursor-pointer mt-2 text-left font-medium"
             onClick={onOrganizationDetail}
           >
-            <TextHover color="theme1Light1">
-              About {organization.name}
-            </TextHover>
+            <TextHover text={`About ${organization.name}`} color="theme1Light1" />
           </div>
         </div>
       </Drawer>
