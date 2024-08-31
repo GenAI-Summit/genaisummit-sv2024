@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import { PTtoUTC } from "@/lib/time";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -8,13 +9,12 @@ const useSessions = () => {
     fetcher,
   );
 
-  console.log(data);
   const sessions = data?.data.map((session) => ({
     id: session.id,
     name: session.name,
     desc: session.desc,
-    start: new Date(session.start),
-    end: new Date(session.end),
+    start: PTtoUTC(session.start),
+    end: PTtoUTC(session.end),
     speakers: session.speakers.filter(
       (speaker) => speaker.session_role === "speaker",
     ),
@@ -25,7 +25,6 @@ const useSessions = () => {
     tracks: session.tracks,
     location: session.location,
   }));
-  console.log(sessions);
 
   return {
     sessions,

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import CalendarBtnDialog from "./CalendarBtnDialog";
 import { motion, AnimatePresence } from "framer-motion";
+import { PTtoUTC } from "@/lib/time";
 // import Triangle from "../SVG/Triangle";
 
 import { createEvent } from "ics";
@@ -36,8 +37,8 @@ const AddToCalendarBtn = ({
   };
 
   const onAddToGoogleCalendar = () => {
-    const startDateObj = new Date(startDate);
-    const endDateObj = new Date(endDate);
+    const startDateObj = PTtoUTC(startDate);
+    const endDateObj = PTtoUTC(endDate);
     const eventTitle = encodeURIComponent(title);
     const eventDetails = encodeURIComponent(details);
     const eventLocation = encodeURIComponent(location);
@@ -48,8 +49,8 @@ const AddToCalendarBtn = ({
   };
 
   const onDownloadICS = () => {
-    const startDateObj = new Date(startDate);
-    const endDateObj = new Date(endDate);
+    const startDateObj = PTtoUTC(startDate);
+    const endDateObj = PTtoUTC(endDate);
     const event = {
       start: [
         startDateObj.getFullYear(),
