@@ -5,9 +5,9 @@ const tickets = [
   {
     id: 1,
     name: "One-Day Pass",
-    price: 99.0,
+    price: 119.0,
     originalPrice: 129.0,
-    saveText: "Save $30 until Sept 1",
+    saveText: "Save $30 until Sept 14",
     platforms: [
       {
         name: "Whova",
@@ -32,9 +32,9 @@ const tickets = [
   {
     id: 2,
     name: "Three-Day Pass",
-    price: 149.0,
+    price: 169.0,
     originalPrice: 199.0,
-    saveText: "Save $50 until Sept 1",
+    saveText: "Save $50 until Sept 14",
     platforms: [
       {
         name: "Whova",
@@ -61,7 +61,7 @@ const tickets = [
     name: "Student Pass",
     price: 99.0,
     originalPrice: 149.0,
-    saveText: "Save $50 until Sept 1",
+    saveText: "",
     platforms: [
       {
         name: "Whova (Student Pass)",
@@ -88,7 +88,7 @@ const tickets = [
     name: "VIP Pass",
     price: 1099.0,
     originalPrice: 1499.0,
-    saveText: "Save $400 until Sept 1",
+    saveText: "",
     platforms: [
       {
         name: "Whova",
@@ -115,7 +115,7 @@ const tickets = [
     name: "Booth Area A",
     price: 3999.0,
     originalPrice: 5999.0,
-    saveText: "Save $2000 until Sept 1",
+    saveText: "",
     platforms: [
       {
         name: "Whova (Exhibitor)",
@@ -164,7 +164,7 @@ const tickets = [
     name: "Booth Area B",
     price: 1999.0,
     originalPrice: 2999.0,
-    saveText: "Save $1000 until Sept 1",
+    saveText: "",
     platforms: [
       {
         name: "Whova (Exhibitor)",
