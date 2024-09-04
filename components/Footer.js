@@ -25,6 +25,10 @@ const Footer = () => {
       name: "instagram",
       link: "https://www.instagram.com/genaisummit.xyz",
     },
+    {
+      name: "discord",
+      link: "https://discord.gg/eaMuvHKFZW",
+    },
   ];
   const quickLinks = [
     {
@@ -122,6 +126,8 @@ const Footer = () => {
               <Link href={item.link} target="_blank" key={item.name}>
                 <Icon
                   className="icon"
+                  width={28}
+                  height={28}
                   src={`/images/icons/${item.name}.svg`}
                   alt={item.name}
                 />
