@@ -23,18 +23,10 @@ const Index = () => {
           <IndexIntro />
         </SectionEnter>
       </div>
-      <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-40 px-5">
-        <SectionEnter>
-          <NewFeatures />
-        </SectionEnter>
-      </div>
       <SectionEnter>
         <FunFacts />
       </SectionEnter>
       <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-40 px-5">
-        <SectionEnter>
-          <IndexMedia />
-        </SectionEnter>
         <SectionEnter>
           <Suspense fallback={<Loader />}>
             <IndexSpeakers />
@@ -50,6 +42,12 @@ const Index = () => {
         </SectionEnter>
         <SectionEnter>
           <Tickets />
+        </SectionEnter>
+        <SectionEnter>
+          <NewFeatures />
+        </SectionEnter>
+        <SectionEnter>
+          <IndexMedia />
         </SectionEnter>
       </div>
     </div>
