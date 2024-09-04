@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ShareBar from "@/components/ShareBar";
 import FloatFooter from "@/components/FloatFooter";
 import Loader from "@/components/Loader";
+import ChatBot from "@/components/ChatBot/ChatBot";
 import "@/styles/globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -78,6 +79,9 @@ const RootLayout = ({ children }) => {
               <ShareBar />
             </Suspense>
           </div>
+          <Suspense fallback={<Loader />}>
+            <ChatBot />
+          </Suspense>
           <Suspense fallback={<Loader />}>
             <FloatFooter />
           </Suspense>
