@@ -14,7 +14,7 @@ const newFeatures = [
   {
     title: "Event App",
     description:
-      "Join the event with the Whova mobile app, featuring automatically updated agendas, speaker info, guidelines/maps, and the latest news.",
+      "Join the event with the Whova mobile app, featuring automatically updated agendas, speaker info, maps, and the latest news.",
     image: "/images/features/feature2.png",
   },
   {
