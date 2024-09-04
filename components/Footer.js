@@ -49,9 +49,9 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="flex flex-col bg-theme1Dark2 text-theme1Light1 border-t border-theme1Light1">
-      <div className="flex p-7 justify-between flex-wrap items-start gap-y-10">
-        <div className="w-full md:w-[30%] flex flex-row md:flex-col justify-around md:justify-between md:gap-y-8 items-center mt-5">
+    <div className="flex flex-col bg-theme1Dark2 text-theme1Light1 border-t border-theme1Light1 items-center justify-center">
+      <div className="max-w-maxWidth flex p-7 justify-between flex-wrap items-start gap-y-10">
+        <div className="w-full lg:w-[15%] flex flex-row lg:flex-col justify-around lg:justify-between lg:gap-y-8 items-center mt-5">
           <Link href="https://gptdao.ai" className="w-fit" target="_blank">
             <Icon
               className="icon"
@@ -75,8 +75,8 @@ const Footer = () => {
             />
           </Link>
         </div>
-        <div className="w-2/5 md:w-[20%] flex flex-col justify-center mt-5 gap-y-6">
-          <div className="text-lg md:text-xl font-bold">
+        <div className="w-2/5 lg:w-[20%] flex flex-col justify-center mt-5 gap-y-6">
+          <div className="text-lg lg:text-xl font-bold">
             <span className={textEffect}>Summit Info</span>
           </div>
           <div>Nov 1 - Nov 3, 2024</div>
@@ -100,8 +100,8 @@ const Footer = () => {
             </Link>
           </span>
         </div>
-        <div className="w-2/5 md:w-[15%] flex flex-col justify-center mt-5 gap-y-6">
-          <div className="text-lg md:text-xl font-bold">
+        <div className="w-2/5 lg:w-[15%] flex flex-col justify-center mt-5 gap-y-6">
+          <div className="text-lg lg:text-xl font-bold">
             <span className={textEffect}>Quick Links</span>
           </div>
           {quickLinks.map((item) => (
@@ -112,8 +112,8 @@ const Footer = () => {
             </span>
           ))}
         </div>
-        <div className="w-full md:w-[35%] flex flex-col justify-center mt-5 gap-y-6">
-          <div className="text-lg md:text-xl font-bold">
+        <div className="w-full lg:w-[35%] flex flex-col justify-center mt-5 gap-y-6">
+          <div className="text-lg lg:text-xl font-bold">
             <span className={textEffect}>Stay Connected</span>
           </div>
           <span className="text-base mb-2 leading-8">
@@ -136,23 +136,25 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col justify-center md:flex-row md:justify-between p-5 border-t border-theme1Light1">
-        <div className="text-sm">
-          <span className="text-sm">
-            <Link href="/privacy" className={hoverEffect}>
+      <div className="w-full border-t border-theme1Light1 flex flex-col justify-center items-center">
+        <div className="w-full h-full max-w-maxWidth flex flex-col justify-center items-center lg:flex-row lg:justify-between p-5 gap-y-5">
+          <div className="text-sm">
+            <span className="text-sm">
+              <Link href="/privacy" className={hoverEffect}>
               Privacy Policy
-            </Link>
-          </span>
-          <span className="text-sm"> | </span>
-          <span className="text-sm">
-            <Link href="/terms" className={hoverEffect}>
+              </Link>
+            </span>
+            <span className="text-sm"> | </span>
+            <span className="text-sm">
+              <Link href="/terms" className={hoverEffect}>
               Terms of Service
-            </Link>
+              </Link>
+            </span>
+          </div>
+          <span className="text-sm">
+          Copyright 2024 GPTDAO. All rights reserved
           </span>
         </div>
-        <span className="text-sm">
-          Copyright 2024 GPTDAO. All rights reserved
-        </span>
       </div>
     </div>
   );
