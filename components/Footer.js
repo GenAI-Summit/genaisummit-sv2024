@@ -93,7 +93,7 @@ const Footer = () => {
           <span>
             <Link
               className={hoverEffect}
-              href="https://linktr.ee/gptdao"
+              href="https://form.gptdao.ai/contact"
               target="_blank"
             >
               Contact us

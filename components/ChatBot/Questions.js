@@ -6,7 +6,7 @@ const Questions = () => {
     {
       id: 1,
       text: "I want to show my product at the event.",
-      url: "https://tally.so/r/nPl9xe",
+      url: "https://form.gptdao.ai/role",
     },
     {
       id: 2,
