@@ -18,7 +18,7 @@ const ChatBotDialog = ({ isOpen, onClose }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bottom-0 right-0 m-4 z-50 w-96 h-[32rem]"
+          className="fixed bottom-0 right-0 m-4 z-50 w-80 h-[32rem]"
           initial={{ opacity: 0, y: 50, scale: 0.9 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 50, scale: 0.9 }}
@@ -40,10 +40,10 @@ const ChatBotDialog = ({ isOpen, onClose }) => {
               <Questions />
             </div>
 
-            <div className="cursor-pointer bg-discord text-white p-4 flex justify-center items-center gap-4" onClick={openDiscord}>
+            <div className="cursor-pointer bg-discord text-white p-2 flex justify-center items-center gap-4" onClick={openDiscord}>
               <Image src="/images/icons/discord.svg" alt="Discord" width={50} height={50} />
               <div className="w-full px-3 py-2 bg-theme1Light1 rounded-lg text-theme1Dark1">
-                Chat with AI bot on Discord!
+                Chat on Discord!
               </div>
             </div>
           </div>
