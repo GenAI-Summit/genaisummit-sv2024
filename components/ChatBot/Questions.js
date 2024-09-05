@@ -5,7 +5,7 @@ const Questions = () => {
   const questions = [
     {
       id: 1,
-      text: "I want to show my product at the event.",
+      text: "I want to showcase my products.",
       url: "https://form.gptdao.ai/role",
     },
     {
