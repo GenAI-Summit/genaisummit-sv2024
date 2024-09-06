@@ -4,9 +4,9 @@ import Navbar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ShareBar from "@/components/ShareBar";
-import FloatFooter from "@/components/FloatFooter";
+// import FloatFooter from "@/components/FloatFooter";
 import Loader from "@/components/Loader";
-import ChatBot from "@/components/ChatBot/ChatBot";
+// import ChatBot from "@/components/ChatBot/ChatBot";
 import "@/styles/globals.css";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -79,12 +79,6 @@ const RootLayout = ({ children }) => {
               <ShareBar />
             </Suspense>
           </div>
-          <Suspense fallback={<Loader />}>
-            <ChatBot />
-          </Suspense>
-          <Suspense fallback={<Loader />}>
-            <FloatFooter />
-          </Suspense>
         </div>
         <Suspense fallback={<Loader />}>
           <Footer />
@@ -93,10 +87,23 @@ const RootLayout = ({ children }) => {
           <ScrollToTop />
         </Suspense>
         <Script
+          src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/oversea/index.js"
           strategy="lazyOnload"
-          src="https://apis.google.com/js/api.js"
-          type="text/javascript"
         />
+        <Script id="coze-init" strategy="lazyOnload">
+          {`
+            if (typeof window !== 'undefined' && window.CozeWebSDK) {
+              new window.CozeWebSDK.WebChatClient({
+                config: {
+                  bot_id: '7408265523265929221',
+                },
+                componentProps: {
+                  title: 'Coze',
+                },
+              });
+            }
+          `}
+        </Script>
       </body>
       <GoogleAnalytics gaId="G-6ETB3L7DWM" />
     </html>
