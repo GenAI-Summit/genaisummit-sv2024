@@ -68,8 +68,8 @@ const RootLayout = ({ children }) => {
         />
       </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={inter.className}>
-        <div className="pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
+      <body className={`${inter.className} flex flex-col min-h-screen`}>
+        <div className="flex-grow pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
           <Suspense fallback={<Loader />}>
             <Navbar />
           </Suspense>
@@ -104,11 +104,3 @@ const RootLayout = ({ children }) => {
 };
 
 export default RootLayout;
-
-/*
-        <script
-          defer
-          src="https://cloud.umami.is/script.js"
-          data-website-id="f606f641-956b-45db-ad03-4f4c2aa2179c"
-        ></script>
-        */
