@@ -88,9 +88,9 @@ const RootLayout = ({ children }) => {
         </Suspense>
         <Script
           src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/oversea/index.js"
-          strategy="lazyOnload"
+          strategy="beforeInteractive"
         />
-        <Script id="coze-init" strategy="lazyOnload">
+        <Script id="coze-init" strategy="afterInteractive">
           {`
             if (typeof window !== 'undefined' && window.CozeWebSDK) {
               new window.CozeWebSDK.WebChatClient({
