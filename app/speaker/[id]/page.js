@@ -7,9 +7,12 @@ import CardLayout from "@/layouts/CardLayout";
 import { getSpeakerById, getSessionsBySpeaker } from "@/lib/api";
 import SectionEnter from "@/motions/SectionEnter";
 
+export const revalidate = 60;
+export const dynamicParams = true;
+
 const SpeakerPage = async ({ params }) => {
-  const speaker = await getSpeakerData(params.id);
-  const sessions = await getSessionsData(speaker.name);
+  let speaker = await getSpeakerData(params.id);
+  let sessions = await getSessionsData(speaker.name);
   return (
     <div className="w-full mt-10">
       <SectionEnter>
@@ -39,8 +42,8 @@ const SpeakerPage = async ({ params }) => {
 };
 
 export const generateMetadata = async ({ params }) => {
-  const speaker = await getSpeakerData(params.id);
-  const bio = speaker.bio.split(". ")[0] + ".";
+  let speaker = await getSpeakerData(params.id);
+  let bio = speaker.bio.split(". ")[0] + ".";
   return {
     title: `${speaker.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
     description: bio,
@@ -59,12 +62,12 @@ export const generateMetadata = async ({ params }) => {
 };
 
 const getSpeakerData = async (id) => {
-  const speaker = await getSpeakerById(id);
+  let speaker = await getSpeakerById(id);
   return speaker;
 };
 
 const getSessionsData = async (name) => {
-  const sessions = await getSessionsBySpeaker(name);
+  let sessions = await getSessionsBySpeaker(name);
   return sessions;
 };
 

@@ -4,8 +4,11 @@ import GoBackController from "@/components/Button/GoBackController";
 import { getSessionById } from "@/lib/api";
 import SectionEnter from "@/motions/SectionEnter";
 
+export const revalidate = 60;
+export const dynamicParams = true;
+
 const SessionPage = async ({ params }) => {
-  const session = await getSessionData(params.id);
+  let session = await getSessionData(params.id);
   return (
     <div className="w-full mt-10">
       <SectionEnter>
@@ -20,8 +23,8 @@ const SessionPage = async ({ params }) => {
 };
 
 export const generateMetadata = async ({ params }) => {
-  const session = await getSessionData(params.id);
-  const desc = session.desc.split(". ")[0] + ".";
+  let session = await getSessionData(params.id);
+  let desc = session.desc.split(". ")[0] + ".";
   return {
     title: `${session.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
     desc,
@@ -41,7 +44,7 @@ export const generateMetadata = async ({ params }) => {
 };
 
 const getSessionData = async (id) => {
-  const session = await getSessionById(id);
+  let session = await getSessionById(id);
   return session;
 };
 

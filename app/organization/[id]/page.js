@@ -5,8 +5,11 @@ import SectionLayout from "@/layouts/SectionLayout";
 import CardLayout from "@/layouts/CardLayout";
 import SectionEnter from "@/motions/SectionEnter";
 
+export const revalidate = 60;
+export const dynamicParams = true;
+
 const SponsorPage = async ({ params }) => {
-  const organization = await getOrganizationData(params.id);
+  let organization = await getOrganizationData(params.id);
   return (
     <SectionEnter>
       <div className="w-full mt-10">
@@ -23,8 +26,8 @@ const SponsorPage = async ({ params }) => {
 };
 
 export const generateMetadata = async ({ params }) => {
-  const organization = await getOrganizationData(params.id);
-  const desc = organization.desc.split(". ")[0] + ".";
+  let organization = await getOrganizationData(params.id);
+  let desc = organization.desc.split(". ")[0] + ".";
   return {
     title: `${organization.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
     description: desc,
@@ -41,7 +44,7 @@ export const generateMetadata = async ({ params }) => {
 };
 
 const getOrganizationData = async (id) => {
-  const orgnization = await getOrganizationById(id);
+  let orgnization = await getOrganizationById(id);
   return orgnization;
 };
 
