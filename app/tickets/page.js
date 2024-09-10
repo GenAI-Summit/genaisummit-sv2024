@@ -1,6 +1,6 @@
 import SectionEnter from "@/motions/SectionEnter";
-import GoBackController from "@/components/Button/GoBackController";
 import Tickets from "@/components/Tickets";
+import GoBackController from "@/components/Button/GoBackController";
 
 const SubscribePage = () => {
   return (
