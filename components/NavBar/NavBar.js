@@ -46,8 +46,13 @@ const NavBar = () => {
   };
 
   const onClickLogo = () => {
-    console.log("Clicked on logo");
     router.push("/");
+    closeDrawer();
+  };
+
+  const onClickTicket = () => {
+    closeDrawer();
+    console.log("Clicked on ticket");
   };
 
   return (
@@ -86,13 +91,15 @@ const NavBar = () => {
               height="30"
             />
           </div>
-          <TicketBtn
-            width="w-48"
-            fill={true}
-            mode="black"
-            url="/tickets"
-            evt="Mobile NavBar Ticket Button"
-          />
+          <div onClick={onClickTicket}>
+            <TicketBtn
+              width="w-48"
+              fill={true}
+              mode="black"
+              url="/tickets"
+              evt="Mobile NavBar Ticket Button"
+            />
+          </div>
           <button onClick={handleDrawer}>
             <Burger isOpen={isMenuOpen} />
           </button>
