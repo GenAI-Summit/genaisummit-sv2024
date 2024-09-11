@@ -9,6 +9,7 @@ import School from "@/components/SVG/School";
 import { FirstName, LastName } from "@/components/SVG/Name";
 
 const Student = ({ widget }) => {
+  const [sent, setSent] = useState(false);
   const [email, setEmail] = useState("");
   const [school, setSchool] = useState("");
   const [firstname, setFirstname] = useState("");
@@ -32,13 +33,14 @@ const Student = ({ widget }) => {
 
   const checkEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    const eduRegex = /\.edu$/;
+    return emailRegex.test(email) && eduRegex.test(email);
   };
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (!checkEmail(email)) {
-      alert("Invalid email address");
+      alert("Please enter a valid .edu email address");
       return;
     }
     if (!school) {
@@ -53,7 +55,24 @@ const Student = ({ widget }) => {
       alert("Last name is required");
       return;
     }
-    console.log(email, school, firstname, lastname);
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/student/start`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ 
+        email, 
+        school_name: school,
+        first_name: firstname,
+        last_name: lastname,
+      }),
+    });
+
+    if (res.ok) {
+      setSent(true);
+      return;
+    }
   };
 
   return (
@@ -114,7 +133,13 @@ const Student = ({ widget }) => {
               />
             </div>
             <div className="flex items-center justify-center">
-              <EduSummit onSubmit={onSubmit} />
+              {sent ? (
+                <div className="text-theme1Light1">
+                  Please check your email for the verification link
+                </div>
+              ) : (
+                <EduSummit onSubmit={onSubmit} />
+              )}
             </div>
           </div>
         </CardLayout>
