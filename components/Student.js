@@ -73,6 +73,8 @@ const Student = ({ widget }) => {
       setSent(true);
       return;
     }
+
+    alert("Please try again later.");
   };
 
   return (
