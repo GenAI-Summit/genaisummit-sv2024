@@ -12,6 +12,8 @@ import Tickets from "@/components/Tickets";
 import IndexIntro from "@/components/Intro/IndexIntro";
 import SectionEnter from "@/motions/SectionEnter";
 
+export const revalidate = 60;
+
 const Index = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-16">
