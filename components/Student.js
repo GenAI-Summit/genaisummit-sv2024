@@ -74,7 +74,8 @@ const Student = ({ widget }) => {
       return;
     }
 
-    alert("Please try again later.");
+    const data = await res.json();
+    alert(data.detail);
   };
 
   return (
