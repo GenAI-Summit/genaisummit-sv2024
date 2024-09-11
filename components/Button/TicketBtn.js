@@ -72,7 +72,7 @@ const TicketBtn = ({
             <div className="flex flex-col items-start justify-center space-y-4">
               {student && (
                 <div className="mt-4">
-                  <p className="text-left text-lg text-theme1Light1">
+                  <p className="text-left text-base md:text-lg text-theme1Light1">
                     <span className="font-bold">Note: </span>
                     <span>To get student discount, you need to </span>
                     <span

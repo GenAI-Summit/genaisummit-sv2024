@@ -93,7 +93,6 @@ const Student = ({ widget }) => {
       return;
     }
 
-    console.log(res);
     const data = await res.json();
     setMessage(data.detail);
   };
