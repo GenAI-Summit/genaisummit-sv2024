@@ -45,7 +45,7 @@ const IndexExhibitors = async () => {
 };
 
 const getExhibitiorsData = async () => {
-  const exhibitors = await getHomeExhibitors();
+  let exhibitors = await getHomeExhibitors();
   return exhibitors;
 };
 
