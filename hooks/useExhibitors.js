@@ -10,7 +10,19 @@ const useExhibitors = () => {
     fetcher,
   );
 
-  const exhibitors = data?.data;
+  const {
+    data: data2,
+    isLoading: isLoading2,
+    error: error2,
+  } = useSWR(
+    "https://api.gptdao.ai/rank/tag?tag_name=hide&type_name=exhibitor",
+    fetcher,
+  );
+
+  const hideExhibitors = data2?.data || [];
+  const exhibitors =
+    data?.data.filter((exhibitor) => !hideExhibitors.includes(exhibitor.id)) ||
+    [];
 
   const sponsors = exhibitors?.filter((exhibitor) =>
     sponsorTiers.includes(exhibitor.tier),
@@ -20,8 +32,8 @@ const useExhibitors = () => {
     exhibitors,
     sponsors,
     sponsorTiers,
-    isLoading,
-    isError: error,
+    isLoading: isLoading || isLoading2,
+    isError: error || error2,
   };
 };
 

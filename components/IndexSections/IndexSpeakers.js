@@ -1,30 +1,18 @@
-"use client";
-
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import SectionLayout from "@/layouts/SectionLayout";
 import SpeakerCard from "@/components/SpeakerCard";
 import ShowMore from "@/components/Button/ShowMore";
 import RegisterBtn from "@/components/Button/RegisterBtn";
-import useHomeSpeakers from "@/hooks/useHomeSpeakers";
-import Error from "@/components/Error";
-//import { getIndexSpeakers } from "@/lib/api";
+import { getHomeSpeakers } from "@/lib/api";
 
 import styles from "@/styles/border.module.css";
 
-const IndexSpeakers = () => {
-  const { homeSpeakers, isLoading, isError } = useHomeSpeakers();
+export const revalidate = 60;
+export const dynamicParams = true;
 
-  if (isLoading) {
-    return <Loader />;
-  }
-  if (isError) {
-    return <Error />;
-  }
-
-  if (!homeSpeakers) {
-    return null;
-  }
+const IndexSpeakers = async () => {
+  let homeSpeakers = await getSpeakersData();
 
   return (
     <>
@@ -70,11 +58,9 @@ const IndexSpeakers = () => {
   );
 };
 
-/*
 const getSpeakersData = async () => {
-  const speakers = await getIndexSpeakers();
+  let speakers = await getHomeSpeakers();
   return speakers;
 };
-*/
 
 export default IndexSpeakers;
