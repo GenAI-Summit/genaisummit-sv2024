@@ -62,21 +62,12 @@ const tickets = [
     price: 99.0,
     originalPrice: 149.0,
     saveText: "",
+    student: true,
     platforms: [
       {
         name: "Whova (Student Pass)",
         url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
         logo: "/images/icons/whova.png",
-      },
-      {
-        name: "Eventbrite",
-        url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
-        logo: "/images/icons/eventbrite.png",
-      },
-      {
-        name: "Luma",
-        url: "https://lu.ma/sc9tn1yv",
-        logo: "/images/icons/luma.png",
       },
     ],
     description: [
