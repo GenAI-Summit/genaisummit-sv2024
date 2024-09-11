@@ -56,7 +56,7 @@ const Student = ({ widget }) => {
       return;
     }
 
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/student/start`, {
+    const res = await fetch("https://api.gptdao.ai/student/start", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
