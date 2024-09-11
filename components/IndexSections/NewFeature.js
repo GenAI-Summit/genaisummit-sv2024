@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-// { title, description, image }
 const NewFeature = ({ feature, index }) => {
   return (
     <div
