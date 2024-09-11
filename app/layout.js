@@ -66,6 +66,10 @@ const RootLayout = ({ children }) => {
           src="https://hello.gptdao.ai/script.js"
           data-website-id="abca0cd7-fb79-4c0e-aae6-48ed09441129"
         />
+        <Script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          strategy="lazyOnload"
+        />
       </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className} flex flex-col min-h-screen`}>

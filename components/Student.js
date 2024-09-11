@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SectionLayout from "@/layouts/SectionLayout";
 import CardLayout from "@/layouts/CardLayout";
 import EduSummit from "@/components/Button/EduSummit";
@@ -14,6 +14,18 @@ const Student = ({ widget }) => {
   const [school, setSchool] = useState("");
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
+  const [message, setMessage] = useState("");
+  const [cooldown, setCooldown] = useState(0);
+
+  useEffect(() => {
+    let timer;
+    if (cooldown > 0) {
+      timer = setInterval(() => {
+        setCooldown((prevCooldown) => prevCooldown - 1);
+      }, 1000);
+    }
+    return () => clearInterval(timer);
+  }, [cooldown]);
 
   const onChangeEmail = (e) => {
     setEmail(e.target.value);
@@ -33,26 +45,31 @@ const Student = ({ widget }) => {
 
   const checkEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const eduRegex = /\.edu$/;
-    return emailRegex.test(email) && eduRegex.test(email);
+    // const eduRegex = /\.edu$/;
+    return emailRegex.test(email);
+    // return emailRegex.test(email) && eduRegex.test(email);
   };
 
   const onSubmit = async (e) => {
     e.preventDefault();
+    if (cooldown > 0) {
+      setMessage(`Please wait ${cooldown} seconds before resending.`);
+      return;
+    }
     if (!checkEmail(email)) {
-      alert("Please enter a valid .edu email address");
+      setMessage("Please enter a valid .edu email address");
       return;
     }
     if (!school) {
-      alert("School is required");
+      setMessage("School is required");
       return;
     }
     if (!firstname) {
-      alert("First name is required");
+      setMessage("First name is required");
       return;
     }
     if (!lastname) {
-      alert("Last name is required");
+      setMessage("Last name is required");
       return;
     }
 
@@ -71,18 +88,21 @@ const Student = ({ widget }) => {
 
     if (res.ok) {
       setSent(true);
+      setCooldown(120);
+      setMessage("");
       return;
     }
 
+    console.log(res);
     const data = await res.json();
-    alert(data.detail);
+    setMessage(data.detail);
   };
 
   return (
     <SectionLayout title="Student Verification" widget={widget}>
       <div className="w-full md:w-1/2 max-w-lg mt-8 md:mt-10 text-theme1Light1">
         <CardLayout bgColor="bg-theme1Dark2">
-          <div className="flex flex-col gap-6 p-4">
+          <div className="flex flex-col gap-6 p-4 items-center justify-center">
             <div className="w-full flex rounded-full shadow-lg bg-theme1Dark2 p-1 text-themeLight1 border border-theme1Light1">
               <div className="flex p-1 justify-center items-center rounded-full">
                 <Email />
@@ -135,13 +155,20 @@ const Student = ({ widget }) => {
                 value={lastname}
               />
             </div>
-            <div className="flex items-center justify-center">
+            {message && <div className="text-red-500">{message}</div>}
+            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAjqeWurwPyWFCp7"></div>
+            <div className="flex flex-col items-center justify-center gap-4">
               {sent ? (
-                <div className="text-theme1Light1">
-                  Please check your email for the verification link
-                </div>
+                <>
+                  <div className="text-theme1Light1">
+                    Please check your email for the verification link
+                  </div>
+                  <EduSummit onSubmit={onSubmit} cooldown={cooldown} />
+                </>
               ) : (
-                <EduSummit onSubmit={onSubmit} />
+                <>
+                  <EduSummit onSubmit={onSubmit} />
+                </>
               )}
             </div>
           </div>
