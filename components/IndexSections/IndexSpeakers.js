@@ -8,11 +8,8 @@ import { getHomeSpeakers } from "@/lib/api";
 
 import styles from "@/styles/border.module.css";
 
-export const revalidate = 60;
-export const dynamicParams = true;
-
 const IndexSpeakers = async () => {
-  let homeSpeakers = await getSpeakersData();
+  let homeSpeakers = await getHomeSpeakers();
 
   return (
     <>
@@ -56,11 +53,6 @@ const IndexSpeakers = async () => {
       </SectionLayout>
     </>
   );
-};
-
-const getSpeakersData = async () => {
-  let speakers = await getHomeSpeakers();
-  return speakers;
 };
 
 export default IndexSpeakers;

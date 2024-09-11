@@ -4,14 +4,10 @@ import SectionLayout from "@/layouts/SectionLayout";
 import OrganizationCard from "@/components/OrganizationCard";
 import ShowMore from "@/components/Button/ShowMore";
 import RegisterBtn from "@/components/Button/RegisterBtn";
-
 import { getHomeExhibitors } from "@/lib/api";
 
-export const revalidate = 60;
-export const dynamicParams = true;
-
 const IndexExhibitors = async () => {
-  let homeExhibitors = await getExhibitiorsData();
+  let homeExhibitors = await getHomeExhibitors();
 
   return (
     <SectionLayout
@@ -42,11 +38,6 @@ const IndexExhibitors = async () => {
       </div>
     </SectionLayout>
   );
-};
-
-const getExhibitiorsData = async () => {
-  let exhibitors = await getHomeExhibitors();
-  return exhibitors;
 };
 
 export default IndexExhibitors;
