@@ -49,6 +49,7 @@ const TicketCard = ({ ticket }) => {
                   mode="modal"
                   platforms={ticket.platforms}
                   evt={`Ticket Card - ${ticket.name} Button`}
+                  student={ticket.student}
                 />
               </Suspense>
               {ticket.benefits && (

@@ -7,13 +7,14 @@ import Logo from "@/components/Logo";
 import useParams from "@/hooks/useParams";
 
 const TicketBtn = ({
-  width,
+  width = "min-w-36",
   mode,
   fill,
   border,
   url = "https://whova.com/portal/registration/genai_202405/",
   platforms,
   evt = "",
+  student = false,
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
@@ -38,6 +39,10 @@ const TicketBtn = ({
 
   const umamiTrack = (evt) => {
     window?.umami?.track(evt);
+  };
+
+  const onVerify = () => {
+    router.push("/edu-verify");
   };
 
   if (mode === "modal") {
@@ -65,6 +70,18 @@ const TicketBtn = ({
         >
           <div className="flex flex items-center justify-start">
             <div className="flex flex-col items-start justify-center space-y-4">
+              {student && (
+                <div className="mt-4">
+                  <p className="text-left text-lg text-theme1Light1">
+                    <span className="font-bold">Note: </span>
+                    <span>To get student discount, you need to </span>
+                    <span
+                      className="text-theme1Color3 cursor-pointer hover:underline"
+                      onClick={onVerify}>verify your educational email</span>
+                    <span> first.</span>
+                  </p>
+                </div>
+              )}
               {platforms?.map((platform) => (
                 <div
                   className="cursor-pointer w-full flex items-center justify-start gap-4 group"
