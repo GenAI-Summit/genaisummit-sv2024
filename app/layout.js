@@ -108,11 +108,13 @@ const RootLayout = ({ children }) => {
             }
           `}
         </Script>
+        {/*
         <Script
           data-bot-id="pub-455d6737-84a0-47d1-bcac-880363df6184"
           src="https://chatbox.copilot.livex.ai/livex.min.js"
           strategy="afterInteractive"
         />
+        */}
       </body>
       <GoogleAnalytics gaId="G-6ETB3L7DWM" />
     </html>
