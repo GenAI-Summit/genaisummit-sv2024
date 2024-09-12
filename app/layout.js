@@ -38,7 +38,7 @@ export const metadata = {
     ],
     images: [
       {
-        url: "https://d3ej931a0s5mcg.cloudfront.net/028f7a87-38ab-485b-b7b8-5551be27c7fd/summitPostHori2.png",
+        url: "https://raw.githubusercontent.com/GenAI-Summit/genaisummit-sv2024/main/public/images/propaganda/banner_seo.webp?token=GHSAT0AAAAAACXDB5YSWPK7FUH3PWDXGKQ4ZXDIS3Q",
         width: 1200,
         height: 630,
         alt: "Generative AI Summit Silicon Valley 2024",
