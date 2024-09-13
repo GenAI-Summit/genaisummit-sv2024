@@ -77,7 +77,13 @@ const TicketBtn = ({
                     <span>To get student discount, you need to </span>
                     <span
                       className="text-theme1Color3 cursor-pointer hover:underline"
-                      onClick={onVerify}>verify your educational email</span>
+                      onClick={() => {
+                        onVerify();
+                        umamiTrack("Ticket Modal - Go to Verify");
+                      }}
+                    >
+                      verify your educational email
+                    </span>
                     <span> first.</span>
                   </p>
                 </div>
