@@ -1,10 +1,12 @@
 "use client";
 
 import React from "react";
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 import CardLayout from "@/layouts/CardLayout";
 import SpeakerCard from "@/components/SpeakerCard";
 import { useRouter } from "next/navigation";
-import ParsedHtml from "@/components/ParsedHtml";
+import HtmlToMarkdown from "@/components/HtmlToMarkdown";
 import { formatToPTTime, formatToPTDate } from "@/lib/time";
 
 const SessionCard = ({ session, showDesc = false }) => {
@@ -100,7 +102,9 @@ const SessionCard = ({ session, showDesc = false }) => {
           )}
           {showDesc && (
             <div className="mt-4 text-lg md:text-xl">
-              <ParsedHtml html={session.desc} />
+              <Suspense fallback={<Loader />}>
+                <HtmlToMarkdown html={session.desc} />
+              </Suspense>
             </div>
           )}
         </div>

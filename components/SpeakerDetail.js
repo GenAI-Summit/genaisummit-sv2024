@@ -1,7 +1,9 @@
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "@/components/Icon";
-import ParsedHtml from "@/components/ParsedHtml";
+import HtmlToMarkdown from "@/components/HtmlToMarkdown";
 
 const SpeakerDetail = ({ speaker }) => {
   return (
@@ -64,7 +66,9 @@ const SpeakerDetail = ({ speaker }) => {
           </div>
         </div>
         <div className="mt-8 text-left text-lg md:text-xl">
-          <ParsedHtml html={speaker.bio} />
+          <Suspense fallback={<Loader />}>
+            <HtmlToMarkdown html={speaker.bio} />
+          </Suspense>
         </div>
       </div>
     </>
