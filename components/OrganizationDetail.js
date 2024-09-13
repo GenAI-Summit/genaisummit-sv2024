@@ -1,6 +1,8 @@
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 import Link from "next/link";
 import Logo from "@/components/Logo";
-import ParsedHtml from "@/components/ParsedHtml";
+import HtmlToMarkdown from "@/components/HtmlToMarkdown";
 
 const OrganizationDetail = ({ organization }) => {
   return (
@@ -15,8 +17,10 @@ const OrganizationDetail = ({ organization }) => {
       <div className="mt-6 text-3xl font-monaspace_neon font-semibold">
         {organization.name}
       </div>
-      <div className="mt-6">
-        <ParsedHtml html={organization.desc} />
+      <div className="mt-8 text-left text-lg md:text-xl">
+        <Suspense fallback={<Loader />}>
+          <HtmlToMarkdown html={organization.desc} />
+        </Suspense>
       </div>
     </div>
   );
