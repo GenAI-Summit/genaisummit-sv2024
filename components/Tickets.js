@@ -7,7 +7,7 @@ const tickets = [
     name: "One-Day Pass",
     price: 129.0,
     originalPrice: 149.0,
-    saveText: "Save $30 until Sept 14",
+    saveText: "Save $20 until Sept 22",
     platforms: [
       {
         name: "Whova",
@@ -34,7 +34,7 @@ const tickets = [
     name: "Three-Day Pass",
     price: 189.0,
     originalPrice: 219.0,
-    saveText: "Save $50 until Sept 14",
+    saveText: "Save $30 until Sept 22",
     platforms: [
       {
         name: "Whova",
