@@ -116,7 +116,7 @@ const TicketBtn = ({
             </div>
             {discountCode && (
               <div className="mt-4 flex items-center gap-4">
-                <p className="text-left text-base md:text-xl text-theme1Light1">
+                <p className="text-left text-base md:text-lg text-theme1Light1">
                   <span className="font-bold">Your discount code: </span>
                   <span> {discountCode}</span>
                 </p>
