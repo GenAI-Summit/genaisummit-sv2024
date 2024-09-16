@@ -34,7 +34,7 @@ const tickets = [
     name: "Three-Day Pass",
     price: 189.0,
     originalPrice: 219.0,
-    saveText: "Save $30 at early bird phase",
+    saveText: "Save $30 now",
     platforms: [
       {
         name: "Luma",

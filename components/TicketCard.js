@@ -32,7 +32,7 @@ const TicketCard = ({ ticket }) => {
                 </p>
               ))}
             </div>
-            <div className="flex flex-col gap-y-4">
+            <div className="flex flex-col gap-y-4 items-center">
               <div className="flex flex-col gap-y-1">
                 <p className="line-through text-theme1Gray1">
                   ${ticket.originalPrice}

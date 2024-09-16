@@ -57,8 +57,7 @@ const TicketBtn = ({
     return (
       <>
         <button
-          className={`
-          group relative z-0 ${width}`}
+          className={`group relative z-0 ${width}`}
           onClick={() => {
             openModal();
             umamiTrack(evt);
