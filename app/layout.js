@@ -90,6 +90,7 @@ const RootLayout = ({ children }) => {
         <Suspense fallback={<Loader />}>
           <ScrollToTop />
         </Suspense>
+        {/*
         <Script
           src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/oversea/index.js"
           strategy="beforeInteractive"
@@ -108,6 +109,7 @@ const RootLayout = ({ children }) => {
             }
           `}
         </Script>
+        */}
         <Script
           data-bot-id="pub-455d6737-84a0-47d1-bcac-880363df6184"
           src="https://chatbox.copilot.livex.ai/livex.min.js"
