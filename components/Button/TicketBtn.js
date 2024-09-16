@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Modal from "@/components/Modal";
 import Logo from "@/components/Logo";
+import Copy from "@/components/Button/Copy";
 import useParams from "@/hooks/useParams";
 
 const TicketBtn = ({
@@ -18,7 +19,14 @@ const TicketBtn = ({
 }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
-  const { getAllParamsStr } = useParams();
+  const { getAllParamsStr, getParam } = useParams();
+  const discountCode = getParam("discount")
+    ? getParam("discount")
+    : getParam("coupon")
+      ? getParam("coupon")
+      : null;
+
+  console.log(discountCode);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -68,7 +76,7 @@ const TicketBtn = ({
           isModalOpen={isModalOpen}
           closeModal={closeModal}
         >
-          <div className="flex flex items-center justify-start">
+          <div className="flex flex-col items-center justify-start">
             <div className="flex flex-col items-start justify-center space-y-4">
               {student && (
                 <div className="mt-4">
@@ -106,6 +114,15 @@ const TicketBtn = ({
                 </div>
               ))}
             </div>
+            {discountCode && (
+              <div className="mt-4 flex items-center gap-4">
+                <p className="text-left text-base md:text-xl text-theme1Light1">
+                  <span className="font-bold">Your discount code: </span>
+                  <span> {discountCode}</span>
+                </p>
+                <Copy text={discountCode} />
+              </div>
+            )}
           </div>
         </Modal>
       </>
