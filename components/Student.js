@@ -50,8 +50,7 @@ const Student = ({ widget }) => {
     // return emailRegex.test(email) && eduRegex.test(email);
   };
 
-  const onSubmit = async (e) => {
-    e.preventDefault();
+  const onSubmit = async () => {
     if (cooldown > 0) {
       setMessage(`Please wait ${cooldown} seconds before resending.`);
       return;
@@ -155,7 +154,7 @@ const Student = ({ widget }) => {
               />
             </div>
             {message && <div className="text-red-500">{message}</div>}
-            <div class="cf-turnstile" data-sitekey="0x4AAAAAAAjqeWurwPyWFCp7"></div>
+            <div className="cf-turnstile" data-sitekey="0x4AAAAAAAjqeWurwPyWFCp7"></div>
             <div className="flex flex-col items-center justify-center gap-4">
               {sent ? (
                 <>
