@@ -26,8 +26,6 @@ const TicketBtn = ({
       ? getParam("coupon")
       : null;
 
-  console.log(discountCode);
-
   const openModal = () => {
     setIsModalOpen(true);
   };

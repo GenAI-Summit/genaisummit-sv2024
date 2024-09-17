@@ -56,6 +56,7 @@ const tickets = [
       "Access to all sessions, workshops, and networking events across the entire three-day summit.",
     ],
   },
+  /*
   {
     id: 3,
     name: "Student Pass",
@@ -74,6 +75,7 @@ const tickets = [
       "Access to all summit activities and sessions. Must purchase with a valid .edu email address.",
     ],
   },
+  */
   {
     id: 4,
     name: "VIP Pass",

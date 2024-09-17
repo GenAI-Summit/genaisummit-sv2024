@@ -1,4 +1,5 @@
 const Verified = () => {
+  console.log("Verified");
   const onClick = () => {
     window.open(
       "https://whova.com/portal/registration/genai_202405/7zyww8zo",
