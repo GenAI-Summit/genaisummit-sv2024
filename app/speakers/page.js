@@ -14,12 +14,14 @@ const SpeakersPage = () => {
   const { speakers, isLoading, isError } = useSpeakers();
   const [text, setText] = useState("");
 
+
   const filteredSpeakers = useMemo(() => {
     return speakers?.filter((speaker) => {
+      const lowerCaseText = text.toLowerCase();
       return (
-        speaker.name.toLowerCase().includes(text) ||
-        speaker.organization.toLowerCase().includes(text) ||
-        speaker.title.toLowerCase().includes(text)
+        speaker.name.toLowerCase().includes(lowerCaseText) ||
+        speaker.organization.toLowerCase().includes(lowerCaseText) ||
+        speaker.title.toLowerCase().includes(lowerCaseText)
       );
     });
   }, [speakers, text]);
