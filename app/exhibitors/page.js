@@ -24,12 +24,14 @@ const ExhibitorsPage = () => {
   };
 
   const filteredExhibitors = useMemo(() => {
-    return exhibitors?.filter(
-      (exhibitor) =>
-        exhibitor.name.toLowerCase().includes(text.toLowerCase()) &&
+    return exhibitors?.filter((exhibitor) => {
+      const lowerCaseText = text.toLowerCase();
+      return (
+        exhibitor.name.toLowerCase().includes(lowerCaseText) &&
         (selectedCategories.length === 0 ||
-          exhibitor.categories.some((c) => selectedCategories.includes(c))),
-    );
+          exhibitor.categories.some((c) => selectedCategories.includes(c)))
+      );
+    });
   }, [exhibitors, text, selectedCategories]);
 
   const onSelectCategory = (category) => {
