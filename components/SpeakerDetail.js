@@ -7,10 +7,10 @@ import HtmlToMarkdown from "@/components/HtmlToMarkdown";
 
 const SpeakerDetail = ({ speaker }) => {
   return (
-    <>
+    <div className="flex flex-col h-full w-full">
       <div className="flex flex-col items-center md:p-4 p-2">
-        <div className="flex items-center gap-6 w-full">
-          <div className="rounded-full overflow-hidden">
+        <div className="flex flex-row items-center gap-6 w-full">
+          <div className="rounded-full overflow-hidden flex-shrink-0">
             <Image
               src={speaker.avatar}
               alt={speaker.name}
@@ -20,12 +20,12 @@ const SpeakerDetail = ({ speaker }) => {
             />
           </div>
           <div className="flex flex-col justify-center text-wrap items-start gap-y-4">
-            <div className="text-lg font-bold">{speaker.name}</div>
+            <div className="text-base md:text-lg font-bold">{speaker.name}</div>
             {speaker.title && (
-              <div className="text-base font-medium">{speaker.title}</div>
+              <div className="text-sm md:text-base font-medium">{speaker.title}</div>
             )}
             {speaker.organization && (
-              <div className="text-base font-medium">
+              <div className="text-sm md:text-base font-medium">
                 @{speaker.organization}
               </div>
             )}
@@ -65,13 +65,14 @@ const SpeakerDetail = ({ speaker }) => {
             ) : null}
           </div>
         </div>
-        <div className="mt-8 text-left text-lg md:text-xl">
-          <Suspense fallback={<Loader />}>
-            <HtmlToMarkdown html={speaker.bio} />
-          </Suspense>
-        </div>
       </div>
-    </>
+
+      <div className="h-4/5 flex-grow overflow-y-auto mt-8 text-left text-base md:text-lg">
+        <Suspense fallback={<Loader />}>
+          <HtmlToMarkdown html={speaker.bio} />
+        </Suspense>
+      </div>
+    </div>
   );
 };
 
