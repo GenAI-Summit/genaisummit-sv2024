@@ -31,13 +31,15 @@ const SpeakerCard = ({ speaker }) => {
         <Image
           src={speaker.avatar}
           alt={speaker.name}
-          width={400}
-          height={400}
+          width={300}
+          height={300}
           loading="lazy"
         />
       </div>
       <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
-        <SpeakerDetail speaker={speaker} />
+        <div className="max-h-[85%] w-full">
+          <SpeakerDetail speaker={speaker} />
+        </div>
         <div
           className="mt-2 cursor-pointer font-medium"
           onClick={onSpeakerDetail}

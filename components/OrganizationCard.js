@@ -34,18 +34,20 @@ const OrganizationCard = ({ organization }) => {
         <Logo src={organization.logo} alt={organization.name} />
       </div>
       <Drawer isDrawerOpen={isDrawerOpen} closeDrawer={closeDrawer}>
-        <OrganizationDetail organization={organization} />
+        <div className="max-h-[80%] w-full">
+          <OrganizationDetail organization={organization} />
+        </div>
         <div className="flex flex-col gap-2">
           {organization.url && (
             <div
-              className="cursor-pointer mt-2 text-left font-medium"
+              className="cursor-pointer mt-2 font-medium"
               onClick={() => openUrl(organization.url)}
             >
               <TextHover text="Official Website" color="theme1Light1" />
             </div>
           )}
           <div
-            className="cursor-pointer mt-2 text-left font-medium"
+            className="cursor-pointer mt-2 font-medium"
             onClick={onOrganizationDetail}
           >
             <TextHover text={`About ${organization.name}`} color="theme1Light1" />
