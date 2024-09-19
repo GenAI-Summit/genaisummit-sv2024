@@ -57,6 +57,27 @@ const RootLayout = ({ children }) => {
           content={metadata.openGraph.keywords.join(", ")}
         />
         <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-16708105359"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics-config" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-16708105359');
+          `}
+        </Script>
+        {/*<!-- Event snippet for Purchase conversion page -->*/}
+        <Script id="google-analytics-event" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16708105359/TDmPCJ-OqtQZEI_phZ8-',
+                'transaction_id': ''
+            });
+          `}
+        </Script>
+        <Script
           strategy="lazyOnload"
           src="https://tally.so/widgets/embed.js"
           crossOrigin="anonymous"
