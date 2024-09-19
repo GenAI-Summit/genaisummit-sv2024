@@ -30,13 +30,13 @@ const SessionCard = ({ session, showDesc = false }) => {
   return (
     <div className="w-full">
       <CardLayout bgColor="bg-theme1Dark3">
-        <div className="flex flex-col items-start text-left text-theme1Light1 md:p-4 p-2 text-lg">
-          <div className="text-xl font-bold mb-4">
+        <div className="flex flex-col items-start text-left text-theme1Light1 md:p-4 p-2 text-base md:text-lg">
+          <div className="text-lg md:text-xl font-bold mb-4">
             <span className={`${typeColorClass} p-0.5 mr-4 rounded`}>
               <span>{session.tag}</span>
             </span>
             <span
-              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-10"
+              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-8 md:leading-10"
               onClick={onSessionClick}
             >
               {session.name}
@@ -101,7 +101,7 @@ const SessionCard = ({ session, showDesc = false }) => {
             </div>
           )}
           {showDesc && (
-            <div className="mt-4 text-lg md:text-xl">
+            <div className="mt-4 text-base md:text-lg">
               <Suspense fallback={<Loader />}>
                 <HtmlToMarkdown html={session.desc} />
               </Suspense>
