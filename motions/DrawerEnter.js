@@ -7,8 +7,8 @@ const DrawerEnter = ({ isOpen, children }) => {
     closed: { 
       x: "100%",
       opacity: 0,
-      scale: 0.98,
-      rotateY: 10,
+      scale: 0.95,
+      rotateY: 15,
       boxShadow: "0px 0px 0px rgba(0, 0, 0, 0)"
     },
     open: { 
@@ -16,7 +16,7 @@ const DrawerEnter = ({ isOpen, children }) => {
       opacity: 1,
       scale: 1,
       rotateY: 0,
-      boxShadow: "-10px 0px 30px rgba(0, 0, 0, 0.15)"
+      boxShadow: "-10px 0px 30px rgba(0, 0, 0, 0.2)"
     },
   };
 
@@ -30,10 +30,11 @@ const DrawerEnter = ({ isOpen, children }) => {
           variants={variants}
           transition={{
             type: "spring",
-            stiffness: 300,
-            damping: 25,
-            mass: 0.8,
-            duration: 0.5,
+            stiffness: 350,
+            damping: 30,
+            mass: 1,
+            duration: 0.6,
+            ease: [0.22, 1, 0.36, 1], // Custom cubic bezier curve
           }}
           className="w-full h-full overflow-hidden origin-right"
         >
