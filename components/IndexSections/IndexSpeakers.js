@@ -18,11 +18,11 @@ const IndexSpeakers = async () => {
         description="LISTEN TO THE EVENT SPEAKERS"
         widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       >
-        <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[4%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
+        <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[14%] md:gap-x-[7%] lg:gap-x-[8%] gap-y-12 md:gap-y-14 lg:gap-y-20">
           {homeSpeakers.map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-[48%] md:w-[28%] lg:w-[19%] ${styles.border}`}
+              className={`w-[43%] md:w-[28%] lg:w-[19%] ${styles.border}`}
             >
               <Suspense fallback={<Loader />}>
                 <SpeakerCard key={speaker.id} speaker={speaker} />

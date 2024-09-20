@@ -14,7 +14,6 @@ const SpeakersPage = () => {
   const { speakers, isLoading, isError } = useSpeakers();
   const [text, setText] = useState("");
 
-
   const filteredSpeakers = useMemo(() => {
     return speakers?.filter((speaker) => {
       const lowerCaseText = text.toLowerCase();
@@ -44,7 +43,7 @@ const SpeakersPage = () => {
         <SpeakersIntro />
       </SectionEnter>
       <SectionEnter>
-        <div className="w-full flex flex-col lg:flex-row gap-y-10 lg:gap-x-8">
+        <div className="w-full flex flex-col gap-y-16 lg:gap-x-8">
           <div className="w-full lg:w-2/5 flex justify-center lg:max-w-96">
             <div className="w-full flex flex-col gap-y-6">
               <SearchBar text={text} setText={setText} />
