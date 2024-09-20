@@ -1,7 +1,44 @@
+import { useRef, useEffect } from "react";
 import Close from "@/components/SVG/Close";
 import DrawerEnter from "@/motions/DrawerEnter";
 
 const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
+  const drawerRef = useRef(null);
+  
+  useEffect(() => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    const handleTouchStart = (e) => {
+      touchStartX = e.touches[0].clientX;
+    };
+    
+    const handleTouchMove = (e) => {
+      touchEndX = e.touches[0].clientX;
+    };
+    
+    const handleTouchEnd = () => {
+      if (touchStartX < touchEndX && touchEndX - touchStartX > 75) {
+        closeDrawer();
+      }
+    };
+    
+    const drawer = drawerRef.current;
+    if (drawer) {
+      drawer.addEventListener("touchstart", handleTouchStart);
+      drawer.addEventListener("touchmove", handleTouchMove);
+      drawer.addEventListener("touchend", handleTouchEnd);
+    }
+    
+    return () => {
+      if (drawer) {
+        drawer.removeEventListener("touchstart", handleTouchStart);
+        drawer.removeEventListener("touchmove", handleTouchMove);
+        drawer.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, [closeDrawer]);
+
   return (
     <div
       className={
@@ -13,6 +50,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
     >
       <DrawerEnter isOpen={isDrawerOpen}>
         <div
+          ref={drawerRef}
           className={
             " w-screen max-w-lg fixed right-0 top-[5%] bg-theme1Dark2 h-[90%] shadow-lg rounded-lg transform  "
           }
