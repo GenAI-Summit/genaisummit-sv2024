@@ -9,11 +9,11 @@ const Speakers = ({ speakers }) => {
         title="Speakers"
         description="LISTEN TO THE EVENT SPEAKERS | MORE TO BE ANNOUNCED SOON"
       >
-        <div className="w-full flex flex-wrap mt-12 gap-x-[5%] md:gap-x-[2%] lg:gap-x-[6%] gap-y-14 justify-start">
+        <div className="w-full flex flex-wrap mt-12 gap-x-[5%] md:gap-x-[5%] gap-y-14 justify-start">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-[30%] md:w-[18%] lg:w-[20%] ${styles.border}`}
+              className={`w-[30%] md:w-[16%] ${styles.border}`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="mt-4 flex flex-col justify-center items-start text-theme1Light1 gap-y-2 md:gap-y-4">

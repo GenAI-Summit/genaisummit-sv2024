@@ -10,7 +10,6 @@ const HtmlToMarkdown = (html) => {
   useEffect(() => {
     const convertHtmlToMarkdown = async () => {
       const md = await htmlToMarkdown(html);
-      console.log(md);
       setMarkdown(md);
     };
     convertHtmlToMarkdown();
