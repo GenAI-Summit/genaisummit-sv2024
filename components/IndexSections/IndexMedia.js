@@ -1,6 +1,7 @@
 import SectionLayout from "@/layouts/SectionLayout";
 import Logo from "@/components/Logo";
 import Link from "next/link";
+import MediaBtn from "@/components/Button/MediaBtn";
 
 import { getMedia } from "@/lib/api";
 
@@ -10,6 +11,7 @@ const IndexMedia = async () => {
     <SectionLayout
       title="Media"
       description="MEDIA COVERAGE OF THE LAST GENAI SUMMIT"
+      widget={<MediaBtn text="Get Media Pass" mode="day" />}
     >
       <div className="mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-7 lg:gap-y-6 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[2%]">
         {media.map((media) => (

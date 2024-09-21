@@ -65,7 +65,7 @@ const tickets = [
     student: true,
     platforms: [
       {
-        name: "Whova (Recommended)",
+        name: "Whova",
         url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
         logo: "/images/icons/whova.png",
       },

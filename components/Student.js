@@ -45,9 +45,8 @@ const Student = ({ widget }) => {
 
   const checkEmail = (email) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // const eduRegex = /\.edu$/;
-    return emailRegex.test(email);
-    // return emailRegex.test(email) && eduRegex.test(email);
+    const eduRegex = /\.edu(\.\w{2})?$/;
+    return emailRegex.test(email) && eduRegex.test(email);
   };
 
   const onSubmit = async () => {
