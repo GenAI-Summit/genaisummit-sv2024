@@ -35,7 +35,7 @@ const TicketCard = ({ ticket }) => {
             <div className="flex flex-col gap-y-4 items-center">
               <div className="flex flex-col gap-y-1">
                 <p className="line-through text-theme1Gray1">
-                  ${ticket.originalPrice}
+                  {ticket.originalPrice ? `$${ticket.originalPrice}` : ""}
                 </p>
                 <p className="text-2xl font-bold bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
                   ${ticket.price}

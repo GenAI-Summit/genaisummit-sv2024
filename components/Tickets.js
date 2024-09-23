@@ -104,7 +104,7 @@ const tickets = [
   {
     id: 5,
     name: "Booth Area A",
-    price: 3999.0,
+    price: 4999.0,
     originalPrice: 5999.0,
     saveText: "",
     platforms: [
@@ -153,8 +153,8 @@ const tickets = [
   {
     id: 6,
     name: "Booth Area B",
-    price: 1999.0,
-    originalPrice: 2999.0,
+    price: 2999.0,
+    originalPrice: null,
     saveText: "",
     platforms: [
       {
