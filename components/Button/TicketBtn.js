@@ -29,6 +29,7 @@ const TicketBtn = ({
   const openModal = () => {
     setIsModalOpen(true);
   };
+
   const closeModal = () => {
     setIsModalOpen(false);
   };
@@ -41,6 +42,20 @@ const TicketBtn = ({
     const str = getAllParamsStr();
     url = url + (str ? "?" + str : "");
     window.open(url, "_blank");
+  };
+
+  const pixelTrack = (evt) => {
+    const eventName = evt.toLowerCase().includes("whova")
+      ? "Whova"
+      : evt.toLowerCase().includes("eventbrite")
+        ? "Eventbrite"
+        : evt.toLowerCase().includes("luma")
+          ? "Luma"
+          : "";
+    console.log("pixelTrack", eventName);
+    if (eventName) {
+      window?.fbq?.("track", eventName);
+    }
   };
 
   const umamiTrack = (evt) => {
@@ -100,6 +115,7 @@ const TicketBtn = ({
                   onClick={() => {
                     openUrl(platform.url);
                     umamiTrack(evt + " - " + platform.name);
+                    pixelTrack(platform.name.toLowerCase());
                   }}
                 >
                   <div className="w-20 h-20">
