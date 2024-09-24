@@ -13,7 +13,7 @@ import {
   TelegramShareButton,
   WhatsappIcon,
   WhatsappShareButton,
-  XIcon,
+  TwitterIcon,
   TwitterShareButton,
 } from "react-share";
 
@@ -27,7 +27,7 @@ const ShareBar = () => {
       <div className="flex justify-center gap-2 items-center">
         <div className="text-themeSectionTitleColor1 font-bold">Share on:</div>
         <TwitterShareButton url={url}>
-          <XIcon size={32} round={true} />
+          <TwitterIcon size={32} round={true} />
         </TwitterShareButton>
         <LinkedinShareButton url={url}>
           <LinkedinIcon size={32} round={true} />

@@ -2,8 +2,8 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Image from "next/image";
 import Link from "next/link";
-import Icon from "@/components/Icon";
 import HtmlToMarkdown from "@/components/HtmlToMarkdown";
+import { LinkedinIcon, TwitterIcon } from "react-share";
 
 const SpeakerDetail = ({ speaker }) => {
   return (
@@ -29,36 +29,16 @@ const SpeakerDetail = ({ speaker }) => {
                 @{speaker.organization}
               </div>
             )}
-            {speaker.website || speaker.linkedin || speaker.twitter ? (
-              <div className="flex gap-1 mt-1">
-                {speaker.website && (
-                  <Link href={speaker.website} target="_blank">
-                    <Icon
-                      width={30}
-                      height={30}
-                      src="/images/icons/website.png"
-                      alt={speaker.name + "'s website"}
-                    />
+            {speaker.socials.linkedin || speaker.socials.twitter ? (
+              <div className="flex gap-4 mt-1">
+                {speaker.socials.linkedin && (
+                  <Link href={speaker.socials.linkedin} target="_blank">
+                    <LinkedinIcon size={32} round={true} />
                   </Link>
                 )}
-                {speaker.linkedin && (
-                  <Link href={speaker.linkedin} target="_blank">
-                    <Icon
-                      width={30}
-                      height={30}
-                      src="/images/icons/linkedin.png"
-                      alt={speaker.name + "'s linkedin account"}
-                    />
-                  </Link>
-                )}
-                {speaker.twitter && (
-                  <Link href={speaker.twitter} target="_blank">
-                    <Icon
-                      width={30}
-                      height={30}
-                      src="/images/icons/x.png"
-                      alt={speaker.name + "'s x account"}
-                    />
+                {speaker.socials.twitter && (
+                  <Link href={speaker.socials.twitter} target="_blank">
+                    <TwitterIcon size={32} round={true} />
                   </Link>
                 )}
               </div>
