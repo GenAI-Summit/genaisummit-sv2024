@@ -10,16 +10,16 @@ const SpeakerDetail = ({ speaker }) => {
     <div className="flex flex-col h-full w-full">
       <div className="flex flex-col items-center md:p-4 p-2">
         <div className="flex flex-row items-center gap-6 w-full">
-          <div className="rounded-full overflow-hidden flex-shrink-0">
+          <div className="md:w-40 md:h-40 w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
             <Image
               src={speaker.avatar}
               alt={speaker.name}
-              width={150}
-              height={150}
+              width={200}
+              height={200}
               loading="lazy"
             />
           </div>
-          <div className="flex flex-col justify-center text-wrap items-start gap-y-4">
+          <div className="flex flex-col justify-center text-wrap items-start gap-y-2 md:gap-y-4">
             <div className="text-base md:text-lg font-bold">{speaker.name}</div>
             {speaker.title && (
               <div className="text-sm md:text-base font-medium">{speaker.title}</div>

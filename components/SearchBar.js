@@ -7,7 +7,7 @@ const SearchBar = ({ text, setText }) => {
     setText(e.target.value);
   };
   return (
-    <div className="w-full flex rounded-full shadow-lg bg-theme1Dark2 p-1 text-themeLight1 border border-theme1Light1">
+    <div className="h-[43px] w-full flex rounded-full shadow-lg bg-theme1Dark2 p-1 text-themeLight1 border border-theme1Light1">
       <div className="flex p-1 justify-center items-center rounded-full">
         <Search />
       </div>
