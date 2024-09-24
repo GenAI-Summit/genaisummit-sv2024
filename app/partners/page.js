@@ -71,7 +71,14 @@ const PartnersPage = () => {
         <div className="w-full flex flex-col lg:flex-row gap-y-10 lg:gap-x-8">
           <div className="w-full lg:w-2/5 flex justify-center lg:max-w-96">
             <div className="w-full flex flex-col gap-y-6">
-              <SearchBar text={text} setText={setText} />
+              <div className="lg:hidden flex gap-x-4">
+                <SearchBar text={text} setText={setText} />
+                <ResetBtn onReset={onReset} width="w-32" />
+              </div>
+              <div className="hidden lg:flex lg:flex-col gap-y-6">
+                <SearchBar text={text} setText={setText} />
+                <ResetBtn onReset={onReset} width="w-full" />
+              </div>
               {categories && (
                 <Filter
                   name="Categories"
@@ -80,7 +87,6 @@ const PartnersPage = () => {
                   onSelect={onSelectCategory}
                 />
               )}
-              <ResetBtn onReset={onReset} />
             </div>
           </div>
           <div className="w-full flex flex-col gap-y-24">
