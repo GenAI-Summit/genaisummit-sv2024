@@ -2,12 +2,13 @@ import styles from "@/styles/border.module.css";
 import SectionLayout from "@/layouts/SectionLayout";
 import SpeakerCard from "@/components/SpeakerCard";
 
-const Speakers = ({ speakers }) => {
+const Speakers = ({ speakers, widget }) => {
   return (
     <>
       <SectionLayout
         title="Speakers"
         description="LISTEN TO THE EVENT SPEAKERS"
+        widget={widget}
       >
         <div className="w-full flex flex-wrap mt-12 gap-x-[5%] md:gap-x-[2%] gap-y-14 justify-start">
           {speakers.map((speaker) => (
