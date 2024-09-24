@@ -44,14 +44,14 @@ const SpeakersPage = () => {
       </SectionEnter>
       <SectionEnter>
         <div className="w-full flex flex-col gap-y-16 lg:gap-x-8">
-          <div className="w-full lg:w-2/5 flex justify-center lg:max-w-96">
+          <div className="md:hidden w-full lg:w-2/5 flex justify-center lg:max-w-96">
             <div className="w-full flex flex-col gap-y-6">
               <SearchBar text={text} setText={setText} />
               <ResetBtn onReset={onReset} />
             </div>
           </div>
           <div className="w-full">
-            <Speakers speakers={filteredSpeakers} />
+            <Speakers speakers={filteredSpeakers} widget={<SearchBar text={text} setText={setText} />} />
           </div>
         </div>
       </SectionEnter>
