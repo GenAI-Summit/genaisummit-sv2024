@@ -1,6 +1,8 @@
+import Link from "next/link";
 import styles from "@/styles/border.module.css";
 import SectionLayout from "@/layouts/SectionLayout";
 import SpeakerCard from "@/components/SpeakerCard";
+import { LinkedinIcon, TwitterIcon } from "react-share";
 
 const Speakers = ({ speakers, widget }) => {
   return (
@@ -31,6 +33,20 @@ const Speakers = ({ speakers, widget }) => {
                     @{speaker.organization}
                   </p>
                 )}
+                {speaker.socials.linkedin || speaker.socials.twitter ? (
+                  <div className="flex gap-4">
+                    {speaker.socials.linkedin && (
+                      <Link href={speaker.socials.linkedin} target="_blank">
+                        <LinkedinIcon size={32} round={true} />
+                      </Link>
+                    )}
+                    {speaker.socials.twitter && (
+                      <Link href={speaker.socials.twitter} target="_blank">
+                        <TwitterIcon size={32} round={true} />
+                      </Link>
+                    )}
+                  </div>
+                ) : null}
               </div>
             </div>
           ))}
