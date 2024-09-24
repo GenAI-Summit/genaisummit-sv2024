@@ -5,6 +5,8 @@ import SpeakerCard from "@/components/SpeakerCard";
 import ShowMore from "@/components/Button/ShowMore";
 import RegisterBtn from "@/components/Button/RegisterBtn";
 import { getHomeSpeakers } from "@/lib/api";
+import Link from "next/link";
+import { LinkedinIcon, TwitterIcon } from "react-share";
 
 import styles from "@/styles/border.module.css";
 
@@ -41,6 +43,20 @@ const IndexSpeakers = async () => {
                     @{speaker.organization}
                   </p>
                 )}
+                {speaker.socials.linkedin || speaker.socials.twitter ? (
+                  <div className="flex gap-4">
+                    {speaker.socials.linkedin && (
+                      <Link href={speaker.socials.linkedin} target="_blank">
+                        <LinkedinIcon size={32} round={true} />
+                      </Link>
+                    )}
+                    {speaker.socials.twitter && (
+                      <Link href={speaker.socials.twitter} target="_blank">
+                        <TwitterIcon size={32} round={true} />
+                      </Link>
+                    )}
+                  </div>
+                ) : null}
               </div>
             </div>
           ))}
