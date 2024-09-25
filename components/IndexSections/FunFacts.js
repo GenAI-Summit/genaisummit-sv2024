@@ -12,13 +12,13 @@ const FunFacts = () => {
       symbol: "+",
     },
     {
-      title: "Exhibitors",
+      title: "Speakers",
       start: 0,
-      end: 300,
+      end: 200,
       symbol: "+",
     },
     {
-      title: "Speakers",
+      title: "Exhibitors",
       start: 0,
       end: 150,
       symbol: "+",
