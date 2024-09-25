@@ -109,7 +109,7 @@ const Tickets = ({ widget }) => {
         },
       ],
       description: [
-        "Access to all summit activities and sessions. Must purchase with a valid .edu email address. (Three-day pass)",
+        "Access to all summit activities and sessions. Must purchase with a valid .edu email address. (Three days)",
       ],
     },
     {
@@ -137,7 +137,7 @@ const Tickets = ({ widget }) => {
         },
       ],
       description: [
-        "All-session access, VIP dinner with speakers, and premium networking events. (Three-day pass)",
+        "All-session access, VIP dinner with speakers, and premium networking events. (Three days)",
       ],
     },
     {
