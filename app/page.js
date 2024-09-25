@@ -41,7 +41,9 @@ const Index = () => {
           </Suspense>
         </SectionEnter>
         <SectionEnter>
-          <Tickets />
+          <Suspense fallback={<Loader />}>
+            <Tickets />
+          </Suspense>
         </SectionEnter>
         <SectionEnter>
           <NewFeatures />
