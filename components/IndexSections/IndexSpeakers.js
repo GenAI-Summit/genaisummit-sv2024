@@ -43,6 +43,12 @@ const IndexSpeakers = async () => {
                     @{speaker.organization}
                   </p>
                 )}
+                {speaker.note && (
+                  <p className="text-[7px] md:text-[11px] lg:text-[13px] xl:text-[15px] text-theme1Gray2">
+                    {speaker.note}
+                  </p>
+                )}
+                {/*
                 {speaker.socials.linkedin || speaker.socials.twitter ? (
                   <div className="flex gap-2 md:gap-3 lg:gap-4">
                     {speaker.socials.linkedin && (
@@ -57,6 +63,7 @@ const IndexSpeakers = async () => {
                     )}
                   </div>
                 ) : null}
+                 */}
               </div>
             </div>
           ))}
