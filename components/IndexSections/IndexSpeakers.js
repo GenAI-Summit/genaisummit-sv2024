@@ -5,8 +5,6 @@ import SpeakerCard from "@/components/SpeakerCard";
 import ShowMore from "@/components/Button/ShowMore";
 import RegisterBtn from "@/components/Button/RegisterBtn";
 import { getHomeSpeakers } from "@/lib/api";
-import Link from "next/link";
-import { LinkedinIcon, TwitterIcon } from "react-share";
 
 import styles from "@/styles/border.module.css";
 
