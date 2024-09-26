@@ -33,15 +33,20 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex flex-col items-center gap-y-8 md:gap-y-8 lg:gap-y-10">
-          <div className="text-xl md:text-3xl lg:text-6xl">
-            <Suspense fallback={<Loader />}>
-              <CountdownTimer time="2024-11-01T00:00:00" />
-            </Suspense>
+          <div className="font-monaspace_neon flex flex-col gap-y-4">
+            <p className="text-sm md:text-lg lg:text-2xl">
+              3 Days | 200+ Speakers | 25+ Tracks
+            </p>
+            <p className="text-lg md:text-xl lg:text-2xl">
+              Meet the Brightest Minds at the Largest AI Event
+            </p>
           </div>
+          <Suspense fallback={<Loader />}>
+            <CountdownTimer time="2024-11-01T00:00:00" />
+          </Suspense>
           <div className="flex flex-col text-base md:text-lg lg:text-xl gap-y-2 lg:gap-y-4">
             <p>Santa Clara Convention Center</p>
-            <p>Santa Clara, CA</p>
-            <p>Nov 1 - Nov 3</p>
+            <p>Santa Clara, CA | Nov 1 - Nov 3</p>
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <SubscribeBtn mode="plain" width="w-48" />
