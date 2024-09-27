@@ -2,9 +2,12 @@ import useSWR from "swr";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
+const apiUrl = "https://api.gptdao.ai";
+// const apiUrl = "http://localhost:8900";
+
 const useHomeSpeakers = () => {
   const { data, isLoading, error } = useSWR(
-    "https://api.gptdao.ai/home/speaker",
+    `${apiUrl}/home/speaker`,
     fetcher,
   );
 
@@ -13,7 +16,7 @@ const useHomeSpeakers = () => {
     isLoading: isLoading2,
     error: error2,
   } = useSWR(
-    "https://api.gptdao.ai/rank/tag?tag_name=hide&type_name=speaker",
+    `${apiUrl}/rank/tag?tag_name=hide&type_name=speaker`,
     fetcher,
   );
 

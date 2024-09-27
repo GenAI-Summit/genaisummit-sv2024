@@ -148,21 +148,25 @@ const Tickets = ({ widget }) => {
       saveText: "Save $1000 now",
       stripeText: "Early Bird",
       platforms: [
+        /*
         {
           name: "Luma",
           url: "https://lu.ma/sc9tn1yv",
           logo: "/images/icons/luma.png",
         },
+        */
         {
-          name: "Whova (Recommended)",
+          name: "Whova",
           url: "https://whova.com/portal/registration/genai_202405/exhibitor",
           logo: "/images/icons/whova.png",
         },
+        /*
         {
           name: "Eventbrite",
           url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
           logo: "/images/icons/eventbrite.png",
         },
+        */
       ],
       description: [
         "Showcase your innovations in our premium booth area. Includes advanced lead tracking technology.",
@@ -198,21 +202,25 @@ const Tickets = ({ widget }) => {
       saveText: "",
       stripeText: "",
       platforms: [
+        /*
         {
           name: "Luma",
           url: "https://lu.ma/sc9tn1yv",
           logo: "/images/icons/luma.png",
         },
+        */
         {
-          name: "Whova (Recommended)",
+          name: "Whova",
           url: "https://whova.com/portal/registration/genai_202405/exhibitor",
           logo: "/images/icons/whova.png",
         },
+        /*
         {
           name: "Eventbrite",
           url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
           logo: "/images/icons/eventbrite.png",
         },
+        */
       ],
       description: [
         "Strategic visibility in a streamlined space. Connect with attendees efficiently in our popular exhibition area.",
