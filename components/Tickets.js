@@ -24,7 +24,7 @@ const Tickets = ({ widget }) => {
     {
       id: 1,
       name: "One-Day Pass",
-      price: 179.0,
+      price: "$179",
       saveText: "",
       platforms: [
         {
@@ -50,7 +50,7 @@ const Tickets = ({ widget }) => {
     {
       id: 2,
       name: "Three-Day Pass",
-      price: 239.0,
+      price: "$239",
       platforms: [
         {
           name: "Luma",
@@ -74,9 +74,25 @@ const Tickets = ({ widget }) => {
     },
     {
       id: 3,
+      name: "Group Tickets",
+      price: "25% Off",
+      saveText: "",
+      platforms: [
+        {
+          name: "Whova",
+          url: "https://whova.com/portal/registration/genai_202405",
+          logo: "/images/icons/whova.png",
+        },
+      ],
+      description: [
+        "Available for VIP Pass and General Admission Three-Day Pass with three or more tickets.",
+      ],
+    },
+    {
+      id: 4,
       name: "Student Pass",
-      price: 99.0,
-      originalPrice: 149.0,
+      price: "$99.0",
+      originalPrice: "$149.0",
       saveText: "Save $50 now",
       stripeText: "Early Bird",
       ModalDescription: (
@@ -109,9 +125,9 @@ const Tickets = ({ widget }) => {
       ],
     },
     {
-      id: 4,
+      id: 5,
       name: "VIP Pass",
-      price: 1099.0,
+      price: "$1099",
       saveText: "",
       platforms: [
         {
@@ -135,9 +151,9 @@ const Tickets = ({ widget }) => {
       ],
     },
     {
-      id: 5,
+      id: 6,
       name: "Booth Area A",
-      price: 5999.0,
+      price: "$5999",
       platforms: [
         /*
         {
@@ -186,9 +202,9 @@ const Tickets = ({ widget }) => {
       ],
     },
     {
-      id: 6,
+      id: 7,
       name: "Booth Area B",
-      price: 3999.0,
+      price: "$3999",
       saveText: "",
       stripeText: "",
       platforms: [
@@ -241,7 +257,7 @@ const Tickets = ({ widget }) => {
       ],
     },
     {
-      id: 7,
+      id: 8,
       name: "Media Pass",
       price: null,
       originalPrice: null,

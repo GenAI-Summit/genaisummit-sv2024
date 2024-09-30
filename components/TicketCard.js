@@ -24,23 +24,23 @@ const TicketCard = ({ ticket }) => {
         <div className="flex flex-col gap-y-4 items-center">
           <div className="flex flex-col gap-y-1">
             <p className="line-through text-theme1Gray1">
-              {ticket.originalPrice ? `$${ticket.originalPrice}` : ""}
+              {ticket.originalPrice ? `${ticket.originalPrice}` : ""}
             </p>
             <p className="text-2xl font-bold bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
-              {ticket.price ? `$${ticket.price}` : ""}
+              {ticket.price ? `${ticket.price}` : ""}
             </p>
             <p className="text-sm text-theme1Gray1">
               <span>{ticket.saveText}</span>
             </p>
           </div>
           {
-            ticket.name.includes("Booth") ? (
+            ticket.name.includes("Booth") || ticket.name.includes("Group") ? (
               <Suspense fallback={<Loader />}>
                 <TicketBtn
                   mode="night"
                   evt={`Ticket Card - ${ticket.name} Button`}
                   text={ticket.btnText}
-                  url="https://whova.com/portal/registration/genai_202405/exhibitor"
+                  url={ticket.platforms[0].url}
                 />
               </Suspense>
             ) :
