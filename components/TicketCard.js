@@ -33,17 +33,30 @@ const TicketCard = ({ ticket }) => {
               <span>{ticket.saveText}</span>
             </p>
           </div>
-          <Suspense fallback={<Loader />}>
-            <TicketBtn
-              mode="modal"
-              platforms={ticket.platforms}
-              evt={`Ticket Card - ${ticket.name} Button`}
-              text={ticket.btnText}
-              ModalDescription={
-                ticket.ModalDescription ? ticket.ModalDescription : null
-              }
-            />
-          </Suspense>
+          {
+            ticket.name.includes("Booth") ? (
+              <Suspense fallback={<Loader />}>
+                <TicketBtn
+                  mode="night"
+                  evt={`Ticket Card - ${ticket.name} Button`}
+                  text={ticket.btnText}
+                  url="https://whova.com/portal/registration/genai_202405/exhibitor"
+                />
+              </Suspense>
+            ) :
+
+              <Suspense fallback={<Loader />}>
+                <TicketBtn
+                  mode="modal"
+                  platforms={ticket.platforms}
+                  evt={`Ticket Card - ${ticket.name} Button`}
+                  text={ticket.btnText}
+                  ModalDescription={
+                    ticket.ModalDescription ? ticket.ModalDescription : null
+                  }
+                />
+              </Suspense>
+          }
           {ticket.benefits && (
             <Suspense fallback={<Loader />}>
               <TicketDetail

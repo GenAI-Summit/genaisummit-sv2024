@@ -176,8 +176,7 @@ const TicketBtn = ({
   if (mode === "night") {
     return (
       <button
-        className={`
-          group relative z-0 ${width}`}
+        className={`group relative z-0 ${width}`}
         onClick={() => {
           openUrl(url);
           umamiTrack(evt);
