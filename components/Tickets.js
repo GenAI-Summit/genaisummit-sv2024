@@ -24,10 +24,8 @@ const Tickets = ({ widget }) => {
     {
       id: 1,
       name: "One-Day Pass",
-      price: 129.0,
-      originalPrice: 149.0,
-      saveText: "Save $20 now",
-      stripeText: "Early Bird",
+      price: 179.0,
+      saveText: "",
       platforms: [
         {
           name: "Luma",
@@ -52,10 +50,7 @@ const Tickets = ({ widget }) => {
     {
       id: 2,
       name: "Three-Day Pass",
-      price: 189.0,
-      originalPrice: 219.0,
-      saveText: "Save $30 now",
-      stripeText: "Early Bird",
+      price: 239.0,
       platforms: [
         {
           name: "Luma",
@@ -83,6 +78,7 @@ const Tickets = ({ widget }) => {
       price: 99.0,
       originalPrice: 149.0,
       saveText: "Save $50 now",
+      stripeText: "Early Bird",
       ModalDescription: (
         <div className="mt-4">
           <p className="text-left text-base md:text-lg text-theme1Light1">
@@ -116,9 +112,7 @@ const Tickets = ({ widget }) => {
       id: 4,
       name: "VIP Pass",
       price: 1099.0,
-      originalPrice: 1499.0,
-      saveText: "Save $400 now",
-      stripeText: "Early Bird",
+      saveText: "",
       platforms: [
         {
           name: "Luma",
@@ -143,10 +137,7 @@ const Tickets = ({ widget }) => {
     {
       id: 5,
       name: "Booth Area A",
-      price: 4999.0,
-      originalPrice: 5999.0,
-      saveText: "Save $1000 now",
-      stripeText: "Early Bird",
+      price: 5999.0,
       platforms: [
         /*
         {
@@ -197,8 +188,7 @@ const Tickets = ({ widget }) => {
     {
       id: 6,
       name: "Booth Area B",
-      price: 2999.0,
-      originalPrice: null,
+      price: 3999.0,
       saveText: "",
       stripeText: "",
       platforms: [
