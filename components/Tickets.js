@@ -91,10 +91,10 @@ const Tickets = ({ widget }) => {
     {
       id: 4,
       name: "Student Pass",
-      price: "$99.0",
-      originalPrice: "$149.0",
-      saveText: "Save $50 now",
-      stripeText: "Early Bird",
+      price: "$119",
+      originalPrice: "",
+      saveText: "",
+      stripeText: "",
       ModalDescription: (
         <div className="mt-4">
           <p className="text-left text-base md:text-lg text-theme1Light1">
