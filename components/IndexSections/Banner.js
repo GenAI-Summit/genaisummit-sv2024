@@ -1,9 +1,12 @@
+"use client";
+
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import TicketBtn from "@/components/Button/TicketBtn";
 import AddToCalendarBtn from "@/components/Button/AddToCalendarBtn";
 import SubscribeBtn from "@/components/Button/SubscribeBtn";
 import CountdownTimer from "@/components/Counter/CountdownTimer";
+import ExhibitorsMarquee from "@/components/IndexSections/Marquee/ExhibitorsMarquee";
 
 const Banner = () => {
   return (
@@ -33,14 +36,6 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex flex-col items-center gap-y-8 md:gap-y-8 lg:gap-y-10">
-          <div className="font-monaspace_neon flex flex-col gap-y-4">
-            <p className="text-sm md:text-lg lg:text-2xl">
-              3 Days | 200+ Speakers | 25+ Tracks
-            </p>
-            <p className="text-lg md:text-xl lg:text-2xl">
-              Meet the Brightest Minds at the Largest AI Event
-            </p>
-          </div>
           <Suspense fallback={<Loader />}>
             <CountdownTimer time="2024-11-01T00:00:00" />
           </Suspense>
@@ -74,6 +69,11 @@ const Banner = () => {
           </div>
         </div>
       </div>
+      <Suspense fallback={<Loader />}>
+        <div className="absolute bottom-0 left-0 w-full bg-theme1Light1 z-30">
+          <ExhibitorsMarquee />
+        </div>
+      </Suspense>
     </div>
   );
 };

@@ -33,12 +33,12 @@ const Index = () => {
           </Suspense>
         </SectionEnter>
         <SectionEnter>
-          <Attendees />
-        </SectionEnter>
-        <SectionEnter>
           <Suspense fallback={<Loader />}>
             <IndexExhibitors />
           </Suspense>
+        </SectionEnter>
+        <SectionEnter>
+          <Attendees />
         </SectionEnter>
         <SectionEnter>
           <Suspense fallback={<Loader />}>
