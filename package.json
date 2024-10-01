@@ -25,6 +25,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-facebook-pixel": "^1.0.4",
+    "react-infinite-ticker": "^2.2.0",
     "react-markdown": "^9.0.1",
     "react-medium-image-zoom": "^5.2.8",
     "react-share": "^5.1.0",
