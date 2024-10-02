@@ -10,10 +10,10 @@ const Media = ({ media }) => {
   return (
     <SectionLayout
       title="Media"
-      description="MEDIA COVERAGE OF THE LAST GENAI SUMMIT"
+      description="MEDIA COVERAGE OF THIS GENAI SUMMIT"
       widget={<MediaBtn text="Get Media Pass" mode="day" />}
     >
-      <div className="w-full flex flex-wrap mt-12 items-center gap-x-[4%] md:gap-x-[4%] lg:gap-x-[2%] gap-y-6 md:gap-y-8 lg:gap-y-4 justify-start">
+      <div className="w-full flex flex-wrap mt-6 items-center gap-x-[4%] md:gap-x-[4%] lg:gap-x-[2%] gap-y-6 md:gap-y-8 lg:gap-y-4">
         {media.map((item) => (
           <Link
             key={item.id}
