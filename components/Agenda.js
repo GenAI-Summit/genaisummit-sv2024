@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+import Loader from "@/components/Loader";
 import SectionLayout from "@/layouts/SectionLayout";
 import SubSectionLayout from "@/layouts/SubSectionLayout";
 import SessionCard from "@/components/SessionCard";
@@ -16,7 +18,9 @@ const Agenda = ({ sessionsByDate, daysMap }) => {
                 <SubSectionLayout key={date} title={daysMap[date]}>
                   <div className="w-full h-full flex flex-col gap-y-10">
                     {sessionsByDate[date].map((session) => (
-                      <SessionCard key={session.id} session={session} />
+                      <Suspense key={session.id} fallback={<Loader />}>
+                        <SessionCard session={session} />
+                      </Suspense>
                     ))}
                   </div>
                 </SubSectionLayout>

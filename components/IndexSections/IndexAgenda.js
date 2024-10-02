@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import SectionLayout from "@/layouts/SectionLayout";
+import Loader from "@/components/Loader";
 import ShowMore from "@/components/Button/ShowMore";
 import { getHomeSessions } from "@/lib/api";
 import SessionCard from "@/components/SessionCard";
@@ -13,7 +15,9 @@ const IndexAgenda = async () => {
     >
       <div className="w-full mt-6 flex flex-col gap-y-4">
         {sessions.map((session) => (
-          <SessionCard key={session.id} session={session} />
+          <Suspense key={session.id} fallback={<Loader />}>
+            <SessionCard session={session} />
+          </Suspense>
         ))}
       </div>
     </SectionLayout>
