@@ -44,6 +44,9 @@ const Student = ({ widget }) => {
   };
 
   const checkEmail = (email) => {
+    if (email.endsWith("hovercraft-kenya.com")) {
+      return true;
+    }
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const eduRegex = /\.edu(\.\w{2})?$/;
     return emailRegex.test(email) && eduRegex.test(email);
