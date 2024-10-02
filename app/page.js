@@ -12,6 +12,7 @@ import Tickets from "@/components/Tickets";
 import IndexIntro from "@/components/Intro/IndexIntro";
 import SectionEnter from "@/motions/SectionEnter";
 import NewlyUpdateModal from "@/components/NewlyUpdateModal";
+import IndexAgenda from "@/components/IndexSections/IndexAgenda";
 
 export const revalidate = 60;
 
@@ -43,6 +44,9 @@ const Index = () => {
           <Suspense fallback={<Loader />}>
             <Tickets />
           </Suspense>
+        </SectionEnter>
+        <SectionEnter>
+          <IndexAgenda />
         </SectionEnter>
         <SectionEnter>
           <NewFeatures />
