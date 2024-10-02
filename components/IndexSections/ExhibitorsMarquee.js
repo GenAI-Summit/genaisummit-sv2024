@@ -56,6 +56,10 @@ const ExhibitorsMarquee = () => {
           </div>
         </div>
       ))}
+      <div className="w-64 md:w-80 text-theme1Dark1 text-sm md:text-base font_monaspace_neon flex items-center">
+        <span className="font-bold">Job Fair: </span>
+        <span> 100+ Companies</span>
+      </div>
     </HorizontalTicker>
   );
 };
