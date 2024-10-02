@@ -41,18 +41,18 @@ const Index = () => {
           </Suspense>
         </SectionEnter>
         <SectionEnter>
-          <Suspense fallback={<Loader />}>
-            <Tickets />
-          </Suspense>
+          <IndexAgenda />
         </SectionEnter>
         <SectionEnter>
-          <IndexAgenda />
+          <IndexMedia />
         </SectionEnter>
         <SectionEnter>
           <NewFeatures />
         </SectionEnter>
         <SectionEnter>
-          <IndexMedia />
+          <Suspense fallback={<Loader />}>
+            <Tickets />
+          </Suspense>
         </SectionEnter>
       </div>
     </div>
