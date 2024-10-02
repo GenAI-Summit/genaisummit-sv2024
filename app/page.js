@@ -11,12 +11,14 @@ import NewFeatures from "@/components/IndexSections/NewFeatures";
 import Tickets from "@/components/Tickets";
 import IndexIntro from "@/components/Intro/IndexIntro";
 import SectionEnter from "@/motions/SectionEnter";
+import NewlyUpdateModal from "@/components/NewlyUpdateModal";
 
 export const revalidate = 60;
 
 const Index = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-16">
+      <NewlyUpdateModal />
       <Banner />
       <div className="max-w-maxWidth w-full lg:w-3/4 px-5">
         <SectionEnter>

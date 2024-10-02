@@ -28,8 +28,13 @@ const useExhibitors = () => {
     sponsorTiers.includes(exhibitor.tier),
   );
 
+  const getExhibitorById = (id) => {
+    return exhibitors.find((exhibitor) => exhibitor.id === id);
+  };
+
   return {
     exhibitors,
+    getExhibitorById,
     sponsors,
     sponsorTiers,
     isLoading: isLoading || isLoading2,
