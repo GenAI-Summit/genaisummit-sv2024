@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
-// Add this custom hook at the top of the file
 const useWindowSize = () => {
   const [windowSize, setWindowSize] = useState({
     width: typeof window !== "undefined" ? window.innerWidth : 0,
@@ -31,7 +30,6 @@ const LogoDrop = ({ logoSrc, count = 20 }) => {
   const [logos, setLogos] = useState([]);
   const { width: windowWidth } = useWindowSize();
 
-  // Calculate logo size based on window width
   const logoSize = Math.max(50, Math.min(200, windowWidth / 10));
 
   useEffect(() => {

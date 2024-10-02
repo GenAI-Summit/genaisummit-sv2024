@@ -1,30 +1,29 @@
 "use client";
+
 import { useState, useEffect, useRef } from "react";
 import Logo from "@/components/Logo";
-import Loader from "@/components/Loader";
-import Error from "@/components/Error";
 import Modal from "@/components/Modal";
-import useExhibitors from "@/hooks/useExhibitors";
 import { Fireworks } from "@fireworks-js/react";
 import umamiTrack from "@/lib/umamiTrace";
-import FallingLogos from "@/motions/FallingLogos";
+// import FallingLogos from "@/motions/FallingLogos";
 import CheckBox from "@/components/SVG/CheckBox";
 
 const NewlyUpdateModal = () => {
-  const { getExhibitorById, isLoading, isError } = useExhibitors();
   const [isOpen, setIsOpen] = useState(false);
   const [showAgain, setShowAgain] = useState(true);
   const fireworksRef = useRef(null);
-  const updateId = 366332;
+
+  const name = "Tesla";
+  const logo = "https://d1keuthy5s86c8.cloudfront.net/genai_202405/8a2f8d63b73774c2d5682d73f1421efc5a63c68bf3d838ef79890175001db909_1/Tesla1.png";
 
   useEffect(() => {
     const localLastShown = localStorage.getItem("popupLastShown");
     const sessionLastShown = sessionStorage.getItem("popupLastShown");
-    const shouldShow = !sessionLastShown && (!localLastShown || localLastShown !== updateId.toString());
+    const shouldShow = !sessionLastShown && (!localLastShown || localLastShown !== name);
 
     if (shouldShow) {
       setIsOpen(true);
-      sessionStorage.setItem("popupLastShown", updateId.toString());
+      sessionStorage.setItem("popupLastShown", name);
     }
 
     if (fireworksRef.current) {
@@ -52,21 +51,11 @@ const NewlyUpdateModal = () => {
     }
   }, []);
 
-  if (isLoading) {
-    return <Loader />;
-  }
-
-  if (isError) {
-    return <Error />;
-  }
-
-  const exhibitor = getExhibitorById(updateId);
-
   const onClose = () => {
     setIsOpen(false);
     if (!showAgain) {
       umamiTrack("Newly Update Do Not Show Again");
-      localStorage.setItem("popupLastShown", updateId.toString());
+      localStorage.setItem("popupLastShown", name);
     }
   };
 
@@ -78,7 +67,7 @@ const NewlyUpdateModal = () => {
     <>
       {isOpen && (
         <>
-          <FallingLogos logoSrc={exhibitor.logo} alt={exhibitor.name} />
+          {/* <FallingLogos logoSrc={logo} alt={name} /> */}
           <Fireworks
             ref={fireworksRef}
             style={{
@@ -97,7 +86,7 @@ const NewlyUpdateModal = () => {
           <div className="flex flex-col gap-y-4">
             <div className="text-2xl md:text-4xl">Let&apos;s Welcome</div>
           </div>
-          <Logo src={exhibitor.logo} alt={exhibitor.name} width={500} height={500} padding="p-0" />
+          <Logo src={logo} alt={name} width={500} height={500} padding="p-0" />
           <div className="flex items-center gap-x-2 cursor-pointer" onClick={onShowAgainChange}>
             <CheckBox label="Do not show this update again" checked={!showAgain} />
           </div>
