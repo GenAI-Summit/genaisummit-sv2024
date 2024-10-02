@@ -5,7 +5,7 @@ import FunFacts from "@/components/IndexSections/FunFacts";
 import IndexSpeakers from "@/components/IndexSections/IndexSpeakers";
 // import IndexSponsors from "@/Components/IndexSections/IndexSponsors";
 import IndexMedia from "@/components/IndexSections/IndexMedia";
-import Attendees from "@/components/IndexSections/Attendees";
+// import Attendees from "@/components/IndexSections/Attendees";
 import IndexExhibitors from "@/components/IndexSections/IndexExhibitors";
 import NewFeatures from "@/components/IndexSections/NewFeatures";
 import Tickets from "@/components/Tickets";
@@ -38,9 +38,6 @@ const Index = () => {
           <Suspense fallback={<Loader />}>
             <IndexExhibitors />
           </Suspense>
-        </SectionEnter>
-        <SectionEnter>
-          <Attendees />
         </SectionEnter>
         <SectionEnter>
           <Suspense fallback={<Loader />}>
