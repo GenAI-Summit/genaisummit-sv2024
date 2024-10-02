@@ -24,8 +24,6 @@ const useMarquee = () => {
   const exhibitors = allExhibitors.filter((exhibitor) => exhibitorsData?.data.includes(exhibitor.id));
   const speakers = allSpeakers.filter((speaker) => speakersData?.data.includes(speaker.id));
 
-  console.log(speakers);
-
   return {
     exhibitors,
     speakers,
