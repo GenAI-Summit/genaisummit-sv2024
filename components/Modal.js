@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import Close from "@/components/SVG/Close";
 import ModalEnter from "@/motions/ModalEnter";
 
@@ -8,18 +9,35 @@ const Modal = ({
   title,
   maxWidth = "max-w-md",
 }) => {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    if (isModalOpen && modalRef.current) {
+      modalRef.current.focus();
+    }
+  }, [isModalOpen]);
+
   if (!isModalOpen) {
     return null;
   }
 
+  const onKeyDown = (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  };
+
   return (
     <div
+      ref={modalRef}
       className={`
         fixed inset-0 bg-gray-900 bg-opacity-50 overflow-y-auto h-full w-full
         flex items-center justify-center transition-opacity duration-300 ease-in-out z-50
         ${isModalOpen ? "opacity-100" : "opacity-0 pointer-events-none"}
       `}
       onClick={closeModal}
+      onKeyDown={onKeyDown}
+      tabIndex={-1}
     >
       <ModalEnter>
         <div

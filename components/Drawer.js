@@ -23,11 +23,18 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
       }
     };
     
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape" && isDrawerOpen) {
+        closeDrawer();
+      }
+    };
+
     const drawer = drawerRef.current;
     if (drawer) {
       drawer.addEventListener("touchstart", handleTouchStart);
       drawer.addEventListener("touchmove", handleTouchMove);
       drawer.addEventListener("touchend", handleTouchEnd);
+      window.addEventListener("keydown", handleKeyDown);
     }
     
     return () => {
@@ -35,9 +42,10 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
         drawer.removeEventListener("touchstart", handleTouchStart);
         drawer.removeEventListener("touchmove", handleTouchMove);
         drawer.removeEventListener("touchend", handleTouchEnd);
+        window.removeEventListener("keydown", handleKeyDown);
       }
     };
-  }, [closeDrawer]);
+  }, [closeDrawer, isDrawerOpen]);
 
   return (
     <div
