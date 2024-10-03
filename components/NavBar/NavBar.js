@@ -106,7 +106,7 @@ const NavBar = () => {
         </div>
         <DropDown isOpen={isMenuOpen}>
           <div
-            className={`${!isMenuOpen ? "hidden" : ""} lg:hidden flex flex-col text-center justify-center gap-6 py-6`}
+            className={`${!isMenuOpen ? "hidden" : ""} xl:hidden flex flex-col text-center justify-center gap-6 py-6`}
           >
             <NavBarItems
               closeDrawer={closeDrawer}
