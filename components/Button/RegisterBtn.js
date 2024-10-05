@@ -1,4 +1,24 @@
-const RegisterBtn = ({ onClick, text = "Register", mode }) => {
+const RegisterBtn = ({ onClick, text = "Register", mode, width }) => {
+  if (mode === "plain") {
+    return (
+      <button
+        data-tally-layout="modal"
+        data-tally-open="nPl9xe"
+        data-tally-width="700"
+        data-tally-emoji-text="👋"
+        data-tally-emoji-animation="wave"
+        data-tally-auto-close="3000"
+        className="relative group z-0"
+        onClick={onClick}
+      >
+        <div className={`rounded-full bg-transparent px-4 py-2 transition-colors duration-300 hover:bg-theme1Dark3 border-[1.5px] border-theme1Light1 ${width}`}>
+          <span className="h-full w-full rounded-full font-light text-theme1Light1">
+            {text}
+          </span>
+        </div>
+      </button>
+    );
+  }
   if (mode === "day") {
     return (
       <button

@@ -3,7 +3,8 @@
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import TicketBtn from "@/components/Button/TicketBtn";
-import AddToCalendarBtn from "@/components/Button/AddToCalendarBtn";
+import RegisterBtn from "@/components/Button/RegisterBtn";
+// import AddToCalendarBtn from "@/components/Button/AddToCalendarBtn";
 import SubscribeBtn from "@/components/Button/SubscribeBtn";
 import TextHover from "@/motions/TextHover";
 // import CountdownTimer from "@/components/Counter/CountdownTimer";
@@ -84,6 +85,12 @@ const Banner = () => {
             </Suspense>
             <div className="hidden lg:block">
               <Suspense fallback={<Loader />}>
+                <RegisterBtn
+                  width="w-48"
+                  mode="plain"
+                  text="Become A Sponsor"
+                />
+                { /*
                 <AddToCalendarBtn
                   width="w-48"
                   mode="plain"
@@ -93,6 +100,7 @@ const Banner = () => {
                   startDate="2024-11-01T08:00:00"
                   endDate="2024-11-03T18:00:00"
                 />
+                */ }
               </Suspense>
             </div>
           </div>
