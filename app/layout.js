@@ -4,6 +4,7 @@ import Navbar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import ShareBar from "@/components/ShareBar";
+import Image from "next/image";
 // import FloatFooter from "@/components/FloatFooter";
 import Loader from "@/components/Loader";
 // import ChatBot from "@/components/ChatBot/ChatBot";
@@ -155,10 +156,11 @@ const RootLayout = ({ children }) => {
           `}
         </Script>
         <noscript>
-          <img
+          <Image
             height="1"
             width="1"
             src="https://www.facebook.com/tr?id=493023690363001&ev=PageView&noscript=1"
+            alt="Facebook Pixel"
           />
         </noscript>
         {/*<!-- End Meta Pixel Code -->*/}
