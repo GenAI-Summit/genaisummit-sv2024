@@ -40,7 +40,7 @@ const TicketDetail = ({ ticket, evt }) => {
       >
         <div className="flex flex-col md:flex-row items-start justify-between gap-y-6 md:gap-x-4">
           <div className="flex flex-col items-start justify-between text-left gap-y-6">
-            <h3 className="text-theme1Light1 font-bold text-2xl">Type A - $4999</h3>
+            <h3 className="text-theme1Light1 font-bold text-2xl">Type A - $5999</h3>
             {ticket.benefits[0].map((benefit, index) => (
               <p key={index} className="text-theme1Light1">
                 {index + 1}. {benefit}
@@ -48,7 +48,7 @@ const TicketDetail = ({ ticket, evt }) => {
             ))}
           </div>
           <div className="flex flex-col items-start justify-between text-left gap-y-6">
-            <h3 className="text-theme1Light1 font-bold text-2xl">Type B - $2999</h3>
+            <h3 className="text-theme1Light1 font-bold text-2xl">Type B - $3999</h3>
             {ticket.benefits[1].map((benefit, index) => (
               <p key={index} className="text-theme1Light1">
                 {index + 1}. {benefit}
