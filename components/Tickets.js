@@ -24,7 +24,7 @@ const Tickets = ({ widget }) => {
     {
       id: 1,
       name: "One-Day Pass",
-      price: "$179",
+      price: "$189",
       saveText: "",
       platforms: [
         {
@@ -50,7 +50,7 @@ const Tickets = ({ widget }) => {
     {
       id: 2,
       name: "Three-Day Pass",
-      price: "$239",
+      price: "$299",
       platforms: [
         {
           name: "Luma",
@@ -127,7 +127,7 @@ const Tickets = ({ widget }) => {
     {
       id: 5,
       name: "VIP Pass",
-      price: "$1099",
+      price: "$1299",
       saveText: "",
       platforms: [
         {

@@ -34,6 +34,12 @@ const nextConfig = {
         port: "",
         pathname: "/images/notable_attendees/**",
       },
+      {
+        protocol: "https",
+        hostname: "www.facebook.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   output: "standalone",
