@@ -41,6 +41,7 @@ const TicketCard = ({ ticket }) => {
                   evt={`Ticket Card - ${ticket.name} Button`}
                   text={ticket.btnText}
                   url={ticket.platforms[0].url}
+                  width="w-44"
                 />
               </Suspense>
             ) :
@@ -51,6 +52,7 @@ const TicketCard = ({ ticket }) => {
                   platforms={ticket.platforms}
                   evt={`Ticket Card - ${ticket.name} Button`}
                   text={ticket.btnText}
+                  width="w-44"
                   ModalDescription={
                     ticket.ModalDescription ? ticket.ModalDescription : null
                   }

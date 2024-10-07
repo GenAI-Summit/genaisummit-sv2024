@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Suspense } from "react";
+import Loader from "../Loader";
 import Modal from "../Modal";
+import TextToMarkdown from "../TextToMarkdown";
 
 const TicketDetail = ({ ticket, evt }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -25,7 +27,7 @@ const TicketDetail = ({ ticket, evt }) => {
 
   return (
     <>
-      <button className="relative group z-0" onClick={onClick}>
+      <button className="w-44 relative group z-0" onClick={onClick}>
         <div className="rounded-full bg-transparent px-4 py-2 transition-colors duration-300 hover:bg-theme1Dark3 border-[1.5px] border-theme1Light1">
           <span className="h-full w-full rounded-full font-light text-theme1Light1">
             What{"'"}s included?
@@ -36,26 +38,11 @@ const TicketDetail = ({ ticket, evt }) => {
         title="Ticket Details"
         isModalOpen={isModalOpen}
         closeModal={closeModal}
-        maxWidth="max-w-6xl"
+        maxWidth="max-w-[90vw] md:max-w-6xl"
       >
-        <div className="flex flex-col md:flex-row items-start justify-between gap-y-6 md:gap-x-4">
-          <div className="flex flex-col items-start justify-between text-left gap-y-6">
-            <h3 className="text-theme1Light1 font-bold text-2xl">Type A - $5999</h3>
-            {ticket.benefits[0].map((benefit, index) => (
-              <p key={index} className="text-theme1Light1">
-                {index + 1}. {benefit}
-              </p>
-            ))}
-          </div>
-          <div className="flex flex-col items-start justify-between text-left gap-y-6">
-            <h3 className="text-theme1Light1 font-bold text-2xl">Type B - $3999</h3>
-            {ticket.benefits[1].map((benefit, index) => (
-              <p key={index} className="text-theme1Light1">
-                {index + 1}. {benefit}
-              </p>
-            ))}
-          </div>
-        </div>
+        <Suspense fallback={<Loader />}>
+          <TextToMarkdown text={ticket.benefits} />
+        </Suspense>
       </Modal>
     </>
   );

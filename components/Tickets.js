@@ -20,6 +20,37 @@ const Tickets = ({ widget }) => {
     window.open("https://form.gptdao.ai/media-pass", "_blank");
   };
 
+  const attendeeBenefits = `
+  |                                                 | Student Pass | 1-day Pass | 3-day Pass | VIP Pass |
+| :---------------------------------------------- | :----------- | :--------- | :--------- | :------- |
+| **Price**                                       | $119         | $189       | $299       | $1299    |
+| **Days**                                        | 3 Days       | 1 Day      | 3 Days     | 3 Days   |
+| **Acess to all speaking sessions of the event** | ✅           | ✅         | ✅         | ✅       |
+| **Access to all side events**                   | ✅           | ✅         | ✅         | ✅       |
+| **Lead scan connection with exhibitors**        | ✅           | ✅         | ✅         | ✅       |
+| **Whova event community mobile app access**     | ✅           | ✅         | ✅         | ✅       |
+| **No educational email verification**           | ❌           | ✅         | ✅         | ✅       |
+| **Premium front-row seats at all stages**       | ❌           | ❌         | ❌         | ✅       |
+| **Speakers and VIP networking lunch buffet**    | ❌           | ❌         | ❌         | ✅       |
+| **Lounge room and deck access**                 | ❌           | ❌         | ❌         | ✅       |
+| **Banquet pass**                                | ❌           | ❌         | ❌         | ✅       |
+| **One complimentary 3-day pass**                | ❌           | ❌         | ❌         | ✅       |
+  `;
+
+  const exhibitorBenefits = `
+  |                                  | Type A                                               | Type B                                             |
+|-----------------------------------------|------------------------------------------------------|----------------------------------------------------|
+| **Price**                             | $5999                                               | $3999                                             |
+| **Location**                            | Exhibition area                                      | Exhibition area                                    |
+| **Space**                               | 16 x 6 feet                                          | 8 x 6 feet                                         |
+| **Tables**                              | Two 96 x 26.5-inch tables (29 inches high)           | One 96 x 26.5-inch table (29 inches high)          |
+| **Publicity Materials Allowed**         | Yes (roll-up banners and posters allowed)            | Yes (roll-up banners and posters allowed)          |
+| **WIFI Coverage**                       | Included                                             | Included                                           |
+| **Tickets Included**                    | 3 Tickets (1 VIP included)                           | 2 Tickets (option to add 1 VIP for $300)           |
+| **Booth Location Selection**            | Included (first come/served basis)                   | Available for $100 (first come/served basis)       |
+| **Whova Lead Scan for Attendee Tracking** | Included                                           | Available for $500                                 |
+  `;
+
   const tickets = [
     {
       id: 1,
@@ -46,6 +77,7 @@ const Tickets = ({ widget }) => {
       description: [
         "Access to all sessions, workshops, and networking opportunities for any single day of the summit.",
       ],
+      benefits: attendeeBenefits,
     },
     {
       id: 2,
@@ -71,6 +103,7 @@ const Tickets = ({ widget }) => {
       description: [
         "Access to all sessions, workshops, and networking events across the entire three-day summit.",
       ],
+      benefits: attendeeBenefits,
     },
     {
       id: 3,
@@ -87,6 +120,7 @@ const Tickets = ({ widget }) => {
       description: [
         "Available for VIP Pass and General Admission Three-Day Pass with three or more tickets.",
       ],
+      benefits: attendeeBenefits,
     },
     {
       id: 4,
@@ -123,6 +157,7 @@ const Tickets = ({ widget }) => {
       description: [
         "Access to all summit activities and sessions. Must purchase with a valid .edu email address. (Three days)",
       ],
+      benefits: attendeeBenefits,
     },
     {
       id: 5,
@@ -149,6 +184,7 @@ const Tickets = ({ widget }) => {
       description: [
         "All-session access, VIP dinner with speakers, and premium networking events. (Three days)",
       ],
+      benefits: attendeeBenefits,
     },
     {
       id: 6,
@@ -178,28 +214,7 @@ const Tickets = ({ widget }) => {
       description: [
         "Showcase your innovations in our premium booth area. Includes advanced lead tracking technology.",
       ],
-      benefits: [
-        [
-          "Located in the exhibition area",
-          "16 x 6 feet of space",
-          "Two 96 x 26.5-inch tables (29 inches high)",
-          "Publicity materials (roll-up banners and posters) allowed",
-          "WIFI coverage included",
-          "3 Tickets (1 VIP included)",
-          "Pick booth location (first come/served basis) included",
-          "Whova Lead Scan included for attendee tracking",
-        ],
-        [
-          "Located in the exhibition area",
-          "8 x 6 feet of space",
-          "One 96 x 26.5-inch table (29 inches high)",
-          "Publicity materials (roll-up banners and posters) allowed",
-          "WIFI coverage included",
-          "2 Tickets (option to add 1 VIP for $300)",
-          "Pick booth location (first come/served basis) for $100",
-          "Whova Lead Scan included for attendee tracking for $500",
-        ],
-      ],
+      benefits: exhibitorBenefits,
     },
     {
       id: 7,
@@ -231,30 +246,7 @@ const Tickets = ({ widget }) => {
       description: [
         "Strategic visibility in a streamlined space. Connect with attendees efficiently in our popular exhibition area.",
       ],
-      benefits: [
-        [
-          "Located in the exhibition area",
-          "16 x 6 feet of space",
-          "Two 96 x 26.5-inch tables (29 inches high)",
-          "Publicity materials (roll-up banners and posters) allowed",
-          "WIFI coverage included",
-          "3 Tickets (1 VIP included)",
-          "Pick booth location (first come/served basis) included",
-          "Whova Lead Scan included for attendee tracking",
-          "Complimentary AI agent audit report (optional bonus, value $2999, and powered by Fenz.AI)",
-        ],
-        [
-          "Located in the exhibition area",
-          "8 x 6 feet of space",
-          "One 96 x 26.5-inch table (29 inches high)",
-          "Publicity materials (roll-up banners and posters) allowed",
-          "WIFI coverage included",
-          "2 Tickets (option to add 1 VIP for $300)",
-          "Pick booth location (first come/served basis) for $100",
-          "Whova Lead Scan included for attendee tracking for $500",
-          "Complimentary AI agent audit report (optional bonus, value $2999, and powered by Fenz.AI)",
-        ],
-      ],
+      benefits: exhibitorBenefits,
     },
     {
       id: 8,
