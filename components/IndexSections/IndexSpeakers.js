@@ -42,7 +42,7 @@ const IndexSpeakers = async () => {
                   </p>
                 )}
                 {speaker.note && (
-                  <p className="text-[7px] md:text-[11px] lg:text-[13px] xl:text-[15px] text-theme1Gray2">
+                  <p className="text-[8px] md:text-[12px] lg:text-[14px] xl:text-[16px]">
                     {speaker.note}
                   </p>
                 )}

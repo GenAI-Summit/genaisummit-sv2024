@@ -38,7 +38,7 @@ const Speakers = ({ speakers, widget }) => {
                   </p>
                 )}
                 {speaker.note && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[13px] text-theme1Gray2">
+                  <p className="text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px]">
                     {speaker.note}
                   </p>
                 )}
