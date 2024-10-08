@@ -27,6 +27,8 @@ const TicketBtn = ({
       ? getParam("coupon")
       : null;
 
+  const whovaCode = getParam("whova");
+
   const openModal = () => {
     setIsModalOpen(true);
   };
@@ -113,6 +115,15 @@ const TicketBtn = ({
                   <span> {discountCode}</span>
                 </p>
                 <Copy text={discountCode} />
+              </div>
+            )}
+            {whovaCode && (
+              <div className="w-full mt-4 flex items-center justify-between">
+                <p className="text-left text-base md:text-lg text-theme1Light1">
+                  <span className="font-bold">Whova Code: </span>
+                  <span> {whovaCode}</span>
+                </p>
+                <Copy text={whovaCode} />
               </div>
             )}
           </div>
