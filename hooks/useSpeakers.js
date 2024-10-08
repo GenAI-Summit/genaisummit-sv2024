@@ -1,4 +1,5 @@
 import useSWR from "swr";
+import notes from "@/public/data/notes.json";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -22,7 +23,13 @@ const useSpeakers = () => {
 
   const hideSpeakers = data2?.data || [];
   const speakers =
-    data?.data.filter((speaker) => !hideSpeakers.includes(speaker.id)) || [];
+    data?.data.filter((speaker) => !hideSpeakers.includes(speaker.id)).map((speaker) => {
+      const note = notes.find((note) => note.id === speaker.id);
+      return {
+        ...speaker,
+        note: note?.note,
+      };
+    }) || [];
 
   return {
     speakers,
