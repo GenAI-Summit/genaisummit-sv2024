@@ -1,10 +1,10 @@
-import Link from "next/link";
+// import Link from "next/link";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import styles from "@/styles/border.module.css";
 import SectionLayout from "@/layouts/SectionLayout";
 import SpeakerCard from "@/components/SpeakerCard";
-import { LinkedinIcon, TwitterIcon } from "react-share";
+// import { LinkedinIcon, TwitterIcon } from "react-share";
 
 const Speakers = ({ speakers, widget }) => {
   return (
@@ -37,7 +37,15 @@ const Speakers = ({ speakers, widget }) => {
                     @{speaker.organization}
                   </p>
                 )}
-                {speaker.socials.linkedin || speaker.socials.twitter ? (
+                {speaker.note && (
+                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[13px] text-theme1Gray2">
+                    {speaker.note}
+                  </p>
+                )}
+                
+                {
+                  /*
+                speaker.socials.linkedin || speaker.socials.twitter ? (
                   <div className="flex gap-2 md:gap-3 lg:gap-4">
                     {speaker.socials.linkedin && (
                       <Link href={speaker.socials.linkedin} target="_blank">
@@ -50,7 +58,9 @@ const Speakers = ({ speakers, widget }) => {
                       </Link>
                     )}
                   </div>
-                ) : null}
+                ) : null
+                */
+                }
               </div>
             </div>
           ))}
