@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 
 const paramList = [
+  "whova",
   "source",
   "coupon",
   "discount",
