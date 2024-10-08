@@ -25,7 +25,7 @@ const ExhibitorsMarquee = () => {
           key={exhibitor.id}
           className="w-36 h-12 md:w-64 md:h-20"
         >
-          <div className="w-12 h-12 md:w-20 md:h-20 rounded-full overflow-hidden">
+          <div className="w-12 h-12 md:w-20 md:h-20">
             <Image
               src={exhibitor.logo}
               alt={exhibitor.name}
