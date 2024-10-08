@@ -60,7 +60,7 @@ const Drawer = ({ children, isDrawerOpen, closeDrawer }) => {
         <div
           ref={drawerRef}
           className={
-            " w-screen max-w-lg fixed right-0 top-[5%] bg-theme1Dark2 h-[90%] shadow-lg rounded-lg transform  "
+            " w-screen max-w-lg fixed right-0 top-[10%] bg-theme1Dark2 h-[80%] shadow-lg rounded-lg transform  "
           }
         >
           <div className="relative w-screen max-w-lg p-7 flex flex-col space-y-6 overflow-y-scroll h-full">
