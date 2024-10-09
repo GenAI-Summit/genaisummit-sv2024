@@ -89,35 +89,31 @@ const TicketBtn = ({
           <div className="flex flex-col items-center justify-start">
             <div className="flex flex-col items-start justify-center space-y-4">
               {ModalDescription}
-              {platforms?.map((platform) => (
-                <div
-                  className="cursor-pointer w-full flex items-center justify-start gap-4 group"
-                  key={platform.name}
-                  onClick={() => {
-                    openUrl(platform.url);
-                    umamiTrack(evt + " - " + platform.name);
-                    pixelTrack(platform.name.toLowerCase());
-                  }}
-                >
-                  <div className="w-20 h-20">
-                    <Logo src={platform.logo} alt={platform.name} />
+              {platforms?.map((platform) => {
+                if (whovaCode && !platform.name.includes("Whova")) {
+                  return;
+                }
+                return (
+                  <div
+                    className="cursor-pointer w-full flex items-center justify-start gap-4 group"
+                    key={platform.name}
+                    onClick={() => {
+                      openUrl(platform.url);
+                      umamiTrack(evt + " - " + platform.name);
+                      pixelTrack(platform.name.toLowerCase());
+                    }}
+                  >
+                    <div className="w-20 h-20">
+                      <Logo src={platform.logo} alt={platform.name} />
+                    </div>
+                    <p className="text-2xl text-left text-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 group-hover:bg-clip-text group-hover:text-transparent transition ease-in-out duration-300">
+                      {platform.name}
+                    </p>
                   </div>
-                  <p className="text-2xl text-left text-theme1Light1 group-hover:bg-gradient-to-br group-hover:from-theme1Color1 group-hover:via-theme1Color2 group-hover:to-theme1Color3 group-hover:bg-clip-text group-hover:text-transparent transition ease-in-out duration-300">
-                    {platform.name}
-                  </p>
-                </div>
-              ))}
+                );
+              })}
             </div>
-            {discountCode && (
-              <div className="mt-4 flex items-center gap-4">
-                <p className="text-left text-base md:text-lg text-theme1Light1">
-                  <span className="font-bold">Your discount code: </span>
-                  <span> {discountCode}</span>
-                </p>
-                <Copy text={discountCode} />
-              </div>
-            )}
-            {whovaCode && (
+            {whovaCode ? (
               <div className="w-full mt-4 flex items-center justify-between">
                 <p className="text-left text-base md:text-lg text-theme1Light1">
                   <span className="font-bold">Whova Code: </span>
@@ -125,7 +121,15 @@ const TicketBtn = ({
                 </p>
                 <Copy text={whovaCode} />
               </div>
-            )}
+            ) : discountCode ? (
+              <div className="mt-4 flex items-center gap-4">
+                <p className="text-left text-base md:text-lg text-theme1Light1">
+                  <span className="font-bold">Your discount code: </span>
+                  <span> {discountCode}</span>
+                </p>
+                <Copy text={discountCode} />
+              </div>
+            ) : null}
           </div>
         </Modal>
       </>
