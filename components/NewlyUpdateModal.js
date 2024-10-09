@@ -4,17 +4,27 @@ import { useState, useEffect, useRef } from "react";
 import Logo from "@/components/Logo";
 import Modal from "@/components/Modal";
 import { Fireworks } from "@fireworks-js/react";
+import SubscribeBtn from "@/components/Button/SubscribeBtn";
 import umamiTrack from "@/lib/umamiTrace";
 // import FallingLogos from "@/motions/FallingLogos";
 import CheckBox from "@/components/SVG/CheckBox";
+import useParams from "@/hooks/useParams";
 
 const NewlyUpdateModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showAgain, setShowAgain] = useState(true);
   const fireworksRef = useRef(null);
-
+  const { getParam } = useParams();
   const name = "Tesla";
   const logo = "https://d1keuthy5s86c8.cloudfront.net/genai_202405/8a2f8d63b73774c2d5682d73f1421efc5a63c68bf3d838ef79890175001db909_1/Tesla1.png";
+
+  const discountCode = getParam("discount")
+    ? getParam("discount")
+    : getParam("coupon")
+      ? getParam("coupon")
+      : getParam("whova")
+        ? getParam("whova")
+        : null;
 
   useEffect(() => {
     const localLastShown = localStorage.getItem("popupLastShown");
@@ -82,11 +92,15 @@ const NewlyUpdateModal = () => {
         </>
       )}
       <Modal isModalOpen={isOpen} closeModal={onClose} title="Newly Updated Exhibitor">
-        <div className="flex flex-col gap-y-2">
-          <div className="flex flex-col gap-y-4">
-            <div className="text-2xl md:text-4xl">Let&apos;s Welcome</div>
-          </div>
+        <div className="flex flex-col items-center gap-y-8">
+          <div className="text-xl md:text-3xl">Let&apos;s Welcome</div>
           <Logo src={logo} alt={name} width={500} height={500} padding="p-0" />
+          {!discountCode && (
+            <div className="flex flex-col gap-y-4">
+              <SubscribeBtn />
+              <p className="text-theme1Light1">Sign up latest updates and get 10% off your tickets</p>
+            </div>
+          )}
           <div className="flex items-center gap-x-2 cursor-pointer" onClick={onShowAgainChange}>
             <CheckBox label="Do not show this update again" checked={!showAgain} />
           </div>
