@@ -19,7 +19,9 @@ export const revalidate = 60;
 const Index = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center gap-y-12 md:gap-y-16">
-      <NewlyUpdateModal />
+      <Suspense fallback={null}>
+        <NewlyUpdateModal />
+      </Suspense>
       <Banner />
       <div className="max-w-maxWidth w-full lg:w-3/4 px-5">
         <IndexSponsors />
