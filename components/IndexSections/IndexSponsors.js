@@ -1,5 +1,5 @@
 import SectionLayout from "@/layouts/SectionLayout";
-// import SubsectionLayout from "@/layouts/SubSectionLayout";
+import SubsectionLayout from "@/layouts/SubSectionLayout";
 import OrganizationCard from "@/components/OrganizationCard";
 // import ShowMore from "@/components/Button/ShowMore";
 import RegisterBtn from "@/components/Button/RegisterBtn";
@@ -24,20 +24,21 @@ const IndexSponsors = async () => {
               return null;
             }
             return (
-              <div key={tier} className="w-full flex flex-col items-center justify-center gap-y-4">
-                <p className="text-2xl font-bold my-6">{tier}</p>
-                <div className="w-full flex flex-col flex-wrap md:flex-row md:gap-x-[2%] gap-y-4 justify-center items-center">
-                  {filteredSponsors.map((sponsor) => (
-                    <div
-                      key={sponsor.id}
-                      className="w-full md:w-[31%] h-36"
-                    >
-                      <OrganizationCard
-                        organization={sponsor}
-                      />
-                    </div>
-                  ))}
-                </div>
+              <div key={tier} className="w-full">
+                <SubsectionLayout title={tier} textAlign="text-center">
+                  <div className="w-full flex flex-col flex-wrap md:flex-row md:gap-x-[2%] gap-y-4 justify-center items-center">
+                    {filteredSponsors.map((sponsor) => (
+                      <div
+                        key={sponsor.id}
+                        className="w-full md:w-[31%] h-36"
+                      >
+                        <OrganizationCard
+                          organization={sponsor}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </SubsectionLayout>
               </div>
             );
           })}
