@@ -9,7 +9,7 @@ const Sponsors = ({ sponsorTiers, sponsors }) => {
         title="Sponsors"
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
       >
-        <div className="w-full flex flex-col gap-y-12 md:gap-y-16 justify-start items-center">
+        <div className="w-full flex flex-col gap-y-12 md:gap-y-4 justify-start items-center">
           {sponsorTiers.map((tier) => {
             const filteredSponsors = sponsors.filter(
               (sponsor) => sponsor.tier === tier,
@@ -24,7 +24,7 @@ const Sponsors = ({ sponsorTiers, sponsors }) => {
                     {filteredSponsors.map((sponsor) => (
                       <div
                         key={sponsor.id}
-                        className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23%] lg:h-27"
+                        className="w-[48%] h-36 md:w-[48%] md:h-27 lg:w-[31%] lg:h-27"
                       >
                         <OrganizationCard organization={sponsor} />
                       </div>

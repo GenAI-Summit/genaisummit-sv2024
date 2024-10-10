@@ -94,7 +94,7 @@ const NewlyUpdateModal = () => {
       <Modal isModalOpen={isOpen} closeModal={onClose} title="Newly Updated Exhibitor">
         <div className="flex flex-col items-center gap-y-8">
           <div className="text-xl md:text-3xl">Let&apos;s Welcome</div>
-          <Logo src={logo} alt={name} width={500} height={500} padding="p-0" />
+          <Logo src={logo} alt={name} width={300} height={300} padding="p-0" />
           {!discountCode && (
             <div className="flex flex-col gap-y-4">
               <SubscribeBtn />

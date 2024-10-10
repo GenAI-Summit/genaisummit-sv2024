@@ -1,12 +1,12 @@
 import SectionLayout from "@/layouts/SectionLayout";
-import SubsectionLayout from "@/layouts/SubSectionLayout";
+// import SubsectionLayout from "@/layouts/SubSectionLayout";
 import OrganizationCard from "@/components/OrganizationCard";
-import ShowMore from "@/components/Button/ShowMore";
+// import ShowMore from "@/components/Button/ShowMore";
 import RegisterBtn from "@/components/Button/RegisterBtn";
 import { getSponsors } from "@/lib/api";
 
 const IndexSponsors = async () => {
-  const sponsors = await getSponsorsData();
+  const sponsors = await getSponsors();
   const tiers = ["Platinum", "Gold", "Silver", "Special"];
   return (
     <>
@@ -15,7 +15,7 @@ const IndexSponsors = async () => {
         description="CHECK WHO MAKES THIS EVENT POSSIBLE!"
         widget={<RegisterBtn text="Become Our Sponsor" mode="day" />}
       >
-        <div className="w-full mt-6 flex flex-col gap-y-12 md:gap-y-16 justify-center items-center">
+        <div className="w-full flex flex-col gap-y-6 mt-6">
           {tiers.map((tier) => {
             const filteredSponsors = sponsors.filter(
               (sponsor) => sponsor.tier === tier,
@@ -24,37 +24,27 @@ const IndexSponsors = async () => {
               return null;
             }
             return (
-              <div className="w-full" key={tier}>
-                <SubsectionLayout title={tier} textAlign="text-center">
-                  <div className="w-full flex flex-wrap items-center justify-center gap-x-[3%] gap-y-4">
-                    {filteredSponsors.map((sponsor) => (
-                      <div
-                        key={sponsor.id}
-                        className="w-full h-36 md:w-[31%] md:h-27"
-                      >
-                        <OrganizationCard
-                          type="sponsor"
-                          organization={sponsor}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </SubsectionLayout>
+              <div key={tier} className="w-full flex flex-col items-center justify-center gap-y-4">
+                <p className="text-2xl font-bold my-6">{tier}</p>
+                <div className="w-full flex flex-col flex-wrap md:flex-row md:gap-x-[2%] gap-y-4 justify-center items-center">
+                  {filteredSponsors.map((sponsor) => (
+                    <div
+                      key={sponsor.id}
+                      className="w-full md:w-[31%] h-36"
+                    >
+                      <OrganizationCard
+                        organization={sponsor}
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             );
           })}
-          <div>
-            <ShowMore target="/partners" text="View All Sponsors" mode="day" />
-          </div>
         </div>
       </SectionLayout>
     </>
   );
-};
-
-const getSponsorsData = async () => {
-  const sponsors = await getSponsors();
-  return sponsors;
 };
 
 export default IndexSponsors;

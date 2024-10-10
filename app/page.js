@@ -9,10 +9,10 @@ import IndexMedia from "@/components/IndexSections/IndexMedia";
 import IndexExhibitors from "@/components/IndexSections/IndexExhibitors";
 import NewFeatures from "@/components/IndexSections/NewFeatures";
 import Tickets from "@/components/Tickets";
-import IndexIntro from "@/components/Intro/IndexIntro";
 import SectionEnter from "@/motions/SectionEnter";
 import NewlyUpdateModal from "@/components/NewlyUpdateModal";
 import IndexAgenda from "@/components/IndexSections/IndexAgenda";
+import IndexSponsors from "@/components/IndexSections/IndexSponsors";
 
 export const revalidate = 60;
 
@@ -22,9 +22,7 @@ const Index = () => {
       <NewlyUpdateModal />
       <Banner />
       <div className="max-w-maxWidth w-full lg:w-3/4 px-5">
-        <SectionEnter>
-          <IndexIntro />
-        </SectionEnter>
+        <IndexSponsors />
       </div>
       <SectionEnter>
         <FunFacts />

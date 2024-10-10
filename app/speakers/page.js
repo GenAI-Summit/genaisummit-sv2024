@@ -7,7 +7,6 @@ import SearchBar from "@/components/SearchBar";
 import Speakers from "@/components/Speakers";
 import ResetBtn from "@/components/Button/ResetBtn";
 import useSpeakers from "@/hooks/useSpeakers";
-import SpeakersIntro from "@/components/Intro/SpeakersIntro";
 import SectionEnter from "@/motions/SectionEnter";
 
 const SpeakersPage = () => {
@@ -39,9 +38,6 @@ const SpeakersPage = () => {
 
   return (
     <div className="w-full flex flex-col gap-y-14 mt-10">
-      <SectionEnter>
-        <SpeakersIntro />
-      </SectionEnter>
       <SectionEnter>
         <div className="w-full flex flex-col gap-y-16 lg:gap-x-8">
           <div className="md:hidden w-full flex gap-x-4">
