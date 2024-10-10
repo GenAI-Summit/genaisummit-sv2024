@@ -8,15 +8,17 @@ import Media from "@/components/Media";
 import SearchBar from "@/components/SearchBar";
 import Filter from "@/components/Filter";
 import ResetBtn from "@/components/Button/ResetBtn";
-// import useExhibitors from "../Hooks/useExhibitors";
+import useExhibitors from "@/hooks/useExhibitors";
 import useMedia from "@/hooks/useMedia";
 import useExhibitorsIndex from "@/hooks/useExhibitorsIndex";
 import PartnersIntro from "@/components/Intro/PartnersIntro";
 import SectionEnter from "@/motions/SectionEnter";
+import Sponsors from "@/components/Sponsors";
 
 const PartnersPage = () => {
-  //const { sponsors, media, sponsorTiers, isLoading, isError } = useExhibitors();
-  const { media, isLoading, isError } = useMedia();
+  const { sponsors, sponsorTiers, isLoading: isLoadingSponsors, isError: isErrorSponsors } = useExhibitors();
+  const { media, isLoading: isLoadingMedia, isError: isErrorMedia } = useMedia();
+
   const [text, setText] = useState("");
   const textLower = text.toLowerCase();
 
@@ -36,7 +38,6 @@ const PartnersPage = () => {
     setText("");
   };
 
-  /*
   const filteredSponsors = useMemo(() => {
     return sponsors?.filter((sponsor) => {
       return (
@@ -46,7 +47,6 @@ const PartnersPage = () => {
       );
     });
   }, [sponsors, textLower, selectedCategories]);
-  */
 
   const filteredMedia = useMemo(() => {
     return media?.filter((media) =>
@@ -54,11 +54,11 @@ const PartnersPage = () => {
     );
   }, [media, textLower]);
 
-  if (isLoading) {
+  if (isLoadingSponsors || isLoadingMedia) {
     return <Loader />;
   }
 
-  if (isError) {
+  if (isErrorSponsors || isErrorMedia) {
     return <Error />;
   }
 
@@ -90,6 +90,12 @@ const PartnersPage = () => {
             </div>
           </div>
           <div className="w-full flex flex-col gap-y-24">
+            <div className="w-full">
+              <Sponsors
+                sponsors={filteredSponsors}
+                sponsorTiers={sponsorTiers}
+              />
+            </div>
             <div className="w-full">
               <Media media={filteredMedia} />
             </div>

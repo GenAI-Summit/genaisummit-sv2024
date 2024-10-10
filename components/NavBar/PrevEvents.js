@@ -31,7 +31,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
         onMouseLeave={closeDialog}
       >
         <div className="inline-flex items-center gap-1 cursor-pointer">
-          PREVIOUS EVENTS
+          PREV EVENTS
         </div>
         <AnimatePresence>
           {showDialog && (
