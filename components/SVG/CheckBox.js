@@ -1,6 +1,6 @@
-const CheckBox = ({ label, checked }) => {
+const CheckBox = ({ label, checked, color = "text-theme1Light1" }) => {
   return (
-    <div className="inline-block flex items-center gap-3 cursor-pointer text-theme1Light1">
+    <div className={`inline-block flex items-center gap-3 cursor-pointer ${color}`}>
       <svg
         className="w-6 h-6"
         viewBox="0 0 24 24"
