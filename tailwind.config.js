@@ -71,6 +71,31 @@ module.exports = {
         discord: "#5865F2",
         popupBg: "#E1D8CA",
 
+
+        // Platinum Tier colors
+        platinumBg: "#E6F3FF",
+        platinumBorder: "#E6F3FF",
+        platinumBorderHover: "#B8E2FF",
+        platinumTitle: "#0077BE",
+
+        // Gold Tier colors
+        goldBg: "#FFF7E0",
+        goldBorder: "#FFF7E0",
+        goldBorderHover: "#FFE082",
+        goldTitle: "#FFA000",
+
+        // Silver Tier colors
+        silverBg: "#F5F5F5",
+        silverBorder: "#F5F5F5",
+        silverBorderHover: "#E0E0E0",
+        silverTitle: "#F7F7F7",
+
+        // Special Tier colors
+        specialBg: "#E6FFF9",
+        specialBorder: "#E6FFF9",
+        specialBorderHover: "#B3FFE6",
+        specialTitle: "#00A86B",
+
         theme1MainBg: "#F7F7F7",
         theme1Text: "#1F2935",
         theme1IntroText: "#1F2935",
