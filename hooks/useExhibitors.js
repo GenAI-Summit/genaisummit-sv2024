@@ -19,10 +19,22 @@ const useExhibitors = () => {
     fetcher,
   );
 
+  const {
+    data: data3,
+    isLoading: isLoading3,
+    error: error3,
+  } = useSWR(
+    "https://api.gptdao.ai/rank/tag?tag_name=only_sponsor&type_name=exhibitor",
+    fetcher,
+  );
+
   const hideExhibitors = data2?.data || [];
+  const onlySponsors = data3?.data || [];
+
   const exhibitors =
-    data?.data.filter((exhibitor) => !hideExhibitors.includes(exhibitor.id)) ||
-    [];
+    data?.data
+      .filter((exhibitor) => !hideExhibitors.includes(exhibitor.id))
+      .filter((exhibitor) => !onlySponsors.includes(exhibitor.id)) || [];
 
   const sponsors = exhibitors?.filter((exhibitor) =>
     sponsorTiers.includes(exhibitor.tier),
@@ -37,8 +49,8 @@ const useExhibitors = () => {
     getExhibitorById,
     sponsors,
     sponsorTiers,
-    isLoading: isLoading || isLoading2,
-    isError: error || error2,
+    isLoading: isLoading || isLoading2 || isLoading3,
+    isError: error || error2 || error3,
   };
 };
 
