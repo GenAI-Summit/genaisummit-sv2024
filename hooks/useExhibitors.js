@@ -36,9 +36,10 @@ const useExhibitors = () => {
       .filter((exhibitor) => !hideExhibitors.includes(exhibitor.id))
       .filter((exhibitor) => !onlySponsors.includes(exhibitor.id)) || [];
 
-  const sponsors = exhibitors?.filter((exhibitor) =>
-    sponsorTiers.includes(exhibitor.tier),
-  );
+  const sponsors =
+    data?.data
+      .filter((exhibitor) => !hideExhibitors.includes(exhibitor.id))
+      .filter((exhibitor) => sponsorTiers.includes(exhibitor.tier)) || [];
 
   const getExhibitorById = (id) => {
     return exhibitors.find((exhibitor) => exhibitor.id === id);
