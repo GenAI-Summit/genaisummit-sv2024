@@ -1,5 +1,5 @@
 import Intro from "@/components/Intro/Intro";
-import RegisterBtn from "@/components/Button/RegisterBtn";
+import RegisterExhibitor from "@/components/Button/RegisterExhibitor";
 
 const ExhibitorsIntro = () => {
   const title = "Showcase the Future";
@@ -14,7 +14,7 @@ const ExhibitorsIntro = () => {
         title={title}
         paragraphs={paragraphs}
         images={images}
-        widget={<RegisterBtn text="Become Our Exhibitor" mode="day" />}
+        widget={<RegisterExhibitor />}
         imgAspect="aspect-[4/3]"
       />
     </>
