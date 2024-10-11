@@ -7,10 +7,15 @@ import OrganizationDetail from "@/components/OrganizationDetail";
 import { useRouter } from "next/navigation";
 import TextHover from "@/motions/TextHover";
 
-const OrganizationCard = ({ organization }) => {
+const OrganizationCard = ({
+  organization,
+  bgColor = "bg-theme1Gray3",
+  borderColor = "border-theme1Gray3",
+  borderColorHover = "hover:border-theme1Gray2",
+}) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
-
+  
   const openDrawer = () => {
     setIsDrawerOpen(true);
   };
@@ -28,7 +33,19 @@ const OrganizationCard = ({ organization }) => {
   return (
     <>
       <div
-        className="w-full h-full bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out transition duration-300 hover:border-theme1Gray2 rounded-lg shadow-md"
+        className={`w-full
+          h-full
+          cursor-pointer
+          border-2
+          ease-in-out
+          transition
+          duration-300
+          rounded-lg
+          shadow-md
+          ${bgColor}
+          ${borderColor}
+          ${borderColorHover}
+        `}
         onClick={openDrawer}
       >
         <Logo src={organization.logo} alt={organization.name} />

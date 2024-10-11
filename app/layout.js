@@ -9,6 +9,7 @@ import Image from "next/image";
 import Loader from "@/components/Loader";
 // import ChatBot from "@/components/ChatBot/ChatBot";
 import "@/styles/globals.css";
+import ColorUtility from "@/components/ColorUtility";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -96,6 +97,7 @@ const RootLayout = ({ children }) => {
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <div className="flex-grow pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
+          <ColorUtility />
           <Suspense fallback={<Loader />}>
             <Navbar />
           </Suspense>
