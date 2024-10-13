@@ -15,6 +15,7 @@ import PopupModal from "@/components/IndexSections/PopupModal";
 import IndexAgenda from "@/components/IndexSections/IndexAgenda";
 import IndexSponsors from "@/components/IndexSections/IndexSponsors";
 import TeslaIntro from "@/components/Intro/TeslaIntro";
+import Marquee from "@/components/IndexSections/Marquee";
 
 export const revalidate = 60;
 
@@ -58,6 +59,11 @@ const Index = () => {
           </Suspense>
         </SectionEnter>
       </div>
+      <Suspense fallback={null}>
+        <div className="fixed bottom-0 left-0 w-full bg-theme1Light1 z-30">
+          <Marquee />
+        </div>
+      </Suspense>
     </div>
   );
 };

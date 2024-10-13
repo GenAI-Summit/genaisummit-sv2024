@@ -8,7 +8,8 @@ import RegisterBtn from "@/components/Button/RegisterBtn";
 import SubscribeBtn from "@/components/Button/SubscribeBtn";
 import TextHover from "@/motions/TextHover";
 // import CountdownTimer from "@/components/Counter/CountdownTimer";
-import Marquee from "@/components/IndexSections/Marquee";
+// import FloatingLogo from "@/components/FloatingLogo";
+import TopLogos from "@/components/TopLogos";
 
 const Banner = () => {
 
@@ -21,7 +22,7 @@ const Banner = () => {
   };
 
   return (
-    <div className="relative w-full h-[85vh] md:h-[93vh] xl:h-screen overflow-hidden flex items-center justify-center">
+    <div className="relative w-full h-screen overflow-hidden flex items-center justify-center">
       <video
         src="/videos/promotion.mp4"
         autoPlay
@@ -31,27 +32,28 @@ const Banner = () => {
         className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
       <div className="absolute inset-0 w-full h-full bg-black opacity-70 z-20"></div>
-      <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-theme1Light1 text-center p-6 gap-y-12 md:gap-y-14 lg:gap-y-16">
-        <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-10">
+      <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-theme1Light1 text-center p-6 gap-y-6 md:gap-y-8 lg:gap-y-10">
+        <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-6">
+          <TopLogos />
           <p>
-            <span className="text-2xl md:text-4xl lg:text-5xl bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
+            <span className="text-lg md:text-xl lg:text-2xl bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
               #AIAREALL
             </span>
           </p>
-          <p className="text-2xl md:text-4xl lg:text-7xl">GENAI SUMMIT</p>
-          <p className="text-2xl md:text-4xl lg:text-7xl">
+          <p className="text-xl md:text-2xl lg:text-4xl">GENAI SUMMIT</p>
+          <p className="text-xl md:text-2xl lg:text-4xl">
             <span>Silicon Valley</span>{" "}
             <span className="bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
               2024
             </span>
           </p>
         </div>
-        <div className="flex flex-col items-center gap-y-8 md:gap-y-8 lg:gap-y-10">
+        <div className="flex flex-col items-center gap-y-4 md:gap-y-6 lg:gap-y-8">
           <div className="font-monaspace_neon flex flex-col gap-y-4">
-            <p className="text-sm md:text-lg lg:text-2xl">
+            <p className="text-sm md:text-base lg:text-lg">
               3 Days | 200+ Speakers | 100+ VCs | 25+ Tracks
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl">
+            <p className="text-base md:text-lg lg:text-xl">
               Meet the Brightest Minds at the Largest AI Event
             </p>
           </div>
@@ -106,11 +108,6 @@ const Banner = () => {
           </div>
         </div>
       </div>
-      <Suspense fallback={<Loader />}>
-        <div className="absolute bottom-0 left-0 w-full bg-theme1Light1 z-30">
-          <Marquee />
-        </div>
-      </Suspense>
     </div>
   );
 };
