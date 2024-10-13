@@ -46,6 +46,7 @@ const useExhibitors = () => {
   };
 
   return {
+    allOrganizations: data?.data || [],
     exhibitors,
     getExhibitorById,
     sponsors,

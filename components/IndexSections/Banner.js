@@ -8,7 +8,7 @@ import RegisterBtn from "@/components/Button/RegisterBtn";
 import SubscribeBtn from "@/components/Button/SubscribeBtn";
 import TextHover from "@/motions/TextHover";
 // import CountdownTimer from "@/components/Counter/CountdownTimer";
-import ExhibitorsMarquee from "@/components/IndexSections/ExhibitorsMarquee";
+import Marquee from "@/components/IndexSections/Marquee";
 
 const Banner = () => {
 
@@ -108,7 +108,7 @@ const Banner = () => {
       </div>
       <Suspense fallback={<Loader />}>
         <div className="absolute bottom-0 left-0 w-full bg-theme1Light1 z-30">
-          <ExhibitorsMarquee />
+          <Marquee />
         </div>
       </Suspense>
     </div>
