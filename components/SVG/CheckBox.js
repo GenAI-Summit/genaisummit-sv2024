@@ -8,12 +8,12 @@ const CheckBox = ({ label, checked, color = "text-theme1Light1" }) => {
         stroke="currentColor"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <rect x="2" y="2" width="20" height="20" rx="2" stroke-width="2" />
+        <rect x="2" y="2" width="20" height="20" rx="2" strokeWidth="2" />
         <path
           className={`${checked ? "" : "hidden"}`}
           d="M5 12 L10 17 L19 8"
-          stroke-width="2"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinejoin="round"
         />
       </svg>
       <span className="text-lg">{label.length === 0 ? "TBD" : label}</span>

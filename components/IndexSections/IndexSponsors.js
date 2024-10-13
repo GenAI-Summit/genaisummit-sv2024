@@ -30,7 +30,7 @@ const IndexSponsors = async () => {
                 <SubsectionLayout
                   title={tier}
                   textAlign="text-left"
-                  titleColor={stylesMap[tier].title}
+                  titleColor={stylesMap[tier.replace(" ", "")].title}
                 >
                   <div className="flex flex-wrap gap-x-[4%] md:gap-x-[3%] gap-y-4 md:gap-y-6 lg:gap-y-8 justify-start items-center">
                     {filteredSponsors.map((sponsor) => (
@@ -40,9 +40,9 @@ const IndexSponsors = async () => {
                       >
                         <OrganizationCard
                           organization={sponsor}
-                          bgColor={stylesMap[tier].bg}
-                          borderColor={stylesMap[tier].border}
-                          borderColorHover={stylesMap[tier].hover}
+                          bgColor={stylesMap[tier.replace(" ", "")].bg}
+                          borderColor={stylesMap[tier.replace(" ", "")].border}
+                          borderColorHover={stylesMap[tier.replace(" ", "")].hover}
                         />
                       </div>
                     ))}
