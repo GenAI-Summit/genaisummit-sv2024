@@ -96,6 +96,12 @@ module.exports = {
         specialBorderHover: "#B3FFE6",
         specialTitle: "#00A86B",
 
+        // Premium Exhibitor Tier colors
+        premiumExhibitorBg: "#FFF0F5",
+        premiumExhibitorBorder: "#FFF0F5",
+        premiumExhibitorBorderHover: "#FFD1DC",
+        premiumExhibitorTitle: "#FF69B4",
+
         theme1MainBg: "#F7F7F7",
         theme1Text: "#1F2935",
         theme1IntroText: "#1F2935",

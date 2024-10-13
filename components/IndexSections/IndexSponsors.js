@@ -8,7 +8,7 @@ import stylesMap from "@/lib/stylesMap";
 
 const IndexSponsors = async () => {
   const sponsors = await getSponsors();
-  const tiers = ["Platinum", "Gold", "Silver", "Special"];
+  const tiers = ["Platinum", "Gold", "Silver", "Special", "Premium Exhibitor"];
 
   return (
     <>

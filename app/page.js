@@ -14,6 +14,7 @@ import SectionEnter from "@/motions/SectionEnter";
 import PopupModal from "@/components/IndexSections/PopupModal";
 import IndexAgenda from "@/components/IndexSections/IndexAgenda";
 import IndexSponsors from "@/components/IndexSections/IndexSponsors";
+import TeslaIntro from "@/components/Intro/TeslaIntro";
 
 export const revalidate = 60;
 
@@ -24,8 +25,9 @@ const Index = () => {
         <PopupModal />
       </Suspense>
       <Banner />
-      <div className="max-w-maxWidth w-full lg:w-3/4 px-5">
+      <div className="max-w-maxWidth w-full lg:w-3/4 px-5 flex flex-col gap-y-12 md:gap-y-16">
         <IndexSponsors />
+        <TeslaIntro />
       </div>
       <SectionEnter>
         <FunFacts />

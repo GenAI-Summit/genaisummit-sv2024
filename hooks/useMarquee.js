@@ -8,10 +8,10 @@ const apiUrl = "https://api.gptdao.ai";
 // const apiUrl = "http://localhost:8900";
 
 const useMarquee = () => {
-  const { exhibitors: allExhibitors, isLoading: isLoadingAllExhibitors, isError: isErrorAllExhibitors } = useExhibitors();
+  const { allOrganizations, isLoading: isLoadingAllOrganizations, isError: isErrorAllOrganizations } = useExhibitors();
   const { speakers: allSpeakers, isLoading: isLoadingAllSpeakers, isError: isErrorAllSpeakers } = useSpeakers();
 
-  const { data: exhibitorsData, isLoading: isLoadingExhibitors, error: errorExhibitors } = useSWR(
+  const { data: organizationsData, isLoading: isLoadingOrganizations, error: errorOrganizations } = useSWR(
     `${apiUrl}/rank/tag?tag_name=marquee&type_name=exhibitor`,
     fetcher,
   );
@@ -21,14 +21,14 @@ const useMarquee = () => {
     fetcher,
   );
 
-  const exhibitors = allExhibitors.filter((exhibitor) => exhibitorsData?.data.includes(exhibitor.id));
+  const organizations = allOrganizations.filter((organization) => organizationsData?.data.includes(organization.id));
   const speakers = allSpeakers.filter((speaker) => speakersData?.data.includes(speaker.id));
 
   return {
-    exhibitors,
+    organizations,
     speakers,
-    isLoading: isLoadingExhibitors || isLoadingSpeakers || isLoadingAllExhibitors || isLoadingAllSpeakers,
-    isError: errorExhibitors || errorSpeakers || isErrorAllExhibitors || isErrorAllSpeakers,
+    isLoading: isLoadingOrganizations || isLoadingSpeakers || isLoadingAllOrganizations || isLoadingAllSpeakers,
+    isError: errorOrganizations || errorSpeakers || isErrorAllOrganizations || isErrorAllSpeakers,
   };
 };
 
