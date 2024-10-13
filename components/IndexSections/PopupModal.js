@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Loader from "@/components/Loader";
 import Image from "next/image";
 import ModalEnter from "@/motions/ModalEnter";
@@ -17,6 +17,7 @@ const date = "1010";
 const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showAgain, setShowAgain] = useState(true);
+  const modalRef = useRef(null);
 
   const [isScriptLoaded, setIsScriptLoaded] = useState(false);
   const [isFormInitialized, setIsFormInitialized] = useState(false);
@@ -32,6 +33,12 @@ const PopupModal = () => {
       sessionStorage.setItem("popupLastShown", date);
     }
   }, []);
+
+  useEffect(() => {
+    if (isOpen && modalRef.current) {
+      modalRef.current.focus();
+    }
+  }, [isOpen]);
 
   useEffect(() => {
     window._ctct_m = "30bb8cd15e4ce5c252b5c0df5da52b42";
@@ -62,6 +69,12 @@ const PopupModal = () => {
     setShowAgain(!showAgain);
   };
 
+  const onKeyDown = (e) => {
+    if (e.key === "Escape") {
+      onClose();
+    }
+  };
+
   if (!isOpen) {
     return null;
   }
@@ -70,6 +83,9 @@ const PopupModal = () => {
     <div
       className="fixed inset-0 bg-gray-900 bg-opacity-50 h-full w-full flex items-center justify-center z-50"
       onClick={onClose}
+      ref={modalRef}
+      onKeyDown={onKeyDown}
+      tabIndex={-1}
     >
       <ModalEnter>
         <div
