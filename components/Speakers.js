@@ -14,31 +14,31 @@ const Speakers = ({ speakers, widget }) => {
         description="LISTEN TO THE EVENT SPEAKERS"
         widget={widget}
       >
-        <div className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] gap-y-14 justify-start">
+        <div className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-14 justify-start">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className="w-[32%] md:w-[18%] flex flex-col"
+              className="w-[23%] md:w-[15%] lg:w-[11%] flex flex-col"
             >
               <Suspense fallback={<Loader />}>
                 <SpeakerCard key={speaker.id} speaker={speaker} />
               </Suspense>
-              <div className="mt-4 flex flex-col justify-between items-start text-theme1Light1 gap-y-2 md:gap-y-4 flex-grow">
-                <p className="text-[10px] md:text-[12px] lg:text-[14px] xl:text-[16px] font-bold">
+              <div className="mt-2 flex flex-col items-start justify-between text-theme1Light1 gap-y-1 lg:gap-y-1 flex-grow">
+                <p className="text-[9px] md:text-[10px] lg:text-[11px] xl:text-[12px] font-bold">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px]">
+                  <p className="text-[7px] md:text-[9px] lg:text-[10px] xl:text-[11px]">
                     {speaker.title}
                   </p>
                 )}
                 {speaker.organization && (
-                  <p className="text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px]">
+                  <p className="text-[7px] md:text-[9px] lg:text-[10px] xl:text-[11px]">
                     @{speaker.organization}
                   </p>
                 )}
                 {speaker.note && (
-                  <p className="text-[8px] md:text-[10px] lg:text-[12px] xl:text-[14px]">
+                  <p className="text-[7px] md:text-[9px] lg:text-[10px] xl:text-[11px]">
                     {speaker.note}
                   </p>
                 )}
