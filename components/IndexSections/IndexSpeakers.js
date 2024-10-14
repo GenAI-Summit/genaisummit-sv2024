@@ -12,7 +12,7 @@ import RegisterBtn from "@/components/Button/RegisterBtn";
 // import { getHomeSpeakers } from "@/lib/api";
 import useSpeakers from "@/hooks/useSpeakers";
 
-import styles from "@/styles/border.module.css";
+// import styles from "@/styles/border.module.css";
 
 const IndexSpeakers = () => {
   const { speakers, isLoading, isError } = useSpeakers();
@@ -46,7 +46,7 @@ const IndexSpeakers = () => {
             <div
               key={speaker.id}
               /*className={`w-[32%] md:w-[19%] ${styles.border} flex flex-col`}*/
-              className={`w-[32%] md:w-[18%] ${styles.border} flex flex-col`}
+              className="w-[32%] md:w-[18%] flex flex-col"
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="mt-4 flex flex-col items-start justify-between gap-y-2 md:gap-y-3 text-theme1Light1 flex-grow">
