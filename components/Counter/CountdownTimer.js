@@ -36,7 +36,7 @@ const CountdownTimer = ({ time }) => {
     "bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent";
 
   if (!mounted) {
-    return null; // or a loading placeholder
+    return null;
   }
 
   return (

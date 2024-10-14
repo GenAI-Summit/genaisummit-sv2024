@@ -89,7 +89,7 @@ const IndexSpeakers = () => {
           ))}
         </div>
         <div className="mt-6 md:mt-8">
-          <ShowAll text={showAll ? "Show Less" : "Show All Speakers"} onClick={onShowAll} />
+          <ShowAll text={showAll ? "Show Less" : "Show More"} onClick={onShowAll} />
         </div>
       </SectionLayout>
     </>

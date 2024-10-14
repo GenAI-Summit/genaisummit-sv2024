@@ -33,8 +33,8 @@ const Banner = () => {
       />
       <div className="absolute inset-0 w-full h-full bg-black opacity-70 z-20"></div>
       <div className="max-w-maxWidth relative z-20 flex flex-col items-center justify-center h-full text-theme1Light1 text-center p-6 gap-y-6 md:gap-y-8 lg:gap-y-10">
+        <TopLogos />
         <div className="font-monaspace_krypton flex flex-col items-center gap-y-4 lg:gap-y-6">
-          <TopLogos />
           <p>
             <span className="text-lg md:text-xl lg:text-2xl bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3 bg-clip-text text-transparent">
               #AIAREALL
@@ -49,7 +49,7 @@ const Banner = () => {
           </p>
         </div>
         <div className="flex flex-col items-center gap-y-4 md:gap-y-6 lg:gap-y-8">
-          <div className="font-monaspace_neon flex flex-col gap-y-4">
+          <div className="flex flex-col gap-y-4">
             <p className="text-sm md:text-base lg:text-lg">
               3 Days | 200+ Speakers | 100+ VCs | 25+ Tracks
             </p>
