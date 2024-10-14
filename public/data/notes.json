@@ -32,12 +32,12 @@
     {
         "id": 41865558,
         "name": "Vanessa Larco",
-        "note": "Fund Size: $25B+"
+        "note": "Fund Size: $25B"
     },
     {
         "id": 41940565,
         "name": "Lip-Bu Tan",
-        "note": "Fund Size: $4B+"
+        "note": "Fund Size: $4B"
     },
     {
         "id": 41403643,
@@ -47,7 +47,7 @@
     {
         "id": 41005134,
         "name": "Filip Kozera",
-        "note": "Funding Amount: $1.9M"
+        "note": "5M Users in 2 Weeks"
     },
     {
         "id": 40779264,
@@ -77,7 +77,7 @@
     {
         "id": 41403640,
         "name": "Philip Rathle",
-        "note": "Valuation: $2B+"
+        "note": "Valuation: $2B"
     },
     {
         "id": 40918134,
@@ -112,7 +112,7 @@
     {
         "id": 40918127,
         "name": "Yohei Nakajima",
-        "note": "BabyAGI creator"
+        "note": "AI Agents creator"
     },
     {
         "id": 40911167,
@@ -612,11 +612,16 @@
     {
         "id": 42363837,
         "name": "Shishir Patil",
-        "note": "Gorilla LLM innovator"
+        "note": "Gorilla LLM Innovator"
     },
     {
         "id": 42636085,
         "name": "Jon Chu",
         "note": "OpenAI Seed Round Investor"
+    },
+    {
+        "id": 42055485,
+        "name": "Annie Pearl",
+        "note": "Microsoft Startups Ecosystem"
     }
 ]
