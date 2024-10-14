@@ -45,7 +45,7 @@ const Marquee = () => {
             key={`speaker-${item.id}-${Math.random()}`}
             className="w-56 h-24 md:w-80 md:h-32 flex justify-between items-center gap-4"
           >
-            <div className="w-16 h-16 md:w-24 md:h-24 rounded-full overflow-hidden">
+            <div className="w-16 h-16 md:w-24 md:h-24 overflow-hidden">
               <Image
                 src={item.avatar}
                 alt={item.name}
