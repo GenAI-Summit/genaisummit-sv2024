@@ -5,7 +5,7 @@ import Loader from "@/components/Loader";
 import TicketBtn from "@/components/Button/TicketBtn";
 import RegisterBtn from "@/components/Button/RegisterBtn";
 // import AddToCalendarBtn from "@/components/Button/AddToCalendarBtn";
-import SubscribeBtn from "@/components/Button/SubscribeBtn";
+// import SubscribeBtn from "@/components/Button/SubscribeBtn";
 import TextHover from "@/motions/TextHover";
 // import CountdownTimer from "@/components/Counter/CountdownTimer";
 // import FloatingLogo from "@/components/FloatingLogo";
@@ -73,7 +73,14 @@ const Banner = () => {
           </div>
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="hidden lg:block">
-              <SubscribeBtn mode="plain" width="w-48" />
+              <Suspense fallback={<Loader />}>
+                <RegisterBtn
+                  width="w-48"
+                  mode="plain"
+                  text="Become An Exhibitor"
+                />
+              </Suspense>
+              {/*<SubscribeBtn mode="plain" width="w-48" />*/}
             </div>
             <Suspense fallback={<Loader />}>
               <TicketBtn

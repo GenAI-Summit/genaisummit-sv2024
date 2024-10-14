@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import SectionLayout from "@/layouts/SectionLayout";
 import OrganizationCard from "@/components/OrganizationCard";
-import ShowMore from "@/components/Button/ShowMore";
+// import ShowMore from "@/components/Button/ShowMore";
 import RegisterExhibitor from "@/components/Button/RegisterExhibitor";
 import { getHomeExhibitors } from "@/lib/api";
 
@@ -27,15 +27,17 @@ const IndexExhibitors = async () => {
           </div>
         ))}
       </div>
+      {/*
       <div className="mt-6 md:mt-8">
         <Suspense fallback={<Loader />}>
           <ShowMore
             target="/exhibitors"
-            text="View All Exhibitors"
+            text="Show All"
             mode="day"
           />
         </Suspense>
       </div>
+      */}
     </SectionLayout>
   );
 };
