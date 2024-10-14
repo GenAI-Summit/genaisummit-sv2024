@@ -8,8 +8,7 @@ const OrganizationDetail = ({ organization }) => {
   return (
     <div className="w-full h-full flex flex-col items-center md:p-4 p-2 text-theme1Light1">
       <Link
-        // className="w-64 h-36 bg-theme1Gray3 rounded-lg shadow-md border-2 border-theme1Gray3 hover:border-theme1Gray2 transition duration-300 ease-in-out"
-        className="w-64 h-36 rounded-lg shadow-md"
+        className="w-64 h-36 bg-theme1Gray3 rounded-lg shadow-md border-2 border-theme1Gray3 hover:border-theme1Gray2 transition duration-300 ease-in-out"
         href={organization.url}
         target="_blank"
       >
