@@ -38,11 +38,15 @@ const IndexSpeakers = () => {
         description="LISTEN TO THE EVENT SPEAKERS"
         widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       >
-        <div className="mt-8 md:mt-10 flex flex-wrap justify-start gap-x-[2%] md:gap-x-[8%] gap-y-14 lg:gap-y-20">
-          {speakers.slice(0, showAll ? speakers.length : 24).map((speaker) => (
+        <div
+          /*className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] gap-y-14 justify-start"*/
+          className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] gap-y-14 justify-start"
+        >
+          {speakers.slice(0, showAll ? speakers.length : 30).map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-[32%] md:w-[19%] ${styles.border} flex flex-col`}
+              /*className={`w-[32%] md:w-[19%] ${styles.border} flex flex-col`}*/
+              className={`w-[32%] md:w-[18%] ${styles.border} flex flex-col`}
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
               <div className="mt-4 flex flex-col items-start justify-between gap-y-2 md:gap-y-3 text-theme1Light1 flex-grow">
