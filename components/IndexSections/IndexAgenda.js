@@ -10,7 +10,7 @@ const IndexAgenda = async () => {
   return (
     <SectionLayout
       title="Agenda"
-      widget={<ShowMore target="/agenda" text="View All Sessions" mode="day" />}
+      widget={<ShowMore target="/agenda" text="View All" mode="day" />}
       description="AGENDA OF THIS GENAI SUMMIT"
     >
       <div className="w-full mt-6 flex flex-col gap-y-4">
