@@ -64,11 +64,11 @@ const FunFacts = () => {
         style={{ objectFit: "cover" }}
       />
       <div className="absolute inset-0 bg-black opacity-35 z-0"></div>
-      <div className="z-10 w-full flex flex-wrap justify-center items-center gap-x-12 gap-y-16 md:gap-y-24 lg:gap-y-32 max-w-maxWidth">
+      <div className="z-10 w-full flex flex-wrap justify-center items-center gap-x-[2%] gap-y-16 md:gap-y-24 lg:gap-y-32 max-w-maxWidth">
         {data.map((item, index) => (
-          <div key={index} className="w-[35%] md:w-[18%] z-10">
+          <div key={index} className="w-[22%] z-10">
             <div>
-              <div className="font-monaspace_neon text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-theme1FunFactsColor1 via-theme1FunFactsColor2 to-theme1FunFactsColor3 text-transparent bg-clip-text">
+              <div className="text-2xl md:text-4xl lg:text-6xl bg-gradient-to-br from-theme1FunFactsColor1 via-theme1FunFactsColor2 to-theme1FunFactsColor3 text-transparent bg-clip-text">
                 <Suspense fallback={<Loader />}>
                   <NumberRoller
                     start={item.start}
@@ -77,7 +77,7 @@ const FunFacts = () => {
                   />
                 </Suspense>
               </div>
-              <div className="mt-2 md:mt-5 md:text-xl lg:text-2xl text-color8">
+              <div className="mt-2 md:mt-5 text-sm md:text-xl lg:text-2xl text-color8">
                 {item.title}
               </div>
             </div>
