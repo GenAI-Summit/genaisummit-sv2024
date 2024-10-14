@@ -17,8 +17,7 @@ const IndexMedia = async () => {
         {media.map((media) => (
           <Link
             key={media.id}
-            // className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[19%] lg:h-27 bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out duration-300 hover:border-theme1Gray2 rounded-lg shadow-md"
-            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[19%] lg:h-27 cursor-pointer rounded-lg shadow-md"
+            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[19%] lg:h-27 bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out duration-300 hover:border-theme1Gray2 rounded-lg shadow-md"
             href={media.url}
             target="_blank"
           >
