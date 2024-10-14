@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
 import Banner from "@/components/IndexSections/Banner";
-import FunFacts from "@/components/IndexSections/FunFacts";
+// import FunFacts from "@/components/IndexSections/FunFacts";
 import IndexSpeakers from "@/components/IndexSections/IndexSpeakers";
 // import IndexSponsors from "@/Components/IndexSections/IndexSponsors";
 import IndexMedia from "@/components/IndexSections/IndexMedia";
@@ -30,9 +30,6 @@ const Index = () => {
         <IndexSponsors />
         <TeslaIntro />
       </div>
-      <SectionEnter>
-        <FunFacts />
-      </SectionEnter>
       <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-40 px-5">
         <SectionEnter>
           <Suspense fallback={<Loader />}>
