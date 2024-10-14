@@ -1,7 +1,7 @@
 // import Link from "next/link";
 import { Suspense } from "react";
 import Loader from "@/components/Loader";
-import styles from "@/styles/border.module.css";
+// import styles from "@/styles/border.module.css";
 import SectionLayout from "@/layouts/SectionLayout";
 import SpeakerCard from "@/components/SpeakerCard";
 // import { LinkedinIcon, TwitterIcon } from "react-share";
@@ -18,7 +18,7 @@ const Speakers = ({ speakers, widget }) => {
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
-              className={`w-[32%] md:w-[18%] ${styles.border} flex flex-col`}
+              className="w-[32%] md:w-[18%] flex flex-col"
             >
               <Suspense fallback={<Loader />}>
                 <SpeakerCard key={speaker.id} speaker={speaker} />

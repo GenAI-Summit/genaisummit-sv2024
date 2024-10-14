@@ -25,7 +25,7 @@ const SpeakerCard = ({ speaker }) => {
   return (
     <>
       <div
-        className="w-full h-auto cursor-pointer rounded-full overflow-hidden"
+        className="w-full h-auto cursor-pointer overflow-hidden"
         onClick={openDrawer}
       >
         <Image
