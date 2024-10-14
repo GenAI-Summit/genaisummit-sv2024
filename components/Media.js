@@ -19,8 +19,7 @@ const Media = ({ media }) => {
             key={item.id}
             href={item.url}
             target="_blank"
-            // className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23.5%] lg:h-27 bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out duration-300 hover:border-theme1Gray2 rounded-lg shadow-md"
-            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23.5%] lg:h-27 cursor-pointer rounded-lg shadow-md"
+            className="w-[48%] h-36 md:w-[30%] md:h-27 lg:w-[23.5%] lg:h-27 bg-theme1Gray3 cursor-pointer border-2 border-theme1Gray3 ease-in-out duration-300 hover:border-theme1Gray2 rounded-lg shadow-md"
           >
             <Logo src={item.logo} alt={item.name} />
           </Link>
