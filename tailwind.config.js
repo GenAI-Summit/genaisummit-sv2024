@@ -62,12 +62,15 @@ module.exports = {
         theme1Dark1: "#101414",
         theme1Dark2: "#161B22",
         theme1Dark3: "#30363D",
+
         theme1Light1: "#F0F0F0",
         theme1Light2: "#F5F5F5",
         theme1Light3: "#F3F3F3",
+
         theme1Gray1: "#8B949E",
         theme1Gray2: "#A0A0A0",
         theme1Gray3: "#E0E0E0",
+
         discord: "#5865F2",
         popupBg: "#E1D8CA",
 
