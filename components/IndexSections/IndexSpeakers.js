@@ -40,7 +40,7 @@ const IndexSpeakers = () => {
       >
         <div
           /*className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] gap-y-14 justify-start"*/
-          className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-14 justify-start"
+          className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-7 justify-start"
         >
           {speakers.slice(0, showAll ? speakers.length : 48).map((speaker) => (
             <div
@@ -49,22 +49,22 @@ const IndexSpeakers = () => {
               className="w-[23%] md:w-[15%] lg:w-[11%] flex flex-col"
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-2 flex flex-col items-start justify-between gap-y-1 lg:gap-y-1 text-theme1Light1 flex-grow">
-                <p className="font-bold text-[9px] md:text-[11px] lg:text-[11px] xl:text-[12px]">
+              <div className="mt-2 flex flex-col items-start justify-between text-theme1Light1 flex-grow">
+                <p className="font-bold text-[9px] md:text-[11px] lg:text-[12px] xl:text-[13px]">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[10px] xl:text-[11px]">
+                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
                     {speaker.title}
                   </p>
                 )}
                 {speaker.organization && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[10px] xl:text-[11px]">
+                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
                     @{speaker.organization}
                   </p>
                 )}
                 {speaker.note && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[10px] xl:text-[11px]">
+                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
                     {speaker.note}
                   </p>
                 )}
