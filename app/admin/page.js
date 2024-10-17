@@ -2,22 +2,30 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
+import useOrders from "@/hooks/useOrders";
+import TicketForm from "./components/TicketForm";
 
-// Dynamically import the BarcodeScannerComponent to avoid SSR issues
 const BarcodeScannerComponent = dynamic(() => import("react-qr-barcode-scanner"), { ssr: false });
 
 const AdminPage = () => {
-  const [data, setData] = useState("Not Found");
   const [startScan, setStartScan] = useState(false);
+  const {
+    orderState,
+    updateOrderState,
+    scanCode,
+    loading,
+  } = useOrders();
 
-  const onUpdate = (err, result) => {
+  const onUpdate = async (err, result) => {
     if (result) {
-      setData(result.text);
+      await scanCode(result.text);
       setStartScan(false);
-    } else {
-      setData("Not Found");
     }
   };
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-4">
@@ -46,9 +54,9 @@ const AdminPage = () => {
         </button>
       )}
       
-      <div className="mt-4 p-4 rounded shadow w-full max-w-lg">
+      <div className="mt-4 p-4 rounded shadow w-full max-w-lg flex flex-col gap-2">
         <h2 className="text-xl font-semibold mb-2">Scan Result:</h2>
-        <p className="break-all">{data}</p>
+        <TicketForm orderState={orderState} updateOrderState={updateOrderState} />
       </div>
     </div>
   );
