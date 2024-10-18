@@ -77,7 +77,7 @@ const Marquee = () => {
         )
       ))}
       <div className="h-full w-64 md:w-80 text-theme1Dark1 text-base md:text-lg font_monaspace_neon flex flex-col items-start justify-center">
-        <span className="font-bold">Job Fair:{" "}</span>
+        <span className="font-bold">Talent Network:{" "}</span>
         <span> 100+ Companies</span>
       </div>
     </HorizontalTicker>
