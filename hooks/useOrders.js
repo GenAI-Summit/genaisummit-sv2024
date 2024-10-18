@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-const apiUrl = "https://api-test.gptdao.ai";
+const apiUrl = "https://api-alpha.gptdao.ai";
 
 const useOrders = () => {
   const [orderState, setOrderState] = useState({
