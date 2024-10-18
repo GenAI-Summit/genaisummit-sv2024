@@ -2,9 +2,18 @@ import { useRouter } from "next/navigation";
 
 const GoBackBtn = () => {
   const router = useRouter();
+  
   const onGoBack = () => {
-    router.back();
+    // Check if the history stack is empty
+    if (window.history.length <= 1) {
+      // If empty, navigate to the home page
+      router.push("/");
+    } else {
+      // Otherwise, go back as before
+      router.back();
+    }
   };
+
   return (
     <button onClick={onGoBack} className="relative group z-0">
       <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-theme1Color1 via-theme1Color2 to-theme1Color3"></div>
