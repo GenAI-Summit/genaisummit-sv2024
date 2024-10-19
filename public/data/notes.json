@@ -530,11 +530,6 @@
         "note": "Valuation: $80M"
     },
     {
-        "id": 42544814,
-        "name": "Lancioni German",
-        "note": "45+ patents"
-    },
-    {
         "id": 42503520,
         "name": "Nathan Hsu",
         "note": ""
@@ -678,5 +673,20 @@
         "id": 42754382,
         "name": "Rajeev Dham",
         "note": "Fund Size: $10B"
+    },
+    {
+        "id": 42467392,
+        "name": "German Lancioni",
+        "note": "45+ patents"
+    },
+    {
+        "id": 42788309,
+        "name": "Waseem Alshikh",
+        "note": "Funding: $126M"
+    },
+    {
+        "id": 42754514,
+        "name": "Rong Yan",
+        "note": "Valuation: $500M"
     }
 ]
