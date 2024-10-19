@@ -61,7 +61,7 @@ const SessionCard = ({ session, showDesc = false }) => {
                     <div className="w-24">
                       <SpeakerCard key={moderator.id} speaker={moderator} />
                     </div>
-                    <div className="flex flex-col items-start justify-center">
+                    <div className="ml-3 flex flex-col items-start justify-center gap-y-3">
                       <p className="text-sm font-bold">{moderator.name}</p>
                       {moderator.title && (
                         <p className="text-xs">{moderator.title}</p>

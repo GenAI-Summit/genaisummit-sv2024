@@ -251,8 +251,8 @@
     },
     {
         "id": 41840423,
-        "name": "Satya Nitta",
-        "note": "Funding Amount: $97.79M"
+        "name": "Ajay Vashee",
+        "note": "Fund Size: $7B"
     },
     {
         "id": 41403629,
@@ -452,7 +452,7 @@
     {
         "id": 41840398,
         "name": "Ofer Ronen",
-        "note": "Funding Amount: $10M"
+        "note": "Funding Amount: $13M"
     },
     {
         "id": 41840393,
@@ -658,5 +658,20 @@
         "id": 42544847,
         "name": "Siddharth Srinivasan",
         "note": ""
+    },
+    {
+        "id": 42788236,
+        "name": "Raiza Martin",
+        "note": "NotebookLM Creator"
+    },
+    {
+        "id": 42754618,
+        "name": "Sameer Dholakia",
+        "note": "Fund Size: $20B"
+    },
+    {
+        "id": 42788277,
+        "name": "May Habib",
+        "note": "Funding Amount: $126M"
     }
 ]
