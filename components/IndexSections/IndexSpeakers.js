@@ -35,12 +35,11 @@ const IndexSpeakers = () => {
     <>
       <SectionLayout
         title="Speakers"
-        description="LISTEN TO THE EVENT SPEAKERS"
         widget={<RegisterBtn text="Become Our Speaker" mode="day" />}
       >
         <div
           /*className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] gap-y-14 justify-start"*/
-          className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-7 justify-start"
+          className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-2 justify-start"
         >
           {speakers.slice(0, showAll ? speakers.length : 48).map((speaker) => (
             <div
@@ -49,22 +48,22 @@ const IndexSpeakers = () => {
               className="w-[23%] md:w-[15%] lg:w-[11%] flex flex-col"
             >
               <SpeakerCard key={speaker.id} speaker={speaker} />
-              <div className="mt-2 flex flex-col items-start justify-between text-theme1Light1 flex-grow">
-                <p className="font-bold text-[9px] md:text-[11px] lg:text-[12px] xl:text-[13px]">
+              <div className="mt-2 flex flex-col items-start justify-between text-theme1Light1">
+                <p className="font-semibold text-[9px] md:text-[12px] lg:text-[12px] xl:text-[13px]">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
+                  <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px]">
                     {speaker.title}
                   </p>
                 )}
                 {speaker.organization && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
+                  <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px]">
                     @{speaker.organization}
                   </p>
                 )}
                 {speaker.note && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
+                  <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px]">
                     {speaker.note}
                   </p>
                 )}

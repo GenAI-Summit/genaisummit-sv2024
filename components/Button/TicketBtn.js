@@ -171,6 +171,23 @@ const TicketBtn = ({
       </button>
     );
   }
+  if (mode === "bright") {
+    return (
+      <button
+        className={`group relative z-0 ${width}`}
+        onClick={() => {
+          openUrl(url);
+          umamiTrack(evt);
+        }}
+      >
+        <div className="m-[1.5px] rounded-full px-4 py-2 bg-theme1Color3 hover:bg-black transition-colors ease-in-out duration-300">
+          <span className="h-full w-full rounded-full text-theme1Light1 font-bold">
+            {text}
+          </span>
+        </div>
+      </button>
+    );
+  }
   if (fill) {
     return (
       <button

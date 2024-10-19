@@ -11,10 +11,9 @@ const Speakers = ({ speakers, widget }) => {
     <>
       <SectionLayout
         title="Speakers"
-        description="LISTEN TO THE EVENT SPEAKERS"
         widget={widget}
       >
-        <div className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-7 justify-start">
+        <div className="w-full flex flex-wrap mt-12 gap-x-[2%] md:gap-x-[2%] lg:gap-x-[1.7%] gap-y-2 justify-start">
           {speakers.map((speaker) => (
             <div
               key={speaker.id}
@@ -23,22 +22,22 @@ const Speakers = ({ speakers, widget }) => {
               <Suspense fallback={<Loader />}>
                 <SpeakerCard key={speaker.id} speaker={speaker} />
               </Suspense>
-              <div className="mt-2 flex flex-col items-start justify-between text-theme1Light1 flex-grow">
-                <p className="text-[9px] md:text-[10px] lg:text-[11px] xl:text-[13px] font-bold">
+              <div className="mt-2 flex flex-col items-start justify-between text-theme1Light1">
+                <p className="text-[9px] md:text-[12px] lg:text-[12px] xl:text-[13px] font-bold">
                   {speaker.name}
                 </p>
                 {speaker.title && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
+                  <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px]">
                     {speaker.title}
                   </p>
                 )}
                 {speaker.organization && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
+                  <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px]">
                     @{speaker.organization}
                   </p>
                 )}
                 {speaker.note && (
-                  <p className="text-[7px] md:text-[9px] lg:text-[11px] xl:text-[12px]">
+                  <p className="text-[7px] md:text-[8px] lg:text-[9px] xl:text-[10px]">
                     {speaker.note}
                   </p>
                 )}

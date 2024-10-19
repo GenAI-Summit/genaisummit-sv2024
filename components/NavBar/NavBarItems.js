@@ -11,8 +11,10 @@ const NavBarItems = ({
   handleDialog,
 }) => {
   const pathname = usePathname();
-  const hoverEffect = "hover:font-semibold duration-300 ease-in-out";
-  const activeEffect = "font-semibold";
+  // const hoverEffect = "hover:font-semibold duration-300 ease-in-out";
+  // const activeEffect = "font-semibold";
+  const hoverEffect = "hover:text-theme1Dark1 duration-300 ease-in-out";
+  const activeEffect = "text-theme1Dark1";
 
   const close = () => {
     closeDrawer();
@@ -31,7 +33,7 @@ const NavBarItems = ({
     <>
       {items.map((item, index) => (
         <Link
-          className={`${item.path.includes(pathname) ? activeEffect : ""}`}
+          className={`${hoverEffect} ${item.path.includes(pathname) ? activeEffect : ""}`}
           href={item.path[0]}
           onClick={close}
           key={index}

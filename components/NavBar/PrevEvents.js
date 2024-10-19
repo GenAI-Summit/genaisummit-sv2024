@@ -3,7 +3,7 @@
 import WrapperArrow from "@/components/SVG/WrapperArrow";
 import { motion, AnimatePresence } from "framer-motion";
 
-const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
+const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect }) => {
   const prevEvents = [
     {
       name: "GenAI Summit SF 2024",
@@ -50,7 +50,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                     onClick={() => openUrl(event.url)}
                   >
                     <motion.div
-                      className="relative inline"
+                      className={`relative inline ${hoverEffect}`}
                       whileHover="hover"
                       initial="initial"
                       variants={{
@@ -101,7 +101,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog }) => {
                   onClick={() => openUrl(event.url)}
                 >
                   <motion.div
-                    className="relative inline"
+                    className={`relative inline ${hoverEffect}`}
                     whileHover="hover"
                     initial="initial"
                     variants={{
