@@ -1,6 +1,6 @@
 const SponsorLayout = ({ children }) => {
   return (
-    <div className="max-w-maxWidth w-full lg:w-3/4 h-full pt-20 px-5">
+    <div className="max-w-maxWidth w-full lg:w-5/6 h-full pt-20 px-5">
       {children}
     </div>
   );

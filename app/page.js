@@ -26,7 +26,7 @@ const Index = () => {
         <PopupModal />
       </Suspense>
       <Banner />
-      <div className="max-w-maxWidth w-full lg:w-3/4 px-5 flex flex-col gap-y-12 md:gap-y-16">
+      <div className="max-w-maxWidth w-full lg:w-5/6 px-5 flex flex-col gap-y-12 md:gap-y-16">
         <IndexSponsors />
         <TeslaIntro />
         <SectionEnter>

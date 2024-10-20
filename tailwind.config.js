@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       maxWidth: {
-        maxWidth: "1280px",
+        maxWidth: "1440px",
       },
       fontFamily: {
         monaspace_krypton: ["MonaspaceKrypton"],

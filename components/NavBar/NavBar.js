@@ -57,7 +57,7 @@ const NavBar = () => {
 
   return (
     <>
-      <div className="fixed top-1 px-6 py-2 lg:w-3/4 max-w-maxWidth shadow-lg rounded-lg bg-theme1Light3 font-semibold text-theme1Gray1 text-sm flex flex-row justify-around items-center hidden lg:flex z-40 text-theme1Dark1 opacity-[98%]">
+      <div className="fixed top-1 px-6 py-2 lg:w-5/6 max-w-maxWidth shadow-lg rounded-lg bg-theme1Light3 font-semibold text-theme1Gray1 text-sm flex flex-row justify-around items-center hidden lg:flex z-40 text-theme1Dark1 opacity-[98%]">
         <div className="cursor-pointer" onClick={onClickLogo}>
           <Icon
             src="/images/icons/favicon.ico"
