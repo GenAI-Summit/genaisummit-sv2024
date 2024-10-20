@@ -30,39 +30,43 @@ const SessionCard = ({ session, showDesc = false }) => {
   return (
     <div className="w-full">
       <CardLayout bgColor="bg-theme1Dark3">
-        <div className="flex flex-col items-start text-left text-theme1Light1 md:p-4 p-2 text-base md:text-lg">
-          <div className="text-lg md:text-xl font-bold mb-4">
-            <span className={`${typeColorClass} p-0.5 mr-4 rounded`}>
+        <div className="flex flex-col items-start gap-y-2 text-left text-theme1Light1 text-sm md:text-base">
+          <div className="text-base md:text-lg font-semibold">
+            <span className={`${typeColorClass} p-0.5 mr-2 rounded`}>
               <span>{session.tag}</span>
             </span>
             <span
-              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-8 md:leading-10"
+              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300 leading-4 md:leading-8"
               onClick={onSessionClick}
             >
               {session.name}
             </span>
           </div>
-          <p className="mb-4 cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300" onClick={() => openUrl(session.start)}>
-            {formatToPTTime(session.start)}
-            {" - "}
-            {formatToPTTime(session.end)}
+          <p>
+            <span>{session.location ? session.location : "TBD"}</span>
             {" | "}
-            {formatToPTDate(session.start)}
+            <span
+              className="cursor-pointer hover:bg-gradient-to-br hover:from-theme1Color1 hover:via-theme1Color2 hover:to-theme1Color3 hover:bg-clip-text hover:text-transparent ease-in-out duration-300"
+              onClick={() => openUrl(session.start)}
+            >
+              {formatToPTTime(session.start)}
+              {" - "}
+              {formatToPTTime(session.end)}
+              {" | "}
+              {formatToPTDate(session.start)}
+            </span>
           </p>
-          <p className="mb-4">{session.location}</p>
-          {session.moderators.length > 0 && (
-            <div className="mb-2">
-              <div className="font-semibold mb-4">
-                Moderator{session.moderators.length > 1 ? "s" : ""}:
-              </div>
-              <div className="flex flex-wrap items-center gap-8">
+          <div className="flex flex-wrap items-center gap-3">
+            {session.moderators.length > 0 && (
+              <>
                 {session.moderators.map((moderator) => (
-                  <div key={moderator.id} className="flex gap-4 items-center">
-                    <div className="w-24">
+                  <div key={moderator.id} className="flex gap-2 items-start">
+                    <div className="w-16">
                       <SpeakerCard key={moderator.id} speaker={moderator} />
                     </div>
-                    <div className="ml-3 flex flex-col items-start justify-center gap-y-3">
-                      <p className="text-sm font-bold">{moderator.name}</p>
+                    <div className="flex flex-col items-start justify-start gap-y-1">
+                      <p className="text-xs font-semibold">{moderator.name}</p>
+                      <p className="text-xs">Moderator</p>
                       {moderator.title && (
                         <p className="text-xs">{moderator.title}</p>
                       )}
@@ -72,22 +76,17 @@ const SessionCard = ({ session, showDesc = false }) => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          )}
-          {session.speakers.length > 0 && (
-            <div className="mb-4">
-              <div className="font-semibold mb-4">
-                Speaker{session.speakers.length > 1 ? "s" : ""}:
-              </div>
-              <div className="flex flex-wrap items-center gap-8">
+              </>
+            )}
+            {session.speakers.length > 0 && (
+              <>
                 {session.speakers.map((speaker) => (
-                  <div key={speaker.id} className="flex gap-4 items-center">
-                    <div className="w-24">
+                  <div key={speaker.id} className="flex gap-2 items-start">
+                    <div className="w-16">
                       <SpeakerCard key={speaker.id} speaker={speaker} />
                     </div>
-                    <div className="ml-3 flex flex-col items-start justify-center gap-y-3">
-                      <p className="text-sm font-bold">{speaker.name}</p>
+                    <div className="flex flex-col items-start justify-start gap-y-1">
+                      <p className="text-xs font-semibold">{speaker.name}</p>
                       {speaker.title && (
                         <p className="text-xs">{speaker.title}</p>
                       )}
@@ -97,11 +96,11 @@ const SessionCard = ({ session, showDesc = false }) => {
                     </div>
                   </div>
                 ))}
-              </div>
-            </div>
-          )}
+              </>
+            )}
+          </div>
           {showDesc && (
-            <div className="mt-4 text-base md:text-lg">
+            <div className="text-base md:text-lg">
               <Suspense fallback={<Loader />}>
                 <HtmlToMarkdown html={session.desc} />
               </Suspense>

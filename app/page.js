@@ -29,8 +29,9 @@ const Index = () => {
       <div className="max-w-maxWidth w-full lg:w-3/4 px-5 flex flex-col gap-y-12 md:gap-y-16">
         <IndexSponsors />
         <TeslaIntro />
-      </div>
-      <div className="max-w-maxWidth w-full lg:w-3/4 flex flex-col gap-y-16 md:gap-y-40 px-5">
+        <SectionEnter>
+          <IndexMedia />
+        </SectionEnter>
         <SectionEnter>
           <Suspense fallback={<Loader />}>
             <IndexSpeakers />
@@ -43,9 +44,6 @@ const Index = () => {
         </SectionEnter>
         <SectionEnter>
           <IndexAgenda />
-        </SectionEnter>
-        <SectionEnter>
-          <IndexMedia />
         </SectionEnter>
         <SectionEnter>
           <NewFeatures />

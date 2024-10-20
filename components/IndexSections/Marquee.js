@@ -12,10 +12,9 @@ const Marquee = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.innerHeight + window.scrollY;
-      const bodyHeight = document.body.offsetHeight;
-      const threshold = 100;
+      const threshold = 1000;
 
-      setIsVisible(scrollPosition < bodyHeight - threshold);
+      setIsVisible(scrollPosition < threshold);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,7 +54,7 @@ const Marquee = () => {
               />
             </div>
             <div className="flex-grow text-[11px] md:text-base text-theme1Dark1 flex flex-col gap-1 md:gap-2 items-start">
-              <p>{item.name}</p>
+              <p className="font-semibold">{item.name}</p>
               <p>{item.title}</p>
             </div>
           </div>
@@ -77,7 +76,7 @@ const Marquee = () => {
         )
       ))}
       <div className="h-full w-64 md:w-80 text-theme1Dark1 text-base md:text-lg font_monaspace_neon flex flex-col items-start justify-center">
-        <span className="font-bold">Talent Network:{" "}</span>
+        <span className="font-semibold">Talent Network:{" "}</span>
         <span> 100+ Companies</span>
       </div>
     </HorizontalTicker>

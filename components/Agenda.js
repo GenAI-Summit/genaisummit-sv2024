@@ -9,7 +9,7 @@ const Agenda = ({ sessionsByDate, daysMap }) => {
     <>
       <SectionLayout
         title="Agenda"
-        description="FIND THE RIGHT SESSIONS FOR YOU | WILL BE UPDATED WEEKLY"
+        description="LISTEN TO THE BEST SPEAKERS | WILL BE UPDATED WEEKLY"
       >
         <div className="w-full mt-6 flex flex-col gap-y-4">
           {sessionsByDate &&
