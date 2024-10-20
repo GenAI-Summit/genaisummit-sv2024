@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
+import umamiTrack from "@/lib/umamiTrace";
 
 const paramList = [
   "whova",
@@ -12,6 +13,7 @@ const paramList = [
   "utm_medium",
   "utm_campaign",
   "fbclid",
+  "visit_from"
 ];
 
 const useParams = () => {
@@ -25,6 +27,10 @@ const useParams = () => {
       if (value) {
         newParams[param] = value;
         sessionStorage.setItem(param, value);
+
+        if (param === "visit_from") {
+          umamiTrack("visit_from", value);
+        }
       } else {
         const storedValue = sessionStorage.getItem(param);
         if (storedValue) {
