@@ -16,7 +16,7 @@ const Agenda = ({ sessionsByDate, daysMap }) => {
             Object.keys(sessionsByDate).map((date) => {
               return (
                 <SubSectionLayout key={date} title={daysMap[date]}>
-                  <div className="w-full h-full flex flex-col gap-y-10">
+                  <div className="w-full h-full flex flex-col gap-y-4">
                     {sessionsByDate[date].map((session) => (
                       <Suspense key={session.id} fallback={<Loader />}>
                         <SessionCard session={session} />
