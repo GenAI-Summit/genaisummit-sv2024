@@ -23,7 +23,7 @@ const Tickets = ({ widget }) => {
   const attendeeBenefits = `
   |                                                 | Student Pass | 1-day Pass | 3-day Pass | VIP Pass |
 | :---------------------------------------------- | :----------- | :--------- | :--------- | :------- |
-| **Price**                                       | $119         | $199       | $399       | $1499    |
+| **Price**                                       | $129         | $249       | $499       | $1599    |
 | **Days**                                        | 3 Days       | 1 Day      | 3 Days     | 3 Days   |
 | **Acess to all speaking sessions of the event** | ✅           | ✅         | ✅         | ✅       |
 | **Access to all side events**                   | ✅           | ✅         | ✅         | ✅       |
@@ -55,7 +55,7 @@ const Tickets = ({ widget }) => {
     {
       id: 1,
       name: "One-Day Pass",
-      price: "$199",
+      price: "$249",
       saveText: "",
       platforms: [
         {
@@ -82,7 +82,7 @@ const Tickets = ({ widget }) => {
     {
       id: 2,
       name: "Three-Day Pass",
-      price: "$399",
+      price: "$499",
       platforms: [
         {
           name: "Luma",
@@ -125,7 +125,7 @@ const Tickets = ({ widget }) => {
     {
       id: 4,
       name: "Student Pass",
-      price: "$119",
+      price: "$129",
       originalPrice: "",
       saveText: "",
       stripeText: "",
@@ -162,7 +162,7 @@ const Tickets = ({ widget }) => {
     {
       id: 5,
       name: "VIP Pass",
-      price: "$1499",
+      price: "$1599",
       saveText: "",
       platforms: [
         {
