@@ -5,8 +5,8 @@ import CheckBox from "@/components/SVG/CheckBox";
 import WrapperArrow from "@/components/SVG/WrapperArrow";
 import { motion, AnimatePresence } from "framer-motion";
 
-const Filter = ({ name, options, selected, onSelect }) => {
-  const [isWrapperOpen, setIsWrapperOpen] = useState(false);
+const Filter = ({ name, options, selected, onSelect, defaultOpen = false }) => {
+  const [isWrapperOpen, setIsWrapperOpen] = useState(defaultOpen);
 
   const onClickWrapper = () => {
     setIsWrapperOpen(!isWrapperOpen);

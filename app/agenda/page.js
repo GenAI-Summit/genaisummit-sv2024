@@ -146,6 +146,7 @@ const AgendaPage = () => {
                 options={dates}
                 selected={selectedDates}
                 onSelect={onSelectedDate}
+                defaultOpen={true}
               />
             )}
             {tags && (

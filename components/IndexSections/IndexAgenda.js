@@ -146,6 +146,7 @@ const IndexAgenda = () => {
                 options={dates}
                 selected={selectedDates}
                 onSelect={onSelectedDate}
+                defaultOpen={true}
               />
             )}
             {tags && (
