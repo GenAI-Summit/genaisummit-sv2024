@@ -41,10 +41,13 @@ const SpeakerCard = ({ speaker }) => {
           <SpeakerDetail speaker={speaker} />
         </div>
         <div
-          className="mt-2 cursor-pointer font-medium"
+          className="mt-2 cursor-pointer font-medium flex justify-start items-center"
           onClick={onSpeakerDetail}
         >
-          <TextHover text={`All Sessions by ${speaker.name}`} color="theme1Light1" />
+          <TextHover
+            text={`All Sessions by ${speaker.name}`}
+            color="theme1Light1"
+          />
         </div>
       </Drawer>
     </>
