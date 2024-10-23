@@ -1,692 +1,566 @@
 [
     {
-        "id": 38836802,
         "name": "Arvind Jain",
         "note": "Valuation: $4.6B"
     },
     {
-        "id": 41840422,
         "name": "Lukas Biewald",
         "note": "Valuation: $1.25B"
     },
     {
-        "id": 40968067,
         "name": "Fiona Ma",
         "note": "Manages $3T payments"
     },
     {
-        "id": 40911424,
         "name": "Deon Nicholas",
         "note": "Funding: $92M"
     },
     {
-        "id": 41683729,
         "name": "Andrew Mayne",
         "note": "OpenAI's first prompt engineer"
     },
     {
-        "id": 41865432,
         "name": "Michael Stewart",
         "note": "Microsoft's venture fund"
     },
     {
-        "id": 41865558,
         "name": "Vanessa Larco",
         "note": "Fund Size: $25B"
     },
     {
-        "id": 41940565,
         "name": "Lip-Bu Tan",
         "note": "Fund Size: $4B"
     },
     {
-        "id": 41403643,
         "name": "Abhay Parasnis",
         "note": "Valuation: $1B"
     },
     {
-        "id": 41005134,
         "name": "Filip Kozera",
         "note": "5M Users in 2 Weeks"
     },
     {
-        "id": 40779264,
         "name": "Jon Shalowitz",
         "note": "5 Startup Exits"
     },
     {
-        "id": 40911352,
         "name": "Raluca Ada Popa",
         "note": "ACM Grace Murray Hopper award 2021"
     },
     {
-        "id": 41652467,
         "name": "Dr. Hoansoo Lee",
         "note": "Former Advisor of President Obama"
     },
     {
-        "id": 40918522,
         "name": "Swapnil Jain",
         "note": "Funding: $213M"
     },
     {
-        "id": 41403641,
         "name": "Jia Li",
         "note": "IEEE Fellow"
     },
     {
-        "id": 41403640,
         "name": "Philip Rathle",
         "note": "Valuation: $2B"
     },
     {
-        "id": 40918134,
         "name": "Dr. Natalia Vassilieva",
         "note": "Valuation: $4B"
     },
     {
-        "id": 40944474,
         "name": "Bhavin Shah",
         "note": "Valuation: $2.1B"
     },
     {
-        "id": 41403630,
         "name": "Andy Hock",
         "note": "Valuation: $4B"
     },
     {
-        "id": 40918130,
         "name": "Ed Roman",
         "note": "250+ web3 & tech investments"
     },
     {
-        "id": 40944473,
         "name": "Tim Shi",
         "note": "Valuation: $1.6B"
     },
     {
-        "id": 40944471,
         "name": "Bob Luijt",
         "note": "Funding: $66.50M"
     },
     {
-        "id": 40918127,
         "name": "Yohei Nakajima",
         "note": "The first AI Agents creator"
     },
     {
-        "id": 40911167,
         "name": "Jason Lopatecki",
         "note": "Funding: $61M"
     },
     {
-        "id": 40911505,
         "name": "Tom Brady",
         "note": "Biopharma investor"
     },
     {
-        "id": 40914256,
         "name": "Rocky Yu",
         "note": ""
     },
     {
-        "id": 40918139,
         "name": "Claudia Vacano",
         "note": ""
     },
     {
-        "id": 40918138,
         "name": "Shailesh Manjrekar",
         "note": "Funding: $7.5M"
     },
     {
-        "id": 40918131,
         "name": "Dr. Curtis Northcutt",
         "note": "Funding: $30M"
     },
     {
-        "id": 40944468,
         "name": "Tushar Gupta",
         "note": "Fund Size: $150M"
     },
     {
-        "id": 40914362,
         "name": "Monica Bajaj",
         "note": "Valuation: $1.112B"
     },
     {
-        "id": 40918132,
         "name": "Ruming Liu",
         "note": "Senior corporate attorney"
     },
     {
-        "id": 40944475,
         "name": "Dmytro Spodarets",
         "note": ""
     },
     {
-        "id": 41403632,
         "name": "Ari Morcos",
         "note": "Funding: $57.7M"
     },
     {
-        "id": 40944469,
         "name": "Ray Wu",
         "note": "Fund Size: $539.4M"
     },
     {
-        "id": 40944476,
         "name": "Joanne Chen",
         "note": ""
     },
     {
-        "id": 40918133,
         "name": "Basel Salahieh",
         "note": "Funding: $2M"
     },
     {
-        "id": 41840383,
         "name": "Jonathan Sanders",
         "note": "Funding: $13M"
     },
     {
-        "id": 40914361,
         "name": "Vidya Sagar Ravipati",
         "note": "GenAI Center"
     },
     {
-        "id": 40944470,
         "name": "Marina Vieva",
         "note": "Women's health advocate"
     },
     {
-        "id": 40918135,
         "name": "Bosco Durai",
         "note": "Funding: $67.3M"
     },
     {
-        "id": 40779536,
         "name": "Yiran Chen",
         "note": "IEEE Fellow"
     },
     {
-        "id": 40918137,
         "name": "Jenny Xiao",
         "note": "Fund Size: $25M"
     },
     {
-        "id": 41840391,
         "name": "Vanja Josifovski",
         "note": "Valuation: $100M"
     },
     {
-        "id": 41940089,
         "name": "Charles Xie",
         "note": "Funding: $115M"
     },
     {
-        "id": 41572064,
         "name": "Zack Li",
         "note": "Funding: $8.75M"
     },
     {
-        "id": 41403631,
         "name": "Yubei Chen",
         "note": "Funding: $2M"
     },
     {
-        "id": 41618114,
         "name": "Weiyan Shi",
         "note": "AI Security Innovators"
     },
     {
-        "id": 41403645,
         "name": "Sumeet Kumar Agrawal",
         "note": "Cloud data engineering"
     },
     {
-        "id": 41403636,
         "name": "Rijul Gupta",
         "note": "DeepFake thought leader by Forbes"
     },
     {
-        "id": 41840423,
         "name": "Ajay Vashee",
         "note": "Fund Size: $7B"
     },
     {
-        "id": 41403629,
         "name": "Puneet Thapliyal",
         "note": ""
     },
     {
-        "id": 41403635,
         "name": "Nirav S. Desai",
         "note": "Valuation: $284M"
     },
     {
-        "id": 41403642,
         "name": "Katie Trauth Taylor",
         "note": "Funding: $5.5M"
     },
     {
-        "id": 41469869,
         "name": "Junchen Jiang",
         "note": "Large-scale networked systems"
     },
     {
-        "id": 41397930,
         "name": "Jeremiah Owyang",
         "note": "Llama Lounge host"
     },
     {
-        "id": 41403639,
         "name": "Igor Carron",
         "note": "Valuation: $250M"
     },
     {
-        "id": 41840390,
         "name": "Jonathan Corbin",
         "note": "Funding: $28M"
     },
     {
-        "id": 41403638,
         "name": "Haroon Choudery",
         "note": "Funding: $2M"
     },
     {
-        "id": 41840419,
         "name": "Douwe Kiela",
         "note": "Funding: $100M"
     },
     {
-        "id": 41403633,
         "name": "Darko Matovski",
         "note": "Valuation: $250M"
     },
     {
-        "id": 41403627,
         "name": "Hamza Farooq",
         "note": "Funding: $2.2M"
     },
     {
-        "id": 41840412,
         "name": "Abdel Mahmoud",
         "note": "Valuation: $95M"
     },
     {
-        "id": 41403644,
         "name": "Dawn Song",
         "note": "MacArthur Foundation Fellowship"
     },
     {
-        "id": 41397351,
         "name": "Chris McCann",
         "note": "Fund Size: $3.5B"
     },
     {
-        "id": 41403628,
         "name": "Badri Nath",
         "note": "Funding: $92M"
     },
     {
-        "id": 41403637,
         "name": "Aman Raghuvanshi",
         "note": "Former Director of Product at Sightly"
     },
     {
-        "id": 41840386,
         "name": "Dan Sahar",
         "note": "Funding: $15.6M"
     },
     {
-        "id": 41403634,
         "name": "Allen Bolourchi",
         "note": "CEO of Crystalytic.ai"
     },
     {
-        "id": 41840402,
         "name": "Zohaib Ahmed",
         "note": "Funding: $10M"
     },
     {
-        "id": 41840397,
         "name": "Will Bryk",
         "note": "Funding: $22M"
     },
     {
-        "id": 41840430,
         "name": "Jon Bratseth",
         "note": "Funding: $31M"
     },
     {
-        "id": 41840428,
         "name": "Vova Golubin",
         "note": "Funding: $4.5M"
     },
     {
-        "id": 41840392,
         "name": "Viren Baraiya",
         "note": "Funding: $29.3M"
     },
     {
-        "id": 41840388,
         "name": "Rajen Sheth",
         "note": "Funding: $20.95M"
     },
     {
-        "id": 41840399,
         "name": "Vinodh Poyyapakkam",
         "note": "Funding: $3.7M"
     },
     {
-        "id": 41840429,
         "name": "Vijay Chandrasekhar",
         "note": "IEEE senior member"
     },
     {
-        "id": 41840426,
         "name": "Tsavo Knott",
         "note": "Funding: $21.5M"
     },
     {
-        "id": 41840418,
         "name": "Tomás Hernando Kofman",
         "note": "Funding: $2.3M"
     },
     {
-        "id": 41840421,
         "name": "Alon Talmor",
         "note": "Funding: $20M"
     },
     {
-        "id": 41840384,
         "name": "Tom Hamer",
         "note": "Funding: $17.8M"
     },
     {
-        "id": 41840413,
         "name": "Alex LeBrun",
         "note": "Funding: $43M"
     },
     {
-        "id": 41840387,
         "name": "Sumit Pal",
         "note": "Funding: €7.0M"
     },
     {
-        "id": 41840427,
         "name": "Sharon Zhou",
         "note": "Funding: $25M"
     },
     {
-        "id": 41840417,
         "name": "Jennifer Dulski",
         "note": "Valuation: $15M"
     },
     {
-        "id": 41840425,
         "name": "Severi Tikkala",
         "note": "Funding: €1.5M"
     },
     {
-        "id": 41840415,
         "name": "Gaurav Passi",
         "note": "Funding: $10M"
     },
     {
-        "id": 41840410,
         "name": "Scott Clark",
         "note": "Former VP/GM at Intel"
     },
     {
-        "id": 41840396,
         "name": "Rishabh Bhargava",
         "note": "Funding: $5.28M"
     },
     {
-        "id": 41840394,
         "name": "Raghavendra Prabhu",
         "note": "Funding: $9M"
     },
     {
-        "id": 41840398,
         "name": "Ofer Ronen",
         "note": "Funding: $13M"
     },
     {
-        "id": 41840393,
         "name": "Nikhil Rao",
         "note": "Funding: $14.95M"
     },
     {
-        "id": 41840411,
         "name": "Max Rollwage",
         "note": "Funding: $14M"
     },
     {
-        "id": 41840400,
         "name": "Marc Seal",
         "note": "Funding: $4M"
     },
     {
-        "id": 42055744,
         "name": "Rowan McAllister",
         "note": "Funding: $9.75B"
     },
     {
-        "id": 41840407,
         "name": "Iván Martínez Toro",
         "note": "Funding: $3.2M"
     },
     {
-        "id": 41840403,
         "name": "Ivan Lee",
         "note": "Funding: $8.95M"
     },
     {
-        "id": 41840420,
         "name": "Guy Korland",
         "note": "Funding: $3M"
     },
     {
-        "id": 41840424,
         "name": "Eric Wengrowski",
         "note": "Funding: $6.23M"
     },
     {
-        "id": 41840389,
         "name": "Dmitry Shapiro",
         "note": ""
     },
     {
-        "id": 41840401,
         "name": "Dan Thomson",
         "note": "Funding: $3.4M"
     },
     {
-        "id": 41840395,
         "name": "Daksh Gupta",
         "note": "Funding: $5.3M"
     },
     {
-        "id": 41840409,
         "name": "Amy Kelly",
         "note": "Funding: $1.2M"
     },
     {
-        "id": 41840406,
         "name": "Amber Nigam",
         "note": "Funding: $2.4M"
     },
     {
-        "id": 41840416,
         "name": "Alon Nafta",
         "note": "Funding: $8M"
     },
     {
-        "id": 41840408,
         "name": "Ali Ansari",
         "note": "Valuation: $80M"
     },
     {
-        "id": 42503520,
         "name": "Nathan Hsu",
         "note": ""
     },
     {
-        "id": 42262362,
         "name": "Walter Goodwin",
         "note": "Funding: $17.5M"
     },
     {
-        "id": 42262358,
         "name": "Vaibhavi Gangwar",
         "note": "Funding: $3M"
     },
     {
-        "id": 42218579,
         "name": "Uri Yerushalmi",
         "note": "Funding: $112.5M"
     },
     {
-        "id": 42262355,
         "name": "Susannah Shattuck",
         "note": "Funding: $41.3M"
     },
     {
-        "id": 42262364,
         "name": "Stephen Chin",
         "note": "Valuation: $2B"
     },
     {
-        "id": 42267001,
         "name": "Pranava Addur",
         "note": "Funding: $10M"
     },
     {
-        "id": 42218743,
         "name": "Lin Qiao",
         "note": "Valuation: $552M"
     },
     {
-        "id": 42262363,
         "name": "Jack McCauley",
         "note": "Oculus VR Co-Founder"
     },
     {
-        "id": 42262359,
         "name": "Hassan Sawaf",
         "note": "Funding: $16.5M"
     },
     {
-        "id": 42262360,
         "name": "Gaurav Agarwal",
         "note": "Funding: $4.7M"
     },
     {
-        "id": 42262357,
         "name": "Daniel Svonava",
         "note": "Funding: $9.5M"
     },
     {
-        "id": 42262352,
         "name": "Brett Waikart",
         "note": "Funding: $2.5M"
     },
     {
-        "id": 42262361,
         "name": "Anu Shukla",
         "note": "Valuation: $18M"
     },
     {
-        "id": 42262353,
         "name": "Ankit Jain",
         "note": "Funding: $51.4M"
     },
     {
-        "id": 42363837,
         "name": "Shishir Patil",
         "note": "Gorilla LLM Creator"
     },
     {
-        "id": 42636085,
         "name": "Jon Chu",
         "note": "OpenAI Seed Round Investor"
     },
     {
-        "id": 42055485,
         "name": "Annie Pearl",
         "note": "Microsoft Startups"
     },
     {
-        "id": 42644182,
         "name": "David Hefter",
         "note": "AI Champion"
     },
     {
-        "id": 42644183,
         "name": "Navrina Singh",
         "note": "Member at the National AI Advisory Committee"
     },
     {
-        "id": 42544783,
         "name": "Sarahyah Yisrael Adon",
         "note": ""
     },
     {
-        "id": 42544797,
         "name": "Phelim Bradley",
         "note": ""
     },
     {
-        "id": 42544847,
         "name": "Ang Li",
         "note": ""
     },
     {
-        "id": 42544848,
         "name": "Deepa Sureka",
         "note": "Distinguished Fellow at Akool"
     },
     {
-        "id": 42544847,
         "name": "Siddharth Srinivasan",
         "note": ""
     },
     {
-        "id": 42788236,
         "name": "Raiza Martin",
         "note": "NotebookLM Creator"
     },
     {
-        "id": 42754618,
         "name": "Sameer Dholakia",
         "note": "Fund Size: $20B"
     },
     {
-        "id": 42788277,
         "name": "May Habib",
         "note": "Funding: $126M"
     },
     {
-        "id": 42754382,
         "name": "Rajeev Dham",
         "note": "Fund Size: $10B"
     },
     {
-        "id": 42467392,
         "name": "German Lancioni",
         "note": "45+ patents"
     },
     {
-        "id": 42788309,
         "name": "Waseem Alshikh",
         "note": "Funding: $126M"
     },
     {
-        "id": 42754514,
         "name": "Rong Yan",
         "note": "Valuation: $500M"
+    },
+    {
+        "name": "Sebastian Enderlein",
+        "note": "Valuation: $2B"
+    },
+    {
+        "name": "Satya Nitta",
+        "note": "Valuation: $600M"
+    },
+    {
+        "name": "Abe Kang",
+        "note": "Valuation: $13B"
     }
 ]

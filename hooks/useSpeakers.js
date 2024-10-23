@@ -24,7 +24,7 @@ const useSpeakers = () => {
   const hideSpeakers = data2?.data || [];
   const speakers =
     data?.data.filter((speaker) => !hideSpeakers.includes(speaker.id)).map((speaker) => {
-      const note = notes.find((note) => note.id === speaker.id);
+      const note = notes.find((note) => note.name === speaker.name);
       return {
         ...speaker,
         note: note?.note,
