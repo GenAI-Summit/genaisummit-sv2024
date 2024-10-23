@@ -16,19 +16,37 @@ const useMarquee = () => {
     fetcher,
   );
 
+  const { data: hideOrganizationsData, isLoading: isLoadingHideOrganizations, error: errorHideOrganizations } = useSWR(
+    `${apiUrl}/rank/tag?tag_name=hide&type_name=exhibitor`,
+    fetcher,
+  );
+
   const { data: speakersData, isLoading: isLoadingSpeakers, error: errorSpeakers } = useSWR(
     `${apiUrl}/rank/tag?tag_name=marquee&type_name=speaker`,
     fetcher,
   );
 
-  const organizations = allOrganizations.filter((organization) => organizationsData?.data.includes(organization.id));
-  const speakers = allSpeakers.filter((speaker) => speakersData?.data.includes(speaker.id));
+  const { data: hideSpeakersData, isLoading: isLoadingHideSpeakers, error: errorHideSpeakers } = useSWR(
+    `${apiUrl}/rank/tag?tag_name=hide&type_name=speaker`,
+    fetcher,
+  );
+
+  const marqueeOrganizations = organizationsData?.data.filter((id) => !hideOrganizationsData?.data.includes(id));
+
+  const marqueeSpeakers = speakersData?.data.filter((id) => !hideSpeakersData?.data.includes(id));
+
+  const organizations = allOrganizations?.filter((organization) => marqueeOrganizations?.includes(organization.id));
+  const speakers = allSpeakers?.filter((speaker) => marqueeSpeakers?.includes(speaker.id));
+
+  console.log(allOrganizations);
+  console.log(marqueeOrganizations);
+  console.log(organizations);
 
   return {
     organizations,
     speakers,
-    isLoading: isLoadingOrganizations || isLoadingSpeakers || isLoadingAllOrganizations || isLoadingAllSpeakers,
-    isError: errorOrganizations || errorSpeakers || isErrorAllOrganizations || isErrorAllSpeakers,
+    isLoading: isLoadingOrganizations || isLoadingSpeakers || isLoadingAllOrganizations || isLoadingAllSpeakers || isLoadingHideOrganizations || isLoadingHideSpeakers,
+    isError: errorOrganizations || errorSpeakers || isErrorAllOrganizations || isErrorAllSpeakers || errorHideOrganizations || errorHideSpeakers,
   };
 };
 

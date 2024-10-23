@@ -11,15 +11,15 @@ const TopLogos = () => {
   }
 
   return (
-    <div className="max-w-maxWidth bg-theme1Light1 rounded-lg px-2 py-1 opacity-90">
+    <div className="w-96 bg-theme1Light1 rounded-lg px-2 py-1 opacity-90">
       <p className="text-center text-theme1Dark1 text-base md:text-lg lg:text-xl">
-        Sponsors and Featured Exhibitor
+        Sponsored by
       </p>
       <div className="max-w-maxWidth flex flex-row items-center gap-x-[3%] justify-center">
         {organizations.map((organization) => (
           <div
             key={organization.id}
-            className="w-[30%] h-auto"
+            className="w-[48%] h-auto"
           >
             <Image
               src={organization.logo}
