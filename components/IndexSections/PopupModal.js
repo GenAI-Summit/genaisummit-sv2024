@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import Loader from "@/components/Loader";
-import Image from "next/image";
+// import Image from "next/image";
 import ModalEnter from "@/motions/ModalEnter";
 import Script from "next/script";
 import CheckBox from "@/components/SVG/CheckBox";
@@ -98,13 +98,13 @@ const PopupModal = () => {
           >
             X
           </button>
-          <Image
+          {/* <Image
             className="object-cover"
             src="/images/propaganda/popup.gif"
             alt="Popup Modal"
             width={500}
             height={500}
-          />
+          /> */}
           <div className="w-full p-4">
             <Script
               src={CTCT_SCRIPT_SRC}
