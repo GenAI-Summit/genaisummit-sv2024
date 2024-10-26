@@ -2,7 +2,7 @@
 
 "use client";
 
-import React, { createContext, useContext, useRef, useState } from "react";
+import React, { createContext, useContext, useRef, useState, useEffect } from "react";
 import { Play, Pause, Volume2, VolumeX, X } from "lucide-react";
 
 // Create context for global audio state
@@ -126,7 +126,7 @@ const AudioPlayer = () => {
     });
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (audioUrl) {
       if (audioRef.current) {
         audioRef.current.pause();
@@ -157,40 +157,38 @@ const AudioPlayer = () => {
   if (!audioUrl) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 w-80 bg-theme1Light1 text-theme1Dark1 shadow-lg rounded-lg overflow-hidden z-50">
-      <div className="p-3">
-        <div className="flex items-center mb-2">
-          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3">
-            <button
-              onClick={handlePlayPause}
-              className="text-white focus:outline-none"
-            >
-              {isPlaying ? <Pause className="text-theme1Dark1" size={20} /> : <Play className="text-theme1Dark1" size={20} />}
-            </button>
-          </div>
-          <div className="flex-1 truncate">
-            <p className="font-semibold text-sm truncate">{title}</p>
-            <p className="text-xs text-white/70">{formatTime((duration * progress) / 100)} / {formatTime(duration)}</p>
-          </div>
+    <div className="w-80 bg-theme1Light1 text-theme1Dark1 shadow-lg rounded-lg overflow-hidden z-50 p-3">
+      <div className="flex items-center mb-2">
+        <div className="w-10 h-10 bg-theme1Dark1/20 rounded-full flex items-center justify-center mr-3">
           <button
-            onClick={handleMute}
-            className="p-2 text-white/70 hover:text-white focus:outline-none transition-colors"
+            onClick={handlePlayPause}
+            className="text-white focus:outline-none"
           >
-            {isMuted ? <VolumeX className="text-theme1Dark1" size={18} /> : <Volume2 className="text-theme1Dark1" size={18} />}
-          </button>
-          <button
-            onClick={handleClose}
-            className="p-2 text-white/70 hover:text-white focus:outline-none transition-colors ml-1"
-          >
-            <X className="text-theme1Dark1" size={18} />
+            {isPlaying ? <Pause className="text-theme1Dark1" size={20} /> : <Play className="text-theme1Dark1" size={20} />}
           </button>
         </div>
-        <div className="w-full bg-white/20 rounded-full h-1">
-          <div
-            className="bg-theme1Dark1 h-1 rounded-full transition-all"
-            style={{ width: `${progress}%` }}
-          />
+        <div className="flex-1 truncate">
+          <p className="font-semibold text-sm truncate">{title}</p>
+          <p className="text-xs text-theme1Dark1/70">{formatTime((duration * progress) / 100)} / {formatTime(duration)}</p>
         </div>
+        <button
+          onClick={handleMute}
+          className="p-2 text-theme1Dark1 hover:text-theme1Light1 focus:outline-none transition-colors"
+        >
+          {isMuted ? <VolumeX className="text-theme1Dark1" size={18} /> : <Volume2 className="text-theme1Dark1" size={18} />}
+        </button>
+        <button
+          onClick={handleClose}
+          className="p-2 text-theme1Dark1 hover:text-theme1Light1 focus:outline-none transition-colors ml-1"
+        >
+          <X className="text-theme1Dark1" size={18} />
+        </button>
+      </div>
+      <div className="w-full bg-theme1Dark1/20 rounded-full h-1">
+        <div
+          className="bg-theme1Dark1 h-1 rounded-full transition-all"
+          style={{ width: `${progress}%` }}
+        />
       </div>
     </div>
   );

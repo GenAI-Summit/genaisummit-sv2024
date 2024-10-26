@@ -28,6 +28,8 @@
     "linebreak-style": ["error", "unix"],
     "quotes": ["error", "double"],
     "semi": ["error", "always"],
-    "no-console": 0
+    "no-console": 0,
+    "no-unused-vars": ["error", { "varsIgnorePattern": "^activeAudioId$" }],
+    "react-hooks/exhaustive-deps": "warn"
   }
 }

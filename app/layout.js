@@ -117,7 +117,9 @@ const RootLayout = ({ children }) => {
           <Suspense fallback={<Loader />}>
             <ScrollToTop />
           </Suspense>
-          <AudioPlayer />
+          <div className="fixed bottom-4 left-4">
+            <AudioPlayer />
+          </div>
         </AudioProvider>
         {/*
         <Script
