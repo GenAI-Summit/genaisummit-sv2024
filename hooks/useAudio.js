@@ -73,8 +73,6 @@ const AudioPlayer = () => {
     audioRef,
   } = useAudioContext();
 
-  const isActive = audioUrl !== "";
-
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = Math.floor(seconds % 60);
@@ -82,7 +80,7 @@ const AudioPlayer = () => {
   };
 
   const handlePlayPause = () => {
-    if (!isActive) return;
+    if (!audioUrl) return;
 
     if (!isPlaying) {
       // If a different audio is active, reset it
@@ -156,43 +154,42 @@ const AudioPlayer = () => {
     setTitle("");
   };
 
-  if (!isActive) return null;
+  if (!audioUrl) return null;
 
   return (
-    <div className="fixed bottom-4 left-4 w-80 bg-white shadow-lg rounded-lg overflow-hidden z-50">
-      <div className="bg-gray-100 p-3 flex justify-between items-center">
-        <span className="font-medium text-sm truncate flex-1">{title}</span>
-        <button
-          onClick={handleClose}
-          className="p-1 text-gray-600 hover:text-gray-800 focus:outline-none"
-        >
-          <X size={16} />
-        </button>
-      </div>
-      <div className="p-4">
-        <div className="w-full bg-gray-200 rounded-full h-1.5 mb-2">
-          <div
-            className="bg-blue-600 h-1.5 rounded-full transition-all"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-        <div className="flex justify-between text-xs text-gray-500 mb-3">
-          <span>{formatTime((duration * progress) / 100)}</span>
-          <span>{formatTime(duration)}</span>
-        </div>
-        <div className="flex justify-between items-center">
-          <button
-            onClick={handlePlayPause}
-            className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700 focus:outline-none"
-          >
-            {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-          </button>
+    <div className="fixed bottom-4 left-4 w-80 bg-theme1Light1 text-theme1Dark1 shadow-lg rounded-lg overflow-hidden z-50">
+      <div className="p-3">
+        <div className="flex items-center mb-2">
+          <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center mr-3">
+            <button
+              onClick={handlePlayPause}
+              className="text-white focus:outline-none"
+            >
+              {isPlaying ? <Pause className="text-theme1Dark1" size={20} /> : <Play className="text-theme1Dark1" size={20} />}
+            </button>
+          </div>
+          <div className="flex-1 truncate">
+            <p className="font-semibold text-sm truncate">{title}</p>
+            <p className="text-xs text-white/70">{formatTime((duration * progress) / 100)} / {formatTime(duration)}</p>
+          </div>
           <button
             onClick={handleMute}
-            className="p-2 text-gray-600 hover:text-gray-800 focus:outline-none"
+            className="p-2 text-white/70 hover:text-white focus:outline-none transition-colors"
           >
-            {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+            {isMuted ? <VolumeX className="text-theme1Dark1" size={18} /> : <Volume2 className="text-theme1Dark1" size={18} />}
           </button>
+          <button
+            onClick={handleClose}
+            className="p-2 text-white/70 hover:text-white focus:outline-none transition-colors ml-1"
+          >
+            <X className="text-theme1Dark1" size={18} />
+          </button>
+        </div>
+        <div className="w-full bg-white/20 rounded-full h-1">
+          <div
+            className="bg-theme1Dark1 h-1 rounded-full transition-all"
+            style={{ width: `${progress}%` }}
+          />
         </div>
       </div>
     </div>
