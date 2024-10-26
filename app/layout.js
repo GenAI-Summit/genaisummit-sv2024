@@ -10,6 +10,8 @@ import Loader from "@/components/Loader";
 // import ChatBot from "@/components/ChatBot/ChatBot";
 import "@/styles/globals.css";
 import ColorUtility from "@/components/ColorUtility";
+import { AudioProvider } from "@/hooks/useAudio";
+import AudioPlayer from "@/hooks/useAudio";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
 
@@ -96,24 +98,27 @@ const RootLayout = ({ children }) => {
       </head>
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className} flex flex-col min-h-screen`}>
-        <div className="flex-grow pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
-          <ColorUtility />
-          <Suspense fallback={<Loader />}>
-            <Navbar />
-          </Suspense>
-          {children}
-          <div className="mt-32 mb-10">
+        <AudioProvider>
+          <div className="flex-grow pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
+            <ColorUtility />
             <Suspense fallback={<Loader />}>
-              <ShareBar />
+              <Navbar />
             </Suspense>
+            {children}
+            <div className="mt-32 mb-10">
+              <Suspense fallback={<Loader />}>
+                <ShareBar />
+              </Suspense>
+            </div>
           </div>
-        </div>
-        <Suspense fallback={<Loader />}>
-          <Footer />
-        </Suspense>
-        <Suspense fallback={<Loader />}>
-          <ScrollToTop />
-        </Suspense>
+          <Suspense fallback={<Loader />}>
+            <Footer />
+          </Suspense>
+          <Suspense fallback={<Loader />}>
+            <ScrollToTop />
+          </Suspense>
+          <AudioPlayer />
+        </AudioProvider>
         {/*
         <Script
           src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/0.1.0-beta.5/libs/oversea/index.js"
