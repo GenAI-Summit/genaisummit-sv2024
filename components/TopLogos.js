@@ -11,15 +11,15 @@ const TopLogos = () => {
   }
 
   return (
-    <div className="w-96 bg-theme1Light1 rounded-lg px-2 py-1 opacity-90">
+    <div className="max-w-md bg-theme1Light1 rounded-lg px-2 py-1 opacity-90 flex flex-col items-center justify-center">
       <p className="text-center text-theme1Dark1 text-base md:text-lg lg:text-xl">
         Sponsored by
       </p>
-      <div className="max-w-maxWidth flex flex-row items-center gap-x-[3%] justify-center">
+      <div className="max-w-maxWidth flex flex-row items-center gap-x-[3%] justify-between">
         {organizations.map((organization) => (
           <div
             key={organization.id}
-            className="w-[48%] h-auto"
+            className="w-[40%] h-auto"
           >
             <Image
               src={organization.logo}
@@ -30,6 +30,17 @@ const TopLogos = () => {
           </div>
         ))}
       </div>
+      <p className="text-center text-theme1Dark1 text-base md:text-lg lg:text-xl">
+        <span className="font-bold text-red-500">Tesla </span>
+        will showcase the latest models and its advanced Autopilot
+        technology, including the
+        <span className="font-bold text-red-500">
+          {" "}
+          Model 3, Model Y, Model S, Model X, and Cybertruck
+        </span>
+        , as well as the newly launched humanoid robot,{" "}
+        <span className="font-bold text-red-500">Optimus</span>.
+      </p>
     </div>
   );
 };
