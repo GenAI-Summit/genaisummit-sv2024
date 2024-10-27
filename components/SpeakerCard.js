@@ -8,15 +8,6 @@ import { useRouter } from "next/navigation";
 import TextHover from "@/motions/TextHover";
 import { useAudioContext } from "@/hooks/useAudio";
 
-const names = [
-  "soumya_batra",
-  "annie_pearl",
-  "raiza_martin",
-  "deon_nicholas",
-  "fiona_ma",
-  "arvind_jain",
-];
-
 const SpeakerCard = ({ speaker }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const router = useRouter();
@@ -26,8 +17,7 @@ const SpeakerCard = ({ speaker }) => {
     window?.umami.track(`Click ${speaker.name}`);
     setIsDrawerOpen(true);
   };
-  const openAudio = (name) => {
-    const url = `https://github.com/GenAI-Summit/podcasts/raw/refs/heads/main/podcasts/${name}.wav`;
+  const openAudio = (url) => {
     setActiveAudioId(speaker.id);
     setAudioUrl(url);
     setTitle(speaker.name);
@@ -52,7 +42,8 @@ const SpeakerCard = ({ speaker }) => {
           height={300}
           loading="lazy"
         />
-        {names.includes(speaker.name.toLowerCase().replace(" ", "_")) && (
+        {speaker.socials.instagram &&
+          speaker.socials.instagram.startsWith("https://www.instagram.com") && (
           <Image
             className="absolute top-0 right-0 cursor-pointer"
             src="/images/icons/sound.svg"
@@ -62,7 +53,12 @@ const SpeakerCard = ({ speaker }) => {
             loading="lazy"
             onClick={(e) => {
               e.stopPropagation();
-              openAudio(speaker.name.toLowerCase().replace(" ", "_"));
+              openAudio(
+                speaker.socials.instagram.replace(
+                  "https://www.instagram.com",
+                  "https://github.com",
+                ),
+              );
             }}
           />
         )}
