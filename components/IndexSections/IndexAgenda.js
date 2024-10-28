@@ -82,13 +82,13 @@ const IndexAgenda = () => {
         (session.name.toLowerCase().includes(textLower) ||
           session.speakers.some(
             (speaker) =>
-              speaker.name.toLowerCase().includes(textLower) ||
-              speaker.organization.toLowerCase().includes(textLower),
+              speaker.name?.toLowerCase().includes(textLower) ||
+              speaker.organization?.toLowerCase().includes(textLower),
           ) ||
           session.moderators.some(
             (moderator) =>
-              moderator.name.toLowerCase().includes(textLower) ||
-              moderator.organization.toLowerCase().includes(textLower),
+              moderator.name?.toLowerCase().includes(textLower) ||
+              moderator.organization?.toLowerCase().includes(textLower),
           )) &&
         (selectedTags.length === 0 || selectedTags.includes(session.tag)) &&
         (selectedTracks.length === 0 ||
