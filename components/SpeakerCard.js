@@ -46,7 +46,7 @@ const SpeakerCard = ({ speaker }) => {
           speaker.socials.instagram.startsWith("https://www.instagram.com") && (
           <Image
             className="absolute top-0 right-0 cursor-pointer"
-            src="/images/icons/sound.svg"
+            src="/images/icons/podcast_light.svg"
             alt="sound"
             width={30}
             height={30}
