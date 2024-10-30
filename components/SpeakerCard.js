@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Drawer from "@/components/Drawer";
 import SpeakerDetail from "@/components/SpeakerDetail";
@@ -16,6 +16,15 @@ const SpeakerCard = ({ speaker }) => {
   const [isHovering, setIsHovering] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [longPressTimer, setLongPressTimer] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsHovering(false);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const openDrawer = () => {
     window?.umami.track(`Click ${speaker.name}`);
@@ -36,7 +45,7 @@ const SpeakerCard = ({ speaker }) => {
   const handleTouchStart = (e) => {
     e.preventDefault();
     const touch = e.touches[0];
-    
+
     const timer = setTimeout(() => {
       const windowWidth = window.innerWidth;
       const windowHeight = window.innerHeight;
@@ -53,7 +62,7 @@ const SpeakerCard = ({ speaker }) => {
           : touch.clientY + offset,
       });
       setIsHovering(true);
-    }, 100); // 500ms long press
+    }, 1);
 
     setLongPressTimer(timer);
   };
@@ -63,12 +72,6 @@ const SpeakerCard = ({ speaker }) => {
       clearTimeout(longPressTimer);
       setLongPressTimer(null);
     }
-    
-    // If we weren't showing the hover image, treat it as a click
-    if (!isHovering) {
-      openDrawer();
-    }
-    
     setIsHovering(false);
   };
 
@@ -113,6 +116,7 @@ const SpeakerCard = ({ speaker }) => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onTouchMove={handleTouchMove}
+        onContextMenu={(e) => e.preventDefault()}
       >
         <Image
           src={speaker.avatar}
@@ -120,6 +124,7 @@ const SpeakerCard = ({ speaker }) => {
           width={500}
           height={500}
           loading="lazy"
+          onContextMenu={(e) => e.preventDefault()}
         />
         {speaker.thoth && isHovering && (
           <div
@@ -128,6 +133,7 @@ const SpeakerCard = ({ speaker }) => {
               left: `${mousePosition.x}px`,
               top: `${mousePosition.y}px`,
             }}
+            onContextMenu={(e) => e.preventDefault()}
           >
             <Image
               src={speaker.thoth}
@@ -135,11 +141,11 @@ const SpeakerCard = ({ speaker }) => {
               width={400}
               height={400}
               className="w-[200px] h-[200px] md:w-[400px] md:h-[400px]"
+              onContextMenu={(e) => e.preventDefault()}
             />
           </div>
         )}
-        {speaker.socials.instagram &&
-          speaker.socials.instagram.startsWith("https://www.instagram.com") && (
+        {speaker.podcast && (
           <Image
             className="absolute top-0 right-0 cursor-pointer"
             src="/images/icons/podcast.svg"
@@ -150,12 +156,7 @@ const SpeakerCard = ({ speaker }) => {
             onClick={(e) => {
               e.stopPropagation();
               umamiTrack(`Click ${speaker.name} podcast`);
-              openAudio(
-                speaker.socials.instagram.replace(
-                  "https://www.instagram.com",
-                  "https://github.com",
-                ),
-              );
+              openAudio(speaker.podcast);
             }}
           />
         )}
