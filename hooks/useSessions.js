@@ -1,5 +1,6 @@
 import useSWR from "swr";
 import { PTtoUTC } from "@/lib/time";
+import notes from "@/public/data/notes.json";
 
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
@@ -17,10 +18,26 @@ const useSessions = () => {
     end: PTtoUTC(session.end),
     speakers: session.speakers.filter(
       (speaker) => speaker.session_role === "speaker",
-    ),
+    )
+      .map((speaker) => {
+        const note = notes.find((note) => note.name === speaker.name);
+        return {
+          ...speaker,
+          thoth: note?.thoth,
+          note: note?.note,
+          podcast: note?.podcast,
+        };
+      }),
     moderators: session.speakers.filter(
       (speaker) => speaker.session_role === "moderator",
-    ),
+    ).map((speaker) => {
+      const note = notes.find((note) => note.name === speaker.name);
+      return {
+        ...speaker,
+        thoth: note?.thoth,
+        note: note?.note,
+      };
+    }),
     tag: session.tags.length > 0 ? session.tags[0] : "Other",
     tracks: session.tracks,
     location: session.location,

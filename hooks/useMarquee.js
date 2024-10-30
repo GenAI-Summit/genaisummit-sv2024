@@ -38,10 +38,6 @@ const useMarquee = () => {
   const organizations = allOrganizations?.filter((organization) => marqueeOrganizations?.includes(organization.id));
   const speakers = allSpeakers?.filter((speaker) => marqueeSpeakers?.includes(speaker.id));
 
-  console.log(allOrganizations);
-  console.log(marqueeOrganizations);
-  console.log(organizations);
-
   return {
     organizations,
     speakers,

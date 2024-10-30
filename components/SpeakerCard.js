@@ -89,8 +89,12 @@ const SpeakerCard = ({ speaker }) => {
       <div
         className="w-full h-auto cursor-pointer overflow-hidden relative"
         onClick={openDrawer}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        onMouseEnter={() => {
+          setIsHovering(true);
+        }}
+        onMouseLeave={() => {
+          setIsHovering(false);
+        }}
         onMouseMove={(e) => {
           const windowWidth = window.innerWidth;
           const windowHeight = window.innerHeight;
