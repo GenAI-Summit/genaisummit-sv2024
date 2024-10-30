@@ -10,7 +10,7 @@ const IndexMedia = async () => {
   return (
     <SectionLayout
       title="Media"
-      description="MEDIA COVERAGE OF THIS GENAI SUMMIT"
+      description="MEDIA ATTENDEES OF THIS GENAI SUMMIT"
       widget={<MediaBtn text="Get Media Pass" mode="day" />}
     >
       <div className="w-full mt-8 md:mt-10 flex flex-wrap justify-start items-center gap-y-7 md:gap-y-8 lg:gap-y-4 gap-x-[4%] md:gap-x-[4%] lg:gap-x-[1%]">
