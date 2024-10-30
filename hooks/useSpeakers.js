@@ -28,6 +28,8 @@ const useSpeakers = () => {
       return {
         ...speaker,
         note: note?.note,
+        podcast: note?.podcast,
+        thoth: note?.thoth,
       };
     }) || [];
 

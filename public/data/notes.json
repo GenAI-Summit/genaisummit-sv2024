@@ -1,15 +1,19 @@
 [
     {
         "name": "Arvind Jain",
-        "note": "Valuation: $4.6B"
+        "note": "Valuation: $4.6B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Arvind_Jain.png?raw=true"
     },
     {
         "name": "Lukas Biewald",
-        "note": "Valuation: $1.25B"
+        "note": "Valuation: $1.25B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Lukas_Biewald.png?raw=true"
     },
     {
         "name": "Fiona Ma",
-        "note": "Manages $3T payments"
+        "note": "Manages $3T payments",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Fiona_Ma.png?raw=true"
+
     },
     {
         "name": "Deon Nicholas",
@@ -21,15 +25,18 @@
     },
     {
         "name": "Michael Stewart",
-        "note": "Microsoft's venture fund"
+        "note": "Microsoft's venture fund",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Michael_Stewart.png?raw=true"
     },
     {
         "name": "Vanessa Larco",
-        "note": "Fund Size: $25B"
+        "note": "Fund Size: $25B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Vanessa_Larco.png?raw=true"
     },
     {
         "name": "Lip-Bu Tan",
-        "note": "Fund Size: $4B"
+        "note": "Fund Size: $4B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/LipBu_Tan.png?raw=true"
     },
     {
         "name": "Abhay Parasnis",
@@ -45,11 +52,13 @@
     },
     {
         "name": "Raluca Ada Popa",
-        "note": "ACM Grace Murray Hopper award 2021"
+        "note": "ACM Grace Murray Hopper award 2021",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Raluca_Ada_Popa.png?raw=true"
     },
     {
-        "name": "Dr. Hoansoo Lee",
-        "note": "Former Advisor of President Obama"
+        "name": "Hoansoo Lee",
+        "note": "Former Advisor of President Obama",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Hoansoo_Lee.png?raw=true"
     },
     {
         "name": "Swapnil Jain",
@@ -61,11 +70,21 @@
     },
     {
         "name": "Philip Rathle",
-        "note": "Valuation: $2B"
+        "note": "Valuation: $2B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Philip_Rathle.png?raw=true"
     },
     {
-        "name": "Dr. Natalia Vassilieva",
-        "note": "Valuation: $4B"
+        "name": "Philip Alvelda",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Philip_Alvelda.png?raw=true"
+    },
+    {
+        "name": "Pritish Yuvraj",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Pritish_Yuvraj.png?raw=true"
+    },
+    {
+        "name": "Natalia Vassilieva",
+        "note": "Valuation: $4B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Natalia_Vassilieva.png?raw=true"
     },
     {
         "name": "Bhavin Shah",
@@ -73,15 +92,18 @@
     },
     {
         "name": "Andy Hock",
-        "note": "Valuation: $4B"
+        "note": "Valuation: $4B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Andy_Hock.png?raw=true"
     },
     {
         "name": "Ed Roman",
-        "note": "250+ web3 & tech investments"
+        "note": "250+ web3 & tech investments",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Ed_Roman.png?raw=true"
     },
     {
         "name": "Tim Shi",
-        "note": "Valuation: $1.6B"
+        "note": "Valuation: $1.6B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Tim_Shi.png?raw=true"
     },
     {
         "name": "Bob Luijt",
@@ -89,11 +111,13 @@
     },
     {
         "name": "Yohei Nakajima",
-        "note": "The first AI Agents creator"
+        "note": "The first AI Agents creator",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Yohei_Nakajima.png?raw=true"
     },
     {
         "name": "Jason Lopatecki",
-        "note": "Funding: $61M"
+        "note": "Funding: $61M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jason_Lopatecki.png?raw=true"
     },
     {
         "name": "Tom Brady",
@@ -192,8 +216,9 @@
         "note": "AI Security Innovators"
     },
     {
-        "name": "Sumeet Kumar Agrawal",
-        "note": "Cloud data engineering"
+        "name": "Sumeet Agrawal",
+        "note": "Cloud data engineering",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Sumeet_Agrawal.png?raw=true"
     },
     {
         "name": "Rijul Gupta",
@@ -221,7 +246,8 @@
     },
     {
         "name": "Jeremiah Owyang",
-        "note": "Llama Lounge host"
+        "note": "Llama Lounge host",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jeremiah_Owyang.png?raw=true"
     },
     {
         "name": "Igor Carron",
@@ -304,6 +330,10 @@
         "note": "Funding: $3.7M"
     },
     {
+        "name": "Jay Allardyce",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jay_Allardyce.png?raw=true"
+    },
+    {
         "name": "Vijay Chandrasekhar",
         "note": "IEEE senior member"
     },
@@ -349,7 +379,8 @@
     },
     {
         "name": "Scott Clark",
-        "note": "Former VP/GM at Intel"
+        "note": "Former VP/GM at Intel",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Scott_Clark.png?raw=true"
     },
     {
         "name": "Rishabh Bhargava",
@@ -377,7 +408,8 @@
     },
     {
         "name": "Rowan McAllister",
-        "note": "Funding: $9.75B"
+        "note": "Funding: $9.75B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Rowan_McAllister.png?raw=true"
     },
     {
         "name": "Iván Martínez Toro",
@@ -437,7 +469,8 @@
     },
     {
         "name": "Uri Yerushalmi",
-        "note": "Funding: $112.5M"
+        "note": "Funding: $112.5M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Uri_Yerushalmi.png?raw=true"
     },
     {
         "name": "Susannah Shattuck",
@@ -453,11 +486,13 @@
     },
     {
         "name": "Lin Qiao",
-        "note": "Valuation: $552M"
+        "note": "Valuation: $552M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Lin_Qiao.png?raw=true"
     },
     {
         "name": "Jack McCauley",
-        "note": "Oculus VR Co-Founder"
+        "note": "Oculus VR Co-Founder",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jack_McCauley.png?raw=true"
     },
     {
         "name": "Hassan Sawaf",
@@ -489,11 +524,13 @@
     },
     {
         "name": "Jon Chu",
-        "note": "OpenAI Seed Round Investor"
+        "note": "OpenAI Seed Round Investor",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jon_Chu.png?raw=true"
     },
     {
         "name": "Annie Pearl",
-        "note": "Microsoft Startups"
+        "note": "Microsoft Startups",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Annie_Pearl.png?raw=true"
     },
     {
         "name": "David Hefter",
@@ -525,7 +562,8 @@
     },
     {
         "name": "Raiza Martin",
-        "note": "NotebookLM Creator"
+        "note": "NotebookLM Creator",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Raiza_Martin.png?raw=true"
     },
     {
         "name": "Sameer Dholakia",
@@ -533,11 +571,13 @@
     },
     {
         "name": "May Habib",
-        "note": "Funding: $126M"
+        "note": "Funding: $126M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/May_Habib.png?raw=true"
     },
     {
         "name": "Rajeev Dham",
-        "note": "Fund Size: $10B"
+        "note": "Fund Size: $10B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Rajeev_Dham.png?raw=true"
     },
     {
         "name": "German Lancioni",
@@ -549,7 +589,8 @@
     },
     {
         "name": "Rong Yan",
-        "note": "Valuation: $500M"
+        "note": "Valuation: $500M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Rong_Yan.png?raw=true"
     },
     {
         "name": "Sebastian Enderlein",
@@ -557,10 +598,27 @@
     },
     {
         "name": "Satya Nitta",
-        "note": "Valuation: $600M"
+        "note": "Valuation: $600M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Satya_Nitta.png?raw=true"
     },
     {
         "name": "Abe Kang",
         "note": "Valuation: $13B"
+    },
+    {
+        "name": "Shaun VanWeelden",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Shaun_VanWeelden.png?raw=true"
+    },
+    {
+        "name": "Soumya Batra",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Soumya_Batra.png?raw=true"
+    },
+    {
+        "name": "Tengyu Ma",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Tengyu_Ma.png?raw=true"
+    },
+    {
+        "name": "Michael Ran",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Michael_Ran.png?raw=true"
     }
 ]
