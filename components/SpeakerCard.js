@@ -7,6 +7,7 @@ import SpeakerDetail from "@/components/SpeakerDetail";
 import { useRouter } from "next/navigation";
 import TextHover from "@/motions/TextHover";
 import { useAudioContext } from "@/hooks/useAudio";
+import umamiTrack from "@/lib/umamiTrace";
 
 const SpeakerCard = ({ speaker }) => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -46,13 +47,14 @@ const SpeakerCard = ({ speaker }) => {
           speaker.socials.instagram.startsWith("https://www.instagram.com") && (
           <Image
             className="absolute top-0 right-0 cursor-pointer"
-            src="/images/icons/podcast_light.svg"
+            src="/images/icons/podcast.svg"
             alt="sound"
             width={30}
             height={30}
             loading="lazy"
             onClick={(e) => {
               e.stopPropagation();
+              umamiTrack(`Click ${speaker.name} podcast`);
               openAudio(
                 speaker.socials.instagram.replace(
                   "https://www.instagram.com",
