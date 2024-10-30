@@ -16,7 +16,6 @@ const SpeakerCard = ({ speaker }) => {
   const [isHovering, setIsHovering] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [longPressTimer, setLongPressTimer] = useState(null);
-  const [touchPosition, setTouchPosition] = useState(null);
 
   const openDrawer = () => {
     window?.umami.track(`Click ${speaker.name}`);
@@ -37,7 +36,6 @@ const SpeakerCard = ({ speaker }) => {
   const handleTouchStart = (e) => {
     e.preventDefault();
     const touch = e.touches[0];
-    setTouchPosition({ x: touch.clientX, y: touch.clientY });
     
     const timer = setTimeout(() => {
       const windowWidth = window.innerWidth;
@@ -60,7 +58,7 @@ const SpeakerCard = ({ speaker }) => {
     setLongPressTimer(timer);
   };
 
-  const handleTouchEnd = (e) => {
+  const handleTouchEnd = () => {
     if (longPressTimer) {
       clearTimeout(longPressTimer);
       setLongPressTimer(null);
@@ -72,10 +70,9 @@ const SpeakerCard = ({ speaker }) => {
     }
     
     setIsHovering(false);
-    setTouchPosition(null);
   };
 
-  const handleTouchMove = (e) => {
+  const handleTouchMove = () => {
     // Cancel long press if user moves their finger
     if (longPressTimer) {
       clearTimeout(longPressTimer);
