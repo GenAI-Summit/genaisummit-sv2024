@@ -148,7 +148,7 @@ const SpeakerCard = ({ speaker }) => {
         {speaker.podcast && (
           <Image
             className="absolute top-0 right-0 cursor-pointer"
-            src="/images/icons/podcast.svg"
+            src="/images/icons/podcast_blue.svg"
             alt="sound"
             width={30}
             height={30}
