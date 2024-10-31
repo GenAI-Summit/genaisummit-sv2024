@@ -16,6 +16,7 @@ import IndexAgenda from "@/components/IndexSections/IndexAgenda";
 import IndexSponsors from "@/components/IndexSections/IndexSponsors";
 // import TeslaIntro from "@/components/Intro/TeslaIntro";
 import Marquee from "@/components/IndexSections/Marquee";
+import MCs from "@/components/MCs";
 
 export const revalidate = 60;
 
@@ -35,6 +36,11 @@ const Index = () => {
         <SectionEnter>
           <Suspense fallback={<Loader />}>
             <IndexSpeakers />
+          </Suspense>
+        </SectionEnter>
+        <SectionEnter>
+          <Suspense fallback={<Loader />}>
+            <MCs />
           </Suspense>
         </SectionEnter>
         <SectionEnter>
