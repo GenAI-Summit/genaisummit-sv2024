@@ -59,20 +59,22 @@ const Tickets = ({ widget }) => {
       saveText: "",
       platforms: [
         {
-          name: "Luma",
-          url: "https://lu.ma/sc9tn1yv",
-          logo: "/images/icons/luma.png",
-        },
-        {
           name: "Whova (Recommended)",
           url: "https://whova.com/portal/registration/genai_202405",
           logo: "/images/icons/whova.png",
+        },
+        /*
+        {
+          name: "Luma",
+          url: "https://lu.ma/sc9tn1yv",
+          logo: "/images/icons/luma.png",
         },
         {
           name: "Eventbrite",
           url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
           logo: "/images/icons/eventbrite.png",
         },
+        */
       ],
       description: [
         "Access to all sessions, workshops, and networking opportunities for any single day of the summit.",
@@ -84,20 +86,22 @@ const Tickets = ({ widget }) => {
       name: "Three-Day Pass",
       price: "$599",
       platforms: [
+        /*
         {
           name: "Luma",
           url: "https://lu.ma/sc9tn1yv",
           logo: "/images/icons/luma.png",
         },
         {
-          name: "Whova (Recommended)",
-          url: "https://whova.com/portal/registration/genai_202405",
-          logo: "/images/icons/whova.png",
-        },
-        {
           name: "Eventbrite",
           url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
           logo: "/images/icons/eventbrite.png",
+        },
+        */
+        {
+          name: "Whova (Recommended)",
+          url: "https://whova.com/portal/registration/genai_202405",
+          logo: "/images/icons/whova.png",
         },
       ],
       description: [
@@ -165,20 +169,22 @@ const Tickets = ({ widget }) => {
       price: "$1699",
       saveText: "",
       platforms: [
+        /*
         {
           name: "Luma",
           url: "https://lu.ma/sc9tn1yv",
           logo: "/images/icons/luma.png",
         },
         {
-          name: "Whova (Recommended)",
-          url: "https://whova.com/portal/registration/genai_202405",
-          logo: "/images/icons/whova.png",
-        },
-        {
           name: "Eventbrite",
           url: "https://www.eventbrite.com/e/genai-summit-silicon-valley-2024-tickets-999543330007",
           logo: "/images/icons/eventbrite.png",
+        },
+        */
+        {
+          name: "Whova",
+          url: "https://whova.com/portal/registration/genai_202405",
+          logo: "/images/icons/whova.png",
         },
       ],
       description: [
