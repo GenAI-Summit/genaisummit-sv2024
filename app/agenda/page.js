@@ -21,7 +21,7 @@ const AgendaPage = () => {
   const [selectedTags, setSelectedTags] = useState([]);
   const [selectedTracks, setSelectedTracks] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState([]);
-  const [selectedDates, setSelectedDates] = useState([]);
+  const [selectedDates, setSelectedDates] = useState(["11/02/2024"]);
   const {
     tags,
     tracks,
