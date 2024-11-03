@@ -78,7 +78,8 @@
     },
     {
         "name": "Jia Li",
-        "note": "IEEE Fellow"
+        "note": "IEEE Fellow",
+        "podcast": "https://podcast.gptdao.ai/Jia_Li.wav"
     },
     {
         "name": "Philip Rathle",
@@ -93,12 +94,14 @@
     },
     {
         "name": "Pritish Yuvraj",
-        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Pritish_Yuvraj.png?raw=true"
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Pritish_Yuvraj.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Pritish_Yuvraj.wav"
     },
     {
         "name": "Natalia Vassilieva",
         "note": "Valuation: $4B",
-        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Natalia_Vassilieva.png?raw=true"
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Natalia_Vassilieva.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Dr_Natalia_Vassilieva.wav"
     },
     {
         "name": "Bhavin Shah",
@@ -151,9 +154,9 @@
         "podcast": "https://podcast.gptdao.ai/Rocky_Yu.wav"
     },
     {
-        "name": "Claudia Vacano",
+        "name": "Claudia Von Vacano",
         "note": "",
-        "podcast": "https://podcast.gptdao.ai/Claudia_Vacano.wav"
+        "podcast": "https://podcast.gptdao.ai/Claudia_Von_Vacano.wav"
     },
     {
         "name": "Shailesh Manjrekar",
@@ -161,7 +164,7 @@
         "podcast": "https://podcast.gptdao.ai/Shailesh_Manjrekar.wav"
     },
     {
-        "name": "Dr. Curtis Northcutt",
+        "name": "Curtis Northcutt",
         "note": "Funding: $30M",
         "podcast": "https://podcast.gptdao.ai/Dr_Curtis_Northcutt.wav"
     },
@@ -280,8 +283,9 @@
         "podcast": "https://podcast.gptdao.ai/Puneet_Thapliyal.wav"
     },
     {
-        "name": "Nirav S. Desai",
-        "note": "Valuation: $284M"
+        "name": "Nirav Desai",
+        "note": "Valuation: $284M",
+        "podcast": "https://podcast.gptdao.ai/Nirav_S_Desai.wav"
     },
     {
         "name": "Katie Trauth Taylor",
@@ -396,7 +400,8 @@
     },
     {
         "name": "Jay Allardyce",
-        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jay_Allardyce.png?raw=true"
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jay_Allardyce.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Jay_Allardyce.wav"
     },
     {
         "name": "Vijay Chandrasekhar",
@@ -730,7 +735,8 @@
     },
     {
         "name": "Shaun VanWeelden",
-        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Shaun_VanWeelden.png?raw=true"
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Shaun_VanWeelden.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Shaun_VanWeelden.wav"
     },
     {
         "name": "Soumya Batra"
@@ -742,7 +748,8 @@
     },
     {
         "name": "Michael Ran",
-        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Michael_Ran.png?raw=true"
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Michael_Ran.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Michael_Ran.wav"
     },
     {
         "name": "Aimee Grove",
@@ -879,5 +886,82 @@
     {
         "name": "Tsavo Knott",
         "podcast": "https://podcast.gptdao.ai/Tsavo_Knott.wav"
+    },
+    {
+        "name": "Amy Love",
+        "podcast": "https://podcast.gptdao.ai/Amy_Love.wav"
+    },
+    {
+        "name": "Demi Obayomi",
+        "podcast": "https://podcast.gptdao.ai/Demi_Obayomi.wav"
+    },
+    {
+        "name": "Divy Chaurasia",
+        "podcast": "https://podcast.gptdao.ai/Divy_Chaurasia.wav"
+    },
+    {
+        "name": "Emma Norchet",
+        "podcast": "https://podcast.gptdao.ai/Emma_Norchet.wav"
+    },
+    {
+        "name": "Gunveer Gujral",
+        "podcast": "https://podcast.gptdao.ai/Gunveer_Gujral.wav"
+    },
+    {
+        "name": "James Luan",
+        "podcast": "https://podcast.gptdao.ai/James_Luan.wav"
+    },
+    {
+        "name": "Jiaqi Chen",
+        "podcast": "https://podcast.gptdao.ai/Jiaqi_Chen.wav"
+
+    },
+    {
+        "name": "Matan Paul Shetrit",
+        "podcast": "https://podcast.gptdao.ai/Matan_Paul_Shetrit.wav"
+    },
+    {
+        "name": "Naisheng Zhang",
+        "podcast": "https://podcast.gptdao.ai/Naisheng_Zhang.wav"
+    },
+    {
+        "name": "Philip Tannor",
+        "podcast": "https://podcast.gptdao.ai/Philip_Tannor.wav"
+    },
+    {
+        "name": "Pradeep Nair",
+        "podcast": "https://podcast.gptdao.ai/Pradeep_Nair.wav"
+    },
+    {
+        "name": "Qi Lyu",
+        "podcast": "https://podcast.gptdao.ai/Qi_Lyu.wav"
+    },
+    {
+        "name": "Rehan Asif",
+        "podcast": "https://podcast.gptdao.ai/Rehan_Asif.wav"
+    },
+    {
+        "name": "Roman Shportko",
+        "podcast": "https://podcast.gptdao.ai/Roman_Shportko.wav"
+    },
+    {
+        "name": "Ruban Phukan",
+        "podcast": "https://podcast.gptdao.ai/Ruban_Phukan.wav"
+    },
+    {
+        "name": "Stephen Delaporte",
+        "podcast": "https://podcast.gptdao.ai/Stephen_Delaporte.wav"
+    },
+    {
+        "name": "Steve Wei",
+        "podcast": "https://podcast.gptdao.ai/Steve_Wei.wav"
+    },
+    {
+        "name": "Sumeet Kumar",
+        "podcast": "https://podcast.gptdao.ai/Sumeet_Kumar.wav"
+    },
+    {
+        "name": "Vic Bhatia",
+        "podcast": "https://podcast.gptdao.ai/Vic_Bhatia.wav"
     }
 ]
