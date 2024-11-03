@@ -46,6 +46,12 @@ const nextConfig = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "media-exp1.licdn.com",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
   output: "standalone",

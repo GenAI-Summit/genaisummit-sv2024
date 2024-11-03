@@ -1,16 +1,9 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Loader from "@/components/Loader";
-// import Image from "next/image";
 import ModalEnter from "@/motions/ModalEnter";
-import Script from "next/script";
 import CheckBox from "@/components/SVG/CheckBox";
 import umamiTrack from "@/lib/umamiTrace";
-
-const CTCT_SCRIPT_SRC =
-  "//static.ctctcdn.com/js/signup-form-widget/current/signup-form-widget.min.js";
-const CTCT_FORM_ID = "56df6b61-4bab-441d-9295-6729eb3b21be";
 
 const date = "1010";
 
@@ -18,9 +11,6 @@ const PopupModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showAgain, setShowAgain] = useState(true);
   const modalRef = useRef(null);
-
-  const [isScriptLoaded, setIsScriptLoaded] = useState(false);
-  const [isFormInitialized, setIsFormInitialized] = useState(false);
 
   useEffect(() => {
     const localLastShown = localStorage.getItem("popupLastShown");
@@ -39,23 +29,6 @@ const PopupModal = () => {
       modalRef.current.focus();
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    window._ctct_m = "30bb8cd15e4ce5c252b5c0df5da52b42";
-  }, []);
-
-  useEffect(() => {
-    if (isScriptLoaded) {
-      const checkFormInitialized = setInterval(() => {
-        if (document.querySelector(".ctct-inline-form")) {
-          setIsFormInitialized(true);
-          clearInterval(checkFormInitialized);
-        }
-      }, 100);
-
-      return () => clearInterval(checkFormInitialized);
-    }
-  }, [isScriptLoaded]);
 
   const onClose = () => {
     setIsOpen(false);
@@ -98,43 +71,35 @@ const PopupModal = () => {
           >
             X
           </button>
-          {/* <Image
-            className="object-cover"
-            src="/images/propaganda/popup.gif"
-            alt="Popup Modal"
-            width={500}
-            height={500}
-          /> */}
           <div className="w-full p-4">
-            <Script
-              src={CTCT_SCRIPT_SRC}
-              strategy="lazyOnload"
-              onLoad={() => setIsScriptLoaded(true)}
-            />
             <div className="text-center mb-4">
               <h2 className="text-theme1Dark1 text-xl md:text-3xl font-bold mb-2">
-                Get 10% Off Your Tickets!
+                Thank you!
               </h2>
               <p className="text-theme1Dark1 text-sm md:text-lg">
-                Sign up for newsletter and get exclusive discounts
+                We would love to hear from you.
               </p>
             </div>
-            {!isFormInitialized && <Loader color="border-theme1Dark1" />}
-            <div className="ctct-inline-form" data-form-id={CTCT_FORM_ID} />
-            {isFormInitialized && (
-              <div className="border-t border-theme1Dark1 pt-4">
-                <div
-                  className="text-theme1Dark1 flex items-center gap-x-2 cursor-pointer"
-                  onClick={onShowAgainChange}
-                >
-                  <CheckBox
-                    label="Do not show this update again"
-                    checked={!showAgain}
-                    color="text-theme1Dark1"
-                  />
-                </div>
+            <button
+              className="bg-theme1Dark1 text-white px-4 py-2 rounded-md"
+              onClick={() => {
+                window.open("https://form.gptdao.ai/sv2024-feedback", "_blank");
+              }}
+            >
+              Give Feedback
+            </button>
+            <div className="border-t border-theme1Dark1 pt-4 mt-4">
+              <div
+                className="text-theme1Dark1 flex items-center gap-x-2 cursor-pointer"
+                onClick={onShowAgainChange}
+              >
+                <CheckBox
+                  label="Do not show this again"
+                  checked={!showAgain}
+                  color="text-theme1Dark1"
+                />
               </div>
-            )}
+            </div>
           </div>
         </div>
       </ModalEnter>
