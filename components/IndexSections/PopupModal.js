@@ -83,7 +83,11 @@ const PopupModal = () => {
             <button
               className="bg-theme1Dark1 text-white px-4 py-2 rounded-md"
               onClick={() => {
-                window.open("https://form.gptdao.ai/sv2024-feedback", "_blank");
+                umamiTrack("Popup Give Feedback");
+                window.open(
+                  "https://form.gptdao.ai/sv2024-feedback?source=website",
+                  "_blank",
+                );
               }}
             >
               Give Feedback
