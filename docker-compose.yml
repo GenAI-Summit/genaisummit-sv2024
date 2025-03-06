@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   genai-web:
     build:
@@ -7,12 +5,14 @@ services:
       dockerfile: Dockerfile
     image: genaisummit-sv2024:1.0
     container_name: GenAI-Summit-SV2024-Web
+    ports:
+      - 3020:3000
     restart: unless-stopped
 
-  tunnel:
-    container_name: GenAI-Web-Tunnel
-    image: cloudflare/cloudflared:latest
-    restart: unless-stopped
-    command: tunnel --no-autoupdate run
-    environment:
-      - TUNNEL_TOKEN=eyJhIjoiODI2MTRjYzQxODc3YjE2NWFiOWU0Y2NmY2VjZTJmZDIiLCJ0IjoiYTU2NTE0YTctNjFhYS00ZTQ3LThlZjQtMTVjZmY4ZWY2MDY3IiwicyI6Ik5qWXlNMk5pWVdZdFpHUTFNeTAwTUdJeUxXRTNNbUV0TkRjM05ESTRNVGxtTVRFeCJ9
+#   tunnel:
+#     container_name: GenAI-Web-Tunnel
+#     image: cloudflare/cloudflared:latest
+#     restart: unless-stopped
+#     command: tunnel --no-autoupdate run
+#     environment:
+#       - TUNNEL_TOKEN=eyJhIjoiODI2MTRjYzQxODc3YjE2NWFiOWU0Y2NmY2VjZTJmZDIiLCJ0IjoiYTU2NTE0YTctNjFhYS00ZTQ3LThlZjQtMTVjZmY4ZWY2MDY3IiwicyI6Ik5qWXlNMk5pWVdZdFpHUTFNeTAwTUdJeUxXRTNNbUV0TkRjM05ESTRNVGxtTVRFeCJ9
