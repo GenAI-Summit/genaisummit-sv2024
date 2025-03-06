@@ -9,7 +9,7 @@ import RegisterBtn from "@/components/Button/RegisterBtn";
 import TextHover from "@/motions/TextHover";
 // import CountdownTimer from "@/components/Counter/CountdownTimer";
 // import FloatingLogo from "@/components/FloatingLogo";
-import TopLogos from "@/components/TopLogos";
+// import TopLogos from "@/components/TopLogos";
 
 const Banner = () => {
 
