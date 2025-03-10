@@ -6,7 +6,7 @@ services:
     image: genaisummit-sv2024:1.0
     container_name: GenAI-Summit-SV2024-Web
     ports:
-      - 3020:3020
+      - 3022:3022
     env_file:
       - .env.local
     restart: unless-stopped
