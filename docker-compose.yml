@@ -5,10 +5,10 @@ services:
       dockerfile: Dockerfile
     image: genaisummit-sv2024:1.0
     container_name: GenAI-Summit-SV2024-Web
-    ports:
-      - 3022:3022
     env_file:
-      - .env.local
+      - .env
+    ports:
+      - ${EXTERNAL_PORT}:3000
     restart: unless-stopped
 
 #   tunnel:
