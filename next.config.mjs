@@ -2,6 +2,8 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/genaisummit-sv2024",
+  assetPrefix: "/genaisummit-sv2024/",
   images: {
     remotePatterns: [
       {
