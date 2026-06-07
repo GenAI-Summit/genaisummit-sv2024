@@ -21,7 +21,7 @@ import { usePathname } from "next/navigation";
 
 const ShareBar = () => {
   const pathname = usePathname();
-  const url = `https://genai-summit.github.io/genaisummit-sv2024${pathname}`;
+  const url = `https://sv2024.genaisummit.xyz${pathname}`;
   return (
     <div>
       <div className="w-10 h-1 mt-2 bg-gradient-to-br from-theme1SectionTitleStripeColor1 via-theme1SectionTitleStripeColor2 to-theme1SectionTitleStripeColor3" />

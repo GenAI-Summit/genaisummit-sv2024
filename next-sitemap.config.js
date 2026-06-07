@@ -2,7 +2,7 @@
 import { getSpeakers, getOrganizations } from "./lib/api.js";
 
 const nextSitemapConfig = {
-  siteUrl: "https://genai-summit.github.io/genaisummit-sv2024",
+  siteUrl: "https://sv2024.genaisummit.xyz",
   outDir: "out",
   generateRobotsTxt: true,
   additionalPaths: async () => {
