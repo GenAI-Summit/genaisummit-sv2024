@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://genai-summit.github.io/genaisummit-sv2024
+Host: https://sv2024.genaisummit.xyz
 
 # Sitemaps
-Sitemap: https://genai-summit.github.io/genaisummit-sv2024/sitemap.xml
+Sitemap: https://sv2024.genaisummit.xyz/sitemap.xml
