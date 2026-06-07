@@ -18,7 +18,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
-const siteUrl = "https://genai-summit.github.io/genaisummit-sv2024";
+const siteUrl = "https://sv2024.genaisummit.xyz";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -97,7 +97,7 @@ const RootLayout = ({ children }) => {
           strategy="lazyOnload"
         />
       </head>
-      <link rel="icon" href="/genaisummit-sv2024/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon.ico" sizes="any" />
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <AudioProvider>
           <div className="flex-grow pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">
