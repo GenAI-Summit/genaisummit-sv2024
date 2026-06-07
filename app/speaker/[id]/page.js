@@ -4,11 +4,17 @@ import GoBackController from "@/components/Button/GoBackController";
 import SectionLayout from "@/layouts/SectionLayout";
 import SubSectionLayout from "@/layouts/SubSectionLayout";
 import CardLayout from "@/layouts/CardLayout";
-import { getSpeakerById, getSessionsBySpeaker } from "@/lib/api";
+import { getSpeakerById, getSessionsBySpeaker, getSpeakers } from "@/lib/api";
 import SectionEnter from "@/motions/SectionEnter";
 
-export const revalidate = 60;
-export const dynamicParams = true;
+export const dynamicParams = false;
+
+export const generateStaticParams = async () => {
+  const speakers = await getSpeakers();
+  return speakers.map((speaker) => ({
+    id: String(speaker.id),
+  }));
+};
 
 const SpeakerPage = async ({ params }) => {
   let speaker = await getSpeakerData(params.id);

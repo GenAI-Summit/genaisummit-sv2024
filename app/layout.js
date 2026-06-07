@@ -18,15 +18,16 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
+const siteUrl = "https://genai-summit.github.io/genaisummit-sv2024";
 
 export const metadata = {
-  metadataBase: new URL("https://genausummit.ai"),
+  metadataBase: new URL(siteUrl),
   title: "GenAI Summit Silicon Valley 2024 | GPTDAO",
   description:
     "Explore the future possibilities at the GenAI Summit from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
   openGraph: {
     type: "website",
-    url: "https://genaisummit.ai/",
+    url: `${siteUrl}/`,
     title: "Generative AI Summit Silicon Valley 2024",
     description:
       "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
@@ -42,7 +43,7 @@ export const metadata = {
     ],
     images: [
       {
-        url: "https://genaisummit.ai/images/propaganda/banner_seo.webp",
+        url: `${siteUrl}/images/propaganda/banner_seo.webp`,
         width: 1200,
         height: 630,
         alt: "Generative AI Summit Silicon Valley 2024",
@@ -96,7 +97,7 @@ const RootLayout = ({ children }) => {
           strategy="lazyOnload"
         />
       </head>
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/genaisummit-sv2024/favicon.ico" sizes="any" />
       <body className={`${inter.className} flex flex-col min-h-screen`}>
         <AudioProvider>
           <div className="flex-grow pb-5 flex flex-col items-center text-center bg-theme1Dark1 text-theme1Light1">

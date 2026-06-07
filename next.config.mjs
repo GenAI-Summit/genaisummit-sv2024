@@ -2,6 +2,8 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: "/genaisummit-sv2024",
+  assetPrefix: "/genaisummit-sv2024/",
   images: {
     remotePatterns: [
       {
@@ -53,8 +55,10 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    unoptimized: true,
   },
-  output: "standalone",
+  output: "export",
+  trailingSlash: true,
   /*
   variants: {
     extend: {

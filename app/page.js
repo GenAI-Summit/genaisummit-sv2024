@@ -15,10 +15,8 @@ import SectionEnter from "@/motions/SectionEnter";
 import IndexAgenda from "@/components/IndexSections/IndexAgenda";
 import IndexSponsors from "@/components/IndexSections/IndexSponsors";
 // import TeslaIntro from "@/components/Intro/TeslaIntro";
-import Marquee from "@/components/IndexSections/Marquee";
+import MarqueeClient from "@/components/IndexSections/MarqueeClient";
 import MCs from "@/components/MCs";
-
-export const revalidate = 60;
 
 const Index = () => {
   return (
@@ -64,7 +62,7 @@ const Index = () => {
       </div>
       <Suspense fallback={null}>
         <div className="fixed bottom-0 left-0 w-full bg-theme1Light1 z-30">
-          <Marquee />
+          <MarqueeClient />
         </div>
       </Suspense>
     </div>

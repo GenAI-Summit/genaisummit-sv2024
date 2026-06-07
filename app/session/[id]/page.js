@@ -1,11 +1,17 @@
 import SectionLayout from "@/layouts/SectionLayout";
 import SessionCard from "@/components/SessionCard";
 import GoBackController from "@/components/Button/GoBackController";
-import { getSessionById } from "@/lib/api";
+import { getSessionById, getSessions } from "@/lib/api";
 import SectionEnter from "@/motions/SectionEnter";
 
-export const revalidate = 60;
-export const dynamicParams = true;
+export const dynamicParams = false;
+
+export const generateStaticParams = async () => {
+  const sessions = await getSessions();
+  return sessions.map((session) => ({
+    id: String(session.id),
+  }));
+};
 
 const SessionPage = async ({ params }) => {
   let session = await getSessionData(params.id);

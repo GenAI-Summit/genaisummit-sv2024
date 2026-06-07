@@ -1,25 +1,18 @@
-import useSWR from "swr";
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import agendaData from "@/public/data/agenda.json";
 
 const useSessionsIndex = () => {
-  const { data, isLoading, error } = useSWR(
-    "https://api.gptdao.ai/index/agenda",
-    fetcher,
-  );
-
-  const tags = data?.data.tags
-    .map((tag) => tag.name)
+  const sessions = agendaData.filter((session) => !session.hide);
+  const tags = [...new Set(sessions.map((session) => session.type).filter(Boolean))]
     .filter((tag) => tag !== "Breakout");
-  const tracks = data?.data.tracks.map((track) => track.name);
-  const locations = data?.data.locations.map((location) => location.name);
+  const tracks = [...new Set(sessions.flatMap((session) => session.tracks || []).map((track) => track.name || track).filter(Boolean))];
+  const locations = [...new Set(sessions.map((session) => session.room || session.location).filter(Boolean))];
 
   return {
     tags,
     tracks,
     locations,
-    isLoading,
-    isError: error,
+    isLoading: false,
+    isError: false,
   };
 };
 

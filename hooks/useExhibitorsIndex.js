@@ -1,21 +1,12 @@
-import useSWR from "swr";
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import exhibitorData from "@/public/data/exhibitors.json";
 
 const useExhibitorsIndex = () => {
-  const { data, isLoading, error } = useSWR(
-    "https://api.gptdao.ai/index/exhibitors",
-    fetcher,
-  );
-
-  const categories = data?.data["booth-categories"].map(
-    (category) => category.name,
-  );
+  const categories = [...new Set(exhibitorData.flatMap((exhibitor) => exhibitor.categories || []))];
 
   return {
     categories,
-    isLoading,
-    isError: error,
+    isLoading: false,
+    isError: false,
   };
 };
 
