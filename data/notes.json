@@ -1,0 +1,967 @@
+[
+    {
+        "name": "Arvind Jain",
+        "note": "Valuation: $4.6B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Arvind_Jain.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Arvind_Jain.wav"
+    },
+    {
+        "name": "Lukas Biewald",
+        "note": "Valuation: $1.25B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Lukas_Biewald.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Lukas_Biewald.wav"
+    },
+    {
+        "name": "Fiona Ma",
+        "note": "Manages $3T payments",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Fiona_Ma.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Fiona_Ma.wav"
+    },
+    {
+        "name": "Deon Nicholas",
+        "note": "Funding: $92M",
+        "podcast": "https://podcast.gptdao.ai/Deon_Nicholas.wav"
+    },
+    {
+        "name": "Andrew Mayne",
+        "note": "OpenAI's first prompt engineer",
+        "podcast": "https://podcast.gptdao.ai/Andrew_Mayne.wav"
+    },
+    {
+        "name": "Michael Stewart",
+        "note": "Microsoft's venture fund",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Michael_Stewart.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Michael_Stewart.wav"
+    },
+    {
+        "name": "Vanessa Larco",
+        "note": "Fund Size: $25B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Vanessa_Larco.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Vanessa_Larco.wav"
+    },
+    {
+        "name": "Lip-Bu Tan",
+        "note": "Fund Size: $4B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/LipBu_Tan.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Lip_Bu_Tan.wav"
+    },
+    {
+        "name": "Abhay Parasnis",
+        "note": "Valuation: $1B"
+    },
+    {
+        "name": "Filip Kozera",
+        "note": "5M Users in 2 Weeks",
+        "podcast": "https://podcast.gptdao.ai/Filip_Kozera.wav"
+    },
+    {
+        "name": "Jon Shalowitz",
+        "note": "5 Startup Exits",
+        "podcast": "https://podcast.gptdao.ai/Jon_Shalowitz.wav"
+    },
+    {
+        "name": "Raluca Ada Popa",
+        "note": "ACM Grace Murray Hopper award 2021",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Raluca_Ada_Popa.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Raluca_Ada_Popa.wav"
+    },
+    {
+        "name": "Hoansoo Lee",
+        "note": "Former Advisor of President Obama",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Hoansoo_Lee.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Dr_Hoansoo_Lee.wav"
+    },
+    {
+        "name": "Swapnil Jain",
+        "note": "Funding: $213M",
+        "podcast": "https://podcast.gptdao.ai/Swapnil_Jain.wav"
+    },
+    {
+        "name": "Jia Li",
+        "note": "IEEE Fellow",
+        "podcast": "https://podcast.gptdao.ai/Jia_Li.wav"
+    },
+    {
+        "name": "Philip Rathle",
+        "note": "Valuation: $2B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Philip_Rathle.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Philip_Rathle.wav"
+    },
+    {
+        "name": "Philip Alvelda",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Philip_Alvelda.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Philip_Alvelda.wav"
+    },
+    {
+        "name": "Pritish Yuvraj",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Pritish_Yuvraj.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Pritish_Yuvraj.wav"
+    },
+    {
+        "name": "Natalia Vassilieva",
+        "note": "Valuation: $4B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Natalia_Vassilieva.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Dr_Natalia_Vassilieva.wav"
+    },
+    {
+        "name": "Bhavin Shah",
+        "note": "Valuation: $2.1B",
+        "podcast": "https://podcast.gptdao.ai/Bhavin_Shah.wav"
+    },
+    {
+        "name": "Andy Hock",
+        "note": "Valuation: $4B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Andy_Hock.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Andy_Hock.wav"
+    },
+    {
+        "name": "Ed Roman",
+        "note": "250+ web3 & tech investments",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Ed_Roman.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Ed_Roman.wav"
+    },
+    {
+        "name": "Tim Shi",
+        "note": "Valuation: $1.6B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Tim_Shi.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Tim_Shi.wav"
+    },
+    {
+        "name": "Bob Luijt",
+        "note": "Funding: $66.50M",
+        "podcast": "https://podcast.gptdao.ai/Bob_Luijt.wav"
+    },
+    {
+        "name": "Yohei Nakajima",
+        "note": "The first AI Agents creator",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Yohei_Nakajima.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Yohei_Nakajima.wav"
+    },
+    {
+        "name": "Jason Lopatecki",
+        "note": "Funding: $61M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jason_Lopatecki.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Jason_Lopatecki.wav"
+    },
+    {
+        "name": "Thomas Brady",
+        "note": "Biopharma investor",
+        "podcast": "https://podcast.gptdao.ai/Tom_Brady.wav"
+    },
+    {
+        "name": "Rocky Yu",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Rocky_Yu.wav"
+    },
+    {
+        "name": "Claudia Von Vacano",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Claudia_Von_Vacano.wav"
+    },
+    {
+        "name": "Shailesh Manjrekar",
+        "note": "Funding: $7.5M",
+        "podcast": "https://podcast.gptdao.ai/Shailesh_Manjrekar.wav"
+    },
+    {
+        "name": "Curtis Northcutt",
+        "note": "Funding: $30M",
+        "podcast": "https://podcast.gptdao.ai/Dr_Curtis_Northcutt.wav"
+    },
+    {
+        "name": "Tushar Gupta",
+        "note": "Fund Size: $150M",
+        "podcast": "https://podcast.gptdao.ai/Tushar_Gupta.wav"
+    },
+    {
+        "name": "Monica Bajaj",
+        "note": "Valuation: $1.112B",
+        "podcast": "https://podcast.gptdao.ai/Monica_Bajaj.wav"
+    },
+    {
+        "name": "Ruming Liu",
+        "note": "Senior corporate attorney",
+        "podcast": "https://podcast.gptdao.ai/Ruming_Liu.wav"
+    },
+    {
+        "name": "Dmytro Spodarets",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Dmytro_Spodarets.wav"
+    },
+    {
+        "name": "Ari Morcos",
+        "note": "Funding: $57.7M"
+    },
+    {
+        "name": "Ray Wu",
+        "note": "Fund Size: $539.4M",
+        "podcast": "https://podcast.gptdao.ai/Ray_Wu.wav"
+    },
+    {
+        "name": "Joanne Chen",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Joanne_Chen.wav"
+    },
+    {
+        "name": "Basel Salahieh",
+        "note": "Funding: $2M",
+        "podcast": "https://podcast.gptdao.ai/Basel_Salahieh.wav"
+    },
+    {
+        "name": "Jonathan Sanders",
+        "note": "Funding: $13M",
+        "podcast": "https://podcast.gptdao.ai/Jonathan_Sanders.wav"
+    },
+    {
+        "name": "Vidya Sagar Ravipati",
+        "note": "GenAI Center",
+        "podcast": "https://podcast.gptdao.ai/Vidya_Sagar_Ravipati.wav"
+    },
+    {
+        "name": "Marina Vieva",
+        "note": "Women's health advocate",
+        "podcast": "https://podcast.gptdao.ai/Marina_Vieva.wav"
+    },
+    {
+        "name": "Bosco Durai",
+        "note": "Funding: $67.3M",
+        "podcast": "https://podcast.gptdao.ai/Bosco_Durai.wav"
+    },
+    {
+        "name": "Yiran Chen",
+        "note": "IEEE Fellow",
+        "podcast": "https://podcast.gptdao.ai/Yiran_Chen.wav"
+    },
+    {
+        "name": "Jenny Xiao",
+        "note": "Fund Size: $25M",
+        "podcast": "https://podcast.gptdao.ai/Jenny_Xiao.wav"
+    },
+    {
+        "name": "Vanja Josifovski",
+        "note": "Valuation: $100M",
+        "podcast": "https://podcast.gptdao.ai/Vanja_Josifovski.wav"
+    },
+    {
+        "name": "Charles Xie",
+        "note": "Funding: $115M",
+        "podcast": "https://podcast.gptdao.ai/Charles_Xie.wav"
+    },
+    {
+        "name": "Zack Li",
+        "note": "Funding: $8.75M"
+    },
+    {
+        "name": "Yubei Chen",
+        "note": "Funding: $2M",
+        "podcast": "https://podcast.gptdao.ai/Yubei_Chen.wav"
+    },
+    {
+        "name": "Weiyan Shi",
+        "note": "AI Security Innovators",
+        "podcast": "https://podcast.gptdao.ai/Weiyan_Shi.wav"
+    },
+    {
+        "name": "Sumeet Agrawal",
+        "note": "Cloud data engineering",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Sumeet_Agrawal.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Sumeet_Agrawal.wav"
+    },
+    {
+        "name": "Rijul Gupta",
+        "note": "DeepFake thought leader by Forbes",
+        "podcast": "https://podcast.gptdao.ai/Rijul_Gupta.wav"
+    },
+    {
+        "name": "Ajay Vashee",
+        "note": "Fund Size: $7B",
+        "podcast": "https://podcast.gptdao.ai/Ajay_Vashee.wav"
+    },
+    {
+        "name": "Puneet Thapliyal",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Puneet_Thapliyal.wav"
+    },
+    {
+        "name": "Nirav Desai",
+        "note": "Valuation: $284M",
+        "podcast": "https://podcast.gptdao.ai/Nirav_S_Desai.wav"
+    },
+    {
+        "name": "Katie Trauth Taylor",
+        "note": "Funding: $5.5M",
+        "podcast": "https://podcast.gptdao.ai/Katie_Trauth_Taylor.wav"
+    },
+    {
+        "name": "Junchen Jiang",
+        "note": "Large-scale networked systems"
+    },
+    {
+        "name": "Jeremiah Owyang",
+        "note": "Llama Lounge host",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jeremiah_Owyang.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Jeremiah_Owyang.wav"
+    },
+    {
+        "name": "Igor Carron",
+        "note": "Valuation: $250M",
+        "podcast": "https://podcast.gptdao.ai/Igor_Carron.wav"
+    },
+    {
+        "name": "Jonathan Corbin",
+        "note": "Funding: $28M"
+    },
+    {
+        "name": "Haroon Choudery",
+        "note": "Funding: $2M",
+        "podcast": "https://podcast.gptdao.ai/Haroon_Choudery.wav"
+    },
+    {
+        "name": "Douwe Kiela",
+        "note": "Funding: $100M"
+    },
+    {
+        "name": "Darko Matovski",
+        "note": "Valuation: $250M",
+        "podcast": "https://podcast.gptdao.ai/Darko_Matovski.wav"
+    },
+    {
+        "name": "Hamza Farooq",
+        "note": "Funding: $2.2M",
+        "podcast": "https://podcast.gptdao.ai/Hamza_Farooq.wav"
+    },
+    {
+        "name": "Abdel Mahmoud",
+        "note": "Valuation: $95M",
+        "podcast": "https://podcast.gptdao.ai/Abdel_Mahmoud.wav"
+    },
+    {
+        "name": "Dawn Song",
+        "note": "MacArthur Foundation Fellowship"
+    },
+    {
+        "name": "Chris McCann",
+        "note": "Fund Size: $3.5B",
+        "podcast": "https://podcast.gptdao.ai/Chris_McCann.wav"
+    },
+    {
+        "name": "Badri Nath",
+        "note": "Funding: $92M"
+    },
+    {
+        "name": "Aman Raghuvanshi",
+        "note": "Former Director of Product at Sightly",
+        "podcast": "https://podcast.gptdao.ai/Aman_Raghuvanshi.wav"
+    },
+    {
+        "name": "Dan Sahar",
+        "note": "Funding: $15.6M",
+        "podcast": "https://podcast.gptdao.ai/Dan_Sahar.wav"
+    },
+    {
+        "name": "Allen Bolourchi",
+        "note": "CEO of Crystalytic.ai",
+        "podcast": "https://podcast.gptdao.ai/Allen_Bolourchi.wav"
+    },
+    {
+        "name": "Zohaib Ahmed",
+        "note": "Funding: $10M",
+        "podcast": "https://podcast.gptdao.ai/Zohaib_Ahmed.wav"
+    },
+    {
+        "name": "Will Bryk",
+        "note": "Funding: $22M",
+        "podcast": "https://podcast.gptdao.ai/Will_Bryk.wav"
+    },
+    {
+        "name": "Jon Bratseth",
+        "note": "Funding: $31M",
+        "podcast": "https://podcast.gptdao.ai/Jon_Bratseth.wav"
+    },
+    {
+        "name": "Vova Golubin",
+        "note": "Funding: $4.5M",
+        "podcast": "https://podcast.gptdao.ai/Vova_Golubin.wav"
+    },
+    {
+        "name": "Viren Baraiya",
+        "note": "Funding: $29.3M",
+        "podcast": "https://podcast.gptdao.ai/Viren_Baraiya.wav"
+    },
+    {
+        "name": "Rajen Sheth",
+        "note": "Funding: $20.95M",
+        "podcast": "https://podcast.gptdao.ai/Rajen_Sheth.wav"
+    },
+    {
+        "name": "Vinodh Poyyapakkam",
+        "note": "Funding: $3.7M",
+        "podcast": "https://podcast.gptdao.ai/Vinodh_Poyyapakkam.wav"
+    },
+    {
+        "name": "Jay Allardyce",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jay_Allardyce.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Jay_Allardyce.wav"
+    },
+    {
+        "name": "Vijay Chandrasekhar",
+        "note": "IEEE senior member"
+    },
+    {
+        "name": "Tsavo Knott",
+        "note": "Funding: $21.5M"
+    },
+    {
+        "name": "Tomás Hernando Kofman",
+        "note": "Funding: $2.3M",
+        "podcast": "https://podcast.gptdao.ai/Tomás_Hernando_Kofman.wav"
+    },
+    {
+        "name": "Alon Talmor",
+        "note": "Funding: $20M",
+        "podcast": "https://podcast.gptdao.ai/Alon_Talmor.wav"
+    },
+    {
+        "name": "Tom Hamer",
+        "note": "Funding: $17.8M",
+        "podcast": "https://podcast.gptdao.ai/Tom_Hamer.wav"
+    },
+    {
+        "name": "Alex LeBrun",
+        "note": "Funding: $43M",
+        "podcast": "https://podcast.gptdao.ai/Alex_LeBrun.wav"
+    },
+    {
+        "name": "Sumit Pal",
+        "note": "Funding: €7.0M",
+        "podcast": "https://podcast.gptdao.ai/Sumit_Pal.wav"
+    },
+    {
+        "name": "Sharon Zhou",
+        "note": "Funding: $25M",
+        "podcast": "https://podcast.gptdao.ai/Sharon_Zhou.wav"
+    },
+    {
+        "name": "Jennifer Dulski",
+        "note": "Valuation: $15M",
+        "podcast": "https://podcast.gptdao.ai/Jennifer_Dulski.wav"
+    },
+    {
+        "name": "Severi Tikkala",
+        "note": "Funding: €1.5M",
+        "podcast": "https://podcast.gptdao.ai/Severi_Tikkala.wav"
+    },
+    {
+        "name": "Gaurav Passi",
+        "note": "Funding: $10M",
+        "podcast": "https://podcast.gptdao.ai/Gaurav_Passi.wav"
+    },
+    {
+        "name": "Scott Clark",
+        "note": "Former VP/GM at Intel",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Scott_Clark.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Scott_Clark.wav"
+    },
+    {
+        "name": "Rishabh Bhargava",
+        "note": "Funding: $5.28M",
+        "podcast": "https://podcast.gptdao.ai/Rishabh_Bhargava.wav"
+    },
+    {
+        "name": "Raghavendra Prabhu",
+        "note": "Funding: $9M",
+        "podcast": "https://podcast.gptdao.ai/Raghavendra_Prabhu.wav"
+    },
+    {
+        "name": "Ofer Ronen",
+        "note": "Funding: $13M",
+        "podcast": "https://podcast.gptdao.ai/Ofer_Ronen.wav"
+    },
+    {
+        "name": "Nikhil Rao",
+        "note": "Funding: $14.95M",
+        "podcast": "https://podcast.gptdao.ai/Nikhil_Rao.wav"
+    },
+    {
+        "name": "Max Rollwage",
+        "note": "Funding: $14M",
+        "podcast": "https://podcast.gptdao.ai/Max_Rollwage.wav"
+    },
+    {
+        "name": "Marc Seal",
+        "note": "Funding: $4M",
+        "podcast": "https://podcast.gptdao.ai/Marc_Seal.wav"
+    },
+    {
+        "name": "Rowan McAllister",
+        "note": "Funding: $9.75B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Rowan_McAllister.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Rowan_McAllister.wav"
+    },
+    {
+        "name": "Iván Martínez Toro",
+        "note": "Funding: $3.2M"
+    },
+    {
+        "name": "Ivan Lee",
+        "note": "Funding: $8.95M",
+        "podcast": "https://podcast.gptdao.ai/Ivan_Lee.wav"
+    },
+    {
+        "name": "Guy Korland",
+        "note": "Funding: $3M",
+        "podcast": "https://podcast.gptdao.ai/Guy_Korland.wav"
+    },
+    {
+        "name": "Eric Wengrowski",
+        "note": "Funding: $6.23M",
+        "podcast": "https://podcast.gptdao.ai/Eric_Wengrowski.wav"
+    },
+    {
+        "name": "Dmitry Shapiro",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Dmitry_Shapiro.wav"
+    },
+    {
+        "name": "Dan Thomson",
+        "note": "Funding: $3.4M",
+        "podcast": "https://podcast.gptdao.ai/Dan_Thomson.wav"
+    },
+    {
+        "name": "Daksh Gupta",
+        "note": "Funding: $5.3M",
+        "podcast": "https://podcast.gptdao.ai/Daksh_Gupta.wav"
+    },
+    {
+        "name": "Amy Kelly",
+        "note": "Funding: $1.2M"
+    },
+    {
+        "name": "Amber Nigam",
+        "note": "Funding: $2.4M",
+        "podcast": "https://podcast.gptdao.ai/Amber_Nigam.wav"
+    },
+    {
+        "name": "Alon Nafta",
+        "note": "Funding: $8M",
+        "podcast": "https://podcast.gptdao.ai/Alon_Nafta.wav"
+    },
+    {
+        "name": "Ali Ansari",
+        "note": "Valuation: $80M"
+    },
+    {
+        "name": "Nathan Hsu",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Nathan_Hsu.wav"
+    },
+    {
+        "name": "Walter Goodwin",
+        "note": "Funding: $17.5M",
+        "podcast": "https://podcast.gptdao.ai/Walter_Goodwin.wav"
+    },
+    {
+        "name": "Vaibhavi Gangwar",
+        "note": "Funding: $3M",
+        "podcast": "https://podcast.gptdao.ai/Vaibhavi_Gangwar.wav"
+    },
+    {
+        "name": "Uri Yerushalmi",
+        "note": "Funding: $112.5M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Uri_Yerushalmi.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Uri_Yerushalmi.wav"
+    },
+    {
+        "name": "Susannah Shattuck",
+        "note": "Funding: $41.3M",
+        "podcast": "https://podcast.gptdao.ai/Susannah_Shattuck.wav"
+    },
+    {
+        "name": "Stephen Chin",
+        "note": "Valuation: $2B",
+        "podcast": "https://podcast.gptdao.ai/Stephen_Chin.wav"
+    },
+    {
+        "name": "Pranava Adduri",
+        "note": "Funding: $10M",
+        "podcast": "https://podcast.gptdao.ai/Pranava_Adduri.wav"
+    },
+    {
+        "name": "Lin Qiao",
+        "note": "Valuation: $552M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Lin_Qiao.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Lin_Qiao.wav"
+    },
+    {
+        "name": "Jack McCauley",
+        "note": "Oculus VR Co-Founder",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jack_McCauley.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Jack_McCauley.wav"
+    },
+    {
+        "name": "Hassan Sawaf",
+        "note": "Funding: $16.5M"
+    },
+    {
+        "name": "Gaurav Agarwal",
+        "note": "Funding: $4.7M"
+    },
+    {
+        "name": "Daniel Svonava",
+        "note": "Funding: $9.5M",
+        "podcast": "https://podcast.gptdao.ai/Daniel_Svonava.wav"
+    },
+    {
+        "name": "Brett Waikart",
+        "note": "Funding: $2.5M",
+        "podcast": "https://podcast.gptdao.ai/Brett_Waikart.wav"
+    },
+    {
+        "name": "Anu Shukla",
+        "note": "Valuation: $18M",
+        "podcast": "https://podcast.gptdao.ai/Anu_Shukla.wav"
+    },
+    {
+        "name": "Ankit Jain",
+        "note": "Funding: $51.4M",
+        "podcast": "https://podcast.gptdao.ai/Ankit_Jain.wav"
+    },
+    {
+        "name": "Shishir Patil",
+        "note": "Gorilla LLM Creator",
+        "podcast": "https://podcast.gptdao.ai/Shishir_Patil.wav"
+    },
+    {
+        "name": "Jon Chu",
+        "note": "OpenAI Seed Round Investor",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Jon_Chu.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Jon_Chu.wav"
+    },
+    {
+        "name": "Annie Pearl",
+        "note": "Microsoft Startups",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Annie_Pearl.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Annie_Pearl.wav"
+    },
+    {
+        "name": "David Hefter",
+        "note": "AI Champion",
+        "podcast": "https://podcast.gptdao.ai/David_Hefter.wav"
+    },
+    {
+        "name": "Navrina Singh",
+        "note": "Member at the National AI Advisory Committee",
+        "podcast": "https://podcast.gptdao.ai/Navrina_Singh.wav"
+    },
+    {
+        "name": "Sarahyah Yisrael Adon",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Sarahyah_Yisrael_Adon.wav"
+    },
+    {
+        "name": "Phelim Bradley",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Phelim_Bradley.wav"
+    },
+    {
+        "name": "Ang Li",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Ang_Li.wav"
+    },
+    {
+        "name": "Deepa Sureka",
+        "note": "Distinguished Fellow at Akool",
+        "podcast": "https://podcast.gptdao.ai/Deepa_Sureka.wav"
+    },
+    {
+        "name": "Siddharth Srinivasan",
+        "note": "",
+        "podcast": "https://podcast.gptdao.ai/Siddharth_Srinivasan.wav"
+    },
+    {
+        "name": "Raiza Martin",
+        "note": "NotebookLM Creator",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Raiza_Martin.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Raiza_Martin.wav"
+    },
+    {
+        "name": "Sameer Dholakia",
+        "note": "Fund Size: $20B",
+        "podcast": "https://podcast.gptdao.ai/Sameer_Dholakia.wav"
+    },
+    {
+        "name": "May Habib",
+        "note": "Funding: $126M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/May_Habib.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/May_Habib.wav"
+    },
+    {
+        "name": "Rajeev Dham",
+        "note": "Fund Size: $10B",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Rajeev_Dham.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Rajeev_Dham.wav"
+    },
+    {
+        "name": "German Lancioni",
+        "note": "45+ patents",
+        "podcast": "https://podcast.gptdao.ai/German_Lancioni.wav"
+    },
+    {
+        "name": "Waseem Alshikh",
+        "note": "Funding: $126M",
+        "podcast": "https://podcast.gptdao.ai/Waseem_Alshikh.wav"
+    },
+    {
+        "name": "Rong Yan",
+        "note": "Valuation: $500M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Rong_Yan.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Rong_Yan.wav"
+    },
+    {
+        "name": "Sebastian Enderlein",
+        "note": "Valuation: $2B",
+        "podcast": "https://podcast.gptdao.ai/Sebastian_Enderlein.wav"
+    },
+    {
+        "name": "Satya Nitta",
+        "note": "Valuation: $600M",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Satya_Nitta.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Satya_Nitta.wav"
+    },
+    {
+        "name": "Abe Kang",
+        "note": "Valuation: $13B",
+        "podcast": "https://podcast.gptdao.ai/Abe_Kang.wav"
+    },
+    {
+        "name": "Shaun VanWeelden",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Shaun_VanWeelden.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Shaun_VanWeelden.wav"
+    },
+    {
+        "name": "Soumya Batra"
+    },
+    {
+        "name": "Tengyu Ma",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Tengyu_Ma.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Tengyu_Ma.wav"
+    },
+    {
+        "name": "Michael Ran",
+        "thoth": "https://github.com/GenAI-Summit/thoth/blob/main/thoth/Michael_Ran.png?raw=true",
+        "podcast": "https://podcast.gptdao.ai/Michael_Ran.wav"
+    },
+    {
+        "name": "Aimee Grove",
+        "podcast": "https://podcast.gptdao.ai/Aimee_Grove.wav"
+    },
+    {
+        "name": "Alexy Khrabrov",
+        "podcast": "https://podcast.gptdao.ai/Alexy_Khrabrov.wav"
+    },
+    {
+        "name": "Andy Singh",
+        "podcast": "https://podcast.gptdao.ai/Andy_Singh.wav"
+    },
+    {
+        "name": "Anna Tong",
+        "podcast": "https://podcast.gptdao.ai/Anna_Tong.wav"
+    },
+    {
+        "name": "Brett Waikart",
+        "podcast": "https://podcast.gptdao.ai/Brett_Waikart.wav"
+    },
+    {
+        "name": "Brittney Harrel",
+        "podcast": "https://podcast.gptdao.ai/Brittney_Harrel.wav"
+    },
+    {
+        "name": "Charles Migos",
+        "podcast": "https://podcast.gptdao.ai/Charles_Migos.wav"
+    },
+    {
+        "name": "Cody Coleman",
+        "podcast": "https://podcast.gptdao.ai/Cody_Coleman.wav"
+    },
+    {
+        "name": "Janelle Teng",
+        "podcast": "https://podcast.gptdao.ai/Janelle_Teng.wav"
+    },
+    {
+        "name": "Jill Harding",
+        "podcast": "https://podcast.gptdao.ai/Jill_Harding.wav"
+    },
+    {
+        "name": "Jobi George",
+        "podcast": "https://podcast.gptdao.ai/Jobi_George.wav"
+    },
+    {
+        "name": "Justin Torre",
+        "podcast": "https://podcast.gptdao.ai/Justin_Torre.wav"
+    },
+    {
+        "name": "Kai Wu",
+        "podcast": "https://podcast.gptdao.ai/Kai_Wu.wav"
+    },
+    {
+        "name": "Kevin Chung",
+        "podcast": "https://podcast.gptdao.ai/Kevin_Chung.wav"
+    },
+    {
+        "name": "Kyle Corbitt",
+        "podcast": "https://podcast.gptdao.ai/Kyle_Corbitt.wav"
+    },
+    {
+        "name": "Madhu Vohra",
+        "podcast": "https://podcast.gptdao.ai/Madhu_Vohra.wav"
+    },
+    {
+        "name": "Margaret Vo",
+        "podcast": "https://podcast.gptdao.ai/Margaret_Vo.wav"
+    },
+    {
+        "name": "Muddu Sudhakar",
+        "podcast": "https://podcast.gptdao.ai/Muddu_Sudhakar.wav"
+    },
+    {
+        "name": "Murray Newlands",
+        "podcast": "https://podcast.gptdao.ai/Murray_Newlands.wav"
+    },
+    {
+        "name": "Nzisa Kiilu",
+        "podcast": "https://podcast.gptdao.ai/Nzisa_Kiilu.wav"
+    },
+    {
+        "name": "Prakash Murugesan",
+        "podcast": "https://podcast.gptdao.ai/Prakash_Murugesan.wav"
+    },
+    {
+        "name": "Pratik Sachdeva",
+        "podcast": "https://podcast.gptdao.ai/Pratik_Sachdeva.wav"
+    },
+    {
+        "name": "Raghav Raghunathan",
+        "podcast": "https://podcast.gptdao.ai/Raghav_Raghunathan.wav"
+    },
+    {
+        "name": "Rocky Yu",
+        "podcast": "https://podcast.gptdao.ai/Rocky_Yu.wav"
+    },
+    {
+        "name": "Rohit Valia",
+        "podcast": "https://podcast.gptdao.ai/Rohit_Valia.wav"
+    },
+    {
+        "name": "Rong Cao",
+        "podcast": "https://podcast.gptdao.ai/Rong_Cao.wav"
+    },
+    {
+        "name": "Shawn Flynn",
+        "podcast": "https://podcast.gptdao.ai/Shawn_Flynn.wav"
+    },
+    {
+        "name": "Sumit Chankramath",
+        "podcast": "https://podcast.gptdao.ai/Sumit_Chankramath.wav"
+    },
+    {
+        "name": "Sydney Levin",
+        "podcast": "https://podcast.gptdao.ai/Sydney_Levin.wav"
+    },
+    {
+        "name": "Vic Bhatia",
+        "podcast": "https://podcast.gptdao.ai/Vic_Bhatia.wav"
+    },
+    {
+        "name": "Vijay Gopal",
+        "podcast": "https://podcast.gptdao.ai/Vijay_Gopal.wav"
+    },
+    {
+        "name": "Yina Zhang",
+        "podcast": "https://podcast.gptdao.ai/Yina_Zhang.wav"
+    },
+    {
+        "name": "Yiqi Zhao",
+        "podcast": "https://podcast.gptdao.ai/Yiqi_Zhao.wav"
+    },
+    {
+        "name": "Tsavo Knott",
+        "podcast": "https://podcast.gptdao.ai/Tsavo_Knott.wav"
+    },
+    {
+        "name": "Amy Love",
+        "podcast": "https://podcast.gptdao.ai/Amy_Love.wav"
+    },
+    {
+        "name": "Demi Obayomi",
+        "podcast": "https://podcast.gptdao.ai/Demi_Obayomi.wav"
+    },
+    {
+        "name": "Divy Chaurasia",
+        "podcast": "https://podcast.gptdao.ai/Divy_Chaurasia.wav"
+    },
+    {
+        "name": "Emma Norchet",
+        "podcast": "https://podcast.gptdao.ai/Emma_Norchet.wav"
+    },
+    {
+        "name": "Gunveer Gujral",
+        "podcast": "https://podcast.gptdao.ai/Gunveer_Gujral.wav"
+    },
+    {
+        "name": "James Luan",
+        "podcast": "https://podcast.gptdao.ai/James_Luan.wav"
+    },
+    {
+        "name": "Jiaqi Chen",
+        "podcast": "https://podcast.gptdao.ai/Jiaqi_Chen.wav"
+
+    },
+    {
+        "name": "Matan Paul Shetrit",
+        "podcast": "https://podcast.gptdao.ai/Matan_Paul_Shetrit.wav"
+    },
+    {
+        "name": "Naisheng Zhang",
+        "podcast": "https://podcast.gptdao.ai/Naisheng_Zhang.wav"
+    },
+    {
+        "name": "Philip Tannor",
+        "podcast": "https://podcast.gptdao.ai/Philip_Tannor.wav"
+    },
+    {
+        "name": "Pradeep Nair",
+        "podcast": "https://podcast.gptdao.ai/Pradeep_Nair.wav"
+    },
+    {
+        "name": "Qi Lyu",
+        "podcast": "https://podcast.gptdao.ai/Qi_Lyu.wav"
+    },
+    {
+        "name": "Rehan Asif",
+        "podcast": "https://podcast.gptdao.ai/Rehan_Asif.wav"
+    },
+    {
+        "name": "Roman Shportko",
+        "podcast": "https://podcast.gptdao.ai/Roman_Shportko.wav"
+    },
+    {
+        "name": "Ruban Phukan",
+        "podcast": "https://podcast.gptdao.ai/Ruban_Phukan.wav"
+    },
+    {
+        "name": "Stephen Delaporte",
+        "podcast": "https://podcast.gptdao.ai/Stephen_Delaporte.wav"
+    },
+    {
+        "name": "Steve Wei",
+        "podcast": "https://podcast.gptdao.ai/Steve_Wei.wav"
+    },
+    {
+        "name": "Sumeet Kumar",
+        "podcast": "https://podcast.gptdao.ai/Sumeet_Kumar.wav"
+    },
+    {
+        "name": "Vic Bhatia",
+        "podcast": "https://podcast.gptdao.ai/Vic_Bhatia.wav"
+    }
+]
