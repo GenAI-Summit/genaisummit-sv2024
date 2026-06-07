@@ -53,8 +53,10 @@ const nextConfig = {
         pathname: "/**",
       },
     ],
+    unoptimized: true,
   },
-  output: "standalone",
+  output: "export",
+  trailingSlash: true,
   /*
   variants: {
     extend: {

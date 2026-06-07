@@ -1,33 +1,20 @@
-import useSWR from "swr";
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
-
-const apiUrl = "https://api.gptdao.ai";
-// const apiUrl = "http://localhost:8900";
+import speakerData from "@/public/data/speakers.json";
 
 const useHomeSpeakers = () => {
-  const { data, isLoading, error } = useSWR(
-    `${apiUrl}/home/speaker`,
-    fetcher,
-  );
-
-  const {
-    data: data2,
-    isLoading: isLoading2,
-    error: error2,
-  } = useSWR(
-    `${apiUrl}/rank/tag?tag_name=hide&type_name=speaker`,
-    fetcher,
-  );
-
-  const hideSpeakers = data2?.data || [];
-  const homeSpeakers =
-    data?.data.filter((speaker) => !hideSpeakers.includes(speaker.id)) || [];
+  const homeSpeakers = speakerData.slice(0, 8).map((speaker) => ({
+    ...speaker,
+    avatar: speaker.avatar || speaker.image,
+    organization: speaker.organization || speaker.company,
+    socials: speaker.socials || {
+      linkedin: speaker.linkedin || "",
+      twitter: speaker.twitter || "",
+    },
+  }));
 
   return {
     homeSpeakers,
-    isLoading: isLoading || isLoading2,
-    isError: error || error2,
+    isLoading: false,
+    isError: false,
   };
 };
 

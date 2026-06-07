@@ -1,74 +1,33 @@
-import useSWR from "swr";
-
-const fetcher = (...args) => fetch(...args).then((res) => res.json());
+import exhibitorData from "@/public/data/exhibitors.json";
+import sponsorData from "@/public/data/sponsors.json";
 
 const sponsorTiers = ["Platinum", "Gold", "Silver", "Special"];
 
+const normalizeOrganization = (organization) => ({
+  ...organization,
+  logo: organization.logo || organization.image,
+  desc: organization.desc || organization.description || "",
+  tier: organization.tier || organization.type || "Exhibitor",
+  location: organization.location || "",
+  categories: organization.categories || [],
+});
+
 const useExhibitors = () => {
-  const { data, isLoading, error } = useSWR(
-    "https://api.gptdao.ai/exhibitors",
-    fetcher,
-  );
-
-  const {
-    data: data2,
-    isLoading: isLoading2,
-    error: error2,
-  } = useSWR(
-    "https://api.gptdao.ai/rank/tag?tag_name=hide&type_name=exhibitor",
-    fetcher,
-  );
-
-  const {
-    data: data3,
-    isLoading: isLoading3,
-    error: error3,
-  } = useSWR(
-    "https://api.gptdao.ai/rank/tag?tag_name=only_sponsor&type_name=exhibitor",
-    fetcher,
-  );
-
-  const hideExhibitors = data2?.data || [];
-  const onlySponsors = data3?.data || [];
-
-  const seenNames = new Set();
-  const exhibitors =
-    data?.data
-      .filter((exhibitor) => !hideExhibitors.includes(exhibitor.id))
-      .filter((exhibitor) => !onlySponsors.includes(exhibitor.id))
-      .filter((exhibitor) => {
-        if (seenNames.has(exhibitor.name)) {
-          return false;
-        }
-        seenNames.add(exhibitor.name);
-        return true;
-      }) || [];
-
-  const seenNames2 = new Set();
-  const sponsors =
-    data?.data
-      .filter((exhibitor) => !hideExhibitors.includes(exhibitor.id))
-      .filter((exhibitor) => sponsorTiers.includes(exhibitor.tier))
-      .filter((exhibitor) => {
-        if (seenNames2.has(exhibitor.name)) {
-          return false;
-        }
-        seenNames2.add(exhibitor.name);
-        return true;
-      }) || [];
+  const exhibitors = exhibitorData.map(normalizeOrganization);
+  const sponsors = sponsorData.map(normalizeOrganization);
 
   const getExhibitorById = (id) => {
     return exhibitors.find((exhibitor) => exhibitor.id === id);
   };
 
   return {
-    allOrganizations: data?.data || [],
+    allOrganizations: [...exhibitors, ...sponsors],
     exhibitors,
     getExhibitorById,
     sponsors,
     sponsorTiers,
-    isLoading: isLoading || isLoading2 || isLoading3,
-    isError: error || error2 || error3,
+    isLoading: false,
+    isError: false,
   };
 };
 

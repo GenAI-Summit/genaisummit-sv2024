@@ -1,12 +1,18 @@
 import OrganizationDetail from "@/components/OrganizationDetail";
 import GoBackController from "@/components/Button/GoBackController";
-import { getOrganizationById } from "@/lib/api";
+import { getOrganizationById, getOrganizations } from "@/lib/api";
 import SectionLayout from "@/layouts/SectionLayout";
 import CardLayout from "@/layouts/CardLayout";
 import SectionEnter from "@/motions/SectionEnter";
 
-export const revalidate = 60;
-export const dynamicParams = true;
+export const dynamicParams = false;
+
+export const generateStaticParams = async () => {
+  const organizations = await getOrganizations();
+  return organizations.map((organization) => ({
+    id: String(organization.id),
+  }));
+};
 
 const SponsorPage = async ({ params }) => {
   let organization = await getOrganizationData(params.id);
