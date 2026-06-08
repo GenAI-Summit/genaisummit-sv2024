@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Terms & Conditions | GenAI Summit Silicon Valley 2024 | GPTDAO",
+  title: "Terms & Conditions | GenAI Summit Silicon Valley 2024 | GPT DAO",
 };
 const TermsLayout = ({ children }) => {
   return (

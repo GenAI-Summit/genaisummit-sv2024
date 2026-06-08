@@ -33,7 +33,7 @@ const NavBar = ({ closeDrawer, openDialog, closeDialog, showDialog, handleDialog
         onMouseLeave={closeDialog}
       >
         <div className="inline-flex items-center gap-1 cursor-pointer">
-          Our Events
+          OUR EVENTS
         </div>
         <AnimatePresence>
           {showDialog && (
@@ -50,6 +50,8 @@ const NavBar = ({ closeDrawer, openDialog, closeDialog, showDialog, handleDialog
                     key={index}
                     className="block cursor-pointer p-2"
                     href={event.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     onClick={close}
                   >
                     <motion.div
@@ -85,7 +87,7 @@ const NavBar = ({ closeDrawer, openDialog, closeDialog, showDialog, handleDialog
           className="inline-flex items-center cursor-pointer gap-1"
           onClick={handleDialog}
         >
-          <span>Our Events</span>
+          <span>OUR EVENTS</span>
           <WrapperArrow isOpen={showDialog} />
         </div>
         <AnimatePresence>
@@ -102,6 +104,8 @@ const NavBar = ({ closeDrawer, openDialog, closeDialog, showDialog, handleDialog
                   key={index}
                   className="cursor-pointer"
                   href={event.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={close}
                 >
                   <motion.div

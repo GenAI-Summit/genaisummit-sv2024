@@ -51,7 +51,7 @@ export const generateMetadata = async ({ params }) => {
   let speaker = await getSpeakerData(params.id);
   let bio = speaker.bio.split(". ")[0] + ".";
   return {
-    title: `${speaker.name} | GenAI Summit Silicon Valley 2024 | GPTDAO`,
+    title: `${speaker.name} | GenAI Summit Silicon Valley 2024 | GPT DAO`,
     description: bio,
     image: speaker.image,
     keywords: [

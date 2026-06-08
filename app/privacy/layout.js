@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Privacy Policy | GenAI Summit Silicon Valley 2024 | GPTDAO",
+  title: "Privacy Policy | GenAI Summit Silicon Valley 2024 | GPT DAO",
 };
 
 const PrivacyLayout = ({ children }) => {
