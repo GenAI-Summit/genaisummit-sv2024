@@ -7,9 +7,9 @@ const PrivacyPage = () => {
     {
       title: "Introduction",
       paragraphs: [
-        "1.1 This Privacy and Cookies Policy sets out the privacy and cookies policy of GPTDAO, a company organizing the summit. For the purpose of data protection laws, the data controller is GPTDAO.",
-        "1.2 By providing your personal information to GPTDAO, you consent to the collection and use of it and any other information provided to GPTDAO in accordance with this Privacy Policy. If at any time you wish to change the uses of your personal information to which you have consented, please contact us at genaix@gptdao.ai.",
-        "1.3 GPTDAO may revise this Privacy Policy at any time by posting an update on its website(s). This Privacy Policy was last updated in July 2024.",
+        "1.1 This Privacy and Cookies Policy sets out the privacy and cookies policy of GenAI X, Inc. (GPT DAO), a company organizing the summit. For the purpose of data protection laws, the data controller is GenAI X, Inc. (GPT DAO).",
+        "1.2 By providing your personal information to GenAI X, Inc. (GPT DAO), you consent to the collection and use of it and any other information provided to GenAI X, Inc. (GPT DAO) in accordance with this Privacy Policy. If at any time you wish to change the uses of your personal information to which you have consented, please contact us at gptdao@genaix.ai.",
+        "1.3 GenAI X, Inc. (GPT DAO) may revise this Privacy Policy at any time by posting an update on its website(s). This Privacy Policy was last updated in July 2024.",
       ],
     },
     {
@@ -27,8 +27,8 @@ const PrivacyPage = () => {
       title: "Storage and retention of your information",
       paragraphs: [
         "3.1 If you would like to change, update or delete your personal information in our databases, you may do so through your account profile or by contacting our customer support. We will make reasonable efforts to comply with your request. Keep in mind, however, that there will be residual information that will remain within our databases, access logs, and other records, which may or may not contain inaccurate or outdated personal information. The residual information will not be used for commercial purposes.",
-        "We will retain your information for as long as your account is active, as needed to provide you with our services or as otherwise required by law. If you wish to cancel your account or request that we no longer use your information please contact us at genaix@gptdao.ai. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.",
-        "3.2 Your personal data will be held and used by GPTDAO, and any third party hosting provider acting on its behalf, in order to run the event and for analyzing visitor traffic with a view to improving the event experience for visitors.",
+        "We will retain your information for as long as your account is active, as needed to provide you with our services or as otherwise required by law. If you wish to cancel your account or request that we no longer use your information please contact us at gptdao@genaix.ai. We will retain and use your information as necessary to comply with our legal obligations, resolve disputes, and enforce our agreements.",
+        "3.2 Your personal data will be held and used by GenAI X, Inc. (GPT DAO), and any third party hosting provider acting on its behalf, in order to run the event and for analyzing visitor traffic with a view to improving the event experience for visitors.",
       ],
     },
     {
@@ -41,7 +41,7 @@ const PrivacyPage = () => {
     {
       title: "Security",
       paragraphs: [
-        "The security of your Personal Information is important to us. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure. Therefore, while we strive to use commercially acceptable means to protect your Personal Information, GPTDAO cannot guarantee its absolute security and cannot accept any liability where the security of your Personal Information is compromised.",
+        "The security of your Personal Information is important to us. However, no method of transmission over the Internet, or method of electronic storage, is 100% secure. Therefore, while we strive to use commercially acceptable means to protect your Personal Information, GenAI X, Inc. (GPT DAO) cannot guarantee its absolute security and cannot accept any liability where the security of your Personal Information is compromised.",
       ],
     },
     {

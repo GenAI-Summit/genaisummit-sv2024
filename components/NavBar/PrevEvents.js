@@ -1,26 +1,28 @@
 "use client";
 
+import Link from "next/link";
 import WrapperArrow from "@/components/SVG/WrapperArrow";
 import { motion, AnimatePresence } from "framer-motion";
 
-const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect }) => {
-  const prevEvents = [
-    {
-      name: "GenAI Summit SF 2024",
-      url: "https://sf2024.genaisummit.ai/",
-    },
+const NavBar = ({ closeDrawer, openDialog, closeDialog, showDialog, handleDialog, hoverEffect }) => {
+  const events = [
     {
       name: "GenAI Summit SV 2023",
-      url: "https://sv2023.genaisummit.ai/",
+      url: "https://genaisummit.xyz/",
     },
     {
-      name: "Asian American Pioneer Medal",
-      url: "https://whova.com/web/%40T7QrhsNC554UYE6QJFdroR4bM1b%40T66riJ8tOCVLsk%3D/",
+      name: "GenAI Summit SF 2024",
+      url: "https://sf2024.genaisummit.xyz/",
+    },
+    {
+      name: "GenAI Summit SV 2024",
+      url: "https://sv2024.genaisummit.xyz/",
     },
   ];
 
-  const openUrl = (url) => {
-    window.open(url, "_blank");
+  const close = () => {
+    closeDrawer();
+    closeDialog();
   };
 
   return (
@@ -31,7 +33,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect
         onMouseLeave={closeDialog}
       >
         <div className="inline-flex items-center gap-1 cursor-pointer">
-          PREV EVENTS
+          Our Events
         </div>
         <AnimatePresence>
           {showDialog && (
@@ -43,11 +45,12 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect
               transition={{ duration: 0.7, type: "spring", ease: "linear" }}
             >
               <div className="w-full h-full bg-color8 z-40 py-4 px-6 rounded-lg">
-                {prevEvents.map((event, index) => (
-                  <div
+                {events.map((event, index) => (
+                  <Link
                     key={index}
-                    className="cursor-pointer p-2"
-                    onClick={() => openUrl(event.url)}
+                    className="block cursor-pointer p-2"
+                    href={event.url}
+                    onClick={close}
                   >
                     <motion.div
                       className={`relative inline ${hoverEffect}`}
@@ -67,7 +70,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect
                         transition={{ duration: 0.3 }}
                       />
                     </motion.div>
-                  </div>
+                  </Link>
                 ))}
               </div>
             </motion.div>
@@ -82,7 +85,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect
           className="inline-flex items-center cursor-pointer gap-1"
           onClick={handleDialog}
         >
-          <span>PREVIOUS EVENT</span>
+          <span>Our Events</span>
           <WrapperArrow isOpen={showDialog} />
         </div>
         <AnimatePresence>
@@ -94,11 +97,12 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.7, type: "spring", ease: "linear" }}
             >
-              {prevEvents.map((event, index) => (
-                <div
+              {events.map((event, index) => (
+                <Link
                   key={index}
                   className="cursor-pointer"
-                  onClick={() => openUrl(event.url)}
+                  href={event.url}
+                  onClick={close}
                 >
                   <motion.div
                     className={`relative inline ${hoverEffect}`}
@@ -118,7 +122,7 @@ const NavBar = ({ openDialog, closeDialog, showDialog, handleDialog, hoverEffect
                       transition={{ duration: 0.3 }}
                     />
                   </motion.div>
-                </div>
+                </Link>
               ))}
             </motion.div>
           )}

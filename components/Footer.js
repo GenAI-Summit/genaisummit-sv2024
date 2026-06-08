@@ -89,7 +89,7 @@ const Footer = () => {
               Santa Clara Convention Center
             </Link>
           </span>
-          <div>genaix@gptdao.ai</div>
+          <div>gptdao@genaix.ai</div>
           <span>
             <Link
               className={hoverEffect}
@@ -152,7 +152,7 @@ const Footer = () => {
             </span>
           </div>
           <span className="text-sm">
-          Copyright 2024 GPTDAO. All rights reserved
+          Copyright 2024 GenAI X, Inc. (GPT DAO). All rights reserved
           </span>
         </div>
       </div>
