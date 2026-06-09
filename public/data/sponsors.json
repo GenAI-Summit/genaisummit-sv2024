@@ -1,74 +1,82 @@
 [
   {
     "id": 0,
-    "name": "Amazon",
+    "name": "Microsoft",
     "type": "Platinum",
-    "url": "https://www.amazon.com",
-    "image": "/images/sponsors/amazon.webp",
-    "description": "Amazon, founded by Jeff Bezos in 1994, has evolved from an online bookstore into a global e-commerce and technology powerhouse. Offering a vast range of products and services, Amazon's innovations include Amazon Prime, Amazon Web Services (AWS), and smart home devices like the Echo. While celebrated for revolutionizing retail and cloud computing, Amazon also faces scrutiny over its labor practices and market impact."
+    "url": "https://www.microsoft.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/70cace73dfcbf654996bef29a4ce987018445183ea3b71825030fe48ba406f3c_1/Whova_EMS.png",
+    "description": "Microsoft was listed as the Platinum sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 1,
-    "name": "IBM",
+    "name": "AWS Startup",
     "type": "Gold",
-    "url": "https://www.ibm.com",
-    "image": "/images/sponsors/ibm.webp",
-    "description": "IBM, established in 1911, is a global technology and consulting company renowned for its contributions to hardware, software, and artificial intelligence. Known for innovations like the mainframe computer and Watson AI, IBM has been a pioneer in cloud computing, quantum computing, and enterprise solutions. Despite shifting market dynamics, IBM continues to influence numerous industries with its cutting-edge technology and comprehensive IT services."
+    "url": "https://aws.amazon.com/startups/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/02d2facdc2a761641b21c8243cf7ca2b9d4682ef425cbb22b819d6f21ced6284_1/aws.png",
+    "description": "AWS Startups was listed as a Gold sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 2,
-    "name": "IOBC Capital",
+    "name": "Microsoft for Startups",
     "type": "Gold",
-    "url": "https://www.iobc.capital/#/",
-    "image": "/images/sponsors/iobc.webp",
-    "description": "IOBC is a venture capital firm specializing in investments across the technology and biotechnology sectors. With a focus on early to growth-stage companies, IOBC provides strategic support and funding to innovative startups. The firm is dedicated to fostering breakthroughs in cutting-edge fields, leveraging its expertise and network to drive success and growth for its portfolio companies."
+    "url": "https://www.microsoft.com/en-us/startups",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/25619062e587c22b697503e39131c0e38d502351bd62efe2de925222b8af15ed_1/66659e7f0449ef4a4cd773d4_logo_microsoft_for_startups.png",
+    "description": "Microsoft for Startups was listed as a Gold sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 3,
-    "name": "SambaNova",
+    "name": "Exabits",
     "type": "Silver",
-    "url": "https://www.sambanova.ai",
-    "image": "/images/sponsors/sambanova.webp",
-    "description": "SambaNova Systems, founded in 2017, is a leading company in AI and machine learning infrastructure. Specializing in advanced software and hardware solutions, SambaNova offers innovative platforms to accelerate AI workloads. Its flagship product, the DataScale system, provides unparalleled performance for enterprise AI applications, enabling organizations to harness the full potential of artificial intelligence and transform their data-driven strategies."
+    "url": "https://www.exabits.ai/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/f1b8bc6bdfbe5607e52cd459bc18656f4de56cca8f79bd2f90cfed1fd6f8b715_1/exabits.png",
+    "description": "Exabits was listed as a Silver sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 4,
-    "name": "Otter.ai",
+    "name": "Fetcherr.io",
     "type": "Silver",
-    "url": "https://otter.ai",
-    "image": "/images/sponsors/otter.webp",
-    "description": "Otter.ai, founded in 2016, is a leading provider of AI-powered transcription and collaboration tools. Its platform offers real-time transcription, meeting summaries, and voice recognition, making it easier for users to capture and share information from meetings, lectures, and conversations. Otter.ai's advanced features enhance productivity and communication, making it a valuable tool for professionals, students, and organizations looking to streamline their workflow."
+    "url": "https://www.fetcherr.io/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/a120ba3c55efac657e95fa5d1708ed30a2ce03abe5586cc7bbe2a4ca974cfb14_1/_AGeyvyEQleYCqsOZUaAkDjud6hlNHPF4Ku7W6DmQXjD9gKEDZJVhEC.png",
+    "description": "Fetcherr is a generative AI pricing engine using algo-trading methodologies to help airline partners optimize pricing and workflows."
   },
   {
     "id": 5,
-    "name": "Iren",
+    "name": "MountainLion AI",
     "type": "Silver",
-    "url": "https://iren.com/",
-    "image": "/images/sponsors/iren.webp",
-    "description": "Iren, previously known as Iris Energy, is a next-generation data center operator powered entirely by renewable energy. Focused on Bitcoin mining, AI cloud services, and other power-intensive computing tasks, Iren operates facilities in Canada and the USA. The company is dedicated to environmental sustainability, leveraging renewable energy to support both technological advancements and local communities."
+    "url": "https://www.mlion.ai/#/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/be41e6b04edde8c4b3bea9062908534c2691cc648a38b2aad3379f68f9153e5b_1/mountainlion.765e6199.png",
+    "description": "MountainLion AI was listed as a Silver sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 6,
-    "name": "Hyperbolic Labs",
-    "type": "Special",
-    "url": "https://hyperboliclabs.com",
-    "image": "/images/sponsors/hyperboliclabs.webp",
-    "description": "Hyperbolic Labs is an innovative technology company specializing in the development of advanced AI solutions and cutting-edge software applications. Focused on enhancing efficiency and automation across various industries, Hyperbolic Labs leverages state-of-the-art machine learning and data analytics to deliver impactful results. Their expertise spans numerous sectors, providing tailored solutions that drive technological advancement and operational excellence."
+    "name": "Fenz AI Agent Guard",
+    "type": "Silver",
+    "url": "https://fenz.ai/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/e39f5298e2a569ed3c8415f75a044a6fc5e024ec65a8140a4ca4e50ffe4a5a03_1/fenzAI.png",
+    "description": "Fenz AI Agent Guard was listed as a Silver sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 7,
-    "name": "TaskUs",
+    "name": "AKOOL",
     "type": "Special",
-    "url": "https://www.taskus.com",
-    "image": "/images/sponsors/taskus.webp",
-    "description": "TaskUs is a leading provider of outsourced digital services and next-generation customer experience for innovative companies. Specializing in customer support, content moderation, and AI operations, TaskUs helps clients scale operations and enhance efficiency. With a global presence and a commitment to employee well-being, TaskUs partners with high-growth companies to deliver customized, tech-enabled solutions that drive business success."
+    "url": "https://akool.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/d0cc8a57518b500df52c50544450587ec65d26b107c6bdc9256b2a9a15e94a71_1/Akool_764x250.png",
+    "description": "AKOOL was listed as a Special sponsor for GenAI Summit Silicon Valley 2024."
   },
   {
     "id": 8,
-    "name": "MetaSill",
+    "name": "Cozy Zero",
     "type": "Special",
-    "url": "https://www.metasill.com",
-    "image": "/images/sponsors/metasill.webp",
-    "description": "Metasill is a cutting-edge technology company specializing in developing advanced materials and solutions for the electronics and semiconductor industries. Focused on innovation and performance, Metasill's products enhance device efficiency and reliability. Leveraging state-of-the-art research and development, the company aims to push the boundaries of material science, delivering high-quality solutions that meet the evolving needs of modern technology applications."
+    "url": "https://cozy-zero.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/7502ca638d4cfe0465326cc2a31fe0343264e69edd2992f5b467f95af9328f17_1/cozy_zero.png",
+    "description": "Cozy Zero was listed as a Special sponsor for GenAI Summit Silicon Valley 2024."
+  },
+  {
+    "id": 9,
+    "name": "GenAI Works",
+    "type": "Special",
+    "url": "https://genai.works/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/37a97fc4ce0552b69f067a5ef1419d71870e0ee9163bf2d8fa3ee2b7bc573245_1/Removebg_preview.png",
+    "description": "GenAI Works was listed as a Special sponsor for GenAI Summit Silicon Valley 2024."
   }
 ]
