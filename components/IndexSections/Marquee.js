@@ -39,7 +39,7 @@ const Marquee = () => {
   return (
     <HorizontalTicker duration={30000}>
       {randomizedItems.map((item, index) => (
-        item.title ? (
+        item.avatar ? (
           <div
             key={`speaker-${item.id}-${index}`}
             className="w-56 h-24 md:w-80 md:h-32 flex justify-between items-center gap-4"
@@ -56,7 +56,7 @@ const Marquee = () => {
             </div>
             <div className="flex-grow text-[11px] md:text-base text-theme1Dark1 flex flex-col gap-1 md:gap-2 items-start">
               <p className="font-semibold">{item.name}</p>
-              <p>{item.title}</p>
+              {item.title ? <p>{item.title}</p> : null}
             </div>
           </div>
         ) : (
