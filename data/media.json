@@ -1,26 +1,86 @@
 [
   {
     "id": 0,
-    "name": "Washington Post",
-    "image": "/images/media/washingtonpost.webp",
-    "url": "https://www.washingtonpost.com/"
+    "name": "CNBC",
+    "url": "https://www.cnbc.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/3380568c775ae34b313871a1551e185cdb214650a23c46cdfa0b7d3147ee6bc4_1/CNBC_logo.svg.png"
   },
   {
     "id": 1,
-    "name": "NBC",
-    "image": "/images/media/nbcnews.webp",
-    "url": "https://www.nbcnews.com/"
+    "name": "Reuters",
+    "url": "https://www.reuters.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/d124d4f727d1ab8de0834e9e2388d643bcc4469f8de1e90c5d335be81fa5e9d8_1/Reuters_Logo.png"
   },
   {
     "id": 2,
-    "name": "Bloomberg",
-    "image": "/images/media/bloomberg.webp",
-    "url": "https://www.bloomberg.com/"
+    "name": "Forbes",
+    "url": "https://www.forbes.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/274a9297d68dbc482c00c919ee5874e8388f81df0a26169b87427f8a4c4e6352_1/forbes.png"
   },
   {
     "id": 3,
-    "name": "Business Insider",
-    "image": "/images/media/businessinsider.webp",
-    "url": "https://www.businessinsider.com/"
+    "name": "IBM Think",
+    "url": "https://www.ibm.com/think",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/bfaa3d5d6d46276a131e2dd9b03ad9eee70dcf21af25efc24f3b3935c98eb6ff_1/ibm.png"
+  },
+  {
+    "id": 4,
+    "name": "TechCrunch",
+    "url": "https://techcrunch.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/958ca4ff24d7d4ce789f95b63906e8d4621a83c05fde0fad78728e56cf6252f7_1/TechCrunch_Logo.png"
+  },
+  {
+    "id": 5,
+    "name": "NIKKEI",
+    "url": "https://www.nikkei.co.jp/nikkeiinfo/en/global_services/nikkei-business-publications.html",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/657eea5f16eef4d35dbd7b294d1e50e394b8102b9da2591251ecd0b527efc330_1/Nikkei_Business_Logo.png"
+  },
+  {
+    "id": 6,
+    "name": "Fast Company",
+    "url": "https://www.fastcompany.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/4362afd82cf1a69a7e5f59498040b2140227498a1314124724efe680a654bb03_1/Fast_Company_Logo.png"
+  },
+  {
+    "id": 7,
+    "name": "Pure AI",
+    "url": "https://pureai.com/Home.aspx",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/08399b95008991a57e21ed58afc4383cab9dc7e27e328f288fc43a555cf3b4c3_1/Pure_AI_logo.jpeg"
+  },
+  {
+    "id": 8,
+    "name": "Peninsula Press",
+    "url": "https://peninsulapress.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/00ae805341da3116b6c3c64efbf9f4dd50790f19360787626d48553abf0d3335_1/peninsula_press.png"
+  },
+  {
+    "id": 9,
+    "name": "The ProHuman",
+    "url": "https://www.theprohuman.ai/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/a2522d19a875a36493dd202d215c69c0f0f7f0be7cb85492479f94fb0408e017_1/prohuman.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "UC Berkeley",
+    "url": "https://www.berkeley.edu/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/3edb46a3938df97f30590a248c2e562251b6baf25771a2d78f060326f86d7c89_1/ucb.png"
+  },
+  {
+    "id": 11,
+    "name": "Thoth",
+    "url": "https://thoth.art/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/e592084aaa5dad37d68feeb3637fb525c5c26f0abcf5b342c5347f35d50aab9d_1/WechatIMG52.png"
+  },
+  {
+    "id": 12,
+    "name": "Mind Body Soul",
+    "url": "https://mindbodysoul.media/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/431c558e79518f2f34292d5547623c4cac2baf83f1592f0dd1aedcd8c103e57e_1/MBS_SEO_Thumbnail.png"
+  },
+  {
+    "id": 13,
+    "name": "CGTN",
+    "url": "https://america.cgtn.com/",
+    "image": "https://d1keuthy5s86c8.cloudfront.net/genai_202405/931d8aa7e7c218c75c5a23bd592fbf0bb853ab1ce3dcd666171bd676af27832c_1/CGTN_America_Logo.png"
   }
 ]
