@@ -8,6 +8,7 @@ import { HorizontalTicker } from "react-infinite-ticker";
 const Marquee = () => {
   const { organizations, speakers, isLoading, isError } = useMarquee();
   const [isVisible, setIsVisible] = useState(true);
+  const tickerItemClass = "w-64 h-24 md:w-80 md:h-32 flex-shrink-0";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -42,7 +43,7 @@ const Marquee = () => {
         item.avatar ? (
           <div
             key={`speaker-${item.id}-${index}`}
-            className="w-56 h-24 md:w-80 md:h-32 flex justify-between items-center gap-4"
+            className={`${tickerItemClass} flex items-center justify-center gap-4 px-4`}
           >
             <div className="w-16 h-16 md:w-24 md:h-24 overflow-hidden flex-shrink-0">
               <Image
@@ -62,7 +63,7 @@ const Marquee = () => {
         ) : (
           <div
             key={`org-${item.id}-${index}`}
-            className="w-36 h-24 md:w-64 md:h-32 flex items-center justify-center px-3 md:px-6"
+            className={`${tickerItemClass} flex items-center justify-center px-6 md:px-8`}
           >
             <div className="h-16 w-full md:h-20 flex items-center justify-center">
               <Image
@@ -77,7 +78,7 @@ const Marquee = () => {
           </div>
         )
       ))}
-      <div className="h-full w-64 md:w-80 text-theme1Dark1 text-base md:text-lg font_monaspace_neon flex flex-col items-start justify-center">
+      <div className={`${tickerItemClass} text-theme1Dark1 text-base md:text-lg font_monaspace_neon flex flex-col items-start justify-center px-6`}>
         <span className="font-semibold">Talent Network:{" "}</span>
         <span> 100+ Companies</span>
       </div>
