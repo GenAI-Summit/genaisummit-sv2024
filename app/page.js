@@ -16,7 +16,6 @@ import IndexAgenda from "@/components/IndexSections/IndexAgenda";
 import IndexSponsors from "@/components/IndexSections/IndexSponsors";
 // import TeslaIntro from "@/components/Intro/TeslaIntro";
 import MarqueeClient from "@/components/IndexSections/MarqueeClient";
-import MCs from "@/components/MCs";
 
 const Index = () => {
   return (
@@ -36,11 +35,6 @@ const Index = () => {
         <SectionEnter>
           <Suspense fallback={<Loader />}>
             <IndexSpeakers />
-          </Suspense>
-        </SectionEnter>
-        <SectionEnter>
-          <Suspense fallback={<Loader />}>
-            <MCs />
           </Suspense>
         </SectionEnter>
         <SectionEnter>
