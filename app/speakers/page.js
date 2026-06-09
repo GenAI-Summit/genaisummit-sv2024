@@ -8,7 +8,6 @@ import Speakers from "@/components/Speakers";
 import ResetBtn from "@/components/Button/ResetBtn";
 import useSpeakers from "@/hooks/useSpeakers";
 import SectionEnter from "@/motions/SectionEnter";
-import MCs from "@/components/MCs";
 
 const SpeakersPage = () => {
   const { speakers, isLoading, isError } = useSpeakers();
@@ -57,9 +56,6 @@ const SpeakersPage = () => {
             />
           </div>
         </div>
-      </SectionEnter>
-      <SectionEnter>
-        <MCs />
       </SectionEnter>
     </div>
   );

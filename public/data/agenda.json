@@ -1,134 +1,871 @@
 [
   {
     "id": 0,
-    "start": "2024-05-29T09:30:00",
-    "end": "2024-05-29T10:15:00",
+    "start": "2024-11-01T09:00:00",
+    "end": "2024-11-01T09:45:00",
     "room": "GPT Stage",
     "type": "Keynote",
-    "topic": "Demystifying LLMs with Mistral AI",
+    "topic": "Productionizing GenAI Models – Lessons from the world's best AI teams",
     "moderators": [],
-    "description": "",
-    "speakers": [0],
+    "description": "Speaker: Lukas Biewald (CEO & Cofounder, Weights & Biases) - AI is poised to add $15.7 trillion to the global economy by 2030, with generative AI at the forefront of this revolution, marking a transformative shift across sectors. In his talk, Lukas Biewald will unpack the impact and potential of generative AI models and share practical insights learned from the best ML teams in the world who're building and implementing AI in production. He will share specific insights on deploying GenAI models into real-world applications, emphasizing LLM evaluation, dataset management, model experimentation and optimization. This session is a call to action for ML teams looking to leverage AI's full potential responsibly, and looking to expedite putting AI into production.",
+    "speakers": [
+      8
+    ],
     "hide": false
   },
   {
     "id": 1,
-    "start": "2024-05-30T09:00:00",
-    "end": "2024-05-30T09:45:00",
+    "start": "2024-11-01T10:30:00",
+    "end": "2024-11-01T11:15:00",
     "room": "GPT Stage",
     "type": "Keynote",
-    "topic": "The Age of Generative AI: Data at the Intelligent Edge",
+    "topic": "Breaking Free from Context Window Length",
     "moderators": [],
     "description": "",
-    "speakers": [14],
+    "speakers": [
+      9
+    ],
     "hide": false
   },
   {
     "id": 2,
-    "start": "2024-05-31T09:45:00",
-    "end": "2024-05-31T10:30:00",
+    "start": "2024-11-01T11:15:00",
+    "end": "2024-11-01T12:00:00",
     "room": "GPT Stage",
     "type": "Keynote",
-    "topic": "What Does AI Mean for Cloud Infrastructure",
+    "topic": "Generative AI: What VCs are Looking for in 2025",
     "moderators": [],
-    "description": "",
-    "speakers": [5],
+    "description": "Rajeev Dham (Managing Partner, Sapphire)",
+    "speakers": [
+      19
+    ],
     "hide": false
   },
   {
     "id": 3,
-    "start": "2024-05-29T10:15:00",
-    "end": "2024-05-29T10:45:00",
+    "start": "2024-11-01T13:00:00",
+    "end": "2024-11-01T13:45:00",
     "room": "GPT Stage",
-    "type": "Keynote",
-    "topic": "AGl Belongs to The Community in Open Source: Democratizing LLMs in The Service of Life and The Planet",
+    "type": "Fireside Chat",
+    "topic": "Building Trust into Enterprise Ready AI: A Conversation",
     "moderators": [],
-    "description": "",
-    "speakers": [1],
+    "description": "Marie Sbrocca (UX Research Lead, Google Gemini)",
+    "speakers": [
+      60,
+      28
+    ],
     "hide": false
   },
   {
     "id": 4,
-    "start": "2024-05-29T10:45:00",
-    "end": "2024-05-29T11:25:00",
+    "start": "2024-11-01T13:45:00",
+    "end": "2024-11-01T14:30:00",
     "room": "GPT Stage",
-    "type": "Keynote",
-    "topic": "Not So Fast: The Slow Death of the All-Powerful GPU",
+    "type": "Panel",
+    "topic": "Next Frontier of Creative AI",
     "moderators": [],
     "description": "",
-    "speakers": [2],
+    "speakers": [
+      32,
+      58,
+      36,
+      99
+    ],
     "hide": false
   },
   {
     "id": 5,
+    "start": "2024-11-01T14:30:00",
+    "end": "2024-11-01T15:15:00",
     "room": "GPT Stage",
-    "start": "2024-05-29T11:45:00",
-    "end": "2024-05-29T12:15:00",
     "type": "Keynote",
-    "topic": "Improving RAG with Retrieval Augmented Fine-Tuning (RAFT) with AI Studio: Practical Insights",
+    "topic": "Democratizing the Compute Economy",
     "moderators": [],
     "description": "",
-    "speakers": [3],
+    "speakers": [
+      46
+    ],
     "hide": false
   },
   {
     "id": 6,
+    "start": "2024-11-01T15:15:00",
+    "end": "2024-11-01T16:00:00",
     "room": "GPT Stage",
-    "start": "2024-05-29T13:00:00",
-    "end": "2024-05-29T13:45:00",
-    "type": "Panel Discussion",
-    "topic": "Key Challenges for Providing GenAI Services On Scalable Cloud Infrastructure",
-    "moderators": [4],
+    "type": "Keynote",
+    "topic": "Unlocking Employee Productivity-The Journey that Led to Building Glean",
+    "moderators": [],
     "description": "",
-    "speakers": [5, 6, 8, 9, 10],
+    "speakers": [
+      4
+    ],
     "hide": false
   },
   {
     "id": 7,
-    "room": "AGI Stage",
-    "start": "2024-05-29T09:15:00",
-    "end": "2024-05-29T10:00:00",
-    "type": "Keynote",
-    "topic": "Advancements in Embodied AI: Key Technologies, Applications, and Future Trends",
+    "start": "2024-11-01T16:00:00",
+    "end": "2024-11-01T16:45:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "AI Agents",
     "moderators": [],
     "description": "",
-    "speakers": [11],
+    "speakers": [
+      42,
+      87,
+      66,
+      48
+    ],
     "hide": false
   },
   {
     "id": 8,
+    "start": "2024-11-01T10:30:00",
+    "end": "2024-11-01T11:15:00",
     "room": "GPT Stage",
-    "start": "2024-05-30T09:45:00",
-    "end": "2024-05-30T10:30:00",
-    "type": "Fireside Chat",
-    "topic": "Unlocks the Power of Knowledge with Information Discovery and Sharing",
-    "moderators": [12],
-    "description": "",
-    "speakers": [14],
+    "type": "Keynote",
+    "topic": "Navigating the Noise",
+    "moderators": [],
+    "description": "Navigating the Noise: Strategies for Startups to Stand Out in the Gen AI Revolution by Vanessa Larco, Partner @New Enterprise Associates (NEA)",
+    "speakers": [
+      11
+    ],
     "hide": false
   },
   {
     "id": 9,
+    "start": "2024-11-01T09:00:00",
+    "end": "2024-11-01T09:45:00",
     "room": "AGI Stage",
-    "start": "2024-05-30T09:00:00",
-    "end": "2024-05-30T09:45:00",
     "type": "Keynote",
-    "topic": "Some Intuitions about Large Language Models",
+    "topic": "Multimodal Application Platforms in the Age of AI",
     "moderators": [],
     "description": "",
-    "speakers": [15],
+    "speakers": [
+      35
+    ],
     "hide": false
   },
   {
     "id": 10,
+    "start": "2024-11-01T09:45:00",
+    "end": "2024-11-01T10:30:00",
     "room": "AGI Stage",
-    "start": "2024-05-30T09:45:00",
-    "end": "2024-05-30T10:15:00",
     "type": "Keynote",
-    "topic": "Either AI Is Happening to You, or You Are Making AI Happen",
+    "topic": "How graph databases are powering fraud detection",
+    "moderators": [],
+    "description": "How graph databases are powering fraud detection, personalization in enterprise",
+    "speakers": [
+      23
+    ],
+    "hide": false
+  },
+  {
+    "id": 11,
+    "start": "2024-11-01T10:30:00",
+    "end": "2024-11-01T11:15:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "AI Agents: Redefining Customer Experience and Business Efficiency",
     "moderators": [],
     "description": "",
-    "speakers": [16],
+    "speakers": [
+      78
+    ],
+    "hide": false
+  },
+  {
+    "id": 12,
+    "start": "2024-11-01T11:15:00",
+    "end": "2024-11-01T12:00:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "Keynote",
+    "moderators": [],
+    "description": "The Future of Generative AI and California: Driving Innovation Through Fiscal Policy by Fiona Ma, CPA & State Treasurer @Califonia State",
+    "speakers": [
+      3
+    ],
+    "hide": false
+  },
+  {
+    "id": 13,
+    "start": "2024-11-01T11:40:00",
+    "end": "2024-11-01T12:05:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "Accelerating Startup Innovation with Microsoft Azure",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      0
+    ],
+    "hide": false
+  },
+  {
+    "id": 14,
+    "start": "2024-11-01T13:00:00",
+    "end": "2024-11-01T13:45:00",
+    "room": "AGI Stage",
+    "type": "Fireside Chat",
+    "topic": "The Next Frontier of AI-Specialized Models for Real-World Impact",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      12,
+      16
+    ],
+    "hide": false
+  },
+  {
+    "id": 15,
+    "start": "2024-11-01T13:45:00",
+    "end": "2024-11-01T14:45:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "Panel",
+    "moderators": [],
+    "description": "Pushing the limits of foundation models and The Venture Capital Perspective",
+    "speakers": [
+      80,
+      5,
+      49,
+      79
+    ],
+    "hide": false
+  },
+  {
+    "id": 16,
+    "start": "2024-11-01T14:45:00",
+    "end": "2024-11-01T15:15:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "Developing and Deploying Cutting-Edge GenAI with Wafer-Scale Engines",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      26
+    ],
+    "hide": false
+  },
+  {
+    "id": 17,
+    "start": "2024-11-01T15:15:00",
+    "end": "2024-11-01T16:00:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "The Power of Data: Fueling Scalable AI for Next-Gen Solutions",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      54,
+      94,
+      30,
+      39
+    ],
+    "hide": false
+  },
+  {
+    "id": 18,
+    "start": "2024-11-01T16:00:00",
+    "end": "2024-11-01T16:45:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "Panel",
+    "moderators": [],
+    "description": "Revolutionizing AI: The Role of Graph Neural Networks in Expanding the Power of Foundation Models",
+    "speakers": [
+      82,
+      90,
+      24
+    ],
+    "hide": false
+  },
+  {
+    "id": 19,
+    "start": "2024-11-01T09:30:00",
+    "end": "2024-11-01T10:15:00",
+    "room": "Agent Stage",
+    "type": "Keynote",
+    "topic": "The Future of AI Agents, Agents, & Agents.",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      50
+    ],
+    "hide": false
+  },
+  {
+    "id": 20,
+    "start": "2024-11-01T10:15:00",
+    "end": "2024-11-01T11:00:00",
+    "room": "Agent Stage",
+    "type": "Keynote",
+    "topic": "Reinvent the contact center, with enterprise-grade generative AI",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      85
+    ],
+    "hide": false
+  },
+  {
+    "id": 21,
+    "start": "2024-11-01T15:00:00",
+    "end": "2024-11-01T15:45:00",
+    "room": "Agent Stage",
+    "type": "Panel",
+    "topic": "Organizational Transformation in the GenAI Era",
+    "moderators": [],
+    "description": "",
+    "speakers": [],
+    "hide": false
+  },
+  {
+    "id": 22,
+    "start": "2024-11-01T16:15:00",
+    "end": "2024-11-01T17:00:00",
+    "room": "Agent Stage",
+    "type": "Panel",
+    "topic": "Panel",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      51
+    ],
+    "hide": false
+  },
+  {
+    "id": 23,
+    "start": "2024-11-02T09:00:00",
+    "end": "2024-11-02T09:45:00",
+    "room": "GPT Stage",
+    "type": "Fireside Chat",
+    "topic": "Multimodal Application Platforms in the Age of AI",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      35,
+      47
+    ],
+    "hide": false
+  },
+  {
+    "id": 24,
+    "start": "2024-11-02T09:45:00",
+    "end": "2024-11-02T10:30:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "Bridging the Gap Between LLM Development and Deployment",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      91,
+      22,
+      31,
+      89
+    ],
+    "hide": false
+  },
+  {
+    "id": 25,
+    "start": "2024-11-02T10:30:00",
+    "end": "2024-11-02T11:15:00",
+    "room": "GPT Stage",
+    "type": "Fireside Chat",
+    "topic": "Fireside Chat",
+    "moderators": [],
+    "description": "Scaling to $100M+ with AI Agents: Insights from a Founding Chief AI Officer and a Public Company COO - Jia Li (Chief AI Officer, Cofounder & President,LiveX AI)",
+    "speakers": [
+      21,
+      38
+    ],
+    "hide": false
+  },
+  {
+    "id": 26,
+    "start": "2024-11-02T11:15:00",
+    "end": "2024-11-02T12:00:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "Navigating the GenAI Revolution",
+    "moderators": [],
+    "description": "Navigating the GenAI Revolution – Strategies for successful Enterprise Deployment with GenAI Apps",
+    "speakers": [
+      83
+    ],
+    "hide": false
+  },
+  {
+    "id": 27,
+    "start": "2024-11-02T14:30:00",
+    "end": "2024-11-02T15:15:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "AI Security",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      44
+    ],
+    "hide": false
+  },
+  {
+    "id": 28,
+    "start": "2024-11-02T13:00:00",
+    "end": "2024-11-02T13:45:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "Scaling Generative AI for the Enterprise",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      7
+    ],
+    "hide": false
+  },
+  {
+    "id": 29,
+    "start": "2024-11-02T13:45:00",
+    "end": "2024-11-02T14:30:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "The Future of Vector DB",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      76,
+      34,
+      53,
+      37
+    ],
+    "hide": false
+  },
+  {
+    "id": 30,
+    "start": "2024-11-02T10:30:00",
+    "end": "2024-11-02T11:15:00",
+    "room": "GPT Stage",
+    "type": "Fireside Chat",
+    "topic": "LLM Demystification",
+    "moderators": [],
+    "description": "Fireside ChatLLM Demystification: unraveling the complexities of Large Language Models",
+    "speakers": [
+      73
+    ],
+    "hide": false
+  },
+  {
+    "id": 31,
+    "start": "2024-11-02T15:15:00",
+    "end": "2024-11-02T16:00:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "Balancing Innovation and Security in AI-Driven Applications",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      72,
+      40,
+      33,
+      44
+    ],
+    "hide": false
+  },
+  {
+    "id": 32,
+    "start": "2024-11-02T16:00:00",
+    "end": "2024-11-02T16:45:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "The Role of AI in Proactive Threat Detection and Incident Response",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      65,
+      61,
+      63
+    ],
+    "hide": false
+  },
+  {
+    "id": 33,
+    "start": "2024-11-02T09:00:00",
+    "end": "2024-11-02T09:45:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "Compound AI systems for modern application development",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      57
+    ],
+    "hide": false
+  },
+  {
+    "id": 34,
+    "start": "2024-11-02T09:45:00",
+    "end": "2024-11-02T10:30:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "From Research to Reality",
+    "moderators": [],
+    "description": "From Research to Reality: Bridging Academic AI Innovation with Industry Implementation",
+    "speakers": [
+      86,
+      92,
+      71,
+      56
+    ],
+    "hide": false
+  },
+  {
+    "id": 35,
+    "start": "2024-11-02T10:30:00",
+    "end": "2024-11-02T11:15:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "Business Agents: The Missing Link in AI-Driven Decision-Making",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      17
+    ],
+    "hide": false
+  },
+  {
+    "id": 36,
+    "start": "2024-11-02T11:15:00",
+    "end": "2024-11-02T12:00:00",
+    "room": "AGI Stage",
+    "type": "Fireside Chat",
+    "topic": "Discovering emerging opportunities in a platform shift",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      81,
+      13
+    ],
+    "hide": false
+  },
+  {
+    "id": 37,
+    "start": "2024-11-02T13:00:00",
+    "end": "2024-11-02T13:45:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "The Transformative Potential of AI Agents",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      62,
+      55,
+      93,
+      52
+    ],
+    "hide": false
+  },
+  {
+    "id": 38,
+    "start": "2024-11-02T13:45:00",
+    "end": "2024-11-02T14:30:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "Harnessing Generative AI for Marketing and Business Growth",
+    "moderators": [],
+    "description": "Harnessing Generative AI for Marketing and Business Growth: From Content Creation to Visual Innovation and Strategy",
+    "speakers": [
+      69,
+      55
+    ],
+    "hide": false
+  },
+  {
+    "id": 39,
+    "start": "2024-11-02T15:15:00",
+    "end": "2024-11-02T16:00:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "From Research to Reality: Commercializing Privacy Technologies",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      68
+    ],
+    "hide": false
+  },
+  {
+    "id": 40,
+    "start": "2024-11-02T16:00:00",
+    "end": "2024-11-02T16:45:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "A New Era of AI-Powered Classrooms",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      31,
+      25,
+      67,
+      95
+    ],
+    "hide": false
+  },
+  {
+    "id": 41,
+    "start": "2024-11-02T09:00:00",
+    "end": "2024-11-02T09:45:00",
+    "room": "Agent Stage",
+    "type": "Keynote",
+    "topic": "Making GenAI Tractable",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      41
+    ],
+    "hide": false
+  },
+  {
+    "id": 42,
+    "start": "2024-11-02T09:45:00",
+    "end": "2024-11-02T10:30:00",
+    "room": "Agent Stage",
+    "type": "Keynote",
+    "topic": "Why the Future of Enterprise AI Requires Agentic Reasoning",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      74
+    ],
+    "hide": false
+  },
+  {
+    "id": 43,
+    "start": "2024-11-02T10:30:00",
+    "end": "2024-11-02T11:15:00",
+    "room": "Agent Stage",
+    "type": "Keynote",
+    "topic": "Democratizing AI through LLama3",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      64
+    ],
+    "hide": false
+  },
+  {
+    "id": 44,
+    "start": "2024-11-02T11:15:00",
+    "end": "2024-11-02T12:00:00",
+    "room": "Agent Stage",
+    "type": "Fireside Chat",
+    "topic": "AI and Creativity: Exploring the Boundaries of Human and AI",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      96
+    ],
+    "hide": false
+  },
+  {
+    "id": 45,
+    "start": "2024-11-03T09:00:00",
+    "end": "2024-11-03T09:45:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "LLM Evaluation",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      22
+    ],
+    "hide": false
+  },
+  {
+    "id": 46,
+    "start": "2024-11-03T09:45:00",
+    "end": "2024-11-03T10:30:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "LLM Evaluation",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      22,
+      31,
+      56,
+      6
+    ],
+    "hide": false
+  },
+  {
+    "id": 47,
+    "start": "2024-11-03T10:30:00",
+    "end": "2024-11-03T11:15:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "LLM Evaluation",
+    "moderators": [],
+    "description": "Scaling LLM Evaluation Beyond Metrics",
+    "speakers": [
+      89,
+      91,
+      45,
+      43
+    ],
+    "hide": false
+  },
+  {
+    "id": 48,
+    "start": "2024-11-03T11:15:00",
+    "end": "2024-11-03T12:00:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "AI Agents",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      77
+    ],
+    "hide": false
+  },
+  {
+    "id": 49,
+    "start": "2024-11-03T13:45:00",
+    "end": "2024-11-03T14:15:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "Multimodal AI: Integrating Vision and Language",
+    "moderators": [],
+    "description": "",
+    "speakers": [
+      11
+    ],
+    "hide": false
+  },
+  {
+    "id": 50,
+    "start": "2024-11-03T14:15:00",
+    "end": "2024-11-03T14:45:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "LLM Infra",
+    "moderators": [],
+    "description": "Democratizing the Compute Economy - Hoansoo Lee (Cofounder & CEO, Exabits.AI)",
+    "speakers": [
+      46
+    ],
+    "hide": false
+  },
+  {
+    "id": 51,
+    "start": "2024-11-03T14:45:00",
+    "end": "2024-11-03T15:15:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "Advancements in Natural Language Processing",
+    "moderators": [],
+    "description": "Soumya Batra (Author of LLama 2)",
+    "speakers": [
+      5
+    ],
+    "hide": false
+  },
+  {
+    "id": 52,
+    "start": "2024-11-03T15:15:00",
+    "end": "2024-11-03T16:00:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "Edge AI/Wearable",
+    "moderators": [],
+    "description": "Tiny but Mighty: The Rise of the SLMs and the Power at the Edge",
+    "speakers": [
+      88,
+      59,
+      98,
+      97
+    ],
+    "hide": false
+  },
+  {
+    "id": 53,
+    "start": "2024-11-03T09:45:00",
+    "end": "2024-11-03T10:30:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "Ethics and Governance",
+    "moderators": [],
+    "description": "Responsible AI: Bridging Innovation and Ethical Imperatives",
+    "speakers": [
+      75,
+      70,
+      84
+    ],
+    "hide": false
+  },
+  {
+    "id": 54,
+    "start": "2024-11-03T14:30:00",
+    "end": "2024-11-03T15:15:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "Fine-tuning LLMs for Specialized Domains",
+    "moderators": [],
+    "description": "This keynote will delve into the techniques and best practices for fine-tuning large language models for specialized domains. The speaker will discuss strategies for adapting pre-trained models to specific industries or tasks, covering topics such as domain-specific data collection, efficient fine-tuning methods, and evaluation metrics. The talk will include case studies of successful domain adaptations in fields like law, finance, and scientific research, providing attendees with practical insights for leveraging LLMs in their specific areas of interest.",
+    "speakers": [],
+    "hide": false
+  },
+  {
+    "id": 55,
+    "start": "2024-11-03T13:00:00",
+    "end": "2024-11-03T13:45:00",
+    "room": "AGI Stage",
+    "type": "Panel",
+    "topic": "Healthcare",
+    "moderators": [],
+    "description": "AI-Driven Healthcare: Unlocking Seamless Access, Smarter Care, and Transformative Patient Outcomes",
+    "speakers": [
+      27,
+      33,
+      29
+    ],
+    "hide": false
+  },
+  {
+    "id": 56,
+    "start": "2024-11-03T15:30:00",
+    "end": "2024-11-03T16:15:00",
+    "room": "GPT Stage",
+    "type": "Panel",
+    "topic": "AI-Generated Content: Copyright and Legal Implications",
+    "moderators": [],
+    "description": "This panel will explore the complex legal landscape surrounding AI-generated content. Legal experts and AI researchers will discuss copyright issues, intellectual property rights, and potential liability concerns associated with content created by AI systems. The panel will address questions such as: Who owns the rights to AI-generated works? How does AI-generated content impact existing copyright laws? What are the implications for artists, writers, and other content creators? Attendees will gain insights into the current legal framework and potential future regulations in this rapidly evolving area.",
+    "speakers": [],
+    "hide": false
+  },
+  {
+    "id": 57,
+    "start": "2024-11-03T16:00:00",
+    "end": "2024-11-03T16:30:00",
+    "room": "AGI Stage",
+    "type": "Keynote",
+    "topic": "Towards Human-Level AI: Current Progress and Future Directions",
+    "moderators": [],
+    "description": "This keynote will provide a comprehensive overview of the current state of AI research and development in the pursuit of human-level artificial intelligence. The speaker will assess recent breakthroughs, ongoing challenges, and promising research directions. The talk will cover topics such as common sense reasoning, transfer learning, and cognitive architectures that aim to replicate human-like intelligence. Attendees will gain insights into the roadmap towards AGI and the potential milestones we can expect in the coming years.",
+    "speakers": [],
+    "hide": false
+  },
+  {
+    "id": 58,
+    "start": "2024-11-03T16:30:00",
+    "end": "2024-11-03T17:15:00",
+    "room": "GPT Stage",
+    "type": "Keynote",
+    "topic": "The Future of Conversational AI",
+    "moderators": [],
+    "description": "This closing keynote will explore the future of conversational AI and its potential to transform human-computer interaction. The speaker will discuss advancements in natural language understanding, context awareness, and personalization that are making AI assistants more capable and human-like. The talk will cover emerging trends such as multimodal conversational AI, emotion recognition, and long-term memory in chatbots. The speaker will also address the societal implications of increasingly sophisticated conversational AI, including issues of trust, privacy, and the changing nature of human-AI relationships.",
+    "speakers": [],
     "hide": false
   }
 ]
