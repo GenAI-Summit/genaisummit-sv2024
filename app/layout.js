@@ -24,7 +24,7 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
   description:
-    "Explore the future possibilities at the GenAI Summit from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
+    "GenAI Summit Silicon Valley 2024 was a GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held November 1-3, 2024 at the Santa Clara Convention Center.",
   alternates: {
     canonical: `${siteUrl}/`,
   },
@@ -42,14 +42,19 @@ export const metadata = {
     url: `${siteUrl}/`,
     title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
     description:
-      "This third large-scale generative AI conference in Silicon Valley will be held from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
+      "A GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held November 1-3, 2024 at the Santa Clara Convention Center.",
     keywords: [
+      "GenAI X",
+      "GenAIX",
       "Generative AI",
+      "GENAI SUMMIT",
+      "GenAI Summit",
       "AI",
       "Conference",
       "Technology",
       "Investment",
       "Silicon Valley",
+      "GPT DAO",
       "GPTDAO",
       "2024",
     ],
@@ -67,44 +72,61 @@ export const metadata = {
     card: "summary_large_image",
     title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
     description:
-      "The third large-scale GenAI Summit in Silicon Valley, held November 1-3, 2024 at the Santa Clara Convention Center.",
+      "A GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held November 1-3, 2024 at the Santa Clara Convention Center.",
     images: [`${siteUrl}/images/propaganda/banner_seo.webp`],
   },
 };
 
-const eventJsonLd = {
+const jsonLdGraph = {
   "@context": "https://schema.org",
-  "@type": "Event",
-  name: "GenAI Summit Silicon Valley 2024",
-  alternateName: "GENAI SUMMIT SV 2024",
-  description:
-    "A GPT DAO generative AI summit held from November 1-3, 2024 at the Santa Clara Convention Center.",
-  url: `${siteUrl}/`,
-  image: `${siteUrl}/images/propaganda/banner_seo.webp`,
-  startDate: "2024-11-01",
-  endDate: "2024-11-03",
-  eventStatus: "https://schema.org/EventCompleted",
-  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
-  location: {
-    "@type": "Place",
-    name: "Santa Clara Convention Center",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Santa Clara",
-      addressRegion: "CA",
-      addressCountry: "US",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://genaix.ai/#organization",
+      name: "GenAI X, Inc.",
+      alternateName: ["GenAI X", "GenAIX", "GPT DAO", "GPTDAO"],
+      url: "https://genaix.ai/",
+      sameAs: [
+        "https://genaisummit.xyz/",
+        "https://sf2024.genaisummit.xyz/",
+        "https://sv2024.genaisummit.xyz/",
+      ],
     },
-  },
-  organizer: {
-    "@type": "Organization",
-    name: "GPT DAO",
-    url: "https://genaix.ai/",
-  },
-  isPartOf: {
-    "@type": "EventSeries",
-    name: "GenAI Summit",
-    url: "https://genaisummit.xyz/",
-  },
+    {
+      "@type": "Event",
+      "@id": `${siteUrl}/#event`,
+      name: "GenAI Summit Silicon Valley 2024",
+      alternateName: ["GENAI SUMMIT SV 2024", "GenAI Summit SV 2024"],
+      description:
+        "A GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held from November 1-3, 2024 at the Santa Clara Convention Center.",
+      url: `${siteUrl}/`,
+      image: `${siteUrl}/images/propaganda/banner_seo.webp`,
+      startDate: "2024-11-01",
+      endDate: "2024-11-03",
+      eventStatus: "https://schema.org/EventCompleted",
+      eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+      location: {
+        "@type": "Place",
+        name: "Santa Clara Convention Center",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Santa Clara",
+          addressRegion: "CA",
+          addressCountry: "US",
+        },
+      },
+      organizer: {
+        "@id": "https://genaix.ai/#organization",
+      },
+      isPartOf: {
+        "@type": "EventSeries",
+        "@id": "https://genaisummit.xyz/#event-series",
+        name: "GENAI SUMMIT",
+        alternateName: "GenAI Summit",
+        url: "https://genaisummit.xyz/",
+      },
+    },
+  ],
 };
 
 const RootLayout = ({ children }) => {
@@ -117,7 +139,7 @@ const RootLayout = ({ children }) => {
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16708105359"
