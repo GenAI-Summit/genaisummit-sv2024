@@ -119,6 +119,44 @@ const jsonLdGraph = {
       organizer: {
         "@id": "https://genaix.ai/#organization",
       },
+      offers: [
+        {
+          "@type": "Offer",
+          name: "Student Pass",
+          url: "https://whova.com/portal/registration/genai_202405/7zyww8zo",
+          price: 139,
+          priceCurrency: "USD",
+          availability: "https://schema.org/SoldOut",
+        },
+        {
+          "@type": "Offer",
+          name: "One-Day Pass",
+          url: "https://whova.com/portal/registration/genai_202405",
+          price: 259,
+          priceCurrency: "USD",
+          availability: "https://schema.org/SoldOut",
+        },
+        {
+          "@type": "Offer",
+          name: "Three-Day Pass",
+          url: "https://whova.com/portal/registration/genai_202405",
+          price: 599,
+          priceCurrency: "USD",
+          availability: "https://schema.org/SoldOut",
+        },
+        {
+          "@type": "Offer",
+          name: "VIP Pass",
+          url: "https://whova.com/portal/registration/genai_202405",
+          price: 1699,
+          priceCurrency: "USD",
+          availability: "https://schema.org/SoldOut",
+        },
+      ],
+      performer: {
+        "@type": "PerformingGroup",
+        name: "GenAI Summit Silicon Valley 2024 speakers",
+      },
       isPartOf: {
         "@type": "EventSeries",
         "@id": "https://genaisummit.xyz/#event-series",
