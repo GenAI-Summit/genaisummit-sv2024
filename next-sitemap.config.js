@@ -43,6 +43,11 @@ const nextSitemapConfig = {
         allow: "/",
       },
     ],
+    additionalSitemaps: [
+      "https://genaisummit.xyz/sitemap-index.xml",
+      "https://genaisummit.xyz/sitemap.xml",
+      "https://sf2024.genaisummit.xyz/sitemap.xml",
+    ],
   },
 };
 
