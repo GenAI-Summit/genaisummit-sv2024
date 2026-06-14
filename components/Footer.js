@@ -152,7 +152,7 @@ const Footer = () => {
             </span>
           </div>
           <span className="text-sm">
-          Copyright 2024 GenAI X, Inc. (GPT DAO). All rights reserved
+          Copyright 2024-2026 GenAI X, Inc. (GPT DAO). All rights reserved
           </span>
         </div>
       </div>
