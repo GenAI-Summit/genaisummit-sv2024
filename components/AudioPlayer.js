@@ -35,7 +35,7 @@ const AudioPlayer = () => {
       if (audioRef.current && audioRef.current.src !== audioUrl) {
         audioRef.current.pause();
         audioRef.current = new Audio(audioUrl);
-        setupAudio();
+        setupAudio(audioRef.current);
       }
 
       audioRef.current.play();
@@ -53,44 +53,58 @@ const AudioPlayer = () => {
     }
   };
 
-  const setupAudio = () => {
-    if (!audioRef.current) {
-      audioRef.current = new Audio(audioUrl);
-    }
-
-    audioRef.current.addEventListener("timeupdate", () => {
-      setProgress((audioRef.current.currentTime / audioRef.current.duration) * 100);
-    });
-
-    audioRef.current.addEventListener("loadedmetadata", () => {
-      setDuration(audioRef.current.duration);
-    });
-
-    audioRef.current.addEventListener("ended", () => {
+  const setupAudio = React.useCallback((audio) => {
+    const handleTimeUpdate = () => {
+      setProgress(audio.duration ? (audio.currentTime / audio.duration) * 100 : 0);
+    };
+    const handleLoadedMetadata = () => {
+      setDuration(audio.duration);
+    };
+    const handleEnded = () => {
       setIsPlaying(false);
       setActiveAudioId(null);
       setAudioUrl("");
       setTitle("");
-    });
-  };
+    };
+
+    audio.addEventListener("timeupdate", handleTimeUpdate);
+    audio.addEventListener("loadedmetadata", handleLoadedMetadata);
+    audio.addEventListener("ended", handleEnded);
+
+    return () => {
+      audio.removeEventListener("timeupdate", handleTimeUpdate);
+      audio.removeEventListener("loadedmetadata", handleLoadedMetadata);
+      audio.removeEventListener("ended", handleEnded);
+    };
+  }, [
+    setActiveAudioId,
+    setAudioUrl,
+    setDuration,
+    setIsPlaying,
+    setProgress,
+    setTitle,
+  ]);
 
   React.useEffect(() => {
+    let cleanupAudio = () => {};
+
     if (audioUrl) {
       if (audioRef.current) {
         audioRef.current.pause();
       }
       audioRef.current = new Audio(audioUrl);
-      setupAudio();
+      cleanupAudio = setupAudio(audioRef.current);
       audioRef.current.play();
       setIsPlaying(true);
     }
 
     return () => {
+      cleanupAudio();
       if (audioRef.current) {
         audioRef.current.pause();
       }
     };
-  }, [audioUrl]);
+  }, [audioRef, audioUrl, setIsPlaying, setupAudio]);
 
   const handleClose = () => {
     if (audioRef.current) {
