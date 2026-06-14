@@ -7,3 +7,6 @@ Host: https://sv2024.genaisummit.xyz
 
 # Sitemaps
 Sitemap: https://sv2024.genaisummit.xyz/sitemap.xml
+Sitemap: https://genaisummit.xyz/sitemap-index.xml
+Sitemap: https://genaisummit.xyz/sitemap.xml
+Sitemap: https://sf2024.genaisummit.xyz/sitemap.xml
