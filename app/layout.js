@@ -22,7 +22,7 @@ const siteUrl = "https://sv2024.genaisummit.xyz";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
-  title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
+  title: "GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)",
   description:
     "GenAI Summit Silicon Valley 2024 was a GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held November 1-3, 2024 at the Santa Clara Convention Center.",
   alternates: {
@@ -40,7 +40,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     url: `${siteUrl}/`,
-    title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
+    title: "GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)",
     description:
       "A GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held November 1-3, 2024 at the Santa Clara Convention Center.",
     keywords: [
@@ -70,7 +70,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
+    title: "GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)",
     description:
       "A GENAI SUMMIT flagship event associated with GenAI X, Inc. d/b/a GPT DAO, held November 1-3, 2024 at the Santa Clara Convention Center.",
     images: [`${siteUrl}/images/propaganda/banner_seo.webp`],

@@ -32,7 +32,7 @@ export const generateMetadata = async ({ params }) => {
   let session = await getSessionData(params.id);
   let desc = session.desc.split(". ")[0] + ".";
   return {
-    title: `${session.name} | GenAI Summit Silicon Valley 2024 | GPT DAO`,
+    title: `${session.name} | GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)`,
     desc,
     keywords: [
       "GenAI Summit",
