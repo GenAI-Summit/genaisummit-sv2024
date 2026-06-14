@@ -25,6 +25,18 @@ export const metadata = {
   title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
   description:
     "Explore the future possibilities at the GenAI Summit from November 1 to November 3, 2024, at the Santa Clara Convention Center.",
+  alternates: {
+    canonical: `${siteUrl}/`,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
+  },
   openGraph: {
     type: "website",
     url: `${siteUrl}/`,
@@ -51,6 +63,48 @@ export const metadata = {
     ],
     siteName: "Generative AI Summit Silicon Valley 2024",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "GenAI Summit Silicon Valley 2024 | GPT DAO",
+    description:
+      "The third large-scale GenAI Summit in Silicon Valley, held November 1-3, 2024 at the Santa Clara Convention Center.",
+    images: [`${siteUrl}/images/propaganda/banner_seo.webp`],
+  },
+};
+
+const eventJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "GenAI Summit Silicon Valley 2024",
+  alternateName: "GENAI SUMMIT SV 2024",
+  description:
+    "A GPT DAO generative AI summit held from November 1-3, 2024 at the Santa Clara Convention Center.",
+  url: `${siteUrl}/`,
+  image: `${siteUrl}/images/propaganda/banner_seo.webp`,
+  startDate: "2024-11-01",
+  endDate: "2024-11-03",
+  eventStatus: "https://schema.org/EventCompleted",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  location: {
+    "@type": "Place",
+    name: "Santa Clara Convention Center",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Santa Clara",
+      addressRegion: "CA",
+      addressCountry: "US",
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "GPT DAO",
+    url: "https://genaix.ai/",
+  },
+  isPartOf: {
+    "@type": "EventSeries",
+    name: "GenAI Summit",
+    url: "https://genaisummit.xyz/",
+  },
 };
 
 const RootLayout = ({ children }) => {
@@ -60,6 +114,10 @@ const RootLayout = ({ children }) => {
         <meta
           name="keywords"
           content={metadata.openGraph.keywords.join(", ")}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd) }}
         />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=AW-16708105359"
