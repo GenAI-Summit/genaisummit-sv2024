@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Get Updates | GenAI Summit Silicon Valley 2024 | GPT DAO",
+  title: "Get Updates | GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)",
 };
 
 const SubscriptionLayout = ({ children }) => {

@@ -35,7 +35,7 @@ export const generateMetadata = async ({ params }) => {
   let organization = await getOrganizationData(params.id);
   let desc = organization.desc.split(". ")[0] + ".";
   return {
-    title: `${organization.name} | GenAI Summit Silicon Valley 2024 | GPT DAO`,
+    title: `${organization.name} | GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)`,
     description: desc,
     image: organization.logo,
     keywords: [

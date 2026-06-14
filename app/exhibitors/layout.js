@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Exhibitors | GenAI Summit Silicon Valley 2024 | GPT DAO",
+  title: "Exhibitors | GenAI Summit Silicon Valley 2024 | GenAI X, Inc. (GPT DAO)",
   description:
     "Engage with leading companies and startups showcasing groundbreaking GenAI solutions. Experience hands-on demos and network with industry disruptors.",
 };
