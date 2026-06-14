@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/NavBar/NavBar";
 import Footer from "@/components/Footer";
+import BrandDiscoverySummary from "@/components/BrandDiscoverySummary";
 import ScrollToTop from "@/components/ScrollToTop";
 import ShareBar from "@/components/ShareBar";
 import Image from "next/image";
@@ -192,6 +193,7 @@ const RootLayout = ({ children }) => {
               </Suspense>
             </div>
           </div>
+          <BrandDiscoverySummary />
           <Suspense fallback={<Loader />}>
             <Footer />
           </Suspense>
